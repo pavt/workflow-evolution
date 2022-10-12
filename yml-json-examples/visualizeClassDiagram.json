@@ -1,0 +1,54 @@
+﻿{
+  "name": "UML Class diagram",
+  "on": {
+    "push": {
+      "branches": [
+        "master"
+      ]
+    },
+    "pull_request": {
+      "branches": [
+        "master"
+      ]
+    },
+    "workflow_dispatch": null
+  },
+  "jobs": {
+    "build": {
+      "runs-on": "ubuntu-latest",
+      "steps": [
+        {
+          "uses": "actions/checkout@v2",
+          "with": {
+            "persist-credentials": false,
+            "fetch-depth": 0
+          }
+        },
+        {
+          "name": "change branch to UML",
+          "run": "git branch uml master\ngit checkout uml\ngit fetch\ngit config --local user.email \"41898282+github-actions[bot]@users.noreply.github.com\"\ngit config --local user.name \"github-actions[bot]\"\ngit pull origin uml --rebase\n"
+        },
+        {
+          "name": "Producing class diagram",
+          "run": "bash ./scripts/visualizeClassDiagram.sh"
+        },
+        {
+          "name": "Push the picture",
+          "run": "mkdir -p ci_data\ncd ci_data\nmv ../uml.png .\ngit add uml.png\ngit checkout --ours -- uml.png\n"
+        },
+        {
+          "name": "Commit changes",
+          "run": "git diff-index --quiet HEAD || git commit -m \"Add changes\" -a\n"
+        },
+        {
+          "name": "Push changes",
+          "uses": "ad-m/github-push-action@master",
+          "with": {
+            "github_token": "${{ secrets.GITHUB_TOKEN }}",
+            "branch": "uml"
+          }
+        }
+      ]
+    }
+  }
+}
