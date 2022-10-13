@@ -10,5 +10,5 @@ Metacello new
 
 Load the Lepiter database:
 ```
-BaselineOfWorkflowEvolution loadlepiter
+BaselineOfWorkflowEvolution loadLepiter
 ```
