@@ -507,7 +507,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-13T08:40:27.86092+02:00"
+									"dateAndTimeString" : "2022-10-13T08:40:41.876905+02:00"
 								}
 							},
 							"uid" : {
@@ -517,7 +517,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Commit and push and add the "
+							"string" : "Commit and push and add the loads script to the README."
 						},
 						{
 							"__type" : "textSnippet",
