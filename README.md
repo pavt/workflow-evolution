@@ -3,9 +3,9 @@
 Load the project into GT:
 ```
 Metacello new
-	baseline: 'GtCommentAnalysis';
+	baseline: 'WorkflowEvolution';
 	repository: 'github://pavt/workflow-evolution:main/src';
-	load.
+	load
 ```
 
 Load the Lepiter database:
