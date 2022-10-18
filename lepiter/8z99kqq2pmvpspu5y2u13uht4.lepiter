@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-17T23:02:02.223271+02:00"
+						"dateAndTimeString" : "2022-10-18T07:37:36.636811+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Use this Vs extension: https://github.com/hilleer/vscode-yaml-plus-json"
+				"string" : "Use this Vs extension: [](https://github.com/hilleer/vscode-yaml-plus-json) "
 			},
 			{
 				"__type" : "textSnippet",
