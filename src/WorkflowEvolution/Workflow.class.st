@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'directory',
 		'filename',
-		'ast'
+		'ast',
+		'name'
 	],
 	#category : #WorkflowEvolution
 }
@@ -51,4 +52,10 @@ Workflow >> filename [
 { #category : #accessing }
 Workflow >> filename: aFilename [
 	filename := aFilename
+]
+
+{ #category : #accessing }
+Workflow >> name: aDictionary [
+
+	name:= (self ast at: #name)
 ]
