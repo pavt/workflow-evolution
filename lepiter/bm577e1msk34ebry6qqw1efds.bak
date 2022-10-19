@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T09:45:03.018855+02:00"
+						"dateAndTimeString" : "2022-10-19T10:57:16.535268+02:00"
 					}
 				},
 				"editEmail" : {
@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T09:51:39.157579+02:00"
+						"dateAndTimeString" : "2022-10-19T10:57:28.35436+02:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "**TODO** Pablo -- write up a short description of the project here."
+				"string" : "GitHub Actions workflows are an event-driven tool to automatically respond to particular GitHub events. Typical events are receiving new pull requests or publishing a software release. Despite the massive and quick adoption of GitHub Actions, little is known about the incremental construction of GitHub Actions workflow by practitioners."
 			},
 			{
 				"__type" : "textSnippet",
@@ -203,7 +203,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T10:03:40.35578+02:00"
+						"dateAndTimeString" : "2022-10-19T10:03:45.08325+02:00"
 					}
 				},
 				"editEmail" : {
@@ -214,7 +214,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T10:03:40.35578+02:00"
+						"dateAndTimeString" : "2022-10-19T10:03:45.417701+02:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +224,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "mhjbjhb"
 			},
 			{
 				"__type" : "textSnippet",
