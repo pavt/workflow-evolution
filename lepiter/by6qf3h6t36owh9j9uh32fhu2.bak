@@ -180,7 +180,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-13T08:30:08.09165+02:00"
+									"dateAndTimeString" : "2022-10-13T11:53:42.942749+02:00"
 								}
 							},
 							"uid" : {
@@ -190,7 +190,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Create a project baseline and load script. (See {{gtPage:How to set up a new GitHub repo|db=2j9m7db2i4oz116bexd7wbdxo}}.)"
+							"string" : "Create a project baseline and load script. (See {{gtPage:How to set up a new GitHub repo|db=2j9m7db2i4oz116bexd7wbdxo}}.) "
 						},
 						{
 							"__type" : "textSnippet",
@@ -647,12 +647,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-10-13T08:23:56.050063+02:00"
+			"dateAndTimeString" : "2022-10-13T11:53:40.96694+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Workflow Evolution repo"
+		"title" : "Setting up Workflow Evolution repo"
 	},
 	"uid" : {
 		"__type" : "uuid",

@@ -55,6 +55,12 @@ Workflow >> filename: aFilename [
 ]
 
 { #category : #accessing }
+Workflow >> name [
+	^ (self ast members detect: [ :node | node name value = '"name"' ]) value value
+		value allButFirst allButLast
+]
+
+{ #category : #accessing }
 Workflow >> name: aDictionary [
 
 	name:= (self ast at: #name)
