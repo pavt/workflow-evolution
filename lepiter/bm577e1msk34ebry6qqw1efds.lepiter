@@ -203,7 +203,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T14:29:01.562689+02:00"
+						"dateAndTimeString" : "2022-10-19T16:35:39.543791+02:00"
 					}
 				},
 				"editEmail" : {
@@ -214,17 +214,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T14:29:01.562689+02:00"
+						"dateAndTimeString" : "2022-10-19T16:35:50.207921+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Y0mF/MOnDQC0bP/wAgbPlg=="
+					"uidString" : "hwcO3MWnDQC13csDAgbPlg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This research project aims to automatically disclose information from GA workflows to aid, for example, in program maintenance tasks.  The long-term vision is to provide a domain model of the workflow evolution to build, visualize, and explore its instances for real software systems and evaluate the proposed approach's usefulness."
+				"string" : "This research project aims to automatically disclose information from GA workflows to aid, for example, in program comprehension and maintenance tasks.  The long-term vision is to provide a domain model of the workflow evolution to build, visualize, and explore its instances for real software systems and evaluate the proposed approach's usefulness."
 			},
 			{
 				"__type" : "textSnippet",

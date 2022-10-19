@@ -177,7 +177,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T14:39:29.255772+02:00"
+						"dateAndTimeString" : "2022-10-19T14:39:46.33436+02:00"
 					}
 				},
 				"uid" : {
@@ -187,7 +187,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Despite the relevance of GA in state-of-the-art software development practices, little is known about how practitioners build and maintain GitHub Actions workflows. For example, it is not clear how practitioners cope with the particularities of developing GA workflows (e.g., workflow are executed only by pushing a change in the repository, debugging a GA workflow is carried out by inspecting logs, workflows are typically edited through a generic text editor or through the GitHub interface). "
+				"string" : "Despite the relevance of GA in state-of-the-art software development practices, little is known about how practitioners build and maintain GitHub Actions workflows. For example, it is not clear how practitioners cope with the particularities of developing GA workflows (e.g., workflow are executed only by pushing a change in the repository, debugging a GA workflow is carried out by inspecting logs, workflows are typically edited through a generic text editor or the GitHub interface). "
 			},
 			{
 				"__type" : "textSnippet",
@@ -203,7 +203,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T14:29:01.562689+02:00"
+						"dateAndTimeString" : "2022-10-19T16:35:39.543791+02:00"
 					}
 				},
 				"editEmail" : {
@@ -214,17 +214,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T14:29:01.562689+02:00"
+						"dateAndTimeString" : "2022-10-19T16:35:48.148886+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Y0mF/MOnDQC0bP/wAgbPlg=="
+					"uidString" : "hwcO3MWnDQC13csDAgbPlg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This research project aims to automatically disclose information from GA workflows to aid, for example, in program maintenance tasks.  The long-term vision is to provide a domain model of the workflow evolution to build, visualize, and explore its instances for real software systems and evaluate the proposed approach's usefulness."
+				"string" : "This research project aims to automatically disclose information from GA workflows to aid, for example, in program comprehension and maintenance tasks.  The long-term vision is to provide a domain model of the workflow evolution to build, vis\nualize, and explore its instances for real software systems and evaluate the proposed approach's usefulness."
 			},
 			{
 				"__type" : "textSnippet",

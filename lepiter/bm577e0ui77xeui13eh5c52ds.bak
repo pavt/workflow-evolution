@@ -71,7 +71,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T14:51:58.147156+02:00"
+									"dateAndTimeString" : "2022-10-19T16:27:05.642788+02:00"
 								}
 							},
 							"uid" : {
@@ -81,44 +81,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Definition: A workflow is the basic building block of the GitHub Actions service. Using workflows, developers configure actions to automatically trigger responses to different events, which are the base, for example, for continuous integration implementation. These events reflect specific software development activities that trigger the workflow execution. For example, a workflow running all the unit tests may be executed upon merging a pull request into a particular branch. Practitioners can define actions by creating entirely new workflows or reusing previously built actions publicly available in the GitHub Actions Marketplace."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T09:57:53.743863+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T14:53:11.877721+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "iFx4TcCnDQCyH6R8D4IxxA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "A workflow has a *name*, *events* , *jobs*."
+							"string" : "Definition: a workflow is the basic building block of the GitHub Actions service. Using workflows, developers configure actions to automatically trigger responses to different events (e.g., push, pull request), which are the base, for example, for continuous integration implementation. These events reflect specific software development activities that trigger the workflow execution. For example, a workflow running all the unit tests may be executed upon merging a pull request into a particular branch. Practitioners can define actions by creating entirely new workflows or reusing previously built actions publicly available in the GitHub Actions Marketplace."
 						},
 						{
 							"__type" : "textSnippet",
@@ -145,7 +108,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T09:58:59.272268+02:00"
+									"dateAndTimeString" : "2022-10-19T17:10:46.172618+02:00"
 								}
 							},
 							"uid" : {
@@ -155,7 +118,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "An **Event** triggers an action inside a job."
+							"string" : "In a gitHub repository a workflow file can be availible in this path:  **/owner-path/repository-name.github/workflows/example.yml**"
 						},
 						{
 							"__type" : "textSnippet",
@@ -171,7 +134,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T09:59:24.839723+02:00"
+									"dateAndTimeString" : "2022-10-19T17:10:16.902532+02:00"
 								}
 							},
 							"editEmail" : {
@@ -182,7 +145,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T09:59:34.144312+02:00"
+									"dateAndTimeString" : "2022-10-19T17:14:08.635791+02:00"
 								}
 							},
 							"uid" : {
@@ -192,10 +155,10 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Inside a **Job** you have *steps*."
+							"string" : "An here we there is a executable example of a workflow file:"
 						},
 						{
-							"__type" : "textSnippet",
+							"__type" : "pharoSnippet",
 							"children" : {
 								"__type" : "snippets",
 								"items" : [ ]
@@ -208,7 +171,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T10:00:13.602014+02:00"
+									"dateAndTimeString" : "2022-10-19T17:11:10.753274+02:00"
 								}
 							},
 							"editEmail" : {
@@ -219,91 +182,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T10:00:35.214658+02:00"
+									"dateAndTimeString" : "2022-10-19T17:12:17.094057+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "MZKPU8CnDQCyKbQrD4IxxA=="
+								"uidString" : "Gb4VW8anDQC18eVrAgbPlg=="
 							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "An example of a step is to define the *environment* for the job."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T10:00:37.685803+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T10:00:58.935533+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "49Q2V8CnDQCyK5FdD4IxxA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "An **Environment** includes the OS, the tools etc."
-						},
-						{
-							"__type" : "textSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T10:01:18.670623+02:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T10:01:30.688886+02:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "yHKjWMCnDQCyLaW0D4IxxA=="
-							},
-							"paragraphStyle" : {
-								"__type" : "textStyle"
-							},
-							"string" : "Next you define the *dependencies* and the *actions*. "
+							"code" : "exampleDir := FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\r\t\t/ 'workflow-evolution' / 'yml-json-examples'.\rvisCDyml := exampleDir / 'visualizeClassDiagram.yml'."
 						}
 					]
 				},
@@ -326,7 +212,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T09:57:52.115587+02:00"
+						"dateAndTimeString" : "2022-10-19T16:30:18.798136+02:00"
 					}
 				},
 				"uid" : {
@@ -336,7 +222,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#What is a Workflow?"
+				"string" : "### Definition"
 			}
 		]
 	},
@@ -359,12 +245,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-10-19T09:57:38.019236+02:00"
+			"dateAndTimeString" : "2022-10-19T16:30:03.297068+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Workflow model"
+		"title" : "What is a workflow"
 	},
 	"uid" : {
 		"__type" : "uuid",
