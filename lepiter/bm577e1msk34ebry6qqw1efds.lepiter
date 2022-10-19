@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T14:25:28.696785+02:00"
+						"dateAndTimeString" : "2022-10-19T14:32:46.091652+02:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Automating repetitive tasks of a software development process is nowadays frequently supported by Social Code Platforms, such as GitHub. GitHub Actions are a service offered by GitHub to automate all software workflow, including building, testing, and deploying directly from GitHub. GA is relatively new since a beta release of GA was available in November 2019. Since then, GA has become a central service for practitioners and cloud adoption. "
+				"string" : "Automating repetitive tasks of a software development process is nowadays frequently supported by Social Code Platforms, such as GitHub. GitHub Actions (GA) are a service offered by GitHub to automate all software workflow, including building, testing, and deploying directly from GitHub. GA is relatively new since a beta release of GA was available in November 2019. Since then, GA has become a central service for practitioners and cloud adoption. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -177,7 +177,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T14:26:18.533033+02:00"
+						"dateAndTimeString" : "2022-10-19T14:39:46.33436+02:00"
 					}
 				},
 				"uid" : {
@@ -187,7 +187,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Despite the relevance of GA in state-of-the-art software development practices, little is known about how practitioners build and maintain GitHub Actions workflows. For example, it is not clear how practitioners cope with the particularities of developing GA workflows (e.g., workflow are executed only by pushing a change in the repository, debugging a GA workflow is carried out by inspecting logs, workflows are typically edited through a generic text editor through the GitHub interface). "
+				"string" : "Despite the relevance of GA in state-of-the-art software development practices, little is known about how practitioners build and maintain GitHub Actions workflows. For example, it is not clear how practitioners cope with the particularities of developing GA workflows (e.g., workflow are executed only by pushing a change in the repository, debugging a GA workflow is carried out by inspecting logs, workflows are typically edited through a generic text editor or the GitHub interface). "
 			},
 			{
 				"__type" : "textSnippet",

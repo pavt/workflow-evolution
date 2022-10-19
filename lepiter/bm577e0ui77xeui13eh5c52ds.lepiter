@@ -60,6 +60,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-10-19T14:45:27.987818+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-10-19T14:51:58.147156+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "5U0OT8SnDQC0lD4bAgbPlg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Definition: A workflow is the basic building block of the GitHub Actions service. Using workflows, developers configure actions to automatically trigger responses to different events, which are the base, for example, for continuous integration implementation. These events reflect specific software development activities that trigger the workflow execution. For example, a workflow running all the unit tests may be executed upon merging a pull request into a particular branch. Practitioners can define actions by creating entirely new workflows or reusing previously built actions publicly available in the GitHub Actions Marketplace."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2022-10-19T09:57:53.743863+02:00"
 								}
 							},
@@ -71,7 +108,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T09:58:05.367063+02:00"
+									"dateAndTimeString" : "2022-10-19T14:53:22.72116+02:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +118,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "A workflow has a *name*, *events* and *jobs*."
+							"string" : "A workflow has a *name*, *events* , *jobs* and *steps*."
 						},
 						{
 							"__type" : "textSnippet",
