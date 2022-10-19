@@ -134,6 +134,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-10-20T00:08:06.071023+02:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-10-20T00:10:08.353767+02:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "fCcdLsynDQCVjYz/Dr6Aow=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "The workflow sintax is YAML/YML. See [ Learn YAML in Y minutes](https://learnxinyminutes.com/docs/yaml/)."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2022-10-19T17:10:16.902532+02:00"
 								}
 							},
@@ -145,7 +182,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T17:16:04.41599+02:00"
+									"dateAndTimeString" : "2022-10-20T00:10:20.212895+02:00"
 								}
 							},
 							"uid" : {
@@ -155,7 +192,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "And here there is a executable example of a workflow file:"
+							"string" : "Here, there is a executable example of a workflow file:"
 						},
 						{
 							"__type" : "pharoSnippet",

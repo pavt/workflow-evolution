@@ -257,7 +257,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T17:16:49.188737+02:00"
+									"dateAndTimeString" : "2022-10-19T17:16:52.247393+02:00"
 								}
 							},
 							"uid" : {
@@ -267,7 +267,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Replicate the workflow history analysis to detect sticky commits"
+							"string" : "[[Replicate the workflow history analysis to detect sticky commits]]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -283,7 +283,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T15:49:10.352977+02:00"
+									"dateAndTimeString" : "2022-10-20T00:28:20.635354+02:00"
 								}
 							},
 							"editEmail" : {
@@ -294,17 +294,17 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-19T15:49:10.352977+02:00"
+									"dateAndTimeString" : "2022-10-20T00:28:20.937332+02:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
-								"uidString" : "d2TONcWnDQC1ksCwAgbPlg=="
+								"uidString" : "0l0udsynDQCVlcvlDr6Aow=="
 							},
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "GEt"
 						},
 						{
 							"__type" : "textSnippet",
