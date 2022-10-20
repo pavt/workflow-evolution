@@ -294,7 +294,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-20T00:28:20.937332+02:00"
+									"dateAndTimeString" : "2022-10-20T00:28:49.66073+02:00"
 								}
 							},
 							"uid" : {
@@ -304,7 +304,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "GEt"
+							"string" : "[[GitHub Actions API: Get view workflow run history ]]"
 						},
 						{
 							"__type" : "textSnippet",

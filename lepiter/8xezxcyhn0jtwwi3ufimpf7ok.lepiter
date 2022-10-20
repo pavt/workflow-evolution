@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T16:53:57.412929+02:00"
+						"dateAndTimeString" : "2022-10-20T09:14:53.979119+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A workflow model include: **events**, **jobs** and **actions**."
+				"string" : "A workflow model include: **events**, **jobs**, **steps** and **actions**."
 			},
 			{
 				"__type" : "textSnippet",
