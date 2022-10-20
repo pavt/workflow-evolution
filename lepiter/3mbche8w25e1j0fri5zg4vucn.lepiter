@@ -208,14 +208,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-20T09:38:01.372277+02:00"
+						"dateAndTimeString" : "2022-10-20T13:01:32.711571+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "cD/vIdSnDQCRb/ReCNYkPQ=="
 				},
-				"code" : "WorkflowExamples new visualizeClassDiagramExample."
+				"code" : "WorkflowExamples new visualizeClassDiagramExample name"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-20T12:53:08.423101+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-20T12:55:16.901131+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "6oEb3tanDQCzrQ4oBC1RQQ=="
+				},
+				"code" : "WorkflowExamples new nameExample\r\t"
 			}
 		]
 	},

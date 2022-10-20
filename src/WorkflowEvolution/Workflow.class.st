@@ -4,8 +4,7 @@ Class {
 	#instVars : [
 		'directory',
 		'filename',
-		'ast',
-		'name'
+		'ast'
 	],
 	#category : #WorkflowEvolution
 }
@@ -58,10 +57,4 @@ Workflow >> filename: aFilename [
 Workflow >> name [
 	^ (self ast members detect: [ :node | node name value = '"name"' ]) value value
 		value allButFirst allButLast
-]
-
-{ #category : #accessing }
-Workflow >> name: aDictionary [
-
-	name:= (self ast at: #name)
 ]
