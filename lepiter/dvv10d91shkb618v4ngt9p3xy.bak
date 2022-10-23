@@ -174,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T19:40:27.125998+02:00"
+						"dateAndTimeString" : "2022-10-23T23:21:05.852455+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "KIfBsxaoDQCazbzzBwSJ6g=="
 				},
-				"code" : "|workflow|\r\rworkflow := Workflow in: exampleDir named: 'visualizeClassDiagram'.\r\r((workflow ast members  detect: [: n | n name value = '\"on\"' ]) value members ) collect: [:each | each name value allButFirst allButLast] \r"
+				"code" : "|workflow|\r\rworkflow := Workflow in: exampleDir named: 'visualizeClassDiagram'.\r\r((workflow ast members  detect: [: n | n name value = '\"on\"' ]) value members ) collect: [:each | each name value allButFirst allButLast]. \r"
 			},
 			{
 				"__type" : "textSnippet",
@@ -197,7 +197,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T17:19:40.395562+02:00"
+						"dateAndTimeString" : "2022-10-23T19:40:56.758867+02:00"
 					}
 				},
 				"editEmail" : {
@@ -208,7 +208,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T17:19:58.981201+02:00"
+						"dateAndTimeString" : "2022-10-23T19:41:16.689756+02:00"
 					}
 				},
 				"uid" : {
@@ -218,7 +218,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now we would like to extract the *events* of the workflow object, so we explore the ast in the inspector, and figure out how to access the name of the relevant node."
+				"string" : "As a result we get the *event* method: "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -245,48 +245,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T17:50:21.009413+02:00"
+						"dateAndTimeString" : "2022-10-23T23:21:22.550278+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "D6BylhaoDQCavildBwSJ6g=="
 				},
-				"code" : "(workflow ast members  detect: [: n | n name value = '\"on\"' ]) value value"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T16:58:39.047056+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T17:15:29.129373+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "oB2lpRaoDQCaxEBMBwSJ6g=="
-				},
-				"code" : ""
+				"code" : "|workflow|\r\rworkflow := Workflow in: exampleDir named: 'visualizeClassDiagram'.\rworkflow events"
 			},
 			{
 				"__type" : "textSnippet",
