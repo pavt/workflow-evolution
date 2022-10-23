@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T23:22:13.47981+02:00"
+						"dateAndTimeString" : "2022-10-23T23:45:40.083087+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The answer must be the number of jobs."
+				"string" : "The answer must a list with the job names of the workflows"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -66,14 +66,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T23:22:31.757307+02:00"
+						"dateAndTimeString" : "2022-10-23T23:49:21.554541+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "ebiyARyoDQCFdF3eBzAvJw=="
 				},
-				"code" : "exampleDir := FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\r\t\t/ 'workflow-evolution' / 'yml-json-examples'.\rvisCDyml := exampleDir / 'visualizeClassDiagram.yml'.\rvisCDjson := exampleDir / 'visualizeClassDiagram.json'"
+				"code" : "exampleDir := FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\r\t\t/ 'workflow-evolution' / 'yml-json-examples'.\rvisCDyml := exampleDir / 'visualizeClassDiagram.yml'.\rvisCDjson := exampleDir / 'visualizeClassDiagram.json'.\rvisCDjson2 := exampleDir / 'runTest.json'"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-23T23:45:58.322329+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-23T23:46:02.737986+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "iwpHVhyoDQCFzjRMBzAvJw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Now we would like to extract the *jobs* of the workflow object, so we explore the ast in the inspector, and figure out how to access the name of the relevant node."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -100,14 +137,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T23:35:04.674155+02:00"
+						"dateAndTimeString" : "2022-10-23T23:49:00.838284+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "lJDiAhyoDQCFer68BzAvJw=="
 				},
-				"code" : "|workflow|\r\rworkflow := Workflow in: exampleDir named: 'visualizeClassDiagram'.\r\r((workflow ast members  detect: [: n | n name value = '\"jobs\"' ] ) value members) collect: [:n | n name value allButFirst allButLast]"
+				"code" : "|workflow|\r\rworkflow := Workflow in: exampleDir named: 'runTest'.\r\r((workflow ast members  detect: [: n | n name value = '\"jobs\"' ] ) value members) collect: [:n | n name value allButFirst allButLast]"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-23T23:46:26.443015+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-23T23:46:43.430337+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rKnxVxyoDQCF0SgpBzAvJw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "And next we are using the \"jobs\" method:"
 			},
 			{
 				"__type" : "pharoSnippet",
