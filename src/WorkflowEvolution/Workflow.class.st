@@ -44,6 +44,12 @@ Workflow >> directory: aDirectory [
 ]
 
 { #category : #accessing }
+Workflow >> events [
+
+^ ((self ast members  detect: [: n | n name value = '"on"' ]) value members ) collect: [:each | each name value allButFirst allButLast] 
+]
+
+{ #category : #accessing }
 Workflow >> filename [
 	^ filename
 ]

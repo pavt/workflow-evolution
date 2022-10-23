@@ -126,7 +126,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T17:16:11.059338+02:00"
+						"dateAndTimeString" : "2022-10-23T19:40:39.912714+02:00"
 					}
 				},
 				"editEmail" : {
@@ -137,7 +137,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T18:04:08.64+02:00"
+						"dateAndTimeString" : "2022-10-23T19:40:39.912714+02:00"
 					}
 				},
 				"uid" : {
@@ -147,7 +147,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then, we know the way th"
+				"string" : "Now we would like to extract the *events* of the workflow object, so we explore the ast in the inspector, and figure out how to access the name of the relevant node."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -174,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T18:03:02.748713+02:00"
+						"dateAndTimeString" : "2022-10-23T19:40:27.125998+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "KIfBsxaoDQCazbzzBwSJ6g=="
 				},
-				"code" : "|workflow|\r\rworkflow := Workflow in: exampleDir named: 'visualizeClassDiagram'.\r\rworkflow name.\r\r(((workflow ast members  detect: [: n | n name value = '\"on\"' ]) value members ) collect: [:each | each name value allButFirst allButLast] ) \r"
+				"code" : "|workflow|\r\rworkflow := Workflow in: exampleDir named: 'visualizeClassDiagram'.\r\r((workflow ast members  detect: [: n | n name value = '\"on\"' ]) value members ) collect: [:each | each name value allButFirst allButLast] \r"
 			},
 			{
 				"__type" : "textSnippet",
