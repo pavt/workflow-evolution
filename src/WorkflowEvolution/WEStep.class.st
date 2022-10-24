@@ -3,7 +3,8 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'name',
-		'content'
+		'content',
+		'step'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
@@ -30,4 +31,13 @@ WEStep >> name [
 WEStep >> name: anObject [
 
 	name := anObject
+]
+
+{ #category : #accessing }
+WEStep >> step [
+
+	|aStep|
+	aStep:= WEStep new.
+	aStep name: self name.
+	^ aStep
 ]

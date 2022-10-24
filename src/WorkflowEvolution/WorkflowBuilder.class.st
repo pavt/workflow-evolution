@@ -64,7 +64,7 @@ WorkflowBuilder >> jobs [
 	| jobAST jobs|
 	jobAST := (self ast members detect: [ :n | n name value = '"jobs"' ])  value members.
 	jobs := OrderedCollection new.
-	jobs add: jobAST.
+	jobs addAll: jobAST.
 	^ jobs 
 ]
 

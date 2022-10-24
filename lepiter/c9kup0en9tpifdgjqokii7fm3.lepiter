@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-24T09:45:24.332093+02:00"
+						"dateAndTimeString" : "2022-10-24T23:10:05.680281+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,125 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-24T09:45:24.332093+02:00"
+						"dateAndTimeString" : "2022-10-24T23:15:55.279207+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "fJ4UtiSoDQCVRincBmIwzw=="
+					"uidString" : "uR3H8y+oDQC4UFbaAVYL6w=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "The workflow will have a name and a collection of Jobs.  Son we'll use the workflow visualizeExampleJSON :"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-24T23:15:02.98177+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-24T23:15:46.77136+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QMsiBDCoDQC4XEBOAVYL6w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The name of the workflow:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-24T23:15:13.164002+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-24T23:16:18.67614+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+FozBjCoDQC4XqZlAVYL6w=="
+				},
+				"code" : "WorkflowBasicExamples new visualizeExampleJSON workflow name"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-24T23:14:19.637247+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-24T23:15:21.524479+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "MZHsAjCoDQC4WiajAVYL6w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The collection of Jobs:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -103,14 +211,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-24T15:07:01.257437+02:00"
+						"dateAndTimeString" : "2022-10-24T23:11:33.373282+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "IlNGsiSoDQCVRAUIBmIwzw=="
 				},
-				"code" : "WorkflowBasicExamples new visualizeClassDiagramExample workflow jobs"
+				"code" : "WorkflowBasicExamples new visualizeExampleJSON workflow jobs"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-24T23:12:07.081154+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-24T23:17:17.980422+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "T6PR+i+oDQC4Vj3MAVYL6w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The name value of the second Job:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -126,7 +271,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-24T16:01:27.074517+02:00"
+						"dateAndTimeString" : "2022-10-24T23:11:58.211+02:00"
 					}
 				},
 				"editEmail" : {
@@ -137,14 +282,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-24T17:00:47.903209+02:00"
+						"dateAndTimeString" : "2022-10-24T23:13:08.478117+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "9L7s9imoDQC/pTNGC/uJUw=="
+					"uidString" : "25uU+i+oDQC4VJWnAVYL6w=="
 				},
-				"code" : "(WorkflowBasicExamples new visualizeExampleJSON workflow jobs)  collect: [:n | n value second name value allButFirst allButLast]"
+				"code" : "WorkflowBasicExamples new visualizeExampleJSON workflow jobs second name value allButFirst allButLast"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-24T23:17:22.019113+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-24T23:17:26.843578+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "O2o8DTCoDQC4ZK6ZAVYL6w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The number of Jobs:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -160,7 +342,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-24T17:00:55.275716+02:00"
+						"dateAndTimeString" : "2022-10-24T23:17:32.613686+02:00"
 					}
 				},
 				"editEmail" : {
@@ -171,14 +353,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-24T17:02:22.129982+02:00"
+						"dateAndTimeString" : "2022-10-24T23:18:02.490667+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "6SybyyqoDQC/tmt1C/uJUw=="
+					"uidString" : "cjCDDjCoDQC4ZsYGAVYL6w=="
 				},
-				"code" : "(WorkflowBasicExamples new visualizeExampleJSON workflow jobs)  detect: [:n | n value first ]"
+				"code" : "WorkflowBasicExamples new visualizeExampleJSON workflow jobs size"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-24T23:18:30.963238+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-24T23:18:46.910919+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "RGed/y+oDQC4WE8IAVYL6w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Since the Job is a object with content, we'll dig into it:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -194,7 +413,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-24T10:01:27.611913+02:00"
+						"dateAndTimeString" : "2022-10-24T23:18:53.259624+02:00"
 					}
 				},
 				"editEmail" : {
@@ -205,82 +424,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-24T16:56:19.724673+02:00"
+						"dateAndTimeString" : "2022-10-24T23:18:53.259624+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "HRp/7ySoDQCVYtMHBmIwzw=="
+					"uidString" : "h79REzCoDQC4atG7AVYL6w=="
 				},
-				"code" : "(WorkflowBasicExamples new visualizeExampleJSON workflow jobs) collect: [:n | n value first]"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-24T16:56:51.944425+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-24T16:57:15.108837+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "BTwavSqoDQC/tGlhC/uJUw=="
-				},
-				"code" : "(WorkflowBasicExamples new visualizeExampleJSON workflow jobs) collect: [:n | n value first]"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-24T10:21:43.532123+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-24T10:21:54.345436+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "c5L4NyWoDQCVd/ygBmIwzw=="
-				},
-				"code" : "WorkflowBuilder "
+				"code" : ""
 			},
 			{
 				"__type" : "pharoSnippet",
