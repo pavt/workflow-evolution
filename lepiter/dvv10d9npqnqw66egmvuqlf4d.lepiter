@@ -137,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T23:49:00.838284+02:00"
+						"dateAndTimeString" : "2022-10-24T14:33:55.254647+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "lJDiAhyoDQCFer68BzAvJw=="
 				},
-				"code" : "|workflow|\r\rworkflow := Workflow in: exampleDir named: 'runTest'.\r\r((workflow ast members  detect: [: n | n name value = '\"jobs\"' ] ) value members) collect: [:n | n name value allButFirst allButLast]"
+				"code" : "workflow := WEWorkflow in: exampleDir named: 'runTest'.\r\r((workflow ast members  detect: [: n | n name value = '\"jobs\"' ] ) value members) collect: [:n | n name value allButFirst allButLast]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -208,14 +208,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T23:37:15.953426+02:00"
+						"dateAndTimeString" : "2022-10-24T14:33:43.450237+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "FeOSDxyoDQCFh+/SBzAvJw=="
 				},
-				"code" : "|workflow|\r\rworkflow := Workflow in: exampleDir named: 'visualizeClassDiagram'.\rworkflow jobs.\rworkflow jobs size\r"
+				"code" : "workflow := Workflow in: exampleDir named: 'visualizeClassDiagram'.\rworkflow jobs.\rworkflow jobs size\r"
 			}
 		]
 	},

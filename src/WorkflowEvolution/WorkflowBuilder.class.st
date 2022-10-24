@@ -61,11 +61,11 @@ WorkflowBuilder >> filename: aFilename [
 
 { #category : #accessing }
 WorkflowBuilder >> jobs [
-	| jobAST jobs job|
-	jobAST := self ast members detect: [ :n | n name value = '"jobs"' ].
-	jobs:= OrderedCollection new.
-	job:= WEJob new.
-	^ jobs
+	| jobAST jobs|
+	jobAST := (self ast members detect: [ :n | n name value = '"jobs"' ])  value members.
+	jobs := OrderedCollection new.
+	jobs add: jobAST.
+	^ jobs 
 ]
 
 { #category : #accessing }
@@ -77,7 +77,7 @@ WorkflowBuilder >> name [
 { #category : #accessing }
 WorkflowBuilder >> workflow [
 	| workflow |
-	workflow := Workflow new.
+	workflow := WEWorkflow new.
 	workflow name: self name.
 	workflow jobs: self jobs.
 

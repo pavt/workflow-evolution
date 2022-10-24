@@ -26,6 +26,11 @@ WorkflowBasicExamples >> nameExample [
 ]
 
 { #category : #accessing }
+WorkflowBasicExamples >> newMethod [
+	"This is a new method"
+]
+
+{ #category : #accessing }
 WorkflowBasicExamples >> visualizeClassDiagramExample [
 
 	<gtExample>
@@ -40,4 +45,20 @@ WorkflowBasicExamples >> visualizeClassDiagramExample [
 	self assert: workflow ast isNotNil.
 	^ workflow
 	
+]
+
+{ #category : #accessing }
+WorkflowBasicExamples >> visualizeExampleJSON [
+
+	<gtExample>
+	| workflow directory filename |
+	workflow := self basicExample.
+	directory:= FileLocator imageDirectory/ 'pharo-local' / 'iceberg' / 'pavt'/ 'workflow-evolution' / 'yml-json-examples'.
+	filename:= 'example'.
+	workflow filename: filename.
+	workflow directory: directory.
+	self assert: workflow directory equals: directory.
+	self assert: workflow filename equals: filename.
+	self assert: workflow ast isNotNil.
+	^ workflow
 ]

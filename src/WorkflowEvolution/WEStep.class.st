@@ -1,30 +1,33 @@
 Class {
-	#name : #WEJob,
+	#name : #WEStep,
 	#superclass : #Object,
 	#instVars : [
 		'name',
-		'steps'
+		'content'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
 
 { #category : #accessing }
-WEJob >> job [
+WEStep >> content [
 
-	|job|
-	job:= WEJob new.
-	job name: self name.
-	^ job
+	^ content
 ]
 
 { #category : #accessing }
-WEJob >> name [
+WEStep >> content: anObject [
+
+	content := anObject
+]
+
+{ #category : #accessing }
+WEStep >> name [
+
 	^ name
-		
 ]
 
 { #category : #accessing }
-WEJob >> name: anObject [
+WEStep >> name: anObject [
 
 	name := anObject
 ]

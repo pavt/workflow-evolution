@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T23:48:55.923841+02:00"
+						"dateAndTimeString" : "2022-10-23T23:49:21.554541+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "ebiyARyoDQCFdF3eBzAvJw=="
 				},
-				"code" : "exampleDir := FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\r\t\t/ 'workflow-evolution' / 'yml-json-examples'.\rvisCDyml := exampleDir / 'visualizeClassDiagram.yml'.\rvisCDjson := exampleDir / 'visualizeClassDiagram.json'\rvisCDjson2 : = exampleDir / 'runTest.json'"
+				"code" : "exampleDir := FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\r\t\t/ 'workflow-evolution' / 'yml-json-examples'.\rvisCDyml := exampleDir / 'visualizeClassDiagram.yml'.\rvisCDjson := exampleDir / 'visualizeClassDiagram.json'.\rvisCDjson2 := exampleDir / 'runTest.json'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -137,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T23:35:04.674155+02:00"
+						"dateAndTimeString" : "2022-10-23T23:49:00.838284+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "lJDiAhyoDQCFer68BzAvJw=="
 				},
-				"code" : "|workflow|\r\rworkflow := Workflow in: exampleDir named: 'visualizeClassDiagram'.\r\r((workflow ast members  detect: [: n | n name value = '\"jobs\"' ] ) value members) collect: [:n | n name value allButFirst allButLast]"
+				"code" : "|workflow|\r\rworkflow := Workflow in: exampleDir named: 'runTest'.\r\r((workflow ast members  detect: [: n | n name value = '\"jobs\"' ] ) value members) collect: [:n | n name value allButFirst allButLast]"
 			},
 			{
 				"__type" : "textSnippet",

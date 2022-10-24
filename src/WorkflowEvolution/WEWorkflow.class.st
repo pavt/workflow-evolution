@@ -1,5 +1,5 @@
 Class {
-	#name : #Workflow,
+	#name : #WEWorkflow,
 	#superclass : #Object,
 	#instVars : [
 		'name',
@@ -9,23 +9,23 @@ Class {
 }
 
 { #category : #accessing }
-Workflow >> jobs [
+WEWorkflow >> jobs [
 
 	^ jobs
 ]
 
 { #category : #accessing }
-Workflow >> jobs: aJobCollection [
+WEWorkflow >> jobs: aJobCollection [
 
 	jobs := aJobCollection
 ]
 
 { #category : #accessing }
-Workflow >> name [
+WEWorkflow >> name [
 	^ name
 ]
 
 { #category : #accessing }
-Workflow >> name: aString [
+WEWorkflow >> name: aString [
 	name := aString
 ]
