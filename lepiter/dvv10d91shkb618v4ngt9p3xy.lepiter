@@ -174,14 +174,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T23:21:05.852455+02:00"
+						"dateAndTimeString" : "2022-10-24T09:37:19.779778+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "KIfBsxaoDQCazbzzBwSJ6g=="
 				},
-				"code" : "|workflow|\r\rworkflow := Workflow in: exampleDir named: 'visualizeClassDiagram'.\r\r((workflow ast members  detect: [: n | n name value = '\"on\"' ]) value members ) collect: [:each | each name value allButFirst allButLast]. \r"
+				"code" : "workflow := Workflow in: exampleDir named: 'visualizeClassDiagram'.\r\r((workflow ast members  detect: [: n | n name value = '\"on\"' ]) value members ) collect: [:each | each name value allButFirst allButLast]. \r"
 			},
 			{
 				"__type" : "textSnippet",
@@ -245,14 +245,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-23T23:21:22.550278+02:00"
+						"dateAndTimeString" : "2022-10-24T09:37:22.412092+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "D6BylhaoDQCavildBwSJ6g=="
 				},
-				"code" : "|workflow|\r\rworkflow := Workflow in: exampleDir named: 'visualizeClassDiagram'.\rworkflow events"
+				"code" : "workflow := Workflow in: exampleDir named: 'visualizeClassDiagram'.\rworkflow events"
 			},
 			{
 				"__type" : "textSnippet",

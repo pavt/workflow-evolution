@@ -1,14 +1,14 @@
 Class {
-	#name : #WorkflowExamples,
+	#name : #WorkflowBasicExamples,
 	#superclass : #Object,
-	#category : #WorkflowEvolution
+	#category : #'WorkflowEvolution-Examples'
 }
 
 { #category : #accessing }
-WorkflowExamples >> basicExample [
+WorkflowBasicExamples >> basicExample [
 	<gtExample>
 	| workflow |
-	workflow := Workflow new.
+	workflow := WorkflowBuilder new.
 	self assert: workflow directory isNil.
 	self assert: workflow filename isNil.
 	"self assert: result ast isNil."
@@ -16,7 +16,7 @@ WorkflowExamples >> basicExample [
 ]
 
 { #category : #accessing }
-WorkflowExamples >> nameExample [
+WorkflowBasicExamples >> nameExample [
 	<gtExample>
 	| workflow |
 	workflow := self visualizeClassDiagramExample.
@@ -26,7 +26,7 @@ WorkflowExamples >> nameExample [
 ]
 
 { #category : #accessing }
-WorkflowExamples >> visualizeClassDiagramExample [
+WorkflowBasicExamples >> visualizeClassDiagramExample [
 
 	<gtExample>
 	| workflow directory filename |
