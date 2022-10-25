@@ -376,7 +376,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T11:29:11.71498+02:00"
+						"dateAndTimeString" : "2022-10-25T11:33:12.52486+02:00"
 					}
 				},
 				"editEmail" : {
@@ -387,12 +387,49 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T11:29:11.71498+02:00"
+						"dateAndTimeString" : "2022-10-25T11:34:35.124325+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "wlAaRzqoDQCKWQ1XC/54HA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The entry point should be visitParse: but in practice we visit an AST so we start with visitObject:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-25T11:34:35.994145+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-25T11:34:35.994145+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "PWxuWjqoDQCvN2dvByrX9A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"

@@ -282,14 +282,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T11:29:22.905501+02:00"
+						"dateAndTimeString" : "2022-10-25T11:30:23.297391+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "BGRW9DmoDQCKO5A1C/54HA=="
 				},
-				"code" : "visitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor\r"
+				"code" : "visitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor"
 			},
 			{
 				"__type" : "textSnippet",
@@ -376,7 +376,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T11:29:11.71498+02:00"
+						"dateAndTimeString" : "2022-10-25T11:33:12.52486+02:00"
 					}
 				},
 				"editEmail" : {
@@ -387,7 +387,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T11:29:11.71498+02:00"
+						"dateAndTimeString" : "2022-10-25T11:34:22.86795+02:00"
 					}
 				},
 				"uid" : {
@@ -397,7 +397,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "The entry point should be visitParse: but in practice we visit an "
 			},
 			{
 				"__type" : "textSnippet",

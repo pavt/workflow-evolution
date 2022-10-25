@@ -13,6 +13,18 @@ WEWorkflowASTVisitor >> initialize [
 ]
 
 { #category : #accessing }
+WEWorkflowASTVisitor >> visitObject: anASTObjectNode [
+	"The AST root is an object node with members.
+	We wantto extract the name, the steps and the jobs."
+	
+	
+	anASTObjectNode members.
+	
+	
+	^ self visitParse: anASTObjectNode
+]
+
+{ #category : #accessing }
 WEWorkflowASTVisitor >> workflow [
 
 	^ workflow
