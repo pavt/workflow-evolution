@@ -301,43 +301,6 @@
 				"string" : "**Workflow ilustration** "
 			},
 			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T20:47:53.149427+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T20:47:53.149427+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "M9AiFUKoDQC10PcwAORzSg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
 				"__type" : "pictureSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -362,14 +325,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T20:45:03.274925+02:00"
+						"dateAndTimeString" : "2022-10-25T20:52:22.704068+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "uM4KBEKoDQC1xfH8AORzSg=="
 				},
-				"url" : "attachments/4eohdn89uomgyviq72ubja8r2/workflow-ilustration.png"
+				"url" : "attachments/4eohdn6g4lhnqsokwauhe81jv/workflow-ilustration.png"
 			}
 		]
 	},
