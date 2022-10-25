@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T11:09:06.556958+02:00"
+						"dateAndTimeString" : "2022-10-25T13:28:16.078435+02:00"
 					}
 				},
 				"uid" : {
@@ -387,7 +387,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T11:34:35.124325+02:00"
+						"dateAndTimeString" : "2022-10-25T13:08:14.939541+02:00"
 					}
 				},
 				"uid" : {
@@ -397,7 +397,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The entry point should be visitParse: but in practice we visit an AST so we start with visitObject:"
+				"string" : "The entry point should be visitParse: but in practice we visit an AST so we start with {{gtMethod:name=WEWorkflowASTVisitor>>visitObject:}}. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -413,7 +413,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T11:34:35.994145+02:00"
+						"dateAndTimeString" : "2022-10-25T13:28:47.607468+02:00"
 					}
 				},
 				"editEmail" : {
@@ -424,7 +424,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T11:34:35.994145+02:00"
+						"dateAndTimeString" : "2022-10-25T13:29:30.31224+02:00"
 					}
 				},
 				"uid" : {
@@ -434,7 +434,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "Then we add dedicated visitors {{gtClass:name=WEEventASTVisitor}} and {{gtClass:name=WEJobASTVisitor}} to build the events and jobs to add to the workflow."
 			},
 			{
 				"__type" : "textSnippet",
