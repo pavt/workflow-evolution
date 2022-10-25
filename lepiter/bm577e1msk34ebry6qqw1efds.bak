@@ -214,7 +214,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T16:35:48.148886+02:00"
+						"dateAndTimeString" : "2022-10-19T16:35:50.207921+02:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +224,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This research project aims to automatically disclose information from GA workflows to aid, for example, in program comprehension and maintenance tasks.  The long-term vision is to provide a domain model of the workflow evolution to build, vis\nualize, and explore its instances for real software systems and evaluate the proposed approach's usefulness."
+				"string" : "This research project aims to automatically disclose information from GA workflows to aid, for example, in program comprehension and maintenance tasks.  The long-term vision is to provide a domain model of the workflow evolution to build, visualize, and explore its instances for real software systems and evaluate the proposed approach's usefulness."
 			},
 			{
 				"__type" : "textSnippet",

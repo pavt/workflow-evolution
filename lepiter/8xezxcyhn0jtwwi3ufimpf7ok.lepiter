@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-20T14:08:47.818934+02:00"
+						"dateAndTimeString" : "2022-10-25T20:32:19.773719+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A **workflow** model include: **events**, **jobs**, **steps** and **actions**."
+				"string" : "For a **workflow** model we will consider: **events**, **runners**,  **jobs** ,* ***steps** and **actions**. "
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-20T14:08:38.362476+02:00"
+						"dateAndTimeString" : "2022-10-25T20:09:44.190431+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-20T14:11:30.120244+02:00"
+						"dateAndTimeString" : "2022-10-25T20:24:44.184226+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The **workflow** has: 1) *name*; 2) *filename*; 3) *directory*; and 4) *ast*."
+				"string" : "A workflow will have one or more *events* and one or more *jobs*. Each *job* can have one or more *steps*, and each *step* can define one or more *actions*.  The *jobs* will be executed in a *runner*."
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-20T14:12:52.255077+02:00"
+						"dateAndTimeString" : "2022-10-25T20:21:39.62324+02:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +103,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-20T14:13:35.116963+02:00"
+						"dateAndTimeString" : "2022-10-25T20:34:01.13559+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "RTAr+9enDQCPJOalDcvDsQ=="
+					"uidString" : "Z0iOkEGoDQC1cXLlAORzSg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The *name* represent the name of the workflow"
+				"string" : "** Workflows** are written in YAML. The workflow refers to the .yml(YAML) file you will create in your repository to define the specific automation procedures, instructions and actions you want to run after an event is triggered or scheduled.\n\nIt is typically used to build, test and deploy your projects on GitHub. Also, it is usually stored in your .github/workflows/ directory."
 			},
 			{
 				"__type" : "textSnippet",
@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-20T14:13:37.376016+02:00"
+						"dateAndTimeString" : "2022-10-25T20:32:13.711467+02:00"
 					}
 				},
 				"editEmail" : {
@@ -140,17 +140,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-20T14:14:15.500398+02:00"
+						"dateAndTimeString" : "2022-10-25T20:32:13.711467+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "q04Q/NenDQCPJjY0DcvDsQ=="
+					"uidString" : "rhIk3UGoDQC1jed8AORzSg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The *filename* represent the explicit yml file. For example. *example.yml*"
+				"string" : "**Events** are the workflow triggers that cause a workflow to run. For example, every time someone creates a pull request (the *event*) for a repository, you can automatically run a command that executes a software testing script."
 			},
 			{
 				"__type" : "textSnippet",
@@ -166,7 +166,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-20T14:14:32.505553+02:00"
+						"dateAndTimeString" : "2022-10-25T20:32:49.140727+02:00"
 					}
 				},
 				"editEmail" : {
@@ -177,17 +177,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-20T14:15:13.09756+02:00"
+						"dateAndTimeString" : "2022-10-25T20:32:57.678778+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ZSjjANinDQCPKCDrDcvDsQ=="
+					"uidString" : "yLFA30GoDQC1lrgbAORzSg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The *directory* represent the space where the file is."
+				"string" : "**Runners** - The procedures defined in the workflow require an environment where they can be executed. *Runners* are servers that allows these steps to be executed in a virtual environment. It can be Github-hosted or self-hosted.\n\nIt cannot be locally hosted, as a runner has to always be listening for events to trigger the workflow."
 			},
 			{
 				"__type" : "textSnippet",
@@ -203,7 +203,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-20T14:15:21.020657+02:00"
+						"dateAndTimeString" : "2022-10-25T20:33:53.168266+02:00"
 					}
 				},
 				"editEmail" : {
@@ -214,17 +214,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-20T14:18:41.428844+02:00"
+						"dateAndTimeString" : "2022-10-25T20:41:26.57068+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "vKesA9inDQCPKurBDcvDsQ=="
+					"uidString" : "8rd2ukGoDQC1fp5GAORzSg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The *ast* represent the abstract syntax tree of the yml file. Obs: in our case, we are using a translated version in Json format."
+				"string" : "**Jobs** and **Steps** - A workflow must have at least 1 job and can consist of multiple jobs that work together either sequentially or in parallel. Each job is a series of **steps** that runs under the same runner (virtual environment).\n\nYou can configure how jobs in a workflow interact with each other. For example, if one job fails, the next one will not run. By default, jobs in a workflow run in parallel."
 			},
 			{
 				"__type" : "textSnippet",
@@ -240,7 +240,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-20T14:15:52.865147+02:00"
+						"dateAndTimeString" : "2022-10-25T20:37:26.70262+02:00"
 					}
 				},
 				"editEmail" : {
@@ -251,17 +251,125 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-20T14:15:52.865147+02:00"
+						"dateAndTimeString" : "2022-10-25T20:42:25.099085+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "quECBtinDQCPLEznDcvDsQ=="
+					"uidString" : "FvLL70GoDQC1nx24AORzSg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "**Actions** - Actions are the simplest unit of the entire workflow. They are essentially the commands that define the steps of each job. You can write your own actions, or you can find actions to use in your workflows in the GitHub Marketplace.\n\nThen, the jobs define the workflow and finally, the runners will run the jobs to execute them."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-25T20:47:33.365379+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-25T20:47:59.744575+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "X7vUAUKoDQC1wBflAORzSg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "**Workflow ilustration** "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-25T20:47:53.149427+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-25T20:47:53.149427+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "M9AiFUKoDQC10PcwAORzSg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
 				"string" : ""
+			},
+			{
+				"__type" : "pictureSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-25T20:43:06.36334+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-25T20:45:03.274925+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "uM4KBEKoDQC1xfH8AORzSg=="
+				},
+				"url" : "attachments/4eohdn89uomgyviq72ubja8r2/workflow-ilustration.png"
 			}
 		]
 	},

@@ -61,11 +61,12 @@ WorkflowBuilder >> filename: aFilename [
 
 { #category : #accessing }
 WorkflowBuilder >> jobs [
-	| jobAST jobs|
-	jobAST := (self ast members detect: [ :n | n name value = '"jobs"' ])  value members.
+	| jobAST jobs |
+	jobAST := (self ast members detect: [ :n | n name value = '"jobs"' ]) value
+			members.
 	jobs := OrderedCollection new.
 	jobs addAll: jobAST.
-	^ jobs 
+	^ jobs
 ]
 
 { #category : #accessing }

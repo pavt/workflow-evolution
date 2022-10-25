@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T09:46:00.724304+02:00"
+						"dateAndTimeString" : "2022-10-25T19:36:50.118792+02:00"
 					}
 				},
 				"editEmail" : {
@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T09:46:03.905091+02:00"
+						"dateAndTimeString" : "2022-10-25T19:38:21.112316+02:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Add some stuff here ..."
+				"string" : "PhD Student at SEG: [SEG](https://seg.inf.unibe.ch/). "
 			},
 			{
 				"__type" : "textSnippet",
