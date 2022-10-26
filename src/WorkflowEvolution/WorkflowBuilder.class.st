@@ -45,8 +45,11 @@ WorkflowBuilder >> directory: aDirectory [
 
 { #category : #accessing }
 WorkflowBuilder >> events [
-	^ (self ast members detect: [ :n | n name value = '"on"' ]) value members
-		collect: [ :each | each name value allButFirst allButLast ]
+	| eventAST events |
+	eventAST := self ast members detect: [ :n | n name value = '"on"' ].
+	events := OrderedCollection new.
+	events addAll: eventAST.
+	^ events
 ]
 
 { #category : #accessing }
@@ -81,6 +84,7 @@ WorkflowBuilder >> workflow [
 	workflow := WEWorkflow new.
 	workflow name: self name.
 	workflow jobs: self jobs.
+	
 
 	^ workflow
 ]

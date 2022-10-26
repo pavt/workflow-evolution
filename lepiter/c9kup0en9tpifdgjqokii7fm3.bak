@@ -150,6 +150,40 @@
 				"code" : "WorkflowBasicExamples new visualizeExampleJSON workflow name"
 			},
 			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T16:57:33.013697+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T16:57:43.198919+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "1aY7+1KoDQCcEtS8DmIxEA=="
+				},
+				"code" : "WorkflowBasicExamples new visualizeExampleJSON workflow events"
+			},
+			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -387,7 +421,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T01:32:00.605356+02:00"
+						"dateAndTimeString" : "2022-10-26T16:57:05.463114+02:00"
 					}
 				},
 				"uid" : {
@@ -397,7 +431,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Since the Job is a object with some content, we'll dig into it: **Pending: get steps ** and inside *steps* we n"
+				"string" : "Since the Job is a object with some content, we'll dig into it: **todo: get steps ** and inside *steps* we need the *uses* (the uses have the actions)"
 			},
 			{
 				"__type" : "pharoSnippet",

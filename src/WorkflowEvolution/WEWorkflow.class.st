@@ -21,21 +21,19 @@ WEWorkflow >> addJob: aJob [
 
 { #category : #accessing }
 WEWorkflow >> events [
-
 	^ events
 ]
 
 { #category : #accessing }
-WEWorkflow >> events: anObject [
+WEWorkflow >> events: aEventCollection [
 
-	events := anObject
+	events := aEventCollection
 ]
 
 { #category : #accessing }
 WEWorkflow >> initialize [
 	events:= OrderedCollection new.
 	jobs:= OrderedCollection new.
-	
 ]
 
 { #category : #accessing }

@@ -566,14 +566,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-26T14:23:18.008468+02:00"
+						"dateAndTimeString" : "2022-10-26T16:06:09.916427+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "UykKeU2oDQCtliRFCsXJEw=="
 				},
-				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow "
+				"code" : "ast := WorkflowBasicExamples new visualizeExampleJSON ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -600,14 +600,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-26T14:46:34.884212+02:00"
+						"dateAndTimeString" : "2022-10-26T16:47:44.183762+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "XAueRk+oDQCIxrc7BwKi6A=="
 				},
-				"code" : "jobs\r\t| jobAST jobs |\r\tjobAST := (self ast members detect: [ :n | n name value = '\"jobs\"' ]) value\r\t\t\tmembers.\r\tjobs := OrderedCollection new.\r\tjobs addAll: jobAST.\r\t^ jobs"
+				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow "
 			},
 			{
 				"__type" : "textSnippet",

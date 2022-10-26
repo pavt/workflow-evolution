@@ -26,11 +26,6 @@ WorkflowBasicExamples >> nameExample [
 ]
 
 { #category : #accessing }
-WorkflowBasicExamples >> newMethod [
-	"This is a new method"
-]
-
-{ #category : #accessing }
 WorkflowBasicExamples >> visualizeClassDiagramExample [
 
 	<gtExample>
