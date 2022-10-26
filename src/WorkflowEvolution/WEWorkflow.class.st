@@ -3,10 +3,35 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'name',
-		'jobs'
+		'jobs',
+		'events'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
+
+{ #category : #accessing }
+WEWorkflow >> addEvent: anEvent [
+	self events add: anEvent
+]
+
+{ #category : #accessing }
+WEWorkflow >> events [
+
+	^ events
+]
+
+{ #category : #accessing }
+WEWorkflow >> events: anObject [
+
+	events := anObject
+]
+
+{ #category : #accessing }
+WEWorkflow >> initialize [
+	events:= OrderedCollection new.
+	jobs:= OrderedCollection new.
+	
+]
 
 { #category : #accessing }
 WEWorkflow >> jobs [

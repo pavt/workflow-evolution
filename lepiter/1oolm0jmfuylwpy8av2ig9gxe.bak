@@ -363,6 +363,40 @@
 				"code" : "visitor workflow "
 			},
 			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T09:47:14.186822+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T09:47:14.186822+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rp5P+EyoDQCtiAmJCsXJEw=="
+				},
+				"code" : ""
+			},
+			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -424,7 +458,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T13:29:22.289327+02:00"
+						"dateAndTimeString" : "2022-10-25T13:29:30.31224+02:00"
 					}
 				},
 				"uid" : {
@@ -434,7 +468,109 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then we add dedicated visitors {{gtClass:name=WEEventASTVisitor}} and {{gtClass:name=WEJobASTVisitor}} to buil"
+				"string" : "Then we add dedicated visitors {{gtClass:name=WEEventASTVisitor}} and {{gtClass:name=WEJobASTVisitor}} to build the events and jobs to add to the workflow."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T09:47:34.329302+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T09:47:40.499365+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "BviC+UyoDQCtiSp9CsXJEw=="
+				},
+				"code" : "visitor eventsAST "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T09:52:36.852659+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T09:52:57.362935+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "xBuLC02oDQCtipIICsXJEw=="
+				},
+				"code" : "visitor eventsAST value members"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T10:23:13.895745+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T10:23:14.7946+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UykKeU2oDQCtliRFCsXJEw=="
+				},
+				"code" : "visitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor"
 			},
 			{
 				"__type" : "textSnippet",

@@ -92,6 +92,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T10:30:20.00139+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T10:30:20.00139+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "h/pvkk2oDQCtnXKvCsXJEw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "** Workflows** are written in YAML. The workflow refers to the .yml(YAML) file you will create in your repository to define the specific automation procedures, instructions and actions you want to run after an event is triggered or scheduled."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2022-10-25T20:21:39.62324+02:00"
 					}
 				},
@@ -103,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T20:34:01.13559+02:00"
+						"dateAndTimeString" : "2022-10-26T10:30:39.16389+02:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +150,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "** Workflows** are written in YAML. The workflow refers to the .yml(YAML) file you will create in your repository to define the specific automation procedures, instructions and actions you want to run after an event is triggered or scheduled.\n\nIt is typically used to build, test and deploy your projects on GitHub. Also, it is usually stored in your .github/workflows/ directory."
+				"string" : "It is typically used to build, test and deploy your projects on GitHub. Also, it is usually stored in your .github/workflows/ directory."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T10:30:43.247898+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T10:31:20.753504+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+qvBk02oDQCtoPSuCsXJEw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "A Workflow is modeled by the {{gtClass:name=WEWorkflow}} class."
 			},
 			{
 				"__type" : "textSnippet",
@@ -151,6 +225,83 @@
 					"__type" : "textStyle"
 				},
 				"string" : "**Events** are the workflow triggers that cause a workflow to run. For example, every time someone creates a pull request (the *event*) for a repository, you can automatically run a command that executes a software testing script."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T10:34:28.913305+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T10:35:00.345931+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "1BRGoU2oDQCtvUkmCsXJEw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Events are modeled by the {{gtClass:name=WEEvent}}  class."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T10:36:08.767652+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T10:36:08.767652+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ycQ5p02oDQCtwer2CsXJEw=="
+				},
+				"exampleSelector" : "visualizeClassDiagramExample",
+				"previewHeight" : 200,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "WorkflowBasicExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : false,
+				"noCode" : false
 			},
 			{
 				"__type" : "textSnippet",
@@ -301,43 +452,6 @@
 				"string" : "**Workflow ilustration** "
 			},
 			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T20:47:53.149427+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T20:47:53.149427+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "M9AiFUKoDQC10PcwAORzSg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
 				"__type" : "pictureSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -362,14 +476,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T20:45:03.274925+02:00"
+						"dateAndTimeString" : "2022-10-25T20:52:22.704068+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "uM4KBEKoDQC1xfH8AORzSg=="
 				},
-				"url" : "attachments/4eohdn89uomgyviq72ubja8r2/workflow-ilustration.png"
+				"url" : "attachments/4eohdn6g4lhnqsokwauhe81jv/workflow-ilustration.png"
 			}
 		]
 	},
