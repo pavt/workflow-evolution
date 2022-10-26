@@ -15,6 +15,11 @@ WEWorkflow >> addEvent: anEvent [
 ]
 
 { #category : #accessing }
+WEWorkflow >> addJob: aJob [
+	self jobs add: aJob
+]
+
+{ #category : #accessing }
 WEWorkflow >> events [
 
 	^ events

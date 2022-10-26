@@ -208,7 +208,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T11:06:36.001149+02:00"
+						"dateAndTimeString" : "2022-10-26T14:23:18.004081+02:00"
 					}
 				},
 				"uid" : {
@@ -218,7 +218,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "It is only used by {{gtClass:name=JSONParseNodeVisitor}}.  Currently there are no references or subcalsses."
+				"string" : "It is only used by {{gtClass:name=JSONParseNodeVisitor}}.  Currently there are no references or subclasses."
 			},
 			{
 				"__type" : "textSnippet",
@@ -282,7 +282,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T11:30:23.297391+02:00"
+						"dateAndTimeString" : "2022-10-26T12:50:39.373076+02:00"
 					}
 				},
 				"uid" : {
@@ -361,40 +361,6 @@
 					"uidString" : "jA0PSDqoDQCKWuZmC/54HA=="
 				},
 				"code" : "visitor workflow "
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-26T09:47:14.186822+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-26T09:47:14.186822+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "rp5P+EyoDQCtiAmJCsXJEw=="
-				},
-				"code" : ""
 			},
 			{
 				"__type" : "textSnippet",
@@ -495,14 +461,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-26T09:47:40.499365+02:00"
+						"dateAndTimeString" : "2022-10-26T15:17:17.444766+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "BviC+UyoDQCtiSp9CsXJEw=="
 				},
-				"code" : "visitor eventsAST "
+				"code" : "visitor := WEEventASTVisitor new."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -518,7 +484,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-26T09:52:36.852659+02:00"
+						"dateAndTimeString" : "2022-10-26T15:17:25.429302+02:00"
 					}
 				},
 				"editEmail" : {
@@ -529,14 +495,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-26T09:52:57.362935+02:00"
+						"dateAndTimeString" : "2022-10-26T15:17:50.89648+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "xBuLC02oDQCtipIICsXJEw=="
+					"uidString" : "SDAnlVGoDQCbKzEYDmIxEA=="
 				},
-				"code" : "visitor eventsAST value members"
+				"code" : "visitor := WEJobASTVisitor new."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T15:18:11.832276+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T15:19:06.017539+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Og6/l1GoDQCbLiRUDmIxEA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Now we have a *worflow* with a name, *events* and *jobs*. "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -563,14 +566,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-26T10:23:40.845245+02:00"
+						"dateAndTimeString" : "2022-10-26T14:23:18.008468+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "UykKeU2oDQCtliRFCsXJEw=="
 				},
-				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow"
+				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T12:32:17.883952+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-10-26T14:46:34.884212+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "XAueRk+oDQCIxrc7BwKi6A=="
+				},
+				"code" : "jobs\r\t| jobAST jobs |\r\tjobAST := (self ast members detect: [ :n | n name value = '\"jobs\"' ]) value\r\t\t\tmembers.\r\tjobs := OrderedCollection new.\r\tjobs addAll: jobAST.\r\t^ jobs"
 			},
 			{
 				"__type" : "textSnippet",

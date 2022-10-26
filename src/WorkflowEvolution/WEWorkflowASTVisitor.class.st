@@ -3,7 +3,8 @@ Class {
 	#superclass : #JSONParseNodeVisitor,
 	#instVars : [
 		'workflow',
-		'eventsAST'
+		'eventsAST',
+		'jobsAST'
 	],
 	#category : #'WorkflowEvolution-Visitor'
 }
@@ -26,11 +27,23 @@ WEWorkflowASTVisitor >> initialize [
 ]
 
 { #category : #accessing }
+WEWorkflowASTVisitor >> jobsAST [
+
+	^ jobsAST
+]
+
+{ #category : #accessing }
+WEWorkflowASTVisitor >> jobsAST: anObject [
+
+	jobsAST := anObject
+]
+
+{ #category : #accessing }
 WEWorkflowASTVisitor >> visitObject: anASTObjectNode [
 	"The AST root is an object node with members.
 	We want to extract the name, the steps and the jobs."
 
-	| members workflowNameAST eventVisitor |
+	| members workflowNameAST eventVisitor jobVisitor |
 	members := anASTObjectNode members.	"Is this true? Can there be more members?"
 	self assert: members size equals: 3.
 
@@ -45,7 +58,16 @@ WEWorkflowASTVisitor >> visitObject: anASTObjectNode [
 			eventVisitor := WEEventASTVisitor new.
 			each acceptVisitor: eventVisitor.
 			self workflow addEvent: eventVisitor event
-			 ]
+			 ].
+			 
+	jobsAST := members detect: [ :n2 | n2 name value = '"jobs"'].
+	jobsAST value members 
+		do: [:each |
+			jobVisitor := WEJobASTVisitor new.
+			each acceptVisitor: jobVisitor.
+			self workflow addJob: jobVisitor job
+			].
+	
 ]
 
 { #category : #accessing }
