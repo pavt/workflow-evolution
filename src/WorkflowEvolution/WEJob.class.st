@@ -9,6 +9,16 @@ Class {
 }
 
 { #category : #accessing }
+WEJob >> addStep: aStep [
+	self steps add: aStep
+]
+
+{ #category : #accessing }
+WEJob >> initialize [
+	steps := OrderedCollection new
+]
+
+{ #category : #accessing }
 WEJob >> job [
 
 	|job|
@@ -24,7 +34,19 @@ WEJob >> name [
 ]
 
 { #category : #accessing }
-WEJob >> name: anObject [
+WEJob >> name: aString [
 
-	name := anObject
+	name := aString
+]
+
+{ #category : #accessing }
+WEJob >> steps [
+
+	^ steps
+]
+
+{ #category : #accessing }
+WEJob >> steps: anObject [
+
+	steps := anObject
 ]

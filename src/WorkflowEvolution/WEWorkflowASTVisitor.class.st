@@ -43,7 +43,7 @@ WEWorkflowASTVisitor >> visitObject: anASTObjectNode [
 	"The AST root is an object node with members.
 	We want to extract the name, the steps and the jobs."
 
-	| members workflowNameAST eventVisitor jobVisitor |
+	| members workflowNameAST eventVisitor jobVisitor stepVisitor jobNameAST |
 	members := anASTObjectNode members.	"Is this true? Can there be more members?"
 	self assert: members size equals: 3.
 
@@ -55,6 +55,7 @@ WEWorkflowASTVisitor >> visitObject: anASTObjectNode [
 	Open question: do these ASTs contain just one or multiple events, respectively jobs? This will have an impact on the design."
 
 	"answer: some of them do not have a collection of events"
+	
 	eventsAST := members detect: [ :n1 | n1 name value = '"on"' ].	"spawn a visit for each event AST"
 	eventsAST value members
 		do: [ :each | 
@@ -63,12 +64,14 @@ WEWorkflowASTVisitor >> visitObject: anASTObjectNode [
 			self workflow addEvent: eventVisitor event ].
 
 	
-	jobsAST := members detect: [ :n2 | n2 name value = '"jobs"' ].
+	jobsAST := members detect: [ :n2 | n2 name value = '"jobs"' ]. 
 	jobsAST value members
 		do: [ :each | 
 			jobVisitor := WEJobASTVisitor new.
 			each acceptVisitor: jobVisitor.
-			self workflow addJob: jobVisitor job ]
+			self workflow addJob: jobVisitor job ].
+			
+	
 ]
 
 { #category : #accessing }
