@@ -53,6 +53,7 @@ WEJobASTVisitor >> visitMember: aJobMemberMemberNode [
 	
 	stepsAST := members detect: [ :n1 | n1  name value  = '"steps"' ].
 
+	"problem: need to cut the content of steps AST?"
 	stepsAST  name
 		do: [ :each | 
 			stepVisitor := WEStepASTVisitor new.
