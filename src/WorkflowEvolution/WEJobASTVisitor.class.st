@@ -46,6 +46,17 @@ WEJobASTVisitor >> stepsAST: anObject [
 { #category : #accessing }
 WEJobASTVisitor >> visitMember: aJobMemberMemberNode [
 
-	job name: aJobMemberMemberNode  name value withoutQuoting
+	| members stepVisitor |
+	
+	members:= aJobMemberMemberNode value members  .
+	job name: aJobMemberMemberNode  name value withoutQuoting.
+	
+	stepsAST := members detect: [ :n1 | n1  name value  = '"steps"' ].
+
+	stepsAST  name
+		do: [ :each | 
+			stepVisitor := WEStepASTVisitor new.
+			each acceptVisitor: stepVisitor.
+			self job addStep: stepVisitor event ].
 	
 ]
