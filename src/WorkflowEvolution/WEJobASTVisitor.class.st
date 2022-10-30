@@ -44,12 +44,12 @@ WEJobASTVisitor >> visitMember: aJobMemberMemberNode [
 
 	| members test |
 	
-	members:= aJobMemberMemberNode value members value.
+	members:= aJobMemberMemberNode value members.
 	test:= aJobMemberMemberNode value members .
 	
 	job name: aJobMemberMemberNode  name value withoutQuoting.
 	
-	job runner: (members detect: [:n | n  name value = '"runs-on"']) name value withoutQuoting.
+	job runner: (members detect: [:n | n  name value = '"runs-on"']) value value value withoutQuoting.
 	
 	
 
