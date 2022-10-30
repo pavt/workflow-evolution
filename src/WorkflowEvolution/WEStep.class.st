@@ -1,6 +1,6 @@
 Class {
 	#name : #WEStep,
-	#superclass : #Object,
+	#superclass : #WEModelEntity,
 	#instVars : [
 		'name'
 	],

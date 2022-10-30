@@ -3,7 +3,8 @@ Class {
 	#superclass : #JSONParseNodeVisitor,
 	#instVars : [
 		'job',
-		'stepsAST'
+		'stepsAST',
+		'runner'
 	],
 	#category : #'WorkflowEvolution-Visitor'
 }
@@ -27,11 +28,6 @@ WEJobASTVisitor >> job: anObject [
 ]
 
 { #category : #accessing }
-WEJobASTVisitor >> newMethod [
-	"This is a new method"
-]
-
-{ #category : #accessing }
 WEJobASTVisitor >> stepsAST [
 
 	^ stepsAST
@@ -46,18 +42,18 @@ WEJobASTVisitor >> stepsAST: anObject [
 { #category : #accessing }
 WEJobASTVisitor >> visitMember: aJobMemberMemberNode [
 
-	| members stepVisitor |
+	| members test |
 	
-	members:= aJobMemberMemberNode value members  .
+	members:= aJobMemberMemberNode value members value.
+	test:= aJobMemberMemberNode value members .
+	
 	job name: aJobMemberMemberNode  name value withoutQuoting.
 	
-	stepsAST := members detect: [ :n1 | n1  name value  = '"steps"' ].
+	job runner: (members detect: [:n | n  name value = '"runs-on"']) name value withoutQuoting.
+	
+	
 
 	"problem: need to cut the content of steps AST?"
-	stepsAST  name
-		do: [ :each | 
-			stepVisitor := WEStepASTVisitor new.
-			each acceptVisitor: stepVisitor.
-			self job addStep: stepVisitor event ].
+	
 	
 ]

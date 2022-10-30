@@ -1,12 +1,18 @@
 Class {
 	#name : #WEJob,
-	#superclass : #Object,
+	#superclass : #WEModelEntity,
 	#instVars : [
 		'name',
-		'steps'
+		'steps',
+		'runner'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
+
+{ #category : #accessing }
+WEJob >> addRunner: aRunner [
+	self runner add: aRunner
+]
 
 { #category : #accessing }
 WEJob >> addStep: aStep [
@@ -37,6 +43,18 @@ WEJob >> name [
 WEJob >> name: aString [
 
 	name := aString
+]
+
+{ #category : #accessing }
+WEJob >> runner [
+
+	^ runner
+]
+
+{ #category : #accessing }
+WEJob >> runner: aString [
+
+	runner := aString
 ]
 
 { #category : #accessing }

@@ -1,6 +1,6 @@
 Class {
 	#name : #WEEvent,
-	#superclass : #Object,
+	#superclass : #WEModelEntity,
 	#instVars : [
 		'name'
 	],
