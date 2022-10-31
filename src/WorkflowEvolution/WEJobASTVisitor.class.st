@@ -57,8 +57,7 @@ WEJobASTVisitor >> visitMember: aJobMemberMemberNode [
 
 	stepsAST := ( members detect: [ :n | n name value = '"steps"' ]) .  
 	
-	"why I cannot visit the stepsAST?"
-	stepsAST value
+	stepsAST value values
 		do: [ :each | 
 			stepVisitor := WEStepASTVisitor new.
 			each acceptVisitor: stepVisitor.

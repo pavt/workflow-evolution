@@ -1,6 +1,6 @@
 Class {
 	#name : #WEStepASTVisitor,
-	#superclass : #Object,
+	#superclass : #JSONParseNodeVisitor,
 	#instVars : [
 		'step'
 	],
