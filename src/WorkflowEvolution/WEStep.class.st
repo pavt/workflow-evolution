@@ -2,21 +2,26 @@ Class {
 	#name : #WEStep,
 	#superclass : #WEModelEntity,
 	#instVars : [
-		'name'
+		'content'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
 
 { #category : #accessing }
-WEStep >> name [
+WEStep >> content [
 
-	^ name
+	^ content
 ]
 
 { #category : #accessing }
-WEStep >> name: anObject [
+WEStep >> content: anObject [
 
-	name := anObject
+	content := anObject
+]
+
+{ #category : #accessing }
+WEStep >> initialize [
+	content := OrderedCollection new
 ]
 
 { #category : #accessing }

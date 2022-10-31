@@ -28,6 +28,11 @@ WEJobASTVisitor >> job: anObject [
 ]
 
 { #category : #accessing }
+WEJobASTVisitor >> newMethod [
+	"This is a new method"
+]
+
+{ #category : #accessing }
 WEJobASTVisitor >> stepsAST [
 
 	^ stepsAST
@@ -42,18 +47,21 @@ WEJobASTVisitor >> stepsAST: anObject [
 { #category : #accessing }
 WEJobASTVisitor >> visitMember: aJobMemberMemberNode [
 
-	| members test |
+	| members stepVisitor |
 	
 	members:= aJobMemberMemberNode value members.
-	test:= aJobMemberMemberNode value members .
 	
-	job name: aJobMemberMemberNode  name value withoutQuoting.
+	job name: aJobMemberMemberNode name value withoutQuoting.
 	
 	job runner: (members detect: [:n | n  name value = '"runs-on"']) value value value withoutQuoting.
-	
-	
 
-	"problem: need to cut the content of steps AST?"
+	stepsAST := ( members detect: [ :n | n name value = '"steps"' ]) .  
 	
+	"why I cannot visit the stepsAST?"
+	stepsAST value
+		do: [ :each | 
+			stepVisitor := WEStepASTVisitor new.
+			each acceptVisitor: stepVisitor.
+			self job addStep: stepVisitor ].
 	
 ]
