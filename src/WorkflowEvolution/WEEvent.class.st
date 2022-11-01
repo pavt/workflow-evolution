@@ -1,9 +1,6 @@
 Class {
 	#name : #WEEvent,
 	#superclass : #WEModelEntity,
-	#instVars : [
-		'name'
-	],
 	#category : #'WorkflowEvolution-Model'
 }
 
@@ -19,11 +16,5 @@ WEEvent >> event [
 { #category : #accessing }
 WEEvent >> name [
 
-	^ name
-]
-
-{ #category : #accessing }
-WEEvent >> name: anObject [
-
-	name := anObject
+	^ (self ast name) value value value withoutQuoting
 ]
