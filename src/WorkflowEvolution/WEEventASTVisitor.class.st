@@ -2,7 +2,8 @@ Class {
 	#name : #WEEventASTVisitor,
 	#superclass : #JSONParseNodeVisitor,
 	#instVars : [
-		'event'
+		'event',
+		'eventsAST'
 	],
 	#category : #'WorkflowEvolution-Visitor'
 }
@@ -17,6 +18,18 @@ WEEventASTVisitor >> event [
 WEEventASTVisitor >> event: anObject [
 
 	event := anObject
+]
+
+{ #category : #accessing }
+WEEventASTVisitor >> eventsAST [
+
+	^ eventsAST
+]
+
+{ #category : #accessing }
+WEEventASTVisitor >> eventsAST: anObject [
+
+	eventsAST := anObject
 ]
 
 { #category : #accessing }

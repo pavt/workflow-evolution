@@ -28,11 +28,6 @@ WEJobASTVisitor >> job: anObject [
 ]
 
 { #category : #accessing }
-WEJobASTVisitor >> newMethod [
-	"This is a new method"
-]
-
-{ #category : #accessing }
 WEJobASTVisitor >> stepsAST [
 
 	^ stepsAST

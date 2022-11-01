@@ -634,14 +634,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-28T01:23:40.052211+02:00"
+						"dateAndTimeString" : "2022-11-01T09:16:41.203547+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "X/DRAW6oDQClr5GpCz6SWw=="
 				},
-				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow jobs"
+				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow name"
 			},
 			{
 				"__type" : "textSnippet",

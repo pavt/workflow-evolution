@@ -29,6 +29,6 @@ WEStep >> step [
 
 	|step|
 	step:= WEStep new.
-	step name: self name.
+	step content: self content.
 	^ step
 ]

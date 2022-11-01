@@ -2,7 +2,6 @@ Class {
 	#name : #WEWorkflow,
 	#superclass : #WEModelEntity,
 	#instVars : [
-		'name',
 		'jobs',
 		'events'
 	],
@@ -25,9 +24,9 @@ WEWorkflow >> events [
 ]
 
 { #category : #accessing }
-WEWorkflow >> events: aEventCollection [
+WEWorkflow >> events: anEventCollection [
 
-	events := aEventCollection
+	events := anEventCollection
 ]
 
 { #category : #accessing }
@@ -50,10 +49,7 @@ WEWorkflow >> jobs: aJobCollection [
 
 { #category : #accessing }
 WEWorkflow >> name [
-	^ name
-]
 
-{ #category : #accessing }
-WEWorkflow >> name: aString [
-	name := aString
+	^ (self ast value members  detect: [ :n | n name value = '"name"' ]) value value value withoutQuoting.
+
 ]

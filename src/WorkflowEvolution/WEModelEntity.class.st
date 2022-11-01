@@ -2,23 +2,10 @@ Class {
 	#name : #WEModelEntity,
 	#superclass : #Object,
 	#instVars : [
-		'ast',
-		'aJob'
+		'ast'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
-
-{ #category : #accessing }
-WEModelEntity >> aJob [
-
-	^ aJob
-]
-
-{ #category : #accessing }
-WEModelEntity >> aJob: anObject [
-
-	aJob := anObject
-]
 
 { #category : #accessing }
 WEModelEntity >> ast [
