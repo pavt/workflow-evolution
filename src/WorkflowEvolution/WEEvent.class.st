@@ -15,6 +15,7 @@ WEEvent >> event [
 
 { #category : #accessing }
 WEEvent >> name [
-
-	^ (self ast name) value value value withoutQuoting
+	^ (self ast isKindOf: JSONStringNode)
+		ifTrue: [ self ast value value withoutQuoting ]
+		ifFalse: [ self ast name value value value withoutQuoting ]
 ]

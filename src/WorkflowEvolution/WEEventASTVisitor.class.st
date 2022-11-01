@@ -40,6 +40,10 @@ WEEventASTVisitor >> initialize [
 
 { #category : #accessing }
 WEEventASTVisitor >> visitMember: aEventMemberNode [
-
 	self event ast: aEventMemberNode
+]
+
+{ #category : #accessing }
+WEEventASTVisitor >> visitString: aStringNode [
+	self event ast: aStringNode
 ]

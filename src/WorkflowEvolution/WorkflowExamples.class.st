@@ -5,6 +5,17 @@ Class {
 }
 
 { #category : #accessing }
+WorkflowExamples >> ciExample [
+	<gtExample>
+	| workflow |
+	workflow := WEWorkflow forExample: 'ci'.
+	self assert: workflow name equals: 'CI'.
+	self assert: workflow events size equals: 1.
+	self assert: workflow jobs size equals: 4.
+	^ workflow
+]
+
+{ #category : #accessing }
 WorkflowExamples >> visualizeClassDiagramExample [
 	<gtExample>
 	| workflow |
