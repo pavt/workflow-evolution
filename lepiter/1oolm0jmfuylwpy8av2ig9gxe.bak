@@ -674,14 +674,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-01T17:05:05.303912+01:00"
+									"dateAndTimeString" : "2022-11-01T17:05:22.495416+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "g/HQn8yoDQC8WmLWCADCWg=="
 							},
-							"code" : ""
+							"code" : "WorkflowExamples new visualizeClassDiagramExample"
 						}
 					]
 				},
