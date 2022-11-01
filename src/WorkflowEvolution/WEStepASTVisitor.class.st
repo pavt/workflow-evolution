@@ -24,3 +24,12 @@ WEStepASTVisitor >> step: anObject [
 
 	step := anObject
 ]
+
+{ #category : #accessing }
+WEStepASTVisitor >> visitMember: aEventMemberNode [
+
+	self step ast: aEventMemberNode.
+
+	step content: aEventMemberNode value
+
+]

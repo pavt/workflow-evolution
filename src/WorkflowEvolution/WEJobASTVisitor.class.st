@@ -44,6 +44,8 @@ WEJobASTVisitor >> visitMember: aJobMemberMemberNode [
 
 	| members stepVisitor |
 	
+	self job ast: aJobMemberMemberNode.
+	
 	members:= aJobMemberMemberNode value members.
 	
 	job name: aJobMemberMemberNode name value withoutQuoting.

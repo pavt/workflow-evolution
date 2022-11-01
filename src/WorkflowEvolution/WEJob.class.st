@@ -2,9 +2,9 @@ Class {
 	#name : #WEJob,
 	#superclass : #WEModelEntity,
 	#instVars : [
-		'name',
 		'steps',
-		'runner'
+		'runner',
+		'name'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
@@ -35,14 +35,14 @@ WEJob >> job [
 
 { #category : #accessing }
 WEJob >> name [
+
 	^ name
-		
 ]
 
 { #category : #accessing }
-WEJob >> name: aString [
+WEJob >> name: anObject [
 
-	name := aString
+	name := anObject
 ]
 
 { #category : #accessing }
