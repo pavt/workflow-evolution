@@ -9,7 +9,26 @@ Class {
 }
 
 { #category : #accessing }
-WEWorkflow class >> for: anObject [ 
+WEWorkflow class >> astFor: aLocalPath [
+	| ast jsonFile |
+	jsonFile := self exampleFolder / (aLocalPath , '.json').
+	ast := JSONParser parse: jsonFile contents.
+	^ ast
+]
+
+{ #category : #accessing }
+WEWorkflow class >> exampleFolder [
+	^ FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'
+		/ 'workflow-evolution' / 'yml-json-examples'
+]
+
+{ #category : #accessing }
+WEWorkflow class >> forExample: aLocalPath [
+	| ast visitor |
+	ast := self astFor: aLocalPath.
+	visitor := WEWorkflowASTVisitor new.
+	ast acceptVisitor: visitor.
+	^ visitor workflow
 ]
 
 { #category : #accessing }
@@ -31,6 +50,26 @@ WEWorkflow >> events [
 WEWorkflow >> events: anEventCollection [
 
 	events := anEventCollection
+]
+
+{ #category : #accessing }
+WEWorkflow >> gtEventsFor: aView [
+	<gtView>
+	^ aView columnedList
+		title: 'Events';
+		priority: 30;
+		items: [ self events ];
+		column: 'Events' text: [ :event | event name ]
+]
+
+{ #category : #accessing }
+WEWorkflow >> gtJobsFor: aView [
+	<gtView>
+	^ aView columnedList
+		title: 'Jobs';
+		priority: 20;
+		items: [ self jobs ];
+		column: 'Jobs' text: [ :job | job name ]
 ]
 
 { #category : #accessing }

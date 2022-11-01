@@ -545,7 +545,42 @@
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-11-01T16:47:15.022949+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-11-01T16:56:11.976478+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "E9AFYMyoDQC8ClJXCADCWg=="
+							},
+							"code" : "WEWorkflow forExample: 'example'"
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -579,7 +614,76 @@
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-11-01T16:55:45.286187+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-11-01T16:55:48.474618+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "QsBvfsyoDQC8D91TCADCWg=="
+							},
+							"code" : "WEWorkflow forExample: 'visualizeClassDiagram'"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-11-01T17:05:05.303912+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-11-01T17:05:05.303912+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "g/HQn8yoDQC8WmLWCADCWg=="
+							},
+							"code" : ""
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -608,6 +712,74 @@
 					"uidString" : "XAueRk+oDQCIxrc7BwKi6A=="
 				},
 				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-01T16:53:33.902233+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-01T16:53:41.061529+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "uP2adsyoDQC8DQLgCADCWg=="
+				},
+				"code" : "WEWorkflow exampleFolder "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-01T16:53:54.106176+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-01T16:54:06.48328+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "V0fPd8yoDQC8DtpzCADCWg=="
+				},
+				"code" : "WEWorkflow astFor: 'visualizeClassDiagram' "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -668,14 +840,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-01T15:43:50.298483+01:00"
+						"dateAndTimeString" : "2022-11-01T15:56:28.885996+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "67gkRcuoDQC2qHdjCC6U2A=="
 				},
-				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow ast"
+				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow"
 			},
 			{
 				"__type" : "textSnippet",

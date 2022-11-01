@@ -1,7 +1,7 @@
 Class {
 	#name : #WorkflowBasicExamples,
 	#superclass : #Object,
-	#category : #'WorkflowEvolution-Examples'
+	#category : #'WorkflowEvolution-Builder'
 }
 
 { #category : #accessing }
