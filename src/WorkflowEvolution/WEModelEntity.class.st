@@ -18,3 +18,10 @@ WEModelEntity >> ast: anObject [
 
 	ast := anObject
 ]
+
+{ #category : #accessing }
+WEModelEntity >> gtExploreFor: aView [
+	<gtView>
+	
+	 ^ self ast gtExploreFor: aView
+]

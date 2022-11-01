@@ -37,3 +37,9 @@ WEEventASTVisitor >> initialize [
 
 	event:= WEEvent new.
 ]
+
+{ #category : #accessing }
+WEEventASTVisitor >> visitMember: aEventMemberNode [
+
+	self event ast: aEventMemberNode
+]

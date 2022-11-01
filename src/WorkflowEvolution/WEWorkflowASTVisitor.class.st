@@ -55,16 +55,17 @@ WEWorkflowASTVisitor >> visitObject: anASTObjectNode [
 
 	"answer: some of them do not have a collection of events"
 	
-	"eventsAST := (members detect: [ :n1 | n1 name value = '""' ]) value members.
+	eventsAST := (members detect: [ :n1 | n1 name value = '"on"' ]) value members.
 
 	eventsAST   value
 		do: [ :each | 
 			eventVisitor := WEEventASTVisitor new.
+			
 			each acceptVisitor: eventVisitor.
 			self workflow addEvent: eventVisitor event. 
 			].
 			
-	
+	"
 	jobsAST := members detect: [ :n2 | n2 name value = '""' ]. 
 	jobsAST value members
 		do: [ :each | 
