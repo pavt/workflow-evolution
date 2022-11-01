@@ -9,6 +9,10 @@ Class {
 }
 
 { #category : #accessing }
+WEWorkflow class >> for: anObject [ 
+]
+
+{ #category : #accessing }
 WEWorkflow >> addEvent: anEvent [
 	self events add: anEvent
 ]

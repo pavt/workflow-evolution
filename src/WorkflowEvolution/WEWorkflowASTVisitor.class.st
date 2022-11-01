@@ -40,36 +40,33 @@ WEWorkflowASTVisitor >> jobsAST: anObject [
 
 { #category : #accessing }
 WEWorkflowASTVisitor >> visitObject: anASTObjectNode [
-	
 	| members eventVisitor jobVisitor |
-	
 	members := anASTObjectNode members.	"Is this true? Can there be more members?"
-	
 	self assert: members size equals: 3.
 
+	self workflow ast: anASTObjectNode.
 
-	self workflow ast: anASTObjectNode.	
-	
-	"Now we should visit the events and jobs ASTs with their own dedicated visitors.
-	Open question: do these ASTs contain just one or multiple events, respectively jobs? This will have an impact on the design."	"answer: some of them do not have a collection of events"
+	eventsAST := members detect: [ :n1 | n1 name value = '"on"' ].
 
-	eventsAST := (members detect: [ :n1 | n1 name value = '"on"' ]) .
-	
-	
-	eventsAST value members
-		do: [ :each | 
-			eventVisitor := WEEventASTVisitor new.
-			each acceptVisitor: eventVisitor.
-			self workflow addEvent: eventVisitor event ].
+	(eventsAST value isKindOf: JSONStringNode)
+		ifTrue: [ eventVisitor := WEEventASTVisitor new.
+			eventsAST value acceptVisitor: eventVisitor.
+			self workflow addEvent: eventVisitor event ]
+		ifFalse: [ self assert: (eventsAST value isKindOf: JSONObjectNode).
+			eventsAST value members
+				do: [ :each | 
+					eventVisitor := WEEventASTVisitor new.
+					each acceptVisitor: eventVisitor.
+					self workflow addEvent: eventVisitor event ] ].
 
 
 	jobsAST := members detect: [ :n2 | n2 name value = '"jobs"' ].
-	
+
 	jobsAST value members
 		do: [ :each | 
 			jobVisitor := WEJobASTVisitor new.
 			each acceptVisitor: jobVisitor.
-			self workflow addJob: jobVisitor job ].
+			self workflow addJob: jobVisitor job ]
 ]
 
 { #category : #accessing }
