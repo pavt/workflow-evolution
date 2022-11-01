@@ -1,11 +1,11 @@
 Class {
-	#name : #WorkflowExamples,
+	#name : #WEWorkflowExamples,
 	#superclass : #Object,
 	#category : #'WorkflowEvolution-Examples'
 }
 
 { #category : #accessing }
-WorkflowExamples >> ciExample [
+WEWorkflowExamples >> ciExample [
 	<gtExample>
 	| workflow |
 	workflow := WEWorkflow forExample: 'ci'.
@@ -16,7 +16,7 @@ WorkflowExamples >> ciExample [
 ]
 
 { #category : #accessing }
-WorkflowExamples >> visualizeClassDiagramExample [
+WEWorkflowExamples >> visualizeClassDiagramExample [
 	<gtExample>
 	| workflow |
 	workflow := WEWorkflow forExample: 'visualizeClassDiagram'.
