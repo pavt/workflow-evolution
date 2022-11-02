@@ -8,8 +8,15 @@ Class {
 }
 
 { #category : #accessing }
+WEStep >> addProperties: aproperties [ 
+    
+    properties := Dictionary new.
+    
+]
+
+{ #category : #accessing }
 WEStep >> initialize [
-	properties := OrderedCollection new
+	properties := Dictionary new.
 ]
 
 { #category : #accessing }

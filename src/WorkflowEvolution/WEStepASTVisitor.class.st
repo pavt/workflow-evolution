@@ -39,16 +39,18 @@ WEStepASTVisitor >> step: anObject [
 ]
 
 { #category : #accessing }
-WEStepASTVisitor >> visitMember: anEventMemberNode [
-	
-	
-	self step ast: anEventMemberNode.
-	
-	"step properties: anEventMemberNode value."
-	
-	"propertiesAST := (aEventMemberNode value)."
-	
- 
+WEStepASTVisitor >> visitObject: aStepObjectNode [
+	| propertiesVisitor |
+	self step ast: aStepObjectNode.
+
+	propertiesAST := aStepObjectNode value.
 
 
+	propertiesAST value members
+		do: [ :each | 
+			propertiesVisitor := WEStepASTVisitor new.
+			each acceptVisitor: propertiesVisitor.
+			self halt.
+			self step addProperties: propertiesVisitor value].
+					
 ]

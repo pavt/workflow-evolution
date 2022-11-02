@@ -840,14 +840,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-02T11:58:56.049855+01:00"
+						"dateAndTimeString" : "2022-11-02T15:50:17.122164+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "67gkRcuoDQC2qHdjCC6U2A=="
 				},
-				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow"
+				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow "
 			},
 			{
 				"__type" : "pharoSnippet",
