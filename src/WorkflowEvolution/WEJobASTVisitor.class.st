@@ -59,5 +59,7 @@ WEJobASTVisitor >> visitMember: aJobMemberMemberNode [
 			stepVisitor := WEStepASTVisitor new.
 			each acceptVisitor: stepVisitor.
 			self job addStep: stepVisitor ].
+			
+ 
 	
 ]

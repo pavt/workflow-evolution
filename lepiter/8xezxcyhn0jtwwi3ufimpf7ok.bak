@@ -214,7 +214,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T20:32:13.711467+02:00"
+						"dateAndTimeString" : "2022-11-02T09:58:27.114611+01:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +224,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "**Events** are the workflow triggers that cause a workflow to run. For example, every time someone creates a pull request (the *event*) for a repository, you can automatically run a command that executes a software testing script."
+				"string" : "**Events** (object) are the workflow triggers that cause a workflow to run. For example, every time someone creates a pull request (the *event*) for a repository, you can automatically run a command that executes a software testing script."
 			},
 			{
 				"__type" : "textSnippet",
@@ -325,7 +325,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T20:41:26.57068+02:00"
+						"dateAndTimeString" : "2022-11-02T09:59:04.785018+01:00"
 					}
 				},
 				"uid" : {
@@ -335,7 +335,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "**Jobs** and **Steps** - A workflow must have at least 1 job and can consist of multiple jobs that work together either sequentially or in parallel. Each job is a series of **steps** that runs under the same runner (virtual environment).\n\nYou can configure how jobs in a workflow interact with each other. For example, if one job fails, the next one will not run. By default, jobs in a workflow run in parallel."
+				"string" : "**Jobs** and **Steps**  (objects)- A workflow must have at least 1 job and can consist of multiple jobs that work together either sequentially or in parallel. Each job is a series of **steps** that runs under the same runner (virtual environment).\n\nYou can configure how jobs in a workflow interact with each other. For example, if one job fails, the next one will not run. By default, jobs in a workflow run in parallel."
 			},
 			{
 				"__type" : "textSnippet",
@@ -351,7 +351,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-28T17:42:36.929567+02:00"
+						"dateAndTimeString" : "2022-11-02T09:59:26.611286+01:00"
 					}
 				},
 				"editEmail" : {
@@ -362,7 +362,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-28T17:42:46.891574+02:00"
+						"dateAndTimeString" : "2022-11-02T09:59:55.565972+01:00"
 					}
 				},
 				"uid" : {
@@ -372,81 +372,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "todo: resolve content pr"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-28T17:42:27.725104+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-28T17:42:27.725104+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "cW+I13uoDQClyB/MCz6SWw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-28T17:42:27.904824+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-28T17:42:27.904824+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "by2L13uoDQClyZnoCz6SWw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
+				"string" : "So, each step have: name, uses (actions) and run"
 			},
 			{
 				"__type" : "textSnippet",

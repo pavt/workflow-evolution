@@ -640,7 +640,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-01T16:55:48.474618+01:00"
+									"dateAndTimeString" : "2022-11-02T10:32:40.58603+01:00"
 								}
 							},
 							"uid" : {
@@ -674,14 +674,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-01T17:05:22.495416+01:00"
+									"dateAndTimeString" : "2022-11-01T17:26:23.997878+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "g/HQn8yoDQC8WmLWCADCWg=="
 							},
-							"code" : "WorkflowExamples new visualizeClassDiagramExample"
+							"code" : "WEWorkflowExamples new visualizeClassDiagramExample"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -840,14 +840,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-01T15:56:28.885996+01:00"
+						"dateAndTimeString" : "2022-11-02T11:35:50.565839+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "67gkRcuoDQC2qHdjCC6U2A=="
 				},
-				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow"
+				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow jobs first steps"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-02T10:51:29.583409+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-02T10:51:29.583409+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "RpGThduoDQC/5CNxCqQkog=="
+				},
+				"code" : ""
 			},
 			{
 				"__type" : "textSnippet",

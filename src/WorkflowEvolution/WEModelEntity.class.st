@@ -23,5 +23,6 @@ WEModelEntity >> ast: anObject [
 WEModelEntity >> gtExploreFor: aView [
 	<gtView>
 	
-	 ^ self ast gtExploreFor: aView
+	 ^ (self ast gtExploreFor: aView) title: 'JSON'
+	 
 ]

@@ -2,26 +2,26 @@ Class {
 	#name : #WEStep,
 	#superclass : #WEModelEntity,
 	#instVars : [
-		'content'
+		'properties'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
 
 { #category : #accessing }
-WEStep >> content [
-
-	^ content
-]
-
-{ #category : #accessing }
-WEStep >> content: anObject [
-
-	content := anObject
-]
-
-{ #category : #accessing }
 WEStep >> initialize [
-	content := OrderedCollection new
+	properties := OrderedCollection new
+]
+
+{ #category : #accessing }
+WEStep >> properties [
+
+	^ properties
+]
+
+{ #category : #accessing }
+WEStep >> properties: anObject [
+
+	properties := anObject
 ]
 
 { #category : #accessing }
@@ -29,6 +29,6 @@ WEStep >> step [
 
 	|step|
 	step:= WEStep new.
-	step content: self content.
+	step properties: self properties.
 	^ step
 ]
