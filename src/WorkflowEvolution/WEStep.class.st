@@ -8,9 +8,9 @@ Class {
 }
 
 { #category : #accessing }
-WEStep >> addProperties: aproperties [ 
+WEStep >> addProperties: propertiess [
     
-    properties := Dictionary new.
+    self properties add: propertiess
     
 ]
 
@@ -21,6 +21,9 @@ WEStep >> initialize [
 
 { #category : #accessing }
 WEStep >> properties [
+	properties := Dictionary new.
+	self step ast members
+		do: [ :propAST | properties at: propAST name value withoutQuoting put: propAST value value value ].
 
 	^ properties
 ]
@@ -38,4 +41,10 @@ WEStep >> step [
 	step:= WEStep new.
 	step properties: self properties.
 	^ step
+]
+
+{ #category : #accessing }
+WEStep >> step: anObject [
+
+	step := anObject
 ]

@@ -39,18 +39,14 @@ WEStepASTVisitor >> step: anObject [
 ]
 
 { #category : #accessing }
-WEStepASTVisitor >> visitObject: aStepObjectNode [
-	| propertiesVisitor |
-	self step ast: aStepObjectNode.
-
-	propertiesAST := aStepObjectNode value.
-
-
-	propertiesAST value members
-		do: [ :each | 
-			propertiesVisitor := WEStepASTVisitor new.
-			each acceptVisitor: propertiesVisitor.
-			self halt.
-			self step addProperties: propertiesVisitor value].
-					
+WEStepASTVisitor >> visitObject: anASTObjectNode [
+	
+ 
+	
+	self step ast: anASTObjectNode.
+	
+	"propertiesAsDictionary := Dictionary new.
+	step ast members
+		do: [ :propAST | 
+			propertiesAsDictionary at: propAST name value withoutQuoting put: propAST value value value ]"
 ]

@@ -60,6 +60,7 @@ WEJobASTVisitor >> visitMember: aJobMemberMemberNode [
 			each acceptVisitor: stepVisitor.
 			self job addStep: stepVisitor step].
 			
- 
+	 
+		 
 	
 ]

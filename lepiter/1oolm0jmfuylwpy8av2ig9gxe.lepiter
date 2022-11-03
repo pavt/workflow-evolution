@@ -840,7 +840,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-02T15:50:17.122164+01:00"
+						"dateAndTimeString" : "2022-11-03T11:47:55.81749+01:00"
 					}
 				},
 				"uid" : {
@@ -874,14 +874,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-02T10:51:29.583409+01:00"
+						"dateAndTimeString" : "2022-11-03T12:55:16.611625+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "RpGThduoDQC/5CNxCqQkog=="
 				},
-				"code" : ""
+				"code" : "step:= (WEWorkflow forExample: 'visualizeClassDiagram' ) jobs first steps first.\rproperties1:= step ast members first .\rdic:= Dictionary new.\rstep ast members do: [\r\t:propAST | \r\tdic at: propAST name value withoutQuoting put: propAST value value value.\r].\rdic "
 			},
 			{
 				"__type" : "textSnippet",
