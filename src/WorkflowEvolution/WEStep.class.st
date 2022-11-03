@@ -8,23 +8,12 @@ Class {
 }
 
 { #category : #accessing }
-WEStep >> addProperties: propertiess [
-    
-    self properties add: propertiess
-    
-]
-
-{ #category : #accessing }
 WEStep >> initialize [
 	properties := Dictionary new.
 ]
 
 { #category : #accessing }
 WEStep >> properties [
-	properties := Dictionary new.
-	self step ast members
-		do: [ :propAST | properties at: propAST name value withoutQuoting put: propAST value value value ].
-
 	^ properties
 ]
 
