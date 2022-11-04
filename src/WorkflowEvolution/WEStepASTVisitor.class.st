@@ -15,18 +15,6 @@ WEStepASTVisitor >> initialize [
 ]
 
 { #category : #accessing }
-WEStepASTVisitor >> propertiesAST [
-
-	^ propertiesAST
-]
-
-{ #category : #accessing }
-WEStepASTVisitor >> propertiesAST: anObject [
-
-	propertiesAST := anObject
-]
-
-{ #category : #accessing }
 WEStepASTVisitor >> step [
 
 	^ step

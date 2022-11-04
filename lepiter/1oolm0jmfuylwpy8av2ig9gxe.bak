@@ -874,14 +874,82 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-03T12:55:09.144213+01:00"
+						"dateAndTimeString" : "2022-11-03T12:55:16.611625+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "RpGThduoDQC/5CNxCqQkog=="
 				},
-				"code" : "step:= (WEWorkflow forExample: 'visualizeClassDiagram' ) jobs first steps first.\rproperties1:= step ast members first .\rdic:= Dictionary new.\rstep ast members do: [\r\t:propAST | \r\tdic at: propAST name value withoutQuoting put: propAST value value .\r].\rdic "
+				"code" : "step:= (WEWorkflow forExample: 'visualizeClassDiagram' ) jobs first steps first.\rproperties1:= step ast members first .\rdic:= Dictionary new.\rstep ast members do: [\r\t:propAST | \r\tdic at: propAST name value withoutQuoting put: propAST value value value.\r].\rdic "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-04T14:03:47.108167+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-04T14:27:39.674915+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dPnycAapDQCKx26+ClbBIg=="
+				},
+				"code" : "(((step:= (WEWorkflow forExample: 'visualizeClassDiagram' ) ) ast members value detect: [ :n | n name value = '\"jobs\"' ]))  "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-04T14:27:48.374589+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-04T14:40:58.84112+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UfTaxgapDQCKz8UwClbBIg=="
+				},
+				"code" : "job:= (((WEWorkflow forExample: 'visualizeClassDiagram') ast members value ) detect: [ :n | n name value = '\"jobs\"' ]).\r\r(job value members first value members detect: [ :n | n name value = '\"steps\"' ]) value values "
 			},
 			{
 				"__type" : "textSnippet",

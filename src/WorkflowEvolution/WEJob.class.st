@@ -20,6 +20,16 @@ WEJob >> addStep: aStep [
 ]
 
 { #category : #accessing }
+WEJob >> gtStepsFor: aView [
+	<gtView>
+	^ aView columnedList
+		title: 'Steps';
+		priority: 40;
+		items: [ self steps ];
+		column: 'Steps' text: [ :step | step   ]
+]
+
+{ #category : #accessing }
 WEJob >> initialize [
 	steps := OrderedCollection new
 ]

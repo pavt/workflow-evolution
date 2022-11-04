@@ -3,7 +3,8 @@ Class {
 	#superclass : #WEModelEntity,
 	#instVars : [
 		'jobs',
-		'events'
+		'events',
+		'steps'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
@@ -95,4 +96,25 @@ WEWorkflow >> name [
 
 	^ (self ast value members  detect: [ :n | n name value = '"name"' ]) value value value withoutQuoting.
 
+]
+
+{ #category : #accessing }
+WEWorkflow >> newMethod [
+	"This is a new method"
+]
+
+{ #category : #accessing }
+WEWorkflow >> steps [
+	| job |
+	
+	job := self ast members value detect: [ :n | n name value = '"jobs"' ].
+	^ (job value members first value members detect: [ :n | n name value = '"steps"' ])  value values
+	
+		
+]
+
+{ #category : #accessing }
+WEWorkflow >> steps: anObject [
+
+	steps := anObject
 ]

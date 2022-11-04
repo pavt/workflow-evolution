@@ -28,6 +28,18 @@ WEJobASTVisitor >> job: anObject [
 ]
 
 { #category : #accessing }
+WEJobASTVisitor >> runner [
+
+	^ runner
+]
+
+{ #category : #accessing }
+WEJobASTVisitor >> runner: anObject [
+
+	runner := anObject
+]
+
+{ #category : #accessing }
 WEJobASTVisitor >> stepsAST [
 
 	^ stepsAST
