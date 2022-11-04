@@ -362,7 +362,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-02T09:59:55.565972+01:00"
+						"dateAndTimeString" : "2022-11-02T09:59:58.538132+01:00"
 					}
 				},
 				"uid" : {
@@ -372,7 +372,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "So, each step have: name, uses (actions) and run"
+				"string" : "So, each step have: name, uses (actions) and run."
 			},
 			{
 				"__type" : "textSnippet",

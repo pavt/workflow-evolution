@@ -99,11 +99,6 @@ WEWorkflow >> name [
 ]
 
 { #category : #accessing }
-WEWorkflow >> newMethod [
-	"This is a new method"
-]
-
-{ #category : #accessing }
 WEWorkflow >> steps [
 	| job |
 	

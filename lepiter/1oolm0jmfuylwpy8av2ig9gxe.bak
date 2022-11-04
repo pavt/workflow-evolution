@@ -518,7 +518,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-26T15:18:11.832276+02:00"
+						"dateAndTimeString" : "2022-11-04T23:46:01.583328+01:00"
 					}
 				},
 				"editEmail" : {
@@ -529,7 +529,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-26T15:19:06.017539+02:00"
+						"dateAndTimeString" : "2022-11-04T23:46:25.088429+01:00"
 					}
 				},
 				"uid" : {
@@ -539,213 +539,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now we have a *worflow* with a name, *events* and *jobs*. "
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-01T16:47:15.022949+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-01T17:21:39.630846+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "E9AFYMyoDQC8ClJXCADCWg=="
-							},
-							"code" : "WEWorkflow forExample: 'ci'"
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-26T10:23:13.895745+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-01T15:35:51.970324+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "UykKeU2oDQCtliRFCsXJEw=="
-				},
-				"code" : "ast := WorkflowBasicExamples new visualizeExampleJSON ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-01T16:55:45.286187+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-02T10:32:40.58603+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "QsBvfsyoDQC8D91TCADCWg=="
-							},
-							"code" : "WEWorkflow forExample: 'visualizeClassDiagram'"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-01T17:05:05.303912+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-01T17:26:23.997878+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "g/HQn8yoDQC8WmLWCADCWg=="
-							},
-							"code" : "WEWorkflowExamples new visualizeClassDiagramExample"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-01T16:53:33.902233+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-01T16:53:41.061529+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "uP2adsyoDQC8DQLgCADCWg=="
-							},
-							"code" : "WEWorkflow exampleFolder "
-						}
-					]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-26T12:32:17.883952+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-28T01:12:10.513149+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "XAueRk+oDQCIxrc7BwKi6A=="
-				},
-				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor"
+				"string" : "Then, is possible to get the AST from a JSON file:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -782,7 +576,7 @@
 				"code" : "WEWorkflow astFor: 'visualizeClassDiagram' "
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -795,7 +589,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-28T01:12:07.643213+02:00"
+						"dateAndTimeString" : "2022-11-04T23:46:50.523623+01:00"
 					}
 				},
 				"editEmail" : {
@@ -806,14 +600,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-01T15:27:28.876148+01:00"
+						"dateAndTimeString" : "2022-11-04T23:47:40.050062+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "X/DRAW6oDQClr5GpCz6SWw=="
+					"uidString" : "h2BnlQ6pDQCZQtMaCII/Ag=="
 				},
-				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow jobs first steps first step content"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "(We deprecate this procedure) Here we get the file, ast and the we visit the workflow:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -848,6 +645,43 @@
 					"uidString" : "67gkRcuoDQC2qHdjCC6U2A=="
 				},
 				"code" : "ast := WorkflowBasicExamples new visualizeClassDiagramExample ast.\rvisitor := WEWorkflowASTVisitor new.\rast acceptVisitor: visitor.\rvisitor workflow "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-04T23:47:59.071589+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-04T23:48:21.159173+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "T9qsmQ6pDQCZRWW/CII/Ag=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Looking a way to put the properties of a Step as a Dictionary:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -897,7 +731,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-04T14:03:47.108167+01:00"
+						"dateAndTimeString" : "2022-11-04T23:49:47.850368+01:00"
 					}
 				},
 				"editEmail" : {
@@ -908,17 +742,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-04T14:27:39.674915+01:00"
+						"dateAndTimeString" : "2022-11-04T23:51:00.615876+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "dPnycAapDQCKx26+ClbBIg=="
+					"uidString" : "uVKxoA6pDQCZVg4nCII/Ag=="
 				},
-				"code" : "(((step:= (WEWorkflow forExample: 'visualizeClassDiagram' ) ) ast members value detect: [ :n | n name value = '\"jobs\"' ]))  "
+				"code" : "WEWorkflow forExample: 'ci'"
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -931,7 +765,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-04T14:27:48.374589+01:00"
+						"dateAndTimeString" : "2022-11-04T23:49:43.189607+01:00"
 					}
 				},
 				"editEmail" : {
@@ -942,14 +776,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-04T14:40:58.84112+01:00"
+						"dateAndTimeString" : "2022-11-04T23:49:44.920434+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "UfTaxgapDQCKz8UwClbBIg=="
+					"uidString" : "LWvdnw6pDQCZVCDHCII/Ag=="
 				},
-				"code" : "job:= (((WEWorkflow forExample: 'visualizeClassDiagram') ast members value ) detect: [ :n | n name value = '\"jobs\"' ]).\r\r(job value members first value members detect: [ :n | n name value = '\"steps\"' ]) value values "
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
 			},
 			{
 				"__type" : "textSnippet",

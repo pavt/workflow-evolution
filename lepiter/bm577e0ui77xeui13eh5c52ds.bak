@@ -145,7 +145,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-20T00:09:38.263678+02:00"
+									"dateAndTimeString" : "2022-10-20T00:10:08.353767+02:00"
 								}
 							},
 							"uid" : {
@@ -155,7 +155,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "The workflow sintax is YAML/YML. See [Duck Duck Go](https://learnxinyminutes.com/docs/yaml/)"
+							"string" : "The workflow sintax is YAML/YML. See [ Learn YAML in Y minutes](https://learnxinyminutes.com/docs/yaml/)."
 						},
 						{
 							"__type" : "textSnippet",
@@ -182,7 +182,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-10-20T00:08:06.073013+02:00"
+									"dateAndTimeString" : "2022-10-20T00:10:20.212895+02:00"
 								}
 							},
 							"uid" : {
@@ -192,7 +192,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Here there is a executable example of a workflow file:"
+							"string" : "Here, there is a executable example of a workflow file:"
 						},
 						{
 							"__type" : "pharoSnippet",
