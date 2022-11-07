@@ -1,5 +1,37 @@
 Class {
 	#name : #WEJob,
-	#superclass : #WEModelEntity,
+	#superclass : #WENamedEntity,
+	#instVars : [
+		'steps'
+	],
 	#category : #'WorkflowEvolution-Model'
 }
+
+{ #category : #accessing }
+WEJob >> data: aDictionary [
+	super data: aDictionary.
+	self initializeSteps.
+	"self name: (data at: 'name')"
+]
+
+{ #category : #accessing }
+WEJob >> gtStepsFor: aView [
+	<gtView>
+	^ aView columnedList
+		title: 'Steps';
+		priority: 30;
+		items: [ self steps ];
+		column: 'Step' text: [ :step | step ];
+		column: 'with' text: [ :step | step with asString ];
+		column: 'uses' text: [ :step | step uses asString ]
+]
+
+{ #category : #initialization }
+WEJob >> initializeSteps [
+	steps := (data at: 'steps') collect: [ :dict | WEStep new data: dict ]
+]
+
+{ #category : #accessing }
+WEJob >> steps [
+	^ steps
+]

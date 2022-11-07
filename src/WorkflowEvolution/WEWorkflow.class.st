@@ -1,6 +1,6 @@
 Class {
 	#name : #WEWorkflow,
-	#superclass : #WEModelEntity,
+	#superclass : #WENamedEntity,
 	#instVars : [
 		'events',
 		'jobs'

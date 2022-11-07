@@ -1,5 +1,5 @@
 Class {
 	#name : #WEEvent,
-	#superclass : #WEModelEntity,
+	#superclass : #WENamedEntity,
 	#category : #'WorkflowEvolution-Model'
 }

@@ -208,14 +208,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-07T09:40:57.544255+01:00"
+						"dateAndTimeString" : "2022-11-07T13:27:44.371259+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "u4lImj6pDQCF5fKND+T7Ew=="
 				},
-				"code" : "WEWorkflow new data: dictionary"
+				"code" : "WEWorkflow new data: dictionary "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-07T16:18:40.120658+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-07T16:18:50.000123+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "a6varESpDQCcqHJoD13eLQ=="
+				},
+				"code" : "WEStep new"
 			}
 		]
 	},
