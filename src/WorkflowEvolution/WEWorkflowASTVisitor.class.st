@@ -23,7 +23,7 @@ WEWorkflowASTVisitor >> eventsAST: anObject [
 
 { #category : #accessing }
 WEWorkflowASTVisitor >> initialize [
-	workflow := WEWorkflow new
+	workflow := OldWEWorkflow new
 ]
 
 { #category : #accessing }

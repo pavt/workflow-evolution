@@ -81,7 +81,7 @@ WorkflowBuilder >> name [
 { #category : #accessing }
 WorkflowBuilder >> workflow [
 	| workflow |
-	workflow := WEWorkflow new.
+	workflow := OldWEWorkflow new.
 	workflow name: self name.
 	workflow jobs: self jobs.
 	

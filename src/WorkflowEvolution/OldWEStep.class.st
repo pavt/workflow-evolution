@@ -1,6 +1,6 @@
 Class {
-	#name : #WEStep,
-	#superclass : #WEModelEntity,
+	#name : #OldWEStep,
+	#superclass : #OldWEModelEntity,
 	#instVars : [
 		'properties'
 	],
@@ -8,32 +8,32 @@ Class {
 }
 
 { #category : #accessing }
-WEStep >> initialize [
+OldWEStep >> initialize [
 	properties := Dictionary new.
 ]
 
 { #category : #accessing }
-WEStep >> properties [
+OldWEStep >> properties [
 	^ properties
 ]
 
 { #category : #accessing }
-WEStep >> properties: anObject [
+OldWEStep >> properties: anObject [
 
 	properties := anObject
 ]
 
 { #category : #accessing }
-WEStep >> step [
+OldWEStep >> step [
 
 	|step|
-	step:= WEStep new.
+	step:= OldWEStep new.
 	step properties: self properties.
 	^ step
 ]
 
 { #category : #accessing }
-WEStep >> step: anObject [
+OldWEStep >> step: anObject [
 
 	step := anObject
 ]

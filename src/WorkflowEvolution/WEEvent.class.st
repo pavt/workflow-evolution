@@ -1,21 +1,20 @@
 Class {
 	#name : #WEEvent,
 	#superclass : #WEModelEntity,
-	#category : #'WorkflowEvolution-Model'
+	#instVars : [
+		'name'
+	],
+	#category : #WorkflowEvolution
 }
 
 { #category : #accessing }
-WEEvent >> event [
+WEEvent >> name [
 
-	|event|
-	event:= WEEvent new.
-	event name: self name.
-	^ event
+	^ name
 ]
 
 { #category : #accessing }
-WEEvent >> name [
-	^ (self ast isKindOf: JSONStringNode)
-		ifTrue: [ self ast value value withoutQuoting ]
-		ifFalse: [ self ast name value value value withoutQuoting ]
+WEEvent >> name: aString [
+
+	name:= aString
 ]

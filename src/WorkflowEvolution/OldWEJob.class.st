@@ -1,6 +1,6 @@
 Class {
-	#name : #WEJob,
-	#superclass : #WEModelEntity,
+	#name : #OldWEJob,
+	#superclass : #OldWEModelEntity,
 	#instVars : [
 		'steps',
 		'runner',
@@ -10,17 +10,17 @@ Class {
 }
 
 { #category : #accessing }
-WEJob >> addRunner: aRunner [
+OldWEJob >> addRunner: aRunner [
 	self runner add: aRunner
 ]
 
 { #category : #accessing }
-WEJob >> addStep: aStep [
+OldWEJob >> addStep: aStep [
 	self steps add: aStep
 ]
 
 { #category : #accessing }
-WEJob >> gtStepsFor: aView [
+OldWEJob >> gtStepsFor: aView [
 	<gtView>
 	^ aView columnedList
 		title: 'Steps';
@@ -30,51 +30,51 @@ WEJob >> gtStepsFor: aView [
 ]
 
 { #category : #accessing }
-WEJob >> initialize [
+OldWEJob >> initialize [
 	steps := OrderedCollection new
 ]
 
 { #category : #accessing }
-WEJob >> job [
+OldWEJob >> job [
 
 	|job|
-	job:= WEJob new.
+	job:= OldWEJob new.
 	job name: self name.
 	^ job
 ]
 
 { #category : #accessing }
-WEJob >> name [
+OldWEJob >> name [
 
 	^ name
 ]
 
 { #category : #accessing }
-WEJob >> name: anObject [
+OldWEJob >> name: anObject [
 
 	name := anObject
 ]
 
 { #category : #accessing }
-WEJob >> runner [
+OldWEJob >> runner [
 
 	^ runner
 ]
 
 { #category : #accessing }
-WEJob >> runner: aString [
+OldWEJob >> runner: aString [
 
 	runner := aString
 ]
 
 { #category : #accessing }
-WEJob >> steps [
+OldWEJob >> steps [
 
 	^ steps
 ]
 
 { #category : #accessing }
-WEJob >> steps: anObject [
+OldWEJob >> steps: anObject [
 
 	steps := anObject
 ]

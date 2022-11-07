@@ -35,7 +35,7 @@ WEEventASTVisitor >> eventsAST: anObject [
 { #category : #accessing }
 WEEventASTVisitor >> initialize [
 
-	event:= WEEvent new.
+	event:= OldWEEvent new.
 ]
 
 { #category : #accessing }

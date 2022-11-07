@@ -2,27 +2,23 @@ Class {
 	#name : #WEModelEntity,
 	#superclass : #Object,
 	#instVars : [
-		'ast'
+		'data'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
 
 { #category : #accessing }
-WEModelEntity >> ast [
+WEModelEntity >> data: dictionary [ 
 
-	^ ast
+	data:= dictionary
 ]
 
 { #category : #accessing }
-WEModelEntity >> ast: anObject [
-
-	ast := anObject
-]
-
-{ #category : #accessing }
-WEModelEntity >> gtExploreFor: aView [
+WEModelEntity >> gtJSONFor: aView [
 	<gtView>
-	
-	 ^ (self ast gtExploreFor: aView) title: 'JSON'
-	 
+	^ aView forward
+		title: 'JSON data';
+		priority: 10;
+		object: [ data ];
+		view: #gtItemsFor:
 ]

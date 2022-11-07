@@ -12,7 +12,7 @@ Class {
 { #category : #accessing }
 WEJobASTVisitor >> initialize [
 
-	job:= WEJob new.
+	job:= OldWEJob new.
 ]
 
 { #category : #accessing }

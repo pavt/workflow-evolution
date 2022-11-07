@@ -11,7 +11,7 @@ Class {
 { #category : #accessing }
 WEStepASTVisitor >> initialize [
 
-	step:= WEStep new.
+	step:= OldWEStep new.
 ]
 
 { #category : #accessing }

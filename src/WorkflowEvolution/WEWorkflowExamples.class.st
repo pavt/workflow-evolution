@@ -8,7 +8,7 @@ Class {
 WEWorkflowExamples >> ciExample [
 	<gtExample>
 	| workflow |
-	workflow := WEWorkflow forExample: 'ci'.
+	workflow := OldWEWorkflow forExample: 'ci'.
 	self assert: workflow name equals: 'CI'.
 	self assert: workflow events size equals: 1.
 	self assert: workflow jobs size equals: 4.
@@ -19,7 +19,7 @@ WEWorkflowExamples >> ciExample [
 WEWorkflowExamples >> visualizeClassDiagramExample [
 	<gtExample>
 	| workflow |
-	workflow := WEWorkflow forExample: 'visualizeClassDiagram'.
+	workflow := OldWEWorkflow forExample: 'visualizeClassDiagram'.
 	self assert: workflow name equals: 'UML Class diagram'.
 	self assert: workflow events size equals: 3.
 	self assert: workflow jobs size equals: 1.
