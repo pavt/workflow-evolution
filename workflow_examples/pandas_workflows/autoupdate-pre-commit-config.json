@@ -1,0 +1,50 @@
+{
+  "name": "Update pre-commit config",
+  "on": {
+    "schedule": [
+      {
+        "cron": "0 7 1 * *"
+      }
+    ],
+    "workflow_dispatch": null
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "jobs": {
+    "update-pre-commit": {
+      "permissions": {
+        "contents": "write",
+        "pull-requests": "write"
+      },
+      "if": "github.repository_owner == 'pandas-dev'",
+      "name": "Autoupdate pre-commit config",
+      "runs-on": "ubuntu-latest",
+      "steps": [
+        {
+          "name": "Set up Python",
+          "uses": "actions/setup-python@v3"
+        },
+        {
+          "name": "Cache multiple paths",
+          "uses": "actions/cache@v3",
+          "with": {
+            "path": "~/.cache/pre-commit\n~/.cache/pip\n",
+            "key": "pre-commit-autoupdate-${{ runner.os }}-build"
+          }
+        },
+        {
+          "name": "Update pre-commit config packages",
+          "uses": "technote-space/create-pr-action@v2",
+          "with": {
+            "GITHUB_TOKEN": "${{ secrets.GITHUB_TOKEN }}",
+            "EXECUTE_COMMANDS": "pip install pre-commit\npre-commit autoupdate || (exit 0);\npre-commit run -a || (exit 0);\n",
+            "COMMIT_MESSAGE": "⬆️ UPGRADE: Autoupdate pre-commit config",
+            "PR_BRANCH_NAME": "pre-commit-config-update-${PR_ID}",
+            "PR_TITLE": "⬆️ UPGRADE: Autoupdate pre-commit config"
+          }
+        }
+      ]
+    }
+  }
+}

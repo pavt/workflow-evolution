@@ -1,0 +1,160 @@
+{
+  "name": "bazel",
+  "on": {
+    "workflow_call": {
+      "inputs": {
+        "build-environment": {
+          "required": true,
+          "type": "string",
+          "description": "Top-level label for what's being built/tested."
+        },
+        "docker-image-name": {
+          "required": true,
+          "type": "string",
+          "description": "Name of the base docker image to build with."
+        },
+        "sync-tag": {
+          "required": false,
+          "type": "string",
+          "default": "",
+          "description": "If this is set, our linter will use this to make sure that every other\njob with the same `sync-tag` is identical.\n"
+        }
+      }
+    }
+  },
+  "env": {
+    "GIT_DEFAULT_BRANCH": "${{ github.event.repository.default_branch }}"
+  },
+  "jobs": {
+    "build-and-test": {
+      "if": "github.repository_owner == 'pytorch'",
+      "runs-on": [
+        "self-hosted",
+        "linux.2xlarge"
+      ],
+      "steps": [
+        {
+          "name": "Checkout PyTorch",
+          "uses": "pytorch/pytorch/.github/actions/checkout-pytorch@master"
+        },
+        {
+          "name": "Setup Linux",
+          "uses": "./.github/actions/setup-linux"
+        },
+        {
+          "name": "Setup SSH (Click me for login details)",
+          "uses": "pytorch/test-infra/.github/actions/setup-ssh@main",
+          "with": {
+            "github-secret": "${{ secrets.GITHUB_TOKEN }}"
+          }
+        },
+        {
+          "name": "Calculate docker image",
+          "id": "calculate-docker-image",
+          "uses": "./.github/actions/calculate-docker-image",
+          "with": {
+            "docker-image-name": "${{ inputs.docker-image-name }}"
+          }
+        },
+        {
+          "name": "Pull docker image",
+          "uses": "pytorch/test-infra/.github/actions/pull-docker-image@main",
+          "with": {
+            "docker-image": "${{ steps.calculate-docker-image.outputs.docker-image }}"
+          }
+        },
+        {
+          "name": "Output disk space left",
+          "run": "sudo df -H\n"
+        },
+        {
+          "name": "Preserve github env variables for use in docker",
+          "run": "env | grep '^GITHUB' >> \"/tmp/github_env_${GITHUB_RUN_ID}\"\nenv | grep '^CI' >> \"/tmp/github_env_${GITHUB_RUN_ID}\"\n"
+        },
+        {
+          "name": "Parse ref",
+          "id": "parse-ref",
+          "run": ".github/scripts/parse_ref.py"
+        },
+        {
+          "name": "Get workflow job id",
+          "id": "get-job-id",
+          "uses": "./.github/actions/get-workflow-job-id",
+          "if": "always()",
+          "with": {
+            "github-token": "${{ secrets.GITHUB_TOKEN }}"
+          }
+        },
+        {
+          "name": "Build",
+          "env": {
+            "BUILD_ENVIRONMENT": "${{ inputs.build-environment }}",
+            "BRANCH": "${{ steps.parse-ref.outputs.branch }}",
+            "AWS_DEFAULT_REGION": "us-east-1",
+            "SHA1": "${{ github.event.pull_request.head.sha || github.sha }}",
+            "SCCACHE_BUCKET": "ossci-compiler-cache-circleci-v2",
+            "TORCH_CUDA_ARCH_LIST": 5.2,
+            "DOCKER_IMAGE": "${{ steps.calculate-docker-image.outputs.docker-image }}",
+            "OUR_GITHUB_JOB_ID": "${{ steps.get-job-id.outputs.job-id }}"
+          },
+          "run": "# detached container should get cleaned up by teardown_ec2_linux\ncontainer_name=$(docker run \\\n  -e BUILD_ENVIRONMENT \\\n  -e MAX_JOBS=\"$(nproc --ignore=2)\" \\\n  -e SCCACHE_BUCKET \\\n  -e SKIP_SCCACHE_INITIALIZATION=1 \\\n  -e TORCH_CUDA_ARCH_LIST \\\n  -e OUR_GITHUB_JOB_ID \\\n  --env-file=\"/tmp/github_env_${GITHUB_RUN_ID}\" \\\n  --security-opt seccomp=unconfined \\\n  --cap-add=SYS_PTRACE \\\n  --tty \\\n  --detach \\\n  --user jenkins \\\n  -v \"${GITHUB_WORKSPACE}:/var/lib/jenkins/workspace\" \\\n  -w /var/lib/jenkins/workspace \\\n  \"${DOCKER_IMAGE}\"\n)\ndocker exec -t \"${container_name}\" sh -c 'sudo chown -R jenkins . && sudo chown -R jenkins /dev && .jenkins/pytorch/build.sh'\n"
+        },
+        {
+          "name": "Test",
+          "id": "test",
+          "timeout-minutes": 210,
+          "env": {
+            "BUILD_ENVIRONMENT": "${{ inputs.build-environment }}",
+            "PR_NUMBER": "${{ github.event.pull_request.number }}",
+            "BRANCH": "${{ steps.parse-ref.outputs.branch }}",
+            "SHA1": "${{ github.event.pull_request.head.sha || github.sha }}",
+            "PYTORCH_RETRY_TEST_CASES": 1,
+            "PYTORCH_OVERRIDE_FLAKY_SIGNAL": 1,
+            "PR_BODY": "${{ github.event.pull_request.body }}",
+            "SCCACHE_BUCKET": "ossci-compiler-cache-circleci-v2",
+            "DOCKER_IMAGE": "${{ steps.calculate-docker-image.outputs.docker-image }}"
+          },
+          "run": "# detached container should get cleaned up by teardown_ec2_linux\nexport SHARD_NUMBER=0\n\nCOMMIT_MESSAGES=$(git cherry -v \"origin/${GIT_DEFAULT_BRANCH:-master}\")\n\n# sanitize the input commit message and PR body here:\n#\n# trim all new lines from commit messages + PR_BODY to avoid issues with batch environment\n# variable copying. see https://github.com/pytorch/pytorch/pull/80043#issuecomment-1167796028\nCOMMIT_MESSAGES=\"${COMMIT_MESSAGES//[$'\\n\\r']}\"\nPR_BODY=\"${PR_BODY//[$'\\n\\r']}\"\n\n# then trim all special characters like single and double quotes to avoid unescaped inputs to\n# wreak havoc internally\nexport COMMIT_MESSAGES=\"${COMMIT_MESSAGES//[\\'\\\"]}\"\nexport PR_BODY=\"${PR_BODY//[\\'\\\"]}\"\n\n# TODO: Stop building test binaries as part of the build phase\n# Make sure we copy test results from bazel-testlogs symlink to\n# a regular directory ./test/test-reports\ncontainer_name=$(docker run \\\n  -e BUILD_ENVIRONMENT \\\n  -e GITHUB_ACTIONS \\\n  -e GIT_DEFAULT_BRANCH=\"$GIT_DEFAULT_BRANCH\" \\\n  -e SHARD_NUMBER \\\n  -e NUM_TEST_SHARDS \\\n  -e MAX_JOBS=\"$(nproc --ignore=2)\" \\\n  -e SCCACHE_BUCKET \\\n  -e PR_BODY \\\n  -e COMMIT_MESSAGES \\\n  -e PYTORCH_RETRY_TEST_CASES \\\n  -e PYTORCH_OVERRIDE_FLAKY_SIGNAL \\\n  --env-file=\"/tmp/github_env_${GITHUB_RUN_ID}\" \\\n  --security-opt seccomp=unconfined \\\n  --cap-add=SYS_PTRACE \\\n  --shm-size=\"1g\" \\\n  --tty \\\n  --detach \\\n  --user jenkins \\\n  -v \"${GITHUB_WORKSPACE}:/var/lib/jenkins/workspace\" \\\n  -w /var/lib/jenkins/workspace \\\n  \"${DOCKER_IMAGE}\"\n)\ndocker exec -t \"${container_name}\" sh -c 'sudo chown -R jenkins . && sudo chown -R jenkins /dev && .jenkins/pytorch/test.sh && cp -Lr ./bazel-testlogs ./test/test-reports'\n"
+        },
+        {
+          "name": "Chown workspace",
+          "uses": "./.github/actions/chown-workspace",
+          "if": "always()"
+        },
+        {
+          "name": "Upload test artifacts",
+          "uses": "./.github/actions/upload-test-artifacts",
+          "if": "always() && (steps.test.conclusion == 'success' || steps.test.conclusion == 'failure')",
+          "with": {
+            "file-suffix": "bazel-${{ github.job }}_${{ steps.get-job-id.outputs.job-id }}"
+          }
+        },
+        {
+          "name": "Upload test statistics",
+          "if": "always()",
+          "env": {
+            "AWS_DEFAULT_REGION": "us-east-1",
+            "GIT_DEFAULT_BRANCH": "${{ github.event.repository.default_branch }}",
+            "BRANCH": "${{ steps.parse-ref.outputs.branch }}",
+            "BUILD_ENVIRONMENT": "${{ inputs.build-environment }}",
+            "PR_NUMBER": "${{ github.event.pull_request.number }}",
+            "PYTORCH_RETRY_TEST_CASES": 1,
+            "PYTORCH_OVERRIDE_FLAKY_SIGNAL": 1,
+            "SHA1": "${{ github.event.pull_request.head.sha || github.sha }}",
+            "TAG": "${{ steps.parse-ref.outputs.tag }}",
+            "WORKFLOW_ID": "${{ github.run_id }}",
+            "GITHUB_TOKEN": "${{ secrets.GITHUB_TOKEN }}",
+            "GHA_WORKFLOW_JOB_ID": "${{ steps.get-job-id.outputs.job-id }}"
+          },
+          "shell": "bash",
+          "run": "set -x\npython3 -m pip install -r requirements.txt\npython3 -m pip install boto3==1.19.12\npython3 -m tools.stats.print_test_stats --upload-to-s3 --compare-with-s3 test\n"
+        },
+        {
+          "name": "Teardown Linux",
+          "uses": "pytorch/test-infra/.github/actions/teardown-linux@main",
+          "if": "always()"
+        }
+      ]
+    }
+  }
+}

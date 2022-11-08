@@ -1,0 +1,47 @@
+{
+  "name": "android-tests",
+  "on": {
+    "workflow_call": null
+  },
+  "defaults": {
+    "run": {
+      "shell": "bash -e -l {0}"
+    }
+  },
+  "jobs": {
+    "build-and-test": {
+      "runs-on": "ubuntu-latest",
+      "steps": [
+        {
+          "name": "Setup miniconda",
+          "uses": "conda-incubator/setup-miniconda@v2",
+          "with": {
+            "auto-update-conda": true,
+            "python-version": 3.8,
+            "activate-environment": "build"
+          }
+        },
+        {
+          "name": "Install dependencies",
+          "run": "conda install -y \\\n  cffi=1.15.1 \\\n  cmake=3.22.1 \\\n  mkl=2022.1.0 \\\n  mkl-include=2022.1.0 \\\n  ninja=1.10.2 \\\n  numpy=1.23.3 \\\n  pyyaml=6.0 \\\n  requests=2.28.1 \\\n  setuptools=65.5.0 \\\n  typing_extensions=4.3.0\n"
+        },
+        {
+          "name": "Checkout PyTorch",
+          "uses": "pytorch/pytorch/.github/actions/checkout-pytorch@master"
+        },
+        {
+          "name": "Build PyTorch Android",
+          "run": "# Install NDK 21 after GitHub update\n# https://github.com/actions/virtual-environments/issues/5595\nANDROID_ROOT=\"/usr/local/lib/android\"\nANDROID_SDK_ROOT=\"${ANDROID_ROOT}/sdk\"\nSDKMANAGER=\"${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager\"\necho \"y\" | ${SDKMANAGER} \"ndk;21.4.7075529\"\n\nexport ANDROID_NDK=\"${ANDROID_SDK_ROOT}/ndk-bundle\"\nln -sfn ${ANDROID_SDK_ROOT}/ndk/21.4.7075529 ${ANDROID_NDK}\n\necho \"CMAKE_PREFIX_PATH=${CONDA_PREFIX:-\"$(dirname \"$(which conda)\")/../\"}\" >> \"${GITHUB_ENV}\"\n./scripts/build_pytorch_android.sh x86\n"
+        },
+        {
+          "name": "Run tests",
+          "uses": "reactivecircus/android-emulator-runner@v2",
+          "with": {
+            "api-level": 25,
+            "script": "./android/run_tests.sh"
+          }
+        }
+      ]
+    }
+  }
+}

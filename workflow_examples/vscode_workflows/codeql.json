@@ -1,0 +1,43 @@
+{
+  "name": "Code Scanning",
+  "on": {
+    "schedule": [
+      {
+        "cron": "0 0 * * 2"
+      }
+    ]
+  },
+  "jobs": {
+    "CodeQL-Build": {
+      "runs-on": "ubuntu-latest",
+      "steps": [
+        {
+          "name": "Checkout repository",
+          "uses": "actions/checkout@v3",
+          "with": {
+            "fetch-depth": 2
+          }
+        },
+        {
+          "run": "git checkout HEAD^2",
+          "if": "${{ github.event_name == 'pull_request' }}"
+        },
+        {
+          "name": "Initialize CodeQL",
+          "uses": "github/codeql-action/init@v2",
+          "with": {
+            "languages": "javascript"
+          }
+        },
+        {
+          "name": "Autobuild",
+          "uses": "github/codeql-action/autobuild@v2"
+        },
+        {
+          "name": "Perform CodeQL Analysis",
+          "uses": "github/codeql-action/analyze@v2"
+        }
+      ]
+    }
+  }
+}

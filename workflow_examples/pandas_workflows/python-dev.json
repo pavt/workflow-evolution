@@ -1,0 +1,82 @@
+{
+  "name": "Python Dev",
+  "on": {
+    "push": {
+      "branches": [
+        "main",
+        "1.5.x"
+      ]
+    },
+    "pull_request": {
+      "branches": [
+        "main",
+        "1.5.x"
+      ],
+      "paths-ignore": [
+        "doc/**"
+      ]
+    }
+  },
+  "env": {
+    "PYTEST_WORKERS": "auto",
+    "PANDAS_CI": 1,
+    "PATTERN": "not slow and not network and not clipboard and not single_cpu",
+    "COVERAGE": true,
+    "PYTEST_TARGET": "pandas"
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "jobs": {
+    "build": {
+      "runs-on": "${{ matrix.os }}",
+      "strategy": {
+        "fail-fast": false,
+        "matrix": {
+          "os": [
+            "ubuntu-latest",
+            "macOS-latest",
+            "windows-latest"
+          ]
+        }
+      },
+      "name": "actions-311-dev",
+      "timeout-minutes": 120,
+      "concurrency": {
+        "group": "${{ github.event_name == 'push' && github.run_number || github.ref }}-${{ matrix.os }}-${{ matrix.pytest_target }}-dev",
+        "cancel-in-progress": true
+      },
+      "steps": [
+        {
+          "uses": "actions/checkout@v3",
+          "with": {
+            "fetch-depth": 0
+          }
+        },
+        {
+          "name": "Set up Python Dev Version",
+          "uses": "actions/setup-python@v4",
+          "with": {
+            "python-version": "3.11-dev"
+          }
+        },
+        {
+          "name": "Install dependencies",
+          "run": "python --version\npython -m pip install --upgrade pip setuptools wheel\npython -m pip install -i https://pypi.anaconda.org/scipy-wheels-nightly/simple numpy\npython -m pip install git+https://github.com/nedbat/coveragepy.git\npython -m pip install python-dateutil pytz cython hypothesis==6.52.1 pytest>=6.2.5 pytest-xdist pytest-cov pytest-asyncio>=0.17\npython -m pip list\n"
+        },
+        {
+          "name": "Build Pandas",
+          "run": "python setup.py build_ext -q -j1\npython -m pip install -e . --no-build-isolation --no-use-pep517 --no-index\n"
+        },
+        {
+          "name": "Build Version",
+          "run": "python -c \"import pandas; pandas.show_versions();\"\n"
+        },
+        {
+          "name": "Test",
+          "uses": "./.github/actions/run-tests"
+        }
+      ]
+    }
+  }
+}
