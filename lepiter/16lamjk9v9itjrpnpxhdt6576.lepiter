@@ -147,6 +147,40 @@
 				"code" : "exampleFolder := FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\n\t\t/ 'workflow-evolution' / 'yml-json-examples'.\nexample := exampleFolder / ('visualizeClassDiagram' , '.json').\ndictionary := STON fromString: example contents.\n"
 			},
 			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-08T09:03:18.74911+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-08T09:03:31.809138+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "K4y9tVKpDQCOkSDRBwcMDQ=="
+				},
+				"code" : "exampleFolder := FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\n\t\t/ 'workflow-evolution' / 'yml-json-examples'.\nexample := exampleFolder / ('ci' , '.json').\ndictionary := STON fromString: example contents."
+			},
+			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
