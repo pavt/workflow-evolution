@@ -29,7 +29,12 @@ WEJob >> gtStepsFor: aView [
 
 { #category : #initialization }
 WEJob >> initializeSteps [
-	steps := (data at: 'steps') collect: [ :dict | WEStep new data: dict ]
+	steps := (data at: 'steps'
+	ifAbsent: [
+	Dictionary new
+	]
+	
+	) collect: [ :dict | WEStep new data: dict ]
 ]
 
 { #category : #accessing }

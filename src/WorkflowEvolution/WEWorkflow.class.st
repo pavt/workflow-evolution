@@ -13,7 +13,7 @@ WEWorkflow >> data: aDictionary [
 	super data: aDictionary.
 	self initializeEvents.
 	self initializeJobs.
-	self name: (data at: 'name')
+	self name: (data at: 'name' ifAbsent: ['(missing name)'])
 ]
 
 { #category : #accessing }
@@ -44,7 +44,7 @@ WEWorkflow >> gtJobsFor: aView [
 { #category : #initialization }
 WEWorkflow >> initializeEvents [
 	| eventDictionary |
-	eventDictionary := data at: 'on'.
+	eventDictionary := data at: 'on' ifAbsent: [ '' ].
 	(eventDictionary isKindOf: String)
 		ifTrue: [ events := OrderedCollection new ]
 		ifFalse: [ events := (data at: 'on') associations
@@ -57,7 +57,7 @@ WEWorkflow >> initializeEvents [
 { #category : #initialization }
 WEWorkflow >> initializeJobs [
 	| jobDictionary |
-	jobDictionary := data at: 'jobs'.
+	jobDictionary := data at: 'jobs' ifAbsent: [''].
 	(jobDictionary isKindOf: String)
 		ifTrue: [ jobs := OrderedCollection new ]
 		ifFalse: [ jobs := (data at: 'jobs') associations
