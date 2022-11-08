@@ -56,11 +56,15 @@ WEWorkflow >> initializeEvents [
 
 { #category : #initialization }
 WEWorkflow >> initializeJobs [
-	jobs := (data at: 'jobs') associations
-		collect: [ :asoc | 
-			WEJob new
-				name: asoc key;
-				data: asoc value ]
+	| jobDictionary |
+	jobDictionary := data at: 'jobs'.
+	(jobDictionary isKindOf: String)
+		ifTrue: [ jobs := OrderedCollection new ]
+		ifFalse: [ jobs := (data at: 'jobs') associations
+					collect: [ :asoc | 
+						WEJob new
+							name: asoc key;
+							data: asoc value ] ]
 ]
 
 { #category : #accessing }
