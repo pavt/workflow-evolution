@@ -45,9 +45,9 @@ WEWorkflow >> gtJobsFor: aView [
 WEWorkflow >> initializeEvents [
 	| eventDictionary |
 	eventDictionary := data at: 'on' ifAbsent: [ '' ].
-	(eventDictionary isKindOf: String)
+	(eventDictionary isKindOf: ArrayedCollection)
 		ifTrue: [ events := OrderedCollection new ]
-		ifFalse: [ events := (data at: 'on') associations
+		ifFalse: [ events := (data at: 'on' ) associations
 					collect: [ :asoc | 
 						WEEvent new
 							name: asoc key;
