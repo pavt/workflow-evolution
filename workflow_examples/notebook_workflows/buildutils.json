@@ -1,0 +1,85 @@
+{
+  "name": "Build Utilities",
+  "on": {
+    "push": {
+      "branches": [
+        "main"
+      ]
+    },
+    "pull_request": null
+  },
+  "defaults": {
+    "run": {
+      "shell": "bash -l {0}"
+    }
+  },
+  "concurrency": {
+    "group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}",
+    "cancel-in-progress": true
+  },
+  "jobs": {
+    "versioning": {
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 10,
+      "steps": [
+        {
+          "name": "Checkout",
+          "uses": "actions/checkout@v3"
+        },
+        {
+          "name": "Base Setup",
+          "uses": "jupyterlab/maintainer-tools/.github/actions/base-setup@v1"
+        },
+        {
+          "name": "Install dependencies",
+          "run": "python -m pip install -U \"jupyterlab>=4.0.0a30,<5\" hatch\njlpm\njlpm run build\n"
+        },
+        {
+          "name": "Configure git identity to commit",
+          "run": "git config --global user.email \"you@example.com\"\ngit config --global user.name \"Your Name\"\n"
+        },
+        {
+          "name": "Reset version",
+          "run": "hatch version 9.8.7\njlpm run lerna version 9.8.7 --no-push --force-publish --no-git-tag-version --yes\ngit commit -am \"Release 9.8.7\"\n"
+        },
+        {
+          "name": "Patch Release",
+          "run": "jlpm release:patch --force\n"
+        },
+        {
+          "name": "Minor Release",
+          "run": "jlpm release:bump minor --force\n"
+        },
+        {
+          "name": "Release Cycle",
+          "run": "# beta\njlpm release:bump release --force\n# rc\njlpm release:bump release --force\n# final\njlpm release:bump release --force\n"
+        },
+        {
+          "name": "Major Release",
+          "run": "jlpm release:bump major --force\n"
+        }
+      ]
+    },
+    "npm": {
+      "runs-on": "ubuntu-latest",
+      "steps": [
+        {
+          "name": "Checkout",
+          "uses": "actions/checkout@v3"
+        },
+        {
+          "name": "Install Python",
+          "uses": "actions/setup-python@v4",
+          "with": {
+            "python-version": "3.9",
+            "architecture": "x64"
+          }
+        },
+        {
+          "name": "Install dependencies",
+          "run": "python -m pip install -U \"jupyterlab>=4.0.0a30,<5\" pip\njlpm\njlpm run build\n"
+        }
+      ]
+    }
+  }
+}

@@ -43,20 +43,28 @@ WEWorkflow >> gtJobsFor: aView [
 
 { #category : #initialization }
 WEWorkflow >> initializeEvents [
-	events := (data at: 'on') associations
-			collect: [ :asoc | 
-				WEEvent new
-					name: asoc key;
-					data: asoc value ]
+	| eventDictionary |
+	eventDictionary := data at: 'on'.
+	(eventDictionary isKindOf: String)
+		ifTrue: [ events := OrderedCollection new ]
+		ifFalse: [ events := (data at: 'on') associations
+					collect: [ :asoc | 
+						WEEvent new
+							name: asoc key;
+							data: asoc value ] ]
 ]
 
 { #category : #initialization }
 WEWorkflow >> initializeJobs [
-	jobs := (data at: 'jobs') associations
-		collect: [ :asoc | 
-			WEJob new
-				name: asoc key;
-				data: asoc value ]
+	| jobDictionary |
+	jobDictionary := data at: 'jobs'.
+	(jobDictionary isKindOf: String)
+		ifTrue: [ jobs := OrderedCollection new ]
+		ifFalse: [ jobs := (data at: 'jobs') associations
+					collect: [ :asoc | 
+						WEJob new
+							name: asoc key;
+							data: asoc value ] ]
 ]
 
 { #category : #accessing }

@@ -1,0 +1,216 @@
+{
+  "name": "linux-binary-build",
+  "on": {
+    "workflow_call": {
+      "inputs": {
+        "build_name": {
+          "required": true,
+          "type": "string",
+          "description": "The build's name"
+        },
+        "build_environment": {
+          "required": true,
+          "type": "string",
+          "description": "The build environment"
+        },
+        "PYTORCH_ROOT": {
+          "required": true,
+          "type": "string",
+          "description": "Root directory for the pytorch/pytorch repository"
+        },
+        "BUILDER_ROOT": {
+          "required": true,
+          "type": "string",
+          "description": "Root directory for the pytorch/builder repository"
+        },
+        "PACKAGE_TYPE": {
+          "required": true,
+          "type": "string",
+          "description": "Package type"
+        },
+        "DESIRED_CUDA": {
+          "required": true,
+          "type": "string",
+          "description": "Desired Cuda version"
+        },
+        "GPU_ARCH_VERSION": {
+          "required": false,
+          "type": "string",
+          "description": "GPU Arch version"
+        },
+        "GPU_ARCH_TYPE": {
+          "required": true,
+          "type": "string",
+          "description": "GPU Arch type"
+        },
+        "DOCKER_IMAGE": {
+          "required": true,
+          "type": "string",
+          "description": "Docker image to use"
+        },
+        "LIBTORCH_CONFIG": {
+          "required": false,
+          "type": "string",
+          "description": "Desired libtorch config (for libtorch builds only)"
+        },
+        "LIBTORCH_VARIANT": {
+          "required": false,
+          "type": "string",
+          "description": "Desired libtorch variant (for libtorch builds only)"
+        },
+        "DESIRED_DEVTOOLSET": {
+          "required": false,
+          "type": "string",
+          "description": "Desired dev toolset"
+        },
+        "DESIRED_PYTHON": {
+          "required": false,
+          "type": "string",
+          "description": "Desired python version"
+        },
+        "PYTORCH_EXTRA_INSTALL_REQUIREMENTS": {
+          "required": false,
+          "type": "string",
+          "description": "Extra install requirements",
+          "default": ""
+        }
+      },
+      "secrets": {
+        "github-token": {
+          "required": true,
+          "description": "Github Token"
+        }
+      }
+    }
+  },
+  "jobs": {
+    "build": {
+      "runs-on": "linux.12xlarge",
+      "timeout-minutes": 150,
+      "env": {
+        "PYTORCH_ROOT": "${{ inputs.PYTORCH_ROOT }}",
+        "BUILDER_ROOT": "${{ inputs.BUILDER_ROOT }}",
+        "PACKAGE_TYPE": "${{ inputs.PACKAGE_TYPE }}",
+        "DESIRED_CUDA": "${{ inputs.DESIRED_CUDA }}",
+        "GPU_ARCH_VERSION": "${{ inputs.GPU_ARCH_VERSION }}",
+        "GPU_ARCH_TYPE": "${{ inputs.GPU_ARCH_TYPE }}",
+        "DOCKER_IMAGE": "${{ inputs.DOCKER_IMAGE }}",
+        "SKIP_ALL_TESTS": 1,
+        "LIBTORCH_CONFIG": "${{ inputs.LIBTORCH_CONFIG }}",
+        "LIBTORCH_VARIANT": "${{ inputs.LIBTORCH_VARIANT }}",
+        "DESIRED_DEVTOOLSET": "${{ inputs.DESIRED_DEVTOOLSET }}",
+        "DESIRED_PYTHON": "${{ inputs.DESIRED_PYTHON }}",
+        "PYTORCH_EXTRA_INSTALL_REQUIREMENTS": "${{ inputs.PYTORCH_EXTRA_INSTALL_REQUIREMENTS }}",
+        "ALPINE_IMAGE": "308535385114.dkr.ecr.us-east-1.amazonaws.com/tool/alpine",
+        "ANACONDA_USER": "pytorch",
+        "AWS_DEFAULT_REGION": "us-east-1",
+        "BINARY_ENV_FILE": "/tmp/env",
+        "BUILD_ENVIRONMENT": "${{ inputs.build_environment }}",
+        "GITHUB_TOKEN": "${{ secrets.github-token }}",
+        "PR_NUMBER": "${{ github.event.pull_request.number }}",
+        "PYTORCH_FINAL_PACKAGE_DIR": "/artifacts",
+        "SHA1": "${{ github.event.pull_request.head.sha || github.sha }}"
+      },
+      "steps": [
+        {
+          "name": "Make the env permanent during this workflow (but not the secrets)",
+          "shell": "bash",
+          "run": "{\n  echo \"PYTORCH_ROOT=${{ env.PYTORCH_ROOT }}\"\n  echo \"BUILDER_ROOT=${{ env.BUILDER_ROOT }}\"\n  echo \"PACKAGE_TYPE=${{ env.PACKAGE_TYPE }}\"\n  echo \"DESIRED_CUDA=${{ env.DESIRED_CUDA }}\"\n  echo \"GPU_ARCH_VERSION=${{ env.GPU_ARCH_VERSION }}\"\n  echo \"GPU_ARCH_TYPE=${{ env.GPU_ARCH_TYPE }}\"\n  echo \"DOCKER_IMAGE=${{ env.DOCKER_IMAGE }}\"\n  echo \"SKIP_ALL_TESTS=${{ env.SKIP_ALL_TESTS }}\"\n  echo \"LIBTORCH_CONFIG=${{ env.LIBTORCH_CONFIG }}\"\n  echo \"LIBTORCH_VARIANT=${{ env.LIBTORCH_VARIANT }}\"\n  echo \"DESIRED_DEVTOOLSET=${{ env.DESIRED_DEVTOOLSET }}\"\n  echo \"DESIRED_PYTHON=${{ env.DESIRED_PYTHON }}\"\n  echo \"PYTORCH_EXTRA_INSTALL_REQUIREMENTS=${{ env.PYTORCH_EXTRA_INSTALL_REQUIREMENTS }}\"\n  echo \"ALPINE_IMAGE=${{ env.ALPINE_IMAGE }}\"\n  echo \"ANACONDA_USER=${{ env.ANACONDA_USER }}\"\n  echo \"AWS_DEFAULT_REGION=${{ env.AWS_DEFAULT_REGION }}\"\n  echo \"BINARY_ENV_FILE=${{ env.BINARY_ENV_FILE }}\"\n  echo \"BUILD_ENVIRONMENT=${{ env.BUILD_ENVIRONMENT }}\"\n  echo \"BUILD_NAME=${{ env.BUILD_NAME }}\"\n  echo \"PR_NUMBER=${{ env.PR_NUMBER }}\"\n  echo \"PYTORCH_FINAL_PACKAGE_DIR=${{ env.PYTORCH_FINAL_PACKAGE_DIR }}\"\n  echo \"SHA1=${{ env.SHA1 }}\"\n} >> \"${GITHUB_ENV} }}\"\n"
+        },
+        {
+          "name": "List the env",
+          "shell": "bash",
+          "run": "env"
+        },
+        {
+          "name": "Checkout PyTorch",
+          "uses": "pytorch/pytorch/.github/actions/checkout-pytorch@master"
+        },
+        {
+          "name": "Setup Linux",
+          "uses": "./.github/actions/setup-linux"
+        },
+        {
+          "name": "Chown workspace",
+          "uses": "./.github/actions/chown-workspace"
+        },
+        {
+          "name": "[FB EMPLOYEES] Enable SSH (Click me for login details)",
+          "uses": "pytorch/test-infra/.github/actions/setup-ssh@main",
+          "with": {
+            "github-secret": "${{ secrets.github-token }}"
+          }
+        },
+        {
+          "name": "Clean workspace",
+          "shell": "bash",
+          "run": "rm -rf \"${GITHUB_WORKSPACE}\"\nmkdir \"${GITHUB_WORKSPACE}\"\n"
+        },
+        {
+          "name": "Checkout PyTorch to pytorch dir",
+          "uses": "zhouzhuojie/checkout@05b13c9a0d21f08f6d5e64a1d5042246d13619d9",
+          "with": {
+            "ref": "${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}",
+            "submodules": "recursive",
+            "path": "pytorch"
+          }
+        },
+        {
+          "name": "Clean PyTorch checkout",
+          "run": "# Remove any artifacts from the previous checkouts\ngit clean -fxd\n",
+          "working-directory": "pytorch"
+        },
+        {
+          "name": "Checkout pytorch/builder to builder dir",
+          "uses": "zhouzhuojie/checkout@05b13c9a0d21f08f6d5e64a1d5042246d13619d9",
+          "with": {
+            "ref": "main",
+            "submodules": "recursive",
+            "repository": "pytorch/builder",
+            "path": "builder"
+          }
+        },
+        {
+          "name": "Clean pytorch/builder checkout",
+          "run": "# Remove any artifacts from the previous checkouts\ngit clean -fxd\n",
+          "working-directory": "builder"
+        },
+        {
+          "name": "Pull Docker image",
+          "uses": "pytorch/test-infra/.github/actions/pull-docker-image@main",
+          "with": {
+            "docker-image": "${{ inputs.DOCKER_IMAGE }}"
+          }
+        },
+        {
+          "name": "Build PyTorch binary",
+          "run": "set -x\nmkdir -p artifacts/\ncontainer_name=$(docker run \\\n  -e BINARY_ENV_FILE \\\n  -e BUILDER_ROOT \\\n  -e BUILD_ENVIRONMENT \\\n  -e DESIRED_CUDA \\\n  -e DESIRED_DEVTOOLSET \\\n  -e DESIRED_PYTHON \\\n  -e GITHUB_ACTIONS \\\n  -e GPU_ARCH_TYPE \\\n  -e GPU_ARCH_VERSION \\\n  -e LIBTORCH_VARIANT \\\n  -e PACKAGE_TYPE \\\n  -e PYTORCH_FINAL_PACKAGE_DIR \\\n  -e PYTORCH_ROOT \\\n  -e SKIP_ALL_TESTS \\\n  -e PYTORCH_EXTRA_INSTALL_REQUIREMENTS \\\n  --tty \\\n  --detach \\\n  -v \"${GITHUB_WORKSPACE}/pytorch:/pytorch\" \\\n  -v \"${GITHUB_WORKSPACE}/builder:/builder\" \\\n  -v \"${RUNNER_TEMP}/artifacts:/artifacts\" \\\n  -w / \\\n  \"${DOCKER_IMAGE}\"\n)\ndocker exec -t -w \"${PYTORCH_ROOT}\" \"${container_name}\" bash -c \"bash .circleci/scripts/binary_populate_env.sh\"\ndocker exec -t \"${container_name}\" bash -c \"source ${BINARY_ENV_FILE} && bash /builder/${{ inputs.PACKAGE_TYPE }}/build.sh\"\n"
+        },
+        {
+          "name": "Chown artifacts",
+          "if": "always()",
+          "shell": "bash",
+          "run": "# Ensure the working directory gets chowned back to the current user\ndocker run --rm -v \"${RUNNER_TEMP}/artifacts:/v\" -w /v \"${ALPINE_IMAGE}\" chown -R \"$(id -u):$(id -g)\" .\n"
+        },
+        {
+          "uses": "actions/upload-artifact@v3",
+          "with": {
+            "name": "${{ inputs.build_name }}",
+            "if-no-files-found": "error",
+            "path": "${{ runner.temp }}/artifacts/*"
+          }
+        },
+        {
+          "name": "Teardown Linux",
+          "if": "always()",
+          "uses": "pytorch/test-infra/.github/actions/teardown-linux@main"
+        },
+        {
+          "name": "Chown workspace",
+          "if": "always()",
+          "uses": "./pytorch/.github/actions/chown-workspace"
+        }
+      ]
+    }
+  }
+}

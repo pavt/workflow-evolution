@@ -1,0 +1,166 @@
+{
+  "name": "android-full-build-test",
+  "on": {
+    "workflow_call": {
+      "inputs": {
+        "build-environment": {
+          "required": true,
+          "type": "string",
+          "description": "Top-level label for what's being built/tested."
+        },
+        "docker-image-name": {
+          "required": true,
+          "type": "string",
+          "description": "Name of the base docker image to build with."
+        },
+        "sync-tag": {
+          "required": false,
+          "type": "string",
+          "default": "",
+          "description": "If this is set, our linter will use this to make sure that every other\njob with the same `sync-tag` is identical.\n"
+        }
+      }
+    }
+  },
+  "env": {
+    "GIT_DEFAULT_BRANCH": "${{ github.event.repository.default_branch }}"
+  },
+  "jobs": {
+    "build": {
+      "if": "github.repository_owner == 'pytorch'",
+      "runs-on": [
+        "self-hosted",
+        "linux.2xlarge"
+      ],
+      "steps": [
+        {
+          "name": "Checkout PyTorch",
+          "uses": "pytorch/pytorch/.github/actions/checkout-pytorch@master"
+        },
+        {
+          "name": "Setup Linux",
+          "uses": "./.github/actions/setup-linux"
+        },
+        {
+          "name": "Setup SSH (Click me for login details)",
+          "uses": "pytorch/test-infra/.github/actions/setup-ssh@main",
+          "with": {
+            "github-secret": "${{ secrets.GITHUB_TOKEN }}"
+          }
+        },
+        {
+          "name": "Calculate docker image",
+          "id": "calculate-docker-image",
+          "uses": "./.github/actions/calculate-docker-image",
+          "with": {
+            "docker-image-name": "${{ inputs.docker-image-name }}"
+          }
+        },
+        {
+          "name": "Pull docker image",
+          "uses": "pytorch/test-infra/.github/actions/pull-docker-image@main",
+          "with": {
+            "docker-image": "${{ steps.calculate-docker-image.outputs.docker-image }}"
+          }
+        },
+        {
+          "name": "Output disk space left",
+          "shell": "bash",
+          "run": "sudo df -H\n"
+        },
+        {
+          "name": "Preserve github env variables for use in docker",
+          "shell": "bash",
+          "run": "env | grep '^GITHUB' >> \"/tmp/github_env_${GITHUB_RUN_ID}\"\nenv | grep '^CI' >> \"/tmp/github_env_${GITHUB_RUN_ID}\"\n"
+        },
+        {
+          "name": "Parse ref",
+          "id": "parse-ref",
+          "run": ".github/scripts/parse_ref.py"
+        },
+        {
+          "name": "Build arm-v7a",
+          "uses": "./.github/actions/build-android",
+          "with": {
+            "arch": "arm_v7a",
+            "arch-for-build-env": "arm-v7a",
+            "github-secret": "${{ secrets.GITHUB_TOKEN }}",
+            "build-environment": "${{ inputs.build-environment }}",
+            "docker-image": "${{ steps.calculate-docker-image.outputs.docker-image }}",
+            "branch": "${{ steps.parse-ref.outputs.branch }}"
+          }
+        },
+        {
+          "name": "Build arm-v8a",
+          "uses": "./.github/actions/build-android",
+          "with": {
+            "arch": "arm_v8a",
+            "arch-for-build-env": "arm-v8a",
+            "github-secret": "${{ secrets.GITHUB_TOKEN }}",
+            "build-environment": "${{ inputs.build-environment }}",
+            "docker-image": "${{ steps.calculate-docker-image.outputs.docker-image }}",
+            "branch": "${{ steps.parse-ref.outputs.branch }}"
+          }
+        },
+        {
+          "name": "Build x86_32",
+          "id": "build-x86_32",
+          "uses": "./.github/actions/build-android",
+          "with": {
+            "arch": "x86_32",
+            "arch-for-build-env": "x86_32",
+            "github-secret": "${{ secrets.GITHUB_TOKEN }}",
+            "build-environment": "${{ inputs.build-environment }}",
+            "docker-image": "${{ steps.calculate-docker-image.outputs.docker-image }}",
+            "branch": "${{ steps.parse-ref.outputs.branch }}"
+          }
+        },
+        {
+          "name": "Build x86_64",
+          "uses": "./.github/actions/build-android",
+          "with": {
+            "arch": "x86_64",
+            "arch-for-build-env": "x86_64",
+            "github-secret": "${{ secrets.GITHUB_TOKEN }}",
+            "build-environment": "${{ inputs.build-environment }}",
+            "docker-image": "${{ steps.calculate-docker-image.outputs.docker-image }}",
+            "branch": "${{ steps.parse-ref.outputs.branch }}"
+          }
+        },
+        {
+          "name": "Build final artifact",
+          "env": {
+            "BRANCH": "${{ steps.parse-ref.outputs.branch }}",
+            "DOCKER_IMAGE": "${{ steps.calculate-docker-image.outputs.docker-image }}",
+            "AWS_DEFAULT_REGION": "us-east-1",
+            "PR_NUMBER": "${{ github.event.pull_request.number }}",
+            "SHA1": "${{ github.event.pull_request.head.sha || github.sha }}",
+            "SCCACHE_BUCKET": "ossci-compiler-cache-circleci-v2",
+            "ID_X86_32": "${{ steps.build-x86_32.outputs.container_id }}"
+          },
+          "run": "set -eux\n\n# Putting everything together\n# ID_X86_32 container were created during build-x86_32 step\ndocker cp \"${GITHUB_WORKSPACE}/build_android_install_arm_v7a\" \"${ID_X86_32}:/var/lib/jenkins/workspace/build_android_install_arm_v7a\"\ndocker cp \"${GITHUB_WORKSPACE}/build_android_install_x86_64\" \"${ID_X86_32}:/var/lib/jenkins/workspace/build_android_install_x86_64\"\ndocker cp \"${GITHUB_WORKSPACE}/build_android_install_arm_v8a\" \"${ID_X86_32}:/var/lib/jenkins/workspace/build_android_install_arm_v8a\"\ndocker cp \"${GITHUB_WORKSPACE}/build_android_install_x86_32\" \"${ID_X86_32}:/var/lib/jenkins/workspace/build_android_install_x86_32\"\n\n# run gradle buildRelease\n(echo \"./.circleci/scripts/build_android_gradle.sh\" | docker exec \\\n  -e BUILD_ENVIRONMENT=\"pytorch-linux-focal-py3-clang7-android-ndk-r19c-gradle-build\" \\\n  -e MAX_JOBS=\"$(nproc --ignore=2)\" \\\n  -e AWS_DEFAULT_REGION \\\n  -e PR_NUMBER \\\n  -e SHA1 \\\n  -e BRANCH \\\n  -e SCCACHE_BUCKET \\\n  -e SKIP_SCCACHE_INITIALIZATION=1 \\\n  --env-file=\"/tmp/github_env_${GITHUB_RUN_ID}\" \\\n  --user jenkins \\\n  -u jenkins -i \"${ID_X86_32}\" bash) 2>&1\n\nmkdir -p \"${GITHUB_WORKSPACE}/build_android_artifacts\"\ndocker cp \"${ID_X86_32}:/var/lib/jenkins/workspace/android/artifacts.tgz\" \"${GITHUB_WORKSPACE}/build_android_artifacts/\"\n"
+        },
+        {
+          "name": "Store PyTorch Android Build Artifacts on S3",
+          "uses": "seemethere/upload-artifact-s3@v5",
+          "with": {
+            "name": "${{ inputs.build-environment }}",
+            "retention-days": 14,
+            "if-no-files-found": "error",
+            "path": "build_android_artifacts/artifacts.tgz"
+          }
+        },
+        {
+          "name": "Chown workspace",
+          "uses": "./.github/actions/chown-workspace",
+          "if": "always()"
+        },
+        {
+          "name": "Teardown Linux",
+          "uses": "pytorch/test-infra/.github/actions/teardown-linux@main",
+          "if": "always()"
+        }
+      ]
+    }
+  }
+}

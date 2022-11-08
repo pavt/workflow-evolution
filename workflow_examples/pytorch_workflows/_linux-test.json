@@ -1,0 +1,216 @@
+{
+  "name": "linux-test",
+  "on": {
+    "workflow_call": {
+      "inputs": {
+        "build-environment": {
+          "required": true,
+          "type": "string",
+          "description": "Top-level label for what's being built/tested."
+        },
+        "test-matrix": {
+          "required": true,
+          "type": "string",
+          "description": "JSON description of what test configs to run."
+        },
+        "docker-image": {
+          "required": true,
+          "type": "string",
+          "description": "Docker image to run in."
+        },
+        "sync-tag": {
+          "required": false,
+          "type": "string",
+          "default": "",
+          "description": "If this is set, our linter will use this to make sure that every other\njob with the same `sync-tag` is identical.\n"
+        }
+      }
+    }
+  },
+  "env": {
+    "GIT_DEFAULT_BRANCH": "${{ github.event.repository.default_branch }}"
+  },
+  "jobs": {
+    "filter": {
+      "runs-on": [
+        "self-hosted",
+        "linux.large"
+      ],
+      "outputs": {
+        "test-matrix": "${{ steps.filter.outputs.test-matrix }}",
+        "is-test-matrix-empty": "${{ steps.filter.outputs.is-test-matrix-empty }}"
+      },
+      "steps": [
+        {
+          "name": "Checkout PyTorch",
+          "uses": "pytorch/pytorch/.github/actions/checkout-pytorch@master",
+          "with": {
+            "fetch-depth": 1,
+            "submodules": false
+          }
+        },
+        {
+          "name": "Select all requested test configurations",
+          "id": "filter",
+          "uses": "./.github/actions/filter-test-configs",
+          "with": {
+            "github-token": "${{ secrets.GITHUB_TOKEN }}",
+            "test-matrix": "${{ inputs.test-matrix }}"
+          }
+        }
+      ]
+    },
+    "test": {
+      "needs": "filter",
+      "if": "github.repository_owner == 'pytorch' && needs.filter.outputs.is-test-matrix-empty == 'False'",
+      "strategy": {
+        "matrix": "${{ fromJSON(needs.filter.outputs.test-matrix) }}",
+        "fail-fast": false
+      },
+      "runs-on": "${{ matrix.runner }}",
+      "steps": [
+        {
+          "name": "Checkout PyTorch",
+          "uses": "pytorch/pytorch/.github/actions/checkout-pytorch@master"
+        },
+        {
+          "name": "Setup Linux",
+          "uses": "./.github/actions/setup-linux"
+        },
+        {
+          "name": "Setup SSH (Click me for login details)",
+          "uses": "pytorch/test-infra/.github/actions/setup-ssh@main",
+          "with": {
+            "github-secret": "${{ secrets.GITHUB_TOKEN }}"
+          }
+        },
+        {
+          "name": "Pull docker image",
+          "uses": "pytorch/test-infra/.github/actions/pull-docker-image@main",
+          "with": {
+            "docker-image": "${{ inputs.docker-image }}"
+          }
+        },
+        {
+          "name": "Install nvidia driver, nvidia-docker runtime, set GPU_FLAG",
+          "uses": "nick-fields/retry@3e91a01664abd3c5cd539100d10d33b9c5b68482",
+          "if": "contains(inputs.build-environment, 'cuda') && !contains(matrix.config, 'nogpu')",
+          "with": {
+            "timeout_minutes": 10,
+            "max_attempts": 3,
+            "command": "set -ex\nbash .github/scripts/install_nvidia_utils_linux.sh\necho \"GPU_FLAG=--gpus all\" >> \"${GITHUB_ENV}\"\n"
+          }
+        },
+        {
+          "name": "Start monitoring script",
+          "id": "monitor-script",
+          "shell": "bash",
+          "run": "python3 -m pip install psutil==5.9.1\npython3 -m pip install pynvml==11.4.1\npython3 -m tools.stats.monitor > usage_log.txt 2>&1 &\necho \"monitor-script-pid=${!}\" >> \"${GITHUB_OUTPUT}\"\n"
+        },
+        {
+          "name": "Download build artifacts",
+          "uses": "./.github/actions/download-build-artifacts",
+          "with": {
+            "name": "${{ inputs.build-environment }}"
+          }
+        },
+        {
+          "name": "Parse ref",
+          "id": "parse-ref",
+          "run": ".github/scripts/parse_ref.py"
+        },
+        {
+          "name": "Test",
+          "id": "test",
+          "env": {
+            "BUILD_ENVIRONMENT": "${{ inputs.build-environment }}",
+            "PR_NUMBER": "${{ github.event.pull_request.number }}",
+            "BRANCH": "${{ steps.parse-ref.outputs.branch }}",
+            "SHA1": "${{ github.event.pull_request.head.sha || github.sha }}",
+            "BASE_SHA": "${{ github.event.pull_request.base.sha || github.sha }}",
+            "PYTORCH_RETRY_TEST_CASES": 1,
+            "PYTORCH_OVERRIDE_FLAKY_SIGNAL": 1,
+            "TEST_CONFIG": "${{ matrix.config }}",
+            "SHARD_NUMBER": "${{ matrix.shard }}",
+            "NUM_TEST_SHARDS": "${{ matrix.num_shards }}",
+            "PR_BODY": "${{ github.event.pull_request.body }}",
+            "SCCACHE_BUCKET": "ossci-compiler-cache-circleci-v2",
+            "SCCACHE_S3_KEY_PREFIX": "${{ github.workflow }}",
+            "SHM_SIZE": "${{ contains(inputs.build-environment, 'cuda') && '2g' || '1g' }}",
+            "DOCKER_IMAGE": "${{ inputs.docker-image }}",
+            "XLA_CUDA": "${{ contains(inputs.build-environment, 'xla') && '0' || '' }}",
+            "XLA_CLANG_CACHE_S3_BUCKET_NAME": "ossci-compiler-clang-cache-circleci-xla",
+            "PYTORCH_TEST_CUDA_MEM_LEAK_CHECK": "${{ matrix.mem_leak_check && '1' || '0'}}"
+          },
+          "timeout-minutes": 240,
+          "run": "set -x\n\nif [[ $TEST_CONFIG == 'multigpu' ]]; then\n  TEST_COMMAND=.jenkins/pytorch/multigpu-test.sh\nelif [[ $BUILD_ENVIRONMENT == *onnx* ]]; then\n  TEST_COMMAND=.jenkins/caffe2/test.sh\nelse\n  TEST_COMMAND=.jenkins/pytorch/test.sh\nfi\n\nCOMMIT_MESSAGES=$(git cherry -v \"origin/${GIT_DEFAULT_BRANCH:-master}\")\n\n# sanitize the input commit message and PR body here:\n#\n# trim all new lines from commit messages + PR_BODY to avoid issues with batch environment\n# variable copying. see https://github.com/pytorch/pytorch/pull/80043#issuecomment-1167796028\nCOMMIT_MESSAGES=\"${COMMIT_MESSAGES//[$'\\n\\r']}\"\nPR_BODY=\"${PR_BODY//[$'\\n\\r']}\"\n\n# then trim all special characters like single and double quotes to avoid unescaped inputs to\n# wreak havoc internally\nexport COMMIT_MESSAGES=\"${COMMIT_MESSAGES//[\\'\\\"]}\"\nexport PR_BODY=\"${PR_BODY//[\\'\\\"]}\"\n\n# detached container should get cleaned up by teardown_ec2_linux\n# TODO: Stop building test binaries as part of the build phase\n# Used for GPU_FLAG since that doesn't play nice\n# shellcheck disable=SC2086,SC2090\ncontainer_name=$(docker run \\\n  ${GPU_FLAG:-} \\\n  -e BUILD_ENVIRONMENT \\\n  -e PR_NUMBER \\\n  -e GITHUB_ACTIONS \\\n  -e BASE_SHA \\\n  -e BRANCH \\\n  -e SHA1 \\\n  -e AWS_DEFAULT_REGION \\\n  -e IN_WHEEL_TEST \\\n  -e SHARD_NUMBER \\\n  -e TEST_CONFIG \\\n  -e NUM_TEST_SHARDS \\\n  -e PR_BODY \\\n  -e COMMIT_MESSAGES \\\n  -e PYTORCH_RETRY_TEST_CASES \\\n  -e PYTORCH_OVERRIDE_FLAKY_SIGNAL \\\n  -e PR_LABELS \\\n  -e MAX_JOBS=\"$(nproc --ignore=2)\" \\\n  -e SCCACHE_BUCKET \\\n  -e SCCACHE_S3_KEY_PREFIX \\\n  -e XLA_CUDA \\\n  -e XLA_CLANG_CACHE_S3_BUCKET_NAME \\\n  -e PYTORCH_TEST_CUDA_MEM_LEAK_CHECK \\\n  --env-file=\"/tmp/github_env_${GITHUB_RUN_ID}\" \\\n  --ulimit stack=10485760:83886080 \\\n  --security-opt seccomp=unconfined \\\n  --cap-add=SYS_PTRACE \\\n  --ipc=host \\\n  --shm-size=\"${SHM_SIZE}\" \\\n  --tty \\\n  --detach \\\n  --name=\"${container_name}\" \\\n  --user jenkins \\\n  -v \"${GITHUB_WORKSPACE}:/var/lib/jenkins/workspace\" \\\n  -w /var/lib/jenkins/workspace \\\n  \"${DOCKER_IMAGE}\"\n)\ndocker exec -t \"${container_name}\" sh -c \"pip install $(echo dist/*.whl)[opt-einsum] && ${TEST_COMMAND}\"\n"
+        },
+        {
+          "name": "Get workflow job id",
+          "id": "get-job-id",
+          "uses": "./.github/actions/get-workflow-job-id",
+          "if": "always()",
+          "with": {
+            "github-token": "${{ secrets.GITHUB_TOKEN }}"
+          }
+        },
+        {
+          "name": "Stop monitoring script",
+          "if": "always() && steps.monitor-script.outputs.monitor-script-pid",
+          "shell": "bash",
+          "continue-on-error": true,
+          "env": {
+            "MONITOR_SCRIPT_PID": "${{ steps.monitor-script.outputs.monitor-script-pid }}"
+          },
+          "run": "kill \"$MONITOR_SCRIPT_PID\"\n"
+        },
+        {
+          "name": "Upload test artifacts",
+          "uses": "./.github/actions/upload-test-artifacts",
+          "if": "always() && (steps.test.conclusion == 'success' || steps.test.conclusion == 'failure')",
+          "with": {
+            "file-suffix": "${{ github.job }}-${{ matrix.config }}-${{ matrix.shard }}-${{ matrix.num_shards }}-${{ matrix.runner }}_${{ steps.get-job-id.outputs.job-id }}"
+          }
+        },
+        {
+          "name": "Store Core dumps on S3",
+          "uses": "seemethere/upload-artifact-s3@v5",
+          "if": "failure()",
+          "with": {
+            "name": "coredumps-${{ matrix.config }}-${{ matrix.shard }}-${{ matrix.num_shards }}-${{ matrix.runner }}",
+            "retention-days": 14,
+            "if-no-files-found": "ignore",
+            "path": "./**/core.[1-9]*"
+          }
+        },
+        {
+          "name": "Upload test statistics",
+          "if": "always()",
+          "env": {
+            "AWS_DEFAULT_REGION": "us-east-1",
+            "GIT_DEFAULT_BRANCH": "${{ github.event.repository.default_branch }}",
+            "BRANCH": "${{ steps.parse-ref.outputs.branch }}",
+            "TEST_CONFIG": "${{ matrix.config }}",
+            "SHARD_NUMBER": "${{ matrix.shard }}",
+            "BUILD_ENVIRONMENT": "${{ inputs.build-environment }}",
+            "PR_NUMBER": "${{ github.event.pull_request.number }}",
+            "PYTORCH_RETRY_TEST_CASES": 1,
+            "PYTORCH_OVERRIDE_FLAKY_SIGNAL": 1,
+            "SHA1": "${{ github.event.pull_request.head.sha || github.sha }}",
+            "TAG": "${{ steps.parse-ref.outputs.tag }}",
+            "WORKFLOW_ID": "${{ github.run_id }}",
+            "GITHUB_TOKEN": "${{ secrets.GITHUB_TOKEN }}",
+            "GHA_WORKFLOW_JOB_ID": "${{ steps.get-job-id.outputs.job-id }}"
+          },
+          "shell": "bash",
+          "run": "set -x\npython3 -m pip install -r requirements.txt\npython3 -m pip install boto3==1.19.12\npython3 -m tools.stats.print_test_stats --upload-to-s3 --compare-with-s3 test\n"
+        },
+        {
+          "name": "Teardown Linux",
+          "uses": "pytorch/test-infra/.github/actions/teardown-linux@main",
+          "if": "always()"
+        }
+      ]
+    }
+  }
+}

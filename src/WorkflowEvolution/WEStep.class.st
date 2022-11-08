@@ -10,6 +10,11 @@ WEStep >> getField: fieldName [
 ]
 
 { #category : #accessing }
+WEStep >> name [
+	^ (self getField: 'name')
+]
+
+{ #category : #accessing }
 WEStep >> uses [
 	^ (self getField: 'uses')
 ]

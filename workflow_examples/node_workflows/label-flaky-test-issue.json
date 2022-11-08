@@ -1,0 +1,38 @@
+{
+  "name": "Label Flaky Test Issues",
+  "on": {
+    "issues": {
+      "types": [
+        "opened",
+        "labeled"
+      ]
+    }
+  },
+  "jobs": {
+    "label": {
+      "if": "github.event.label.name == 'flaky-test'",
+      "runs-on": "ubuntu-latest",
+      "permissions": {
+        "issues": "write"
+      },
+      "steps": [
+        {
+          "name": "Extract labels",
+          "id": "extract-labels",
+          "env": {
+            "BODY": "${{ github.event.issue.body }}"
+          },
+          "run": "BODY=\"${BODY//$'\\n'/'\\n'}\"\n\ndeclare -A platform2label\n\nplatform2label[\"AIX\"]=\"aix\";\nplatform2label[\"FreeBSD\"]=\"freebsd\";\nplatform2label[\"Linux ARM64\"]=\"linux\";\nplatform2label[\"Linux ARMv7\"]=\"arm\";\nplatform2label[\"Linux PPC64LE\"]=\"ppc\";\nplatform2label[\"Linux s390x\"]=\"s390\";\nplatform2label[\"Linux x64\"]=\"linux\";\nplatform2label[\"macOS ARM64\"]=\"macos\";\nplatform2label[\"macOS x64\"]=\"macos\";\nplatform2label[\"SmartOS\"]=\"smartos\";\nplatform2label[\"Windows\"]=\"windows\";\n\n# sed is cleaning up the edges\nPLATFORMS=$(echo $BODY | sed 's/^.*Platform\\\\n\\\\n//' | sed 's/\\(, Other\\)\\?\\\\n\\\\n.*$//') 2> /dev/null\nreadarray -d , -t list <<< \"$PLATFORMS\"\nlabels=\nfor row in \"${list[@]}\"; do \\\n  platform=$(echo $row | xargs); \\\n  labels=\"${labels}${platform2label[$platform]},\"; \\\ndone;\n\necho \"LABELS=${labels::-1}\" >> $GITHUB_OUTPUT\n"
+        },
+        {
+          "name": "Add labels",
+          "env": {
+            "GITHUB_TOKEN": "${{ secrets.GITHUB_TOKEN }}",
+            "NUMBER": "${{ github.event.issue.number }}"
+          },
+          "run": "gh issue edit \"$NUMBER\" --repo ${{ github.repository }} --add-label \"${{ steps.extract-labels.outputs.LABELS }}\""
+        }
+      ]
+    }
+  }
+}

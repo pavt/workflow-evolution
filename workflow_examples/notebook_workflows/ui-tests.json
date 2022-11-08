@@ -1,0 +1,120 @@
+{
+  "name": "UI Tests",
+  "on": {
+    "push": {
+      "branches": [
+        "main"
+      ]
+    },
+    "pull_request": null
+  },
+  "concurrency": {
+    "group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}",
+    "cancel-in-progress": true
+  },
+  "jobs": {
+    "build": {
+      "name": "Build",
+      "runs-on": "ubuntu-latest",
+      "steps": [
+        {
+          "name": "Checkout",
+          "uses": "actions/checkout@v3"
+        },
+        {
+          "name": "Build",
+          "uses": "./.github/actions/build-dist"
+        }
+      ]
+    },
+    "ui-tests": {
+      "needs": [
+        "build"
+      ],
+      "runs-on": "ubuntu-latest",
+      "timeout-minutes": 20,
+      "strategy": {
+        "fail-fast": false,
+        "matrix": {
+          "browser": [
+            "firefox",
+            "chromium"
+          ]
+        }
+      },
+      "steps": [
+        {
+          "name": "Checkout",
+          "uses": "actions/checkout@v3"
+        },
+        {
+          "name": "Base Setup",
+          "uses": "jupyterlab/maintainer-tools/.github/actions/base-setup@v1"
+        },
+        {
+          "uses": "actions/download-artifact@v3",
+          "with": {
+            "name": "notebook-dist-${{ github.run_number }}",
+            "path": "./dist"
+          }
+        },
+        {
+          "name": "Install the package",
+          "run": "cd dist\npython -m pip install -vv notebook*.whl\n"
+        },
+        {
+          "name": "Install the test dependencies",
+          "run": "cd ui-tests\njlpm --frozen-lockfile\njlpm playwright install\n"
+        },
+        {
+          "name": "Start Jupyter Notebook",
+          "run": "cd ui-tests\njlpm start:detached\n"
+        },
+        {
+          "name": "Wait for Jupyter Notebook",
+          "uses": "ifaxity/wait-on-action@v1",
+          "with": {
+            "resource": "http-get://127.0.0.1:8888/",
+            "timeout": 360000
+          }
+        },
+        {
+          "name": "Test",
+          "run": "cd ui-tests\njlpm test --browser ${{ matrix.browser }}\n"
+        },
+        {
+          "name": "Upload Playwright Test assets",
+          "if": "always()",
+          "uses": "actions/upload-artifact@v3",
+          "with": {
+            "name": "notebook-${{ matrix.browser }}-test-assets",
+            "path": "ui-tests/test-results\n"
+          }
+        },
+        {
+          "name": "Upload Playwright Test report",
+          "if": "always()",
+          "uses": "actions/upload-artifact@v3",
+          "with": {
+            "name": "notebook-${{ matrix.browser }}-test-report",
+            "path": "ui-tests/playwright-report\n"
+          }
+        },
+        {
+          "name": "Update snapshots",
+          "if": "failure()",
+          "run": "cd ui-tests\n# remove previous snapshots from other browser\njlpm rimraf \"test/**/*-snapshots/*.png\"\n# generate new snapshots\njlpm run test:update --browser ${{ matrix.browser }}\n"
+        },
+        {
+          "name": "Upload updated snapshots",
+          "if": "failure()",
+          "uses": "actions/upload-artifact@v3",
+          "with": {
+            "name": "notebook-${{ matrix.browser }}-updated-snapshots",
+            "path": "ui-tests/test"
+          }
+        }
+      ]
+    }
+  }
+}

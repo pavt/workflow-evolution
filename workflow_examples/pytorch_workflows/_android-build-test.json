@@ -1,0 +1,98 @@
+{
+  "name": "android-build-test",
+  "on": {
+    "workflow_call": {
+      "inputs": {
+        "build-environment": {
+          "required": true,
+          "type": "string",
+          "description": "Top-level label for what's being built/tested."
+        },
+        "docker-image-name": {
+          "required": true,
+          "type": "string",
+          "description": "Name of the base docker image to build with."
+        },
+        "sync-tag": {
+          "required": false,
+          "type": "string",
+          "default": "",
+          "description": "If this is set, our linter will use this to make sure that every other\njob with the same `sync-tag` is identical.\n"
+        }
+      }
+    }
+  },
+  "env": {
+    "GIT_DEFAULT_BRANCH": "${{ github.event.repository.default_branch }}"
+  },
+  "jobs": {
+    "build-and-test": {
+      "if": "github.repository_owner == 'pytorch'",
+      "runs-on": [
+        "self-hosted",
+        "linux.2xlarge"
+      ],
+      "steps": [
+        {
+          "name": "Checkout PyTorch",
+          "uses": "pytorch/pytorch/.github/actions/checkout-pytorch@master"
+        },
+        {
+          "name": "Setup Linux",
+          "uses": "./.github/actions/setup-linux"
+        },
+        {
+          "name": "Setup SSH (Click me for login details)",
+          "uses": "pytorch/test-infra/.github/actions/setup-ssh@main",
+          "with": {
+            "github-secret": "${{ secrets.GITHUB_TOKEN }}"
+          }
+        },
+        {
+          "name": "Calculate docker image",
+          "id": "calculate-docker-image",
+          "uses": "./.github/actions/calculate-docker-image",
+          "with": {
+            "docker-image-name": "${{ inputs.docker-image-name }}",
+            "xla": "${{ contains(inputs.build-environment, 'xla') }}"
+          }
+        },
+        {
+          "name": "Pull docker image",
+          "uses": "pytorch/test-infra/.github/actions/pull-docker-image@main",
+          "with": {
+            "docker-image": "${{ steps.calculate-docker-image.outputs.docker-image }}"
+          }
+        },
+        {
+          "name": "Output disk space left",
+          "run": "sudo df -H\n"
+        },
+        {
+          "name": "Preserve github env variables for use in docker",
+          "run": "env | grep '^GITHUB' >> \"/tmp/github_env_${GITHUB_RUN_ID}\"\nenv | grep '^CI' >> \"/tmp/github_env_${GITHUB_RUN_ID}\"\n"
+        },
+        {
+          "name": "Build",
+          "env": {
+            "BUILD_ENVIRONMENT": "${{ inputs.build-environment }}",
+            "TORCH_CUDA_ARCH_LIST": 5.2,
+            "SCCACHE_BUCKET": "ossci-compiler-cache-circleci-v2",
+            "DOCKER_IMAGE": "${{ steps.calculate-docker-image.outputs.docker-image }}"
+          },
+          "run": "set -e\n# Unlike other gradle jobs, it's not worth building libtorch in a separate CI job and share via docker, because:\n# 1) Not shareable: it's custom selective build, which is different from default libtorch mobile build;\n# 2) Not parallelizable by architecture: it only builds libtorch for one architecture;\n\nexport BUILD_LITE_INTERPRETER\nBUILD_LITE_INTERPRETER=\"1\"\nif [[ \"${BUILD_ENVIRONMENT}\" == *\"full-jit\" ]]; then\n  BUILD_LITE_INTERPRETER=\"0\"\nfi\n\ngit submodule sync && git submodule update -q --init --recursive --depth 1 --jobs 0\nexport id\nid=$(docker run -e BUILD_ENVIRONMENT \\\n  -e MAX_JOBS=\"$(nproc --ignore=2)\" \\\n  -e SCCACHE_BUCKET \\\n  -e SKIP_SCCACHE_INITIALIZATION=1 \\\n  -e TORCH_CUDA_ARCH_LIST \\\n  -e BUILD_LITE_INTERPRETER \\\n  --env-file=\"/tmp/github_env_${GITHUB_RUN_ID}\" \\\n  --security-opt seccomp=unconfined \\\n  --cap-add=SYS_PTRACE \\\n  --tty \\\n  --detach \\\n  --user jenkins \\\n  -v \"$(pwd):/var/lib/jenkins/workspace\" \\\n  --cap-add=SYS_PTRACE \\\n  --security-opt seccomp=unconfined \\\n  --cap-add=SYS_PTRACE \\\n  --security-opt seccomp=unconfined \\\n  -t -d -w /var/lib/jenkins \"${DOCKER_IMAGE}\")\n\nexport COMMAND\n# shellcheck disable=SC2016\nCOMMAND='(echo \"sudo chown -R jenkins workspace && cd workspace && ./.circleci/scripts/build_android_gradle.sh\" | docker exec -u jenkins -e BUILD_LITE_INTERPRETER -e GRADLE_OFFLINE=1 -i \"$id\" bash) 2>&1'\necho \"${COMMAND}\" > ./command.sh && bash ./command.sh\n# Skip docker push as this job is purely for size analysis purpose.\n# Result binaries are already in `/home/circleci/project/` as it's mounted instead of copied.\n"
+        },
+        {
+          "name": "Chown workspace",
+          "uses": "./.github/actions/chown-workspace",
+          "if": "always()"
+        },
+        {
+          "name": "Teardown Linux",
+          "uses": "pytorch/test-infra/.github/actions/teardown-linux@main",
+          "if": "always()"
+        }
+      ]
+    }
+  }
+}

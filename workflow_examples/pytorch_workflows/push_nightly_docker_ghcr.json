@@ -1,0 +1,51 @@
+{
+  "name": "docker-release-builds",
+  "on": {
+    "schedule": [
+      {
+        "cron": "0 13 * * *"
+      }
+    ],
+    "pull_request": {
+      "paths": [
+        ".github/scripts/build_publish_nightly_docker.sh",
+        ".github/workflows/push_nightly_docker_ghcr.yml",
+        "Dockerfile",
+        "docker.Makefile"
+      ]
+    },
+    "workflow_dispatch": null
+  },
+  "jobs": {
+    "docker-release-build": {
+      "if": "${{ github.repository == 'pytorch/pytorch' }}",
+      "runs-on": "linux.2xlarge",
+      "env": {
+        "GHCR_PAT": "${{ secrets.GHCR_PAT }}",
+        "WITH_PUSH": "${{ github.event_name == 'schedule' }}"
+      },
+      "steps": [
+        {
+          "name": "Checkout PyTorch",
+          "uses": "zhouzhuojie/checkout@05b13c9a0d21f08f6d5e64a1d5042246d13619d9",
+          "with": {
+            "ref": "${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}"
+          }
+        },
+        {
+          "uses": "nick-fields/retry@3e91a01664abd3c5cd539100d10d33b9c5b68482",
+          "name": "Build and upload nightly docker",
+          "with": {
+            "timeout_minutes": 30,
+            "max_attempts": 3,
+            "command": "set -ex\nbash .github/scripts/build_publish_nightly_docker.sh\n"
+          }
+        }
+      ]
+    }
+  },
+  "concurrency": {
+    "group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}-${{ github.event_name == 'workflow_dispatch' }}",
+    "cancel-in-progress": true
+  }
+}

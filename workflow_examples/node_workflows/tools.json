@@ -1,0 +1,91 @@
+{
+  "name": "Tools and deps update",
+  "on": {
+    "schedule": [
+      {
+        "cron": "5 0 * * 0"
+      }
+    ],
+    "workflow_dispatch": null
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "jobs": {
+    "tools-deps-update": {
+      "if": "github.repository == 'nodejs/node'",
+      "runs-on": "ubuntu-latest",
+      "strategy": {
+        "fail-fast": false,
+        "matrix": {
+          "include": [
+            {
+              "id": "eslint",
+              "subsystem": "tools",
+              "label": "tools",
+              "run": "cd tools\nNEW_VERSION=$(npm view eslint dist-tags.latest)\nCURRENT_VERSION=$(node -p \"require('./node_modules/eslint/package.json').version\")\nif [ \"$NEW_VERSION\" != \"$CURRENT_VERSION\" ]; then\n  echo \"NEW_VERSION=$NEW_VERSION\" >> $GITHUB_ENV\n  ./update-eslint.sh\nfi\n"
+            },
+            {
+              "id": "corepack",
+              "subsystem": "deps",
+              "label": "dependencies",
+              "run": "make corepack-update\necho \"NEW_VERSION=$(node deps/corepack/dist/corepack.js --version)\" >> $GITHUB_ENV\n"
+            },
+            {
+              "id": "lint-md-dependencies",
+              "subsystem": "tools",
+              "label": "tools",
+              "run": "cd tools/lint-md\nnpm ci\nNEW_VERSION=$(npm outdated --parseable | cut -d: -f4 | xargs)\nif [ \"$NEW_VERSION\" != \"\" ]; then\n  echo \"NEW_VERSION=$NEW_VERSION\" >> $GITHUB_ENV\n  rm -rf package-lock.json node_modules\n  # Include $NEW_VERSION to explicitly update the package.json\n  # entry for the dependency and also so that semver-major updates\n  # are not skipped.\n  npm install --ignore-scripts $NEW_VERSION\n  npm install --ignore-scripts\n  cd ../..\n  make lint-md-rollup\nfi\n"
+            },
+            {
+              "id": "doc",
+              "subsystem": "tools",
+              "label": "tools",
+              "run": "cd tools/doc\nnpm ci\nNEW_VERSION=$(npm outdated --parseable | cut -d: -f4 | xargs)\nif [ \"$NEW_VERSION\" != \"\" ]; then\n  echo \"NEW_VERSION=$NEW_VERSION\" >> $GITHUB_ENV\n  rm -rf package-lock.json node_modules\n  # Include $NEW_VERSION to explicitly update the package.json\n  # entry for the dependency and also so that semver-major updates\n  # are not skipped.\n  npm install --ignore-scripts $NEW_VERSION\n  npm install --ignore-scripts\nfi\n"
+            },
+            {
+              "id": "undici",
+              "subsystem": "deps",
+              "label": "dependencies",
+              "run": "NEW_VERSION=$(npm view undici dist-tags.latest)\nCURRENT_VERSION=$(node -p \"require('./deps/undici/src/package.json').version\")\nif [ \"$NEW_VERSION\" != \"$CURRENT_VERSION\" ]; then\n  echo \"NEW_VERSION=$NEW_VERSION\" >> $GITHUB_ENV\n  ./tools/update-undici.sh\nfi\n"
+            },
+            {
+              "id": "base64",
+              "subsystem": "deps",
+              "label": "dependencies",
+              "run": "NEW_VERSION=$(gh api repos/aklomp/base64/releases/latest -q '.tag_name|ltrimstr(\"v\")')\nCURRENT_VERSION=$(grep \"base64 LANGUAGES C VERSION\" ./deps/base64/base64/CMakeLists.txt | \\\n                  sed -n \"s/^.*VERSION \\(.*\\))/\\1/p\")\nif [ \"$NEW_VERSION\" != \"$CURRENT_VERSION\" ]; then\n  echo \"NEW_VERSION=$NEW_VERSION\" >> $GITHUB_ENV\n  ./tools/update-base64.sh \"$NEW_VERSION\"\nfi\n"
+            }
+          ]
+        }
+      },
+      "steps": [
+        {
+          "uses": "actions/checkout@v3",
+          "with": {
+            "persist-credentials": false
+          }
+        },
+        {
+          "run": "${{ matrix.run }}",
+          "env": {
+            "GITHUB_TOKEN": "${{ secrets.GH_USER_TOKEN }}"
+          }
+        },
+        {
+          "uses": "gr2m/create-or-update-pull-request-action@dc1726cbf4dd3ce766af4ec29cfb660e0125e8ee",
+          "env": {
+            "GITHUB_TOKEN": "${{ secrets.GH_USER_TOKEN }}"
+          },
+          "with": {
+            "author": "Node.js GitHub Bot <github-bot@iojs.org>",
+            "body": "This is an automated update of ${{ matrix.id }} to ${{ env.NEW_VERSION }}.",
+            "branch": "actions/tools-update-${{ matrix.id }}",
+            "commit-message": "${{ matrix.subsystem }}: update ${{ matrix.id }} to ${{ env.NEW_VERSION }}",
+            "labels": "${{ matrix.label }}",
+            "title": "${{ matrix.subsystem }}: update ${{ matrix.id }} to ${{ env.NEW_VERSION }}"
+          }
+        }
+      ]
+    }
+  }
+}

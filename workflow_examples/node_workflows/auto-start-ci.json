@@ -1,0 +1,78 @@
+{
+  "name": "Auto Start CI",
+  "on": {
+    "schedule": [
+      {
+        "cron": "*/5 * * * *"
+      }
+    ]
+  },
+  "concurrency": "${{ github.workflow }}",
+  "env": {
+    "NODE_VERSION": 16
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "jobs": {
+    "get-prs-for-ci": {
+      "permissions": {
+        "pull-requests": "read"
+      },
+      "if": "github.repository == 'nodejs/node'",
+      "runs-on": "ubuntu-latest",
+      "outputs": {
+        "numbers": "${{ steps.get_prs_for_ci.outputs.numbers }}"
+      },
+      "steps": [
+        {
+          "name": "Get Pull Requests",
+          "id": "get_prs_for_ci",
+          "run": "numbers=$(gh pr list \\\n        --repo ${{ github.repository }} \\\n        --label 'request-ci' \\\n        --json 'number' \\\n        -t '{{ range . }}{{ .number }} {{ end }}' \\\n        --limit 100)\necho \"numbers=$numbers\" >> $GITHUB_OUTPUT\n",
+          "env": {
+            "GITHUB_TOKEN": "${{ secrets.GITHUB_TOKEN }}"
+          }
+        }
+      ]
+    },
+    "start-ci": {
+      "permissions": {
+        "contents": "read",
+        "pull-requests": "write"
+      },
+      "needs": "get-prs-for-ci",
+      "if": "needs.get-prs-for-ci.outputs.numbers != ''",
+      "runs-on": "ubuntu-latest",
+      "steps": [
+        {
+          "uses": "actions/checkout@v3",
+          "with": {
+            "persist-credentials": false
+          }
+        },
+        {
+          "name": "Install Node.js",
+          "uses": "actions/setup-node@v3",
+          "with": {
+            "node-version": "${{ env.NODE_VERSION }}"
+          }
+        },
+        {
+          "name": "Install node-core-utils",
+          "run": "npm install -g node-core-utils"
+        },
+        {
+          "name": "Setup node-core-utils",
+          "run": "ncu-config set username ${{ secrets.JENKINS_USER }}\nncu-config set token \"${{ secrets.GH_USER_TOKEN }}\"\nncu-config set jenkins_token ${{ secrets.JENKINS_TOKEN }}\nncu-config set owner \"${{ github.repository_owner }}\"\nncu-config set repo \"$(echo ${{ github.repository }} | cut -d/ -f2)\"\n"
+        },
+        {
+          "name": "Start the CI",
+          "run": "./tools/actions/start-ci.sh ${{ needs.get-prs-for-ci.outputs.numbers }}",
+          "env": {
+            "GITHUB_TOKEN": "${{ secrets.GITHUB_TOKEN }}"
+          }
+        }
+      ]
+    }
+  }
+}

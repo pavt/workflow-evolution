@@ -1,0 +1,24 @@
+{
+  "name": "Close stale pull requests",
+  "on": {
+    "schedule": [
+      {
+        "cron": "30 * * * *"
+      }
+    ]
+  },
+  "jobs": {
+    "stale": {
+      "if": "${{ github.repository == 'pytorch/pytorch' }}",
+      "runs-on": "ubuntu-latest",
+      "steps": [
+        {
+          "uses": "actions/github-script@v6",
+          "with": {
+            "script": "// Do some dumb retries on requests.\nconst retries = 7;\nconst baseBackoff = 100;\nconst sleep = timeout => new Promise(resolve => setTimeout(resolve, timeout));\ngithub.hook.wrap('request', async (request, options) => {\n  for (let attempt = 1; attempt <= retries; attempt++) {\n    try {\n      return await request(options);\n    } catch (err) {\n      if (attempt < retries) {\n        core.warning(`Request getting retried. Attempt: ${attempt}`);\n        await sleep(baseBackoff * Math.pow(2, attempt));\n        continue;\n      }\n      throw err;\n    }\n  }\n});\n\nconst MAX_API_REQUESTS = 100;\n\n// If a PRs not labeled stale, label them stale after no update for 60 days.\nconst STALE_LABEL_THRESHOLD_MS = 1000 * 60 * 60 * 24 * 60;\n// For PRs already labeled stale, close after not update for 30 days.\nconst STALE_CLOSE_THRESHOLD_MS = 1000 * 60 * 60 * 24 * 30;\n\nconst STALE_MESSAGE =\n  \"Looks like this PR hasn't been updated in a while so we're going to go ahead and mark this as `Stale`. <br>\" +\n  \"Feel free to remove the `Stale` label if you feel this was a mistake. <br>\" +\n  \"If you are unable to remove the `Stale` label please contact a maintainer in order to do so. <br>\" +\n  \"If you want the bot to never mark this PR stale again, add the `no-stale` label.<br>\" +\n  \"`Stale` pull requests will automatically be closed after 30 days of inactivity.<br>\";\n\nlet numAPIRequests = 0;\nlet numProcessed = 0;\n\nasync function processPull(pull) {\n  core.info(`[${pull.number}] URL: ${pull.html_url}`);\n  numProcessed += 1;\n  const labels = pull.labels.map((label) => label.name);\n\n  // Skip if certain labels are present.\n  if (labels.includes(\"no-stale\") || labels.includes(\"high priority\")) {\n    core.info(`[${pull.number}] Skipping because PR has an exempting label.`);\n    return false;\n  }\n\n  // Check if the PR is stale, according to our configured thresholds.\n  let staleThresholdMillis;\n  if (labels.includes(\"Stale\")) {\n    core.info(`[${pull.number}] PR is labeled stale, checking whether we should close it.`);\n    staleThresholdMillis = STALE_CLOSE_THRESHOLD_MS;\n  } else {\n    core.info(`[${pull.number}] Checking whether to label PR as stale.`);\n    staleThresholdMillis = STALE_LABEL_THRESHOLD_MS;\n  }\n\n  const millisSinceLastUpdated =\n    new Date().getTime() - new Date(pull.updated_at).getTime();\n\n  if (millisSinceLastUpdated < staleThresholdMillis) {\n    core.info(`[${pull.number}] Skipping because PR was updated recently`);\n    return false;\n  }\n\n  // At this point, we know we should do something.\n  // For PRs already labeled stale, close them.\n  if (labels.includes(\"Stale\")) {\n    core.info(`[${pull.number}] Closing PR.`);\n    numAPIRequests += 1;\n    await github.rest.issues.update({\n      owner: \"pytorch\",\n      repo: \"pytorch\",\n      issue_number: pull.number,\n      state: \"closed\",\n    });\n  } else {\n    // For PRs not labeled stale, label them stale.\n    core.info(`[${pull.number}] Labeling PR as stale.`);\n\n    numAPIRequests += 1;\n    await github.rest.issues.createComment({\n      owner: \"pytorch\",\n      repo: \"pytorch\",\n      issue_number: pull.number,\n      body: STALE_MESSAGE,\n    });\n\n    numAPIRequests += 1;\n    await github.rest.issues.addLabels({\n      owner: \"pytorch\",\n      repo: \"pytorch\",\n      issue_number: pull.number,\n      labels: [\"Stale\"],\n    });\n  }\n}\n\nfor await (const response of github.paginate.iterator(\n  github.rest.pulls.list,\n  {\n    owner: \"pytorch\",\n    repo: \"pytorch\",\n    state: \"open\",\n    sort: \"created\",\n    direction: \"asc\",\n    per_page: 100,\n  }\n)) {\n  numAPIRequests += 1;\n  const pulls = response.data;\n  // Awaiting in a loop is intentional here. We want to serialize execution so\n  // that log groups are printed correctl\n  for (const pull of pulls) {\n    if (numAPIRequests > MAX_API_REQUESTS) {\n      core.warning(\"Max API requests exceeded, exiting.\");\n      process.exit(0);\n    }\n    await core.group(`Processing PR #${pull.number}`, async () => {\n      await processPull(pull);\n    });\n  }\n}\ncore.info(`Processed ${numProcessed} PRs total.`);\n"
+          }
+        }
+      ]
+    }
+  }
+}

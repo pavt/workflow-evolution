@@ -1,0 +1,24 @@
+{
+  "name": "weekly",
+  "on": {
+    "schedule": [
+      {
+        "cron": "37 7 * * 1"
+      }
+    ],
+    "workflow_dispatch": null
+  },
+  "jobs": {
+    "update-xla-commit-hash": {
+      "uses": "./.github/workflows/_update-commit-hash.yml",
+      "with": {
+        "repo-name": "xla",
+        "branch": "master"
+      },
+      "secrets": {
+        "MERGEBOT_TOKEN": "${{ secrets.MERGEBOT_TOKEN }}",
+        "PYTORCHBOT_TOKEN": "${{ secrets.GH_PYTORCHBOT_TOKEN }}"
+      }
+    }
+  }
+}

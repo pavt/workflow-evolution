@@ -23,7 +23,8 @@ WEJob >> gtStepsFor: aView [
 		items: [ self steps ];
 		column: 'Step' text: [ :step | step ];
 		column: 'with' text: [ :step | step with asString ];
-		column: 'uses' text: [ :step | step uses asString ]
+		column: 'uses' text: [ :step | step uses asString ];
+		column: 'name' text: [ :step | step name asString ]
 ]
 
 { #category : #initialization }

@@ -1,0 +1,63 @@
+{
+  "name": "ossf-scorecard",
+  "on": {
+    "branch_protection_rule": null,
+    "workflow_dispatch": null,
+    "schedule": [
+      {
+        "cron": "32 16 * * 3"
+      }
+    ],
+    "push": {
+      "branches": [
+        "master"
+      ]
+    }
+  },
+  "permissions": "read-all",
+  "jobs": {
+    "analysis": {
+      "name": "Scorecards analysis",
+      "runs-on": "ubuntu-latest",
+      "permissions": {
+        "security-events": "write",
+        "id-token": "write"
+      },
+      "if": "false && github.repository == 'pytorch/pytorch'",
+      "steps": [
+        {
+          "name": "Checkout code",
+          "uses": "actions/checkout@v3",
+          "with": {
+            "persist-credentials": false
+          }
+        },
+        {
+          "name": "Run analysis",
+          "uses": "ossf/scorecard-action@865b4092859256271290c77adbd10a43f4779972",
+          "with": {
+            "results_file": "results.sarif",
+            "results_format": "sarif",
+            "publish_results": true
+          }
+        },
+        {
+          "name": "Upload artifact",
+          "uses": "actions/upload-artifact@v3",
+          "with": {
+            "name": "SARIF file",
+            "path": "results.sarif",
+            "retention-days": 5
+          }
+        },
+        {
+          "name": "Upload to code-scanning",
+          "uses": "github/codeql-action/upload-sarif@5f532563584d71fdef14ee64d17bafb34f751ce5",
+          "with": {
+            "sarif_file": "results.sarif"
+          }
+        }
+      ]
+    }
+  }
+}
