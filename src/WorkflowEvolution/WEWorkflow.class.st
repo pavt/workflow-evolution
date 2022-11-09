@@ -3,10 +3,18 @@ Class {
 	#superclass : #WENamedEntity,
 	#instVars : [
 		'events',
-		'jobs'
+		'jobs',
+		'file'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
+
+{ #category : #accessing }
+WEWorkflow class >> fromFile: aFileReference [
+	^ self new
+		file: aFileReference;
+		data: (STON fromString: aFileReference contents)
+]
 
 { #category : #initialization }
 WEWorkflow >> data: aDictionary [
@@ -22,6 +30,11 @@ WEWorkflow >> events [
 ]
 
 { #category : #accessing }
+WEWorkflow >> file: aFileReference [
+	file := aFileReference
+]
+
+{ #category : #accessing }
 WEWorkflow >> gtEventsFor: aView [
 	<gtView>
 	^ aView columnedList
@@ -29,6 +42,16 @@ WEWorkflow >> gtEventsFor: aView [
 		priority: 20;
 		items: [ self events ];
 		column: 'Event' text: [ :event | event name ]
+]
+
+{ #category : #accessing }
+WEWorkflow >> gtJSONSourceFor: aView [
+	<gtView>
+	^ aView forward
+		title: 'JSON source';
+		priority: 20;
+		object: [ file ];
+		view: #gtJsonFor:
 ]
 
 { #category : #accessing }

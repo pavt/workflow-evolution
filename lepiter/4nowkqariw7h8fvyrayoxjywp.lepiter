@@ -179,6 +179,108 @@
 					"uidString" : "zIEwEFipDQC9zzHMAlauTg=="
 				},
 				"code" : "jsonFiles\r\tcollect: [ :file | WEWorkflow new data: (STON fromString: file contents) ]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-09T09:15:33.500608+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-09T09:20:10.313515+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "6VZg/2apDQCnsIZ7DywrXw=="
+				},
+				"code" : "jsonFiles\r\tcollect: [ :file | WEWorkflow fromFile: file  ]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-09T09:16:29.942942+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-09T09:17:06.104016+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "x5S9AmepDQCntZcwDywrXw=="
+				},
+				"code" : "WEWorkflow fromFile: jsonFiles first "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-09T09:16:23.042614+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-09T09:16:23.042614+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "TEpUAmepDQCntENwDywrXw=="
+				},
+				"code" : ""
 			}
 		]
 	},
