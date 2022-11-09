@@ -205,14 +205,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-09T09:19:55.476799+01:00"
+						"dateAndTimeString" : "2022-11-09T09:20:10.313515+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "6VZg/2apDQCnsIZ7DywrXw=="
 				},
-				"code" : "jsonFiles\r\tcollect: [ :file | WEWorkflow frp,F: file contents) ]"
+				"code" : "jsonFiles\r\tcollect: [ :file | WEWorkflow fromFile: file  ]"
 			},
 			{
 				"__type" : "pharoSnippet",
