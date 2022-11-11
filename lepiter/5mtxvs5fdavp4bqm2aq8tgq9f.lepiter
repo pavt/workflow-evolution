@@ -596,6 +596,77 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-11T15:03:35.259599+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-11T15:03:54.845671+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ccavF5SpDQCcntOeARINyA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Now we have trhe storeString and can recreate the history fast"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-11T15:03:49.735678+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-11T15:03:50.178423+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GlWSGJSpDQCcnzGoARINyA=="
+				},
+				"code" : "(WEHistory fromLocation: (FileLocator basicNew instVarAt: 1 put: ((RelativePath basicNew: 3)  basicAt: 1 put: 'Desktop'; basicAt: 2 put: 'GT'; basicAt: 3 put: 'fastai'; yourself); instVarAt: 2 put: #home; yourself) ) commitIndices: ((OrderedCollection new) add: 31; add: 32; add: 38; add: 49; add: 134; add: 135; add: 136; add: 137; add: 138; add: 139; add: 140; add: 141; add: 142; add: 143; add: 148; add: 149; add: 152; add: 198; add: 208; add: 884; add: 1053; add: 1056; add: 1058; add: 1059; add: 1060; add: 1061; add: 1062; add: 1067; add: 1068; add: 1069; add: 1070; add: 1071; add: 1072; add: 1073; add: 1074; add: 1075; add: 1076; add: 1085; add: 1205; add: 1232; add: 1236; add: 1246; add: 1250; add: 1267; add: 1270; add: 1281; add: 1292; add: 1294; add: 1315; add: 1316; add: 1317; add: 1319; add: 1321; add: 1322; add: 1324; add: 1325; add: 1326; add: 1327; add: 1328; add: 1329; add: 1330; add: 1334; add: 1336; add: 1342; add: 1343; add: 1344; add: 1345; add: 1346; add: 1347; add: 1352; add: 1353; add: 1355; add: 1356; add: 1357; add: 1358; add: 1359; add: 1360; add: 1361; add: 1362; add: 1363; add: 1364; add: 1365; add: 1366; add: 1367; add: 1368; add: 1369; add: 1370; add: 1371; add: 1372; add: 1373; add: 1374; add: 1375; add: 1376; add: 1377; add: 1378; add: 1379; add: 1380; add: 1381; add: 1382; add: 1385; add: 1386; add: 1387; add: 1388; add: 1389; add: 1390; add: 1391; add: 1392; add: 1395; add: 1396; add: 1398; add: 1400; add: 1407; add: 1409; add: 1410; add: 1411; yourself)"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2022-11-11T14:24:34.142673+01:00"
 					}
 				},

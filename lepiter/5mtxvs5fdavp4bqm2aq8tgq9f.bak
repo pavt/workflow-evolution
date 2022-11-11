@@ -499,7 +499,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-11T14:25:42.728254+01:00"
+						"dateAndTimeString" : "2022-11-11T14:25:45.049353+01:00"
 					}
 				},
 				"uid" : {
@@ -509,7 +509,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Since searching for the relevant commits is expensive, we want to cache the indices of the interesting commiots. Here's how to obtain the indices wit:"
+				"string" : "Since searching for the relevant commits is expensive, we want to cache the indices of the interesting commiots. Here's how to obtain the indices with a toy example:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -581,6 +581,43 @@
 					"__type" : "textStyle"
 				},
 				"string" : ""
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-11T15:03:35.259599+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-11T15:03:37.992945+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ccavF5SpDQCcntOeARINyA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Now we have trhe store"
 			},
 			{
 				"__type" : "textSnippet",
