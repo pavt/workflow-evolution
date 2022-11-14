@@ -2,9 +2,9 @@ Class {
 	#name : #WEHistory,
 	#superclass : #Object,
 	#instVars : [
-		'location',
 		'repo',
-		'commitIndices'
+		'commitIndices',
+		'repoPath'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
@@ -12,6 +12,11 @@ Class {
 { #category : #accessing }
 WEHistory class >> fromLocation: aFileReference [
 	^ self new location: aFileReference
+]
+
+{ #category : #accessing }
+WEHistory class >> fromRepoPath: aPathString [
+	^ self new repoPath: aPathString
 ]
 
 { #category : #accessing }
@@ -23,6 +28,7 @@ WEHistory >> allCommits [
 
 { #category : #accessing }
 WEHistory >> commitIndices [
+	"Lazily compute indices of the commits we want if needed"
 	commitIndices
 		ifNil: [ commitIndices := OrderedCollection new.
 			self allCommits
@@ -30,12 +36,6 @@ WEHistory >> commitIndices [
 					(commit ancestorIds notEmpty
 						and: [ ((commit changesFromCommit: commit parent) collect: [ :f | f path ])
 								includes: self docPath ]) ifTrue: [ commitIndices add: index ] ] ].
-	^ commitIndices
-]
-
-{ #category : #accessing }
-WEHistory >> commitIndices1 [
-
 	^ commitIndices
 ]
 
@@ -75,20 +75,14 @@ WEHistory >> gtWorkflowDirFor: aView [
 { #category : #initialization }
 WEHistory >> initializeRepo [
 	repo := IceRepositoryCreator new
-			location: location;
+			location: self location;
 			createRepository
 ]
 
 { #category : #accessing }
 WEHistory >> location [
 
-	^ location
-]
-
-{ #category : #accessing }
-WEHistory >> location: aFileReference [
-	location := aFileReference.
-	self initializeRepo
+	^ self repoPath asFileReference
 ]
 
 { #category : #accessing }
@@ -111,12 +105,24 @@ WEHistory >> repo: anObject [
 ]
 
 { #category : #accessing }
+WEHistory >> repoPath [
+
+	^ repoPath
+]
+
+{ #category : #accessing }
+WEHistory >> repoPath: aPathString [
+	repoPath := aPathString.
+	self initializeRepo
+]
+
+{ #category : #accessing }
 WEHistory >> storeOn: aStream [
 	aStream
 		nextPutAll: '(';
 		nextPutAll: self class name;
-		nextPutAll: ' fromLocation: ';
-		nextPutAll: self location storeString;
+		nextPutAll: ' fromRepoPath: ';
+		nextPutAll: self repoPath storeString;
 		nextPutAll: ' ) commitIndices: ';
 		nextPutAll: self commitIndices storeString
 ]
