@@ -59,7 +59,7 @@ WEHistory >> commitsByAuthor [
 			element author = (commits at: index + 1) author
 				ifFalse: [ authorCommits := OrderedCollection new.
 					commitsByAuthor add: authorCommits ] ].
-	authorCommits add: element.
+	authorCommits add: commits last.
 	^ commitsByAuthor
 ]
 
@@ -143,7 +143,7 @@ WEHistory >> mainBranch [
 
 { #category : #accessing }
 WEHistory >> maxStickyDuration [
-	^ Duration minutes: 3
+	^ Duration minutes: 5
 ]
 
 { #category : #accessing }
@@ -168,6 +168,27 @@ WEHistory >> repoPath [
 WEHistory >> repoPath: aPathString [
 	repoPath := aPathString.
 	self initializeRepo
+]
+
+{ #category : #accessing }
+WEHistory >> stickyCandidates [
+	| candidates stickyCandidate previousAuthor commits |
+	previousAuthor := ''.
+	candidates := OrderedCollection new.
+	stickyCandidate := OrderedCollection new.
+	candidates add: stickyCandidate.
+	commits := self workflowCommits.
+	commits allButLast
+		withIndexDo: [ :element :index | 
+			| nextElement |
+			stickyCandidate add: element.
+			nextElement := commits at: index + 1.
+			(element author ~= nextElement author
+				or: [ element datetime - nextElement datetime > self maxStickyDuration ])
+				ifTrue: [ stickyCandidate := OrderedCollection new.
+					candidates add: stickyCandidate ] ].
+	stickyCandidate add: commits last.
+	^ candidates select: [:each | each size > 1] 
 ]
 
 { #category : #accessing }
