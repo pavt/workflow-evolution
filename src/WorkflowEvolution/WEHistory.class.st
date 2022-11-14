@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'repo',
 		'commitIndices',
-		'repoPath'
+		'repoPath',
+		'stickyCommits'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
@@ -97,11 +98,11 @@ WEHistory >> gtStickyCommitsFor: aView [
 	^ aView columnedList
 		title: 'Sticky Commits';
 		priority: 40;
-		items: [ self stickyCandidates ];
-		column: 'Author' text: [ :each | each first author ];
-		column: 'Start' text: [ :each | each last datetime asString ];
-		column: 'End' text: [ :each | each first datetime asString ];
-		column: 'Number of commits' text: [ :each | each size asString ]
+		items: [ self stickyCommits ];
+		column: 'Author' text: [ :each | each author ];
+		column: 'Start' text: [ :each | each stickyCollection last datetime asString ];
+		column: 'End' text: [ :each | each stickyCollection first datetime asString ];
+		column: 'Number of commits' text: [ :each | each stickyCollection size asString ]
 ]
 
 { #category : #accessing }
@@ -119,6 +120,28 @@ WEHistory >> initializeRepo [
 	repo := IceRepositoryCreator new
 			location: self location;
 			createRepository
+]
+
+{ #category : #accessing }
+WEHistory >> initializeStickyCommits [
+	| stickyCandidate previousAuthor commits candidates |
+	previousAuthor := ''.
+	candidates := OrderedCollection new.
+	stickyCandidate := OrderedCollection new.
+	candidates add: stickyCandidate.
+	commits := self workflowCommits.
+	commits allButLast
+		withIndexDo: [ :element :index | 
+			| nextElement |
+			stickyCandidate add: element.
+			nextElement := commits at: index + 1.
+			(element author ~= nextElement author
+				or: [ element datetime - nextElement datetime > self maxStickyDuration ])
+				ifTrue: [ stickyCandidate := OrderedCollection new.
+					candidates add: stickyCandidate ] ].
+	stickyCandidate add: commits last.
+	stickyCommits := (candidates select: [ :each | each size > 1 ])
+			collect: [ :each | WESticky for: each ]
 ]
 
 { #category : #accessing }
@@ -164,24 +187,9 @@ WEHistory >> repoPath: aPathString [
 ]
 
 { #category : #accessing }
-WEHistory >> stickyCandidates [
-	| candidates stickyCandidate previousAuthor commits |
-	previousAuthor := ''.
-	candidates := OrderedCollection new.
-	stickyCandidate := OrderedCollection new.
-	candidates add: stickyCandidate.
-	commits := self workflowCommits.
-	commits allButLast
-		withIndexDo: [ :element :index | 
-			| nextElement |
-			stickyCandidate add: element.
-			nextElement := commits at: index + 1.
-			(element author ~= nextElement author
-				or: [ element datetime - nextElement datetime > self maxStickyDuration ])
-				ifTrue: [ stickyCandidate := OrderedCollection new.
-					candidates add: stickyCandidate ] ].
-	stickyCandidate add: commits last.
-	^ candidates select: [:each | each size > 1] 
+WEHistory >> stickyCommits [
+	stickyCommits ifNil: [self initializeStickyCommits].
+	^ stickyCommits
 ]
 
 { #category : #accessing }
