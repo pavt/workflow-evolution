@@ -92,23 +92,16 @@ WEHistory >> gtCommitsFor: aView [
 ]
 
 { #category : #accessing }
-WEHistory >> gtRawCommitsFor: aView [
-	"<gtView>"
-	^ aView forward
-		title: 'Raw Commits';
-		priority: 20;
-		object: [ self workflowCommits ];
-		view: #gtItemsFor:
-]
-
-{ #category : #accessing }
-WEHistory >> gtRepoFor: aView [
-	"<gtView>"
-	^ aView forward
-		title: 'Repo';
-		priority: 10;
-		object: [ self repo ];
-		view: #gtLiveFor:
+WEHistory >> gtStickyCommitsFor: aView [
+	<gtView>
+	^ aView columnedList
+		title: 'Sticky Commits';
+		priority: 40;
+		items: [ self stickyCandidates ];
+		column: 'Author' text: [ :each | each first author ];
+		column: 'Start' text: [ :each | each last datetime asString ];
+		column: 'End' text: [ :each | each first datetime asString ];
+		column: 'Number of commits' text: [ :each | each size asString ]
 ]
 
 { #category : #accessing }
