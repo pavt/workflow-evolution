@@ -53,6 +53,27 @@ WEHistory >> docPath [
 ]
 
 { #category : #accessing }
+WEHistory >> gtCommitsFor: aView [
+	<gtView>
+	^ aView columnedList
+		title: 'Commits';
+		priority: 30;
+		items: [ self workflowCommits ];
+		column: 'Author' text: [:commit | commit author];
+		column: 'Timestamp' text: [:commit | commit datetime asString]
+]
+
+{ #category : #accessing }
+WEHistory >> gtRawCommitsFor: aView [
+	"<gtView>"
+	^ aView forward
+		title: 'Raw Commits';
+		priority: 20;
+		object: [ self workflowCommits ];
+		view: #gtItemsFor:
+]
+
+{ #category : #accessing }
 WEHistory >> gtRepoFor: aView [
 	"<gtView>"
 	^ aView forward
