@@ -59,8 +59,18 @@ WEHistory >> gtCommitsFor: aView [
 		title: 'Commits';
 		priority: 30;
 		items: [ self workflowCommits ];
-		column: 'Author' text: [:commit | commit author];
-		column: 'Timestamp' text: [:commit | commit datetime asString]
+		column: 'Author' text: [ :commit | commit author ];
+		column: 'Timestamp' text: [ :commit | commit datetime asString ];
+		column: 'Delta'
+			text: [ :commit | (commit datetime - commit parent datetime) asString ];
+		column: 'Sticky'
+			text: [ :commit | 
+				| delta |
+				delta := commit datetime - commit parent datetime.
+				(commit author = commit parent author
+					and: [ delta < self maxStickyDuration ])
+					ifTrue: [ 'yes' ]
+					ifFalse: [ '' ] ]
 ]
 
 { #category : #accessing }
@@ -111,6 +121,11 @@ WEHistory >> mainBranch [
 	"NB: this could be called eithe main or master -- fix this later tp search for one, then the other"
 
 	^ repo localBranches detect: [ :b | b name = 'master' ]
+]
+
+{ #category : #accessing }
+WEHistory >> maxStickyDuration [
+	^ Duration minutes: 3
 ]
 
 { #category : #accessing }
