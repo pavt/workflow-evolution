@@ -46,6 +46,24 @@ WEHistory >> commitIndices: anObject [
 ]
 
 { #category : #accessing }
+WEHistory >> commitsByAuthor [
+	| commitsByAuthor authorCommits previousAuthor commits |
+	previousAuthor := ''.
+	commitsByAuthor := OrderedCollection new.
+	authorCommits := OrderedCollection new.
+	commitsByAuthor add: authorCommits.
+	commits := self workflowCommits.
+	commits allButLast
+		withIndexDo: [ :element :index | 
+			authorCommits add: element.
+			element author = (commits at: index + 1) author
+				ifFalse: [ authorCommits := OrderedCollection new.
+					commitsByAuthor add: authorCommits ] ].
+	authorCommits add: element.
+	^ commitsByAuthor
+]
+
+{ #category : #accessing }
 WEHistory >> docPath [
 	"This is the path to the workflow file in any given repo with github actions"
 

@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-14T14:01:27.31989+01:00"
+						"dateAndTimeString" : "2022-11-14T14:45:34.004652+01:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "### Heuristic-based procedure to detect Sticky commits:\n1.- consider the commit history of a workflow file in a repository authored by the same developer\n2.- compute the time interval between all adjacent (subsequent) commits (considering the author date (i.e., the date in which the change has been comitted) \n3.- define a candidate threshold (5 mins for the moment) \n4.- define a lexical pattern: '(former or last or prev or previous) and commit ' - for the moment \n"
+				"string" : "### Heuristic-based procedure to detect Sticky commits:\n1.- consider the commit history of a workflow file in a repository authored by the same developer\n2.- compute the time interval between all adjacent (subsequent) commits (considering the author date \n3.- define a candidate threshold (5 mins for the moment) and use it to filter\n4.- define a lexical pattern and use it to filter: '(former or last or prev or previous) and commit ' - for the moment \n"
 			},
 			{
 				"__type" : "textSnippet",
@@ -129,6 +129,43 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-14T15:10:14.897713+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-14T15:10:20.641983+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "5WMNidCpDQC/qSFrCUGU6g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### References\n- Herzig K, Zeller A (2013) The impact of tangled code changes. In: Proceedings of the 10th Working\nConference on Mining Software Repositories, ser. MSR ’13. IEEE Press, Piscataway, pp 121–130\n- Hindle A, German DM, Holt R (2008) What do large commits tell us?: A taxonomical study of large commits. In: Proceedings of the 2008 International Working Conference on Mining Software Repositories, ser. MSR ’08. ACM, New York, pp 99–108\n- Wen, F., Nagy, C., Lanza, M., & Bavota, G. (2022). Quick remedy commits and their impact on mining software repositories. Empirical Software Engineering, 27(1), 1-31.\n- Dai M, Shen B, Zhang T, Zhao M (2014) Impact of consecutive changes on later file versions. In: Proceedingsof the 2014 3rd International Workshop on Evidential Assessment of Software Technologies, ser. EAST 2014. ACM, New York, pp 17–24\n- Park J, Kim M, Ray B, Bae D (2012) An empirical study of supplementary bug fixes. In: 2012 9th IEEE\nWorking Conference on Mining Software Repositories (MSR), pp 40–49\n- Bavota, G., De Carluccio, B., De Lucia, A., Di Penta, M., Oliveto, R., & Strollo, O. (2012, September). When does a refactoring induce bugs? an empirical study. In 2012 IEEE 12th International Working Conference on Source Code Analysis and Manipulation (pp. 104-113). IEEE.\n- Palomba F, Zaidman A, Oliveto R, De Lucia A (2017) An exploratory study on the relationship between\nchanges and refactoring. In: Proceedings of the 25th International Conference on Program Comprehension, ser. ICPC ’17. IEEE Press, pp 176–185"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2022-11-14T14:02:41.728354+01:00"
 					}
 				},
@@ -140,7 +177,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-14T14:04:15.194606+01:00"
+						"dateAndTimeString" : "2022-11-14T15:10:14.908285+01:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +187,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "### References\n- Herzig K, Zeller A (2013) The impact of tangled code changes. In: Proceedings of the 10th Working\nConference on Mining Software Repositories, ser. MSR ’13. IEEE Press, Piscataway, pp 121–130\n- Hindle A, German DM, Holt R (2008) What do large commits tell us?: A taxonomical study of large commits. In: Proceedings of the 2008 International Working Conference on Mining Software Repositories, ser. MSR ’08. ACM, New York, pp 99–108\n- Wen, F., Nagy, C., Lanza, M., & Bavota, G. (2022). Quick remedy commits and their impact on mining software repositories. Empirical Software Engineering, 27(1), 1-31.\n"
+				"string" : ""
 			},
 			{
 				"__type" : "textSnippet",
@@ -177,7 +214,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-14T14:20:57.073572+01:00"
+						"dateAndTimeString" : "2022-11-14T14:57:30.996493+01:00"
 					}
 				},
 				"uid" : {
@@ -187,7 +224,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "### Research notes:\n-  Park et al. (2012) showed that 22% to 33% of bugs require more than one fix attempt (i.e., supplementary patches)\n- Wen et al. (2022) present the type of Quick remedy commits"
+				"string" : "### Research notes:\n- Park et al. (2012) showed that 22% to 33% of bugs require more than one fix attempt (i.e., supplementary patches)\n- Wen et al. (2022) present the type of Quick remedy commits"
 			},
 			{
 				"__type" : "textSnippet",
@@ -203,7 +240,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-14T13:14:03.61823+01:00"
+						"dateAndTimeString" : "2022-11-14T15:29:42.299611+01:00"
 					}
 				},
 				"editEmail" : {
@@ -214,7 +251,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-14T13:14:03.61823+01:00"
+						"dateAndTimeString" : "2022-11-14T15:29:59.404648+01:00"
 					}
 				},
 				"uid" : {
@@ -224,7 +261,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "[[Sticky commits experiment]]"
 			},
 			{
 				"__type" : "textSnippet",
