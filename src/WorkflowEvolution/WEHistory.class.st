@@ -24,7 +24,16 @@ WEHistory class >> fromRepoPath: aPathString [
 WEHistory >> allCommits [
 	"These are all commiyts, not just those to the workflow file"
 
-	^ self mainBranch commits
+	^ self branch commits
+]
+
+{ #category : #accessing }
+WEHistory >> branch [
+	"NB: this could be called eithe main or master -- fix this later tp search for one, then the other"
+
+	^ repo localBranches detect: [ :b | b name = 'main' or: b name = 'master']
+	
+
 ]
 
 { #category : #accessing }
@@ -148,13 +157,6 @@ WEHistory >> initializeStickyCommits [
 WEHistory >> location [
 
 	^ self repoPath asFileReference
-]
-
-{ #category : #accessing }
-WEHistory >> mainBranch [
-	"NB: this could be called eithe main or master -- fix this later tp search for one, then the other"
-
-	^ repo localBranches detect: [ :b | b name = 'main' ]
 ]
 
 { #category : #accessing }
