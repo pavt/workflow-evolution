@@ -90,15 +90,15 @@ WEHistory >> gtCommitsFor: aView [
 		column: 'Author' text: [ :commit | commit author ];
 		column: 'Timestamp' text: [ :commit | commit datetime asString ];
 		column: 'Delta'
-			text: [ :commit | (commit datetime - commit parent datetime) asString ];
-		column: 'Sticky'
+			text: [ :commit | (commit datetime - commit parent datetime) asString ]
+		"column: 'Sticky'
 			text: [ :commit | 
 				| delta |
 				delta := commit datetime - commit parent datetime.
 				(commit author = commit parent author
 					and: [ delta < self maxStickyDuration ])
 					ifTrue: [ 'yes' ]
-					ifFalse: [ '' ] ]
+					ifFalse: [ '' ] ]"
 ]
 
 { #category : #accessing }
