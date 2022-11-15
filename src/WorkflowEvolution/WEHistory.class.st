@@ -68,7 +68,7 @@ WEHistory >> commitsByAuthor [
 WEHistory >> docPath [
 	"This is the path to the workflow file in any given repo with github actions"
 
-	^ Path from: '.github/workflows/docs.yml'
+	^ Path from: '.github/workflows/author-verified.yml'
 ]
 
 { #category : #accessing }
@@ -154,7 +154,7 @@ WEHistory >> location [
 WEHistory >> mainBranch [
 	"NB: this could be called eithe main or master -- fix this later tp search for one, then the other"
 
-	^ repo localBranches detect: [ :b | b name = 'master' ]
+	^ repo localBranches detect: [ :b | b name = 'main' ]
 ]
 
 { #category : #accessing }

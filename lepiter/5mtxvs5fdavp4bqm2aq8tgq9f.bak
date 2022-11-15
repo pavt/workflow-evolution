@@ -701,7 +701,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-14T11:19:34.857498+01:00"
+						"dateAndTimeString" : "2022-11-15T15:21:23.574172+01:00"
 					}
 				},
 				"editEmail" : {
@@ -712,51 +712,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-14T11:20:02.489446+01:00"
+						"dateAndTimeString" : "2022-11-15T15:22:03.910981+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Lk8fUM2pDQCGpluiAN3Rzg=="
+					"uidString" : "riHAzuSpDQCkfjtpDjw7dg=="
 				},
-				"code" : "docCommits := history workflowCommits"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-11T14:12:34.308693+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-11T14:12:34.308693+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "cgpDYZOpDQCb1znBARINyA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
+				"code" : "history:= (WEHistory fromRepoPath: '../fastai' ) commitIndices: indices"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -772,7 +735,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-09T14:36:53.09935+01:00"
+						"dateAndTimeString" : "2022-11-15T16:36:30.925105+01:00"
 					}
 				},
 				"editEmail" : {
@@ -783,14 +746,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-09T15:04:22.450133+01:00"
+						"dateAndTimeString" : "2022-11-15T16:51:27.482529+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "gauHfGupDQCaQI+9CPnrOQ=="
+					"uidString" : "Wdlo2+WpDQCkkWWTDjw7dg=="
 				},
-				"code" : "docCommits := master commits\r\t\tselect: [ :commit | \r\t\t\tcommit ancestorIds notEmpty\r\t\t\t\tand: [ ((commit changesFromCommit: commit parent) collect: [ :f | f path ])\r\t\t\t\t\t\tincludes: docPath ] ]."
+				"code" : "commitsWorkflowAuthorVerified:= WEHistory new.\rindicesWorkflowAuthorVerified:= (commits repoPath: '../vscode' ) commitIndices."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-15T16:38:38.227323+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-15T16:52:05.732729+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "jFP/4uWpDQCkkqoZDjw7dg=="
+				},
+				"code" : "indicesWorkflowAuthorVerified storeString "
 			},
 			{
 				"__type" : "textSnippet",

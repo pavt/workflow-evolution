@@ -40,6 +40,278 @@
 					"__type" : "textStyle"
 				},
 				"string" : "[[Experimenting with GitHub and repo versions]] "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-14T15:31:52.728155+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-14T15:31:54.449074+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "d+Jo1tCpDQC/tpSiCUGU6g=="
+				},
+				"code" : "history:= (WEHistory fromRepoPath: '../fastai' ) commitIndices: ((OrderedCollection new) add: 31; add: 32; add: 38; add: 49; add: 134; add: 135; add: 136; add: 137; add: 138; add: 139; add: 140; add: 141; add: 142; add: 143; add: 148; add: 149; add: 152; add: 198; add: 208; add: 884; add: 1053; add: 1056; add: 1058; add: 1059; add: 1060; add: 1061; add: 1062; add: 1067; add: 1068; add: 1069; add: 1070; add: 1071; add: 1072; add: 1073; add: 1074; add: 1075; add: 1076; add: 1085; add: 1205; add: 1232; add: 1236; add: 1246; add: 1250; add: 1267; add: 1270; add: 1281; add: 1292; add: 1294; add: 1315; add: 1316; add: 1317; add: 1319; add: 1321; add: 1322; add: 1324; add: 1325; add: 1326; add: 1327; add: 1328; add: 1329; add: 1330; add: 1334; add: 1336; add: 1342; add: 1343; add: 1344; add: 1345; add: 1346; add: 1347; add: 1352; add: 1353; add: 1355; add: 1356; add: 1357; add: 1358; add: 1359; add: 1360; add: 1361; add: 1362; add: 1363; add: 1364; add: 1365; add: 1366; add: 1367; add: 1368; add: 1369; add: 1370; add: 1371; add: 1372; add: 1373; add: 1374; add: 1375; add: 1376; add: 1377; add: 1378; add: 1379; add: 1380; add: 1381; add: 1382; add: 1385; add: 1386; add: 1387; add: 1388; add: 1389; add: 1390; add: 1391; add: 1392; add: 1395; add: 1396; add: 1398; add: 1400; add: 1407; add: 1409; add: 1410; add: 1411; yourself)"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-14T15:32:14.412268+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-14T15:32:16.244463+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DsKz19CpDQC/uZiyCUGU6g=="
+				},
+				"code" : "docCommits := history workflowCommits"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-15T15:37:05.562527+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-15T15:37:37.34239+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "sbvlBuWpDQCkggXTDjw7dg=="
+				},
+				"code" : "history2:= (WEHistory fromRepoPath: '../fastai' ) commitIndices: ((OrderedCollection new) add: 4; add: 8; add: 10; add: 13; add: 38; add: 50; add: 113; add: 122; add: 127; add: 128; add: 129; add: 130; add: 152; add: 198; add: 199; add: 200; add: 207; add: 208; add: 209; add: 232; add: 240; add: 369; add: 371; add: 381; add: 391; add: 393; add: 402; add: 404; add: 405; add: 406; add: 407; add: 408; add: 411; add: 412; add: 413; add: 423; add: 424; add: 428; add: 750; add: 910; add: 935; add: 985; add: 1224; add: 1225; add: 1231; add: 1235; add: 1247; add: 1248; add: 1249; add: 1259; add: 1260; add: 1264; add: 1265; add: 1267; add: 1268; add: 1269; add: 1271; add: 1294; add: 1318; add: 1320; add: 1323; add: 1337; add: 1340; add: 1341; add: 1354; add: 1393; add: 1399; add: 1441; add: 1466; add: 1473; add: 1475; add: 1498; add: 1509; add: 1510; add: 1511; add: 1522; add: 1523; add: 1524; add: 1526; add: 1527; add: 1528; add: 1534; add: 1535; add: 1536; add: 1538; add: 1545; add: 1547; add: 1548; add: 1549; add: 1550; add: 1552; add: 1553; add: 1554; add: 1555; add: 1556; add: 1557; add: 1558; add: 1559; add: 1562; add: 1566; add: 1567; add: 1568; add: 1569; add: 1570; add: 1571; add: 1572; add: 1573; add: 1574; add: 1575; add: 1576; add: 1577; add: 1578; add: 1580; add: 1593; add: 1594; add: 1598; add: 1599; add: 1602; add: 1604; add: 1606; add: 1607; add: 1679; add: 1693; add: 1781; add: 1783; add: 2137; add: 2220; add: 2235; add: 2239; add: 2240; add: 2477; add: 2480; add: 2497; add: 2504; add: 2561; yourself)"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-15T15:37:19.624426+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-15T15:37:38.755489+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "B028B+WpDQCkhOXlDjw7dg=="
+				},
+				"code" : "docCommits2 := history2 workflowCommits"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-15T16:31:22.736146+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-15T16:33:56.120035+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "JkIKyeWpDQCki8IKDjw7dg=="
+				},
+				"code" : "history3:= (WEHistory fromRepoPath: '../vscode' ) commitIndices: ((OrderedCollection new) add: 4; add: 8; add: 10; add: 13; add: 38; add: 50; add: 113; add: 122; add: 127; add: 128; add: 129; add: 130; add: 152; add: 198; add: 199; add: 200; add: 207; add: 208; add: 209; add: 232; add: 240; add: 369; add: 371; add: 381; add: 391; add: 393; add: 402; add: 404; add: 405; add: 406; add: 407; add: 408; add: 411; add: 412; add: 413; add: 423; add: 424; add: 428; add: 750; add: 910; add: 935; add: 985; add: 1224; add: 1225; add: 1231; add: 1235; add: 1247; add: 1248; add: 1249; add: 1259; add: 1260; add: 1264; add: 1265; add: 1267; add: 1268; add: 1269; add: 1271; add: 1294; add: 1318; add: 1320; add: 1323; add: 1337; add: 1340; add: 1341; add: 1354; add: 1393; add: 1399; add: 1441; add: 1466; add: 1473; add: 1475; add: 1498; add: 1509; add: 1510; add: 1511; add: 1522; add: 1523; add: 1524; add: 1526; add: 1527; add: 1528; add: 1534; add: 1535; add: 1536; add: 1538; add: 1545; add: 1547; add: 1548; add: 1549; add: 1550; add: 1552; add: 1553; add: 1554; add: 1555; add: 1556; add: 1557; add: 1558; add: 1559; add: 1562; add: 1566; add: 1567; add: 1568; add: 1569; add: 1570; add: 1571; add: 1572; add: 1573; add: 1574; add: 1575; add: 1576; add: 1577; add: 1578; add: 1580; add: 1593; add: 1594; add: 1598; add: 1599; add: 1602; add: 1604; add: 1606; add: 1607; add: 1679; add: 1693; add: 1781; add: 1783; add: 2137; add: 2220; add: 2235; add: 2239; add: 2240; add: 2477; add: 2480; add: 2497; add: 2504; add: 2561; yourself)"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-15T16:31:44.72157+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-15T16:31:54.433018+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "tbpZyuWpDQCkjaU3Djw7dg=="
+				},
+				"code" : "docCommits3 := history3 workflowCommits"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-15T16:39:58.413911+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-15T16:40:49.630038+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cODG5+WpDQCkk2gSDjw7dg=="
+				},
+				"code" : "history4:= (WEHistory fromRepoPath: '../vscode' ) commitIndices: ((OrderedCollection new) add: 162; add: 1048; add: 1130; add: 1262; add: 1562; add: 1620; add: 1684; add: 1686; add: 1688; add: 2037; add: 2213; add: 2542; add: 2675; add: 3016; add: 3046; add: 3058; add: 3117; add: 3158; add: 3303; add: 3982; add: 4019; add: 4080; add: 4094; add: 4111; add: 4118; add: 4146; add: 4195; add: 4254; add: 4290; add: 4299; add: 4424; add: 4473; add: 4640; add: 4746; add: 4786; add: 4809; add: 4879; add: 4882; add: 4921; add: 4922; add: 4944; add: 4948; add: 4999; add: 5034; add: 5036; add: 5071; add: 5083; add: 5085; add: 5146; add: 5156; add: 5186; add: 5222; add: 5227; add: 5228; add: 5553; add: 5707; add: 5754; add: 5771; add: 5780; add: 5806; add: 5811; add: 5813; add: 5839; yourself)"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-15T16:52:21.267541+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-15T16:52:22.806986+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ZuwNFOapDQCklcPaDjw7dg=="
+				},
+				"code" : "((OrderedCollection new) add: 162; add: 1048; add: 1130; add: 1262; add: 1562; add: 1620; add: 1684; add: 1686; add: 1688; add: 2037; add: 2213; add: 2542; add: 2675; add: 3016; add: 3046; add: 3058; add: 3117; add: 3158; add: 3303; add: 3982; add: 4019; add: 4080; add: 4094; add: 4111; add: 4118; add: 4146; add: 4195; add: 4254; add: 4290; add: 4299; add: 4424; add: 4473; add: 4640; add: 4746; add: 4786; add: 4809; add: 4879; add: 4882; add: 4921; add: 4922; add: 4944; add: 4948; add: 4999; add: 5034; add: 5036; add: 5071; add: 5083; add: 5085; add: 5146; add: 5156; add: 5186; add: 5222; add: 5227; add: 5228; add: 5553; add: 5707; add: 5754; add: 5771; add: 5780; add: 5806; add: 5811; add: 5813; add: 5839; yourself)"
 			}
 		]
 	},
