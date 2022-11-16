@@ -105,10 +105,10 @@ WEHistory >> gtStickyCommitsFor: aView [
 		title: 'Sticky Commits';
 		priority: 40;
 		items: [ self stickyCommits ];
-		column: 'Author' text: [ :each | each author ];
-		column: 'Start' text: [ :each | each stickyCollection last datetime asString ];
-		column: 'End' text: [ :each | each stickyCollection first datetime asString ];
-		column: 'Number of commits' text: [ :each | each stickyCollection size asString ]
+		column: 'Author' text: [ :each | each stickyGroup first commit author ];
+		column: 'Start' text: [ :each | each stickyGroup last commit datetime asString ];
+		column: 'End' text: [ :each | each stickyGroup first commit datetime asString ];
+		column: 'Number of commits' text: [ :each | each stickyGroup size asString ]
 ]
 
 { #category : #accessing }
@@ -147,7 +147,7 @@ WEHistory >> initializeStickyCommits [
 					candidates add: stickyCandidate ] ].
 	stickyCandidate add: commits last.
 	stickyCommits := (candidates select: [ :each | each size > 1 ])
-			collect: [ :each | WESticky for: each ]
+			collect: [ :each | WEStickyGroup forCommit: each forYML: self ymlFile ]
 ]
 
 { #category : #accessing }
