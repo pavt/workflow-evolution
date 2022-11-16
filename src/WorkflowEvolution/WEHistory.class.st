@@ -5,7 +5,8 @@ Class {
 		'repo',
 		'commitIndices',
 		'repoPath',
-		'stickyCommits'
+		'stickyCommits',
+		'ymlFile'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
@@ -16,8 +17,11 @@ WEHistory class >> fromLocation: aFileReference [
 ]
 
 { #category : #accessing }
-WEHistory class >> fromRepoPath: aPathString [
-	^ self new repoPath: aPathString
+WEHistory class >> fromRepoPath: aPathString forYML: aFilename [
+	^ self new repoPath: aPathString ; 
+		   ymlFile: aFilename
+	
+	
 ]
 
 { #category : #accessing }
@@ -31,7 +35,7 @@ WEHistory >> allCommits [
 WEHistory >> branch [
 	"NB: this could be called eithe main or master -- fix this later tp search for one, then the other"
 
-	^ repo localBranches detect: [ :b | b name = 'main' or: b name = 'master']
+	^ repo localBranches detect: [ :b | b name = 'main' or: [b name = 'master']]
 	
 
 ]
@@ -45,7 +49,7 @@ WEHistory >> commitIndices [
 				withIndexDo: [ :commit :index | 
 					(commit ancestorIds notEmpty
 						and: [ ((commit changesFromCommit: commit parent) collect: [ :f | f path ])
-								includes: self docPath ]) ifTrue: [ commitIndices add: index ] ] ].
+								includes: self ymlFilePath ]) ifTrue: [ commitIndices add: index ] ] ].
 	^ commitIndices
 ]
 
@@ -71,13 +75,6 @@ WEHistory >> commitsByAuthor [
 					commitsByAuthor add: authorCommits ] ].
 	authorCommits add: commits last.
 	^ commitsByAuthor
-]
-
-{ #category : #accessing }
-WEHistory >> docPath [
-	"This is the path to the workflow file in any given repo with github actions"
-
-	^ Path from: '.github/workflows/author-verified.yml'
 ]
 
 { #category : #accessing }
@@ -161,7 +158,7 @@ WEHistory >> location [
 
 { #category : #accessing }
 WEHistory >> maxStickyDuration [
-	^ Duration minutes: 5
+	^ Duration minutes: 30
 ]
 
 { #category : #accessing }
@@ -201,6 +198,8 @@ WEHistory >> storeOn: aStream [
 		nextPutAll: self class name;
 		nextPutAll: ' fromRepoPath: ';
 		nextPutAll: self repoPath storeString;
+		nextPutAll: ' forYML: ';
+		nextPutAll: self ymlFile storeString;
 		nextPutAll: ' ) commitIndices: ';
 		nextPutAll: self commitIndices storeString
 ]
@@ -213,4 +212,22 @@ WEHistory >> workflowCommits [
 { #category : #accessing }
 WEHistory >> workflowDir [
 	^ repo repositoryDirectory / '.github' / 'workflows'
+]
+
+{ #category : #accessing }
+WEHistory >> ymlFile [
+
+	^ ymlFile
+]
+
+{ #category : #accessing }
+WEHistory >> ymlFile: aFilename [
+	ymlFile := aFilename
+]
+
+{ #category : #accessing }
+WEHistory >> ymlFilePath [
+	"This is the path to the workflow file in any given repo with github actions"
+
+	^ Path from: '.github/workflows/', self ymlFile
 ]

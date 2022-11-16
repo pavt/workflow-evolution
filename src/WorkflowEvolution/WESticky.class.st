@@ -31,6 +31,11 @@ WESticky >> gtWEStickyFor: aView [
 ]
 
 { #category : #accessing }
+WESticky >> size [
+	^ self stickyCollection size
+]
+
+{ #category : #accessing }
 WESticky >> stickyCollection [
 
 	^ stickyCollection
