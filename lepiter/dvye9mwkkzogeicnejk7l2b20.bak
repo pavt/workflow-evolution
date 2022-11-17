@@ -276,14 +276,82 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-16T13:12:25.565736+01:00"
+						"dateAndTimeString" : "2022-11-16T13:12:59.26962+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "e9xAH/epDQCescbMCYDkzA=="
 				},
-				"code" : "(WEHistory fromRepoPath: '../vscode' forYML: 'ci.yml' ) commitIndices: ((OrderedCollection new) add: 162; add: 567; add: 571; add: 574; add: 576; add: 630; add: 650; add: 1130; add: 1562; add: 1620; add: 1686; add: 1689; add: 1725; add: 1726; add: 1756; add: 1783; add: 2037; add: 2213; add: 2542; add: 2675; add: 3016; add: 3046; add: 3058; add: 3117; add: 3158; add: 3303; add: 4111; add: 4146; add: 4290; add: 4299; add: 4424; add: 4429; add: 5034; add: 5071; add: 5146; add: 5156; add: 5186; add: 5222; add: 5227; add: 5228; add: 5229; add: 5374; add: 5488; add: 5529; add: 5806; add: 5955; add: 5975; add: 6013; add: 6065; add: 6205; add: 6218; add: 6242; add: 6288; add: 6302; add: 6303; add: 6304; add: 6332; add: 7336; add: 7433; add: 7467; add: 7586; add: 7635; add: 7793; add: 8013; add: 8175; add: 8205; add: 8361; add: 8362; add: 8379; add: 8393; add: 8581; add: 8632; add: 8669; add: 8673; add: 8730; add: 8732; add: 8787; add: 8790; add: 8834; add: 8862; add: 9483; add: 9511; add: 9542; add: 9603; add: 10034; add: 10069; add: 10104; add: 10129; add: 10153; add: 10307; add: 10318; add: 10321; add: 10333; add: 10337; add: 10447; add: 10537; add: 10576; add: 10591; add: 10652; add: 10675; add: 10682; add: 10808; add: 10867; add: 10871; add: 10951; add: 10972; add: 11041; add: 11427; add: 11461; add: 11609; add: 11742; add: 11815; add: 11842; add: 11877; add: 11986; add: 12010; add: 12039; add: 12174; add: 12214; add: 12437; add: 12470; add: 12497; add: 12510; add: 12543; add: 12548; add: 12598; add: 12677; add: 12683; add: 12792; add: 12797; add: 13612; add: 13753; add: 14355; add: 15287; add: 15356; add: 16007; add: 16016; add: 16018; add: 16201; add: 16229; add: 16395; add: 16555; add: 16627; add: 17135; add: 17147; add: 17173; add: 17177; add: 17179; add: 17192; add: 17212; add: 17270; add: 17278; add: 17305; add: 17316; add: 17317; add: 17414; add: 17786; add: 18038; add: 18039; add: 19600; add: 19659; add: 19852; add: 19869; add: 21046; add: 21120; add: 21133; add: 21355; add: 21480; add: 22008; add: 22118; add: 22179; add: 22187; add: 22342; add: 22467; add: 22627; add: 22645; add: 22681; add: 22694; add: 23138; add: 23844; add: 23862; add: 24128; add: 24412; add: 24421; add: 24744; add: 25287; add: 25389; add: 25496; add: 25548; add: 25565; add: 25633; add: 25642; add: 25656; add: 26033; add: 26090; add: 26133; add: 26228; add: 26231; add: 26730; add: 26788; add: 26813; add: 26818; add: 26821; add: 26829; add: 26830; add: 26833; add: 26836; add: 26903; add: 26952; add: 27017; add: 27034; add: 27039; add: 27042; add: 27046; add: 27124; add: 27127; add: 27146; add: 27192; add: 27205; add: 27222; add: 27311; add: 27349; add: 27370; add: 27394; add: 27452; add: 27467; add: 27499; add: 27671; add: 27683; add: 27720; add: 27755; add: 27779; add: 27783; add: 27784; add: 27785; add: 27786; add: 27787; add: 27828; add: 27833; add: 27850; add: 27851; add: 27855; add: 27859; add: 27890; add: 27965; add: 27989; add: 27994; add: 28001; add: 28003; add: 28009; add: 28065; add: 28187; add: 28216; add: 28270; add: 28279; add: 28283; add: 28289; add: 28297; add: 28315; add: 28318; add: 28353; add: 28357; add: 28358; add: 28359; add: 28360; add: 28369; add: 28370; add: 28374; add: 28379; add: 28381; add: 28383; add: 28384; add: 28385; add: 28386; add: 28387; add: 28390; add: 28396; add: 28416; add: 28418; add: 28419; add: 28420; add: 28421; add: 28422; add: 28423; add: 28424; add: 28428; add: 28429; add: 28430; add: 28432; add: 28433; add: 28434; add: 28435; add: 28436; add: 28439; add: 28441; add: 28442; add: 28443; add: 28444; add: 28451; add: 28452; add: 28453; add: 28454; add: 28455; add: 28458; add: 28459; add: 28460; add: 28461; add: 28462; add: 28463; add: 28468; add: 28469; add: 28471; add: 28477; add: 28486; add: 28487; add: 28488; add: 28489; add: 28560; add: 28598; add: 28766; add: 29001; add: 29122; add: 29136; add: 29138; add: 29972; add: 29976; add: 30065; add: 30076; add: 31107; add: 31127; add: 31995; add: 35135; add: 36824; add: 37815; add: 38147; add: 38472; add: 38504; add: 38505; add: 38506; add: 38603; add: 38639; add: 38685; add: 38687; add: 38806; add: 39872; add: 40488; add: 40537; add: 40587; add: 40636; add: 40694; add: 40747; add: 40812; add: 40816; add: 40822; add: 41317; add: 41352; add: 41360; add: 41388; add: 41463; add: 41469; add: 41523; add: 41542; add: 41571; add: 41576; add: 41577; add: 41793; add: 41799; add: 41843; add: 41903; add: 41972; add: 41976; add: 42008; add: 42022; add: 42055; add: 42360; add: 42370; add: 42732; add: 42741; add: 42837; add: 42996; add: 43006; add: 43059; add: 43091; add: 43195; add: 43266; add: 43296; add: 43298; add: 43356; add: 43393; add: 43436; add: 43441; add: 43470; add: 43504; add: 43530; add: 43541; add: 43978; add: 44299; add: 45103; add: 45315; add: 45317; add: 45405; add: 45698; add: 45755; add: 45765; add: 46086; add: 46146; add: 46191; add: 46215; add: 46223; add: 46256; add: 46268; add: 46273; add: 46274; add: 46318; add: 46327; add: 46329; add: 46332; add: 46340; add: 46356; add: 46367; add: 46395; add: 46398; add: 46433; add: 46449; add: 46456; add: 46457; add: 46460; add: 46463; add: 46465; add: 46466; add: 46500; add: 46501; add: 46502; yourself)"
+				"code" : "history:=(WEHistory fromRepoPath: '../vscode' forYML: 'ci.yml' ) commitIndices: ((OrderedCollection new) add: 162; add: 567; add: 571; add: 574; add: 576; add: 630; add: 650; add: 1130; add: 1562; add: 1620; add: 1686; add: 1689; add: 1725; add: 1726; add: 1756; add: 1783; add: 2037; add: 2213; add: 2542; add: 2675; add: 3016; add: 3046; add: 3058; add: 3117; add: 3158; add: 3303; add: 4111; add: 4146; add: 4290; add: 4299; add: 4424; add: 4429; add: 5034; add: 5071; add: 5146; add: 5156; add: 5186; add: 5222; add: 5227; add: 5228; add: 5229; add: 5374; add: 5488; add: 5529; add: 5806; add: 5955; add: 5975; add: 6013; add: 6065; add: 6205; add: 6218; add: 6242; add: 6288; add: 6302; add: 6303; add: 6304; add: 6332; add: 7336; add: 7433; add: 7467; add: 7586; add: 7635; add: 7793; add: 8013; add: 8175; add: 8205; add: 8361; add: 8362; add: 8379; add: 8393; add: 8581; add: 8632; add: 8669; add: 8673; add: 8730; add: 8732; add: 8787; add: 8790; add: 8834; add: 8862; add: 9483; add: 9511; add: 9542; add: 9603; add: 10034; add: 10069; add: 10104; add: 10129; add: 10153; add: 10307; add: 10318; add: 10321; add: 10333; add: 10337; add: 10447; add: 10537; add: 10576; add: 10591; add: 10652; add: 10675; add: 10682; add: 10808; add: 10867; add: 10871; add: 10951; add: 10972; add: 11041; add: 11427; add: 11461; add: 11609; add: 11742; add: 11815; add: 11842; add: 11877; add: 11986; add: 12010; add: 12039; add: 12174; add: 12214; add: 12437; add: 12470; add: 12497; add: 12510; add: 12543; add: 12548; add: 12598; add: 12677; add: 12683; add: 12792; add: 12797; add: 13612; add: 13753; add: 14355; add: 15287; add: 15356; add: 16007; add: 16016; add: 16018; add: 16201; add: 16229; add: 16395; add: 16555; add: 16627; add: 17135; add: 17147; add: 17173; add: 17177; add: 17179; add: 17192; add: 17212; add: 17270; add: 17278; add: 17305; add: 17316; add: 17317; add: 17414; add: 17786; add: 18038; add: 18039; add: 19600; add: 19659; add: 19852; add: 19869; add: 21046; add: 21120; add: 21133; add: 21355; add: 21480; add: 22008; add: 22118; add: 22179; add: 22187; add: 22342; add: 22467; add: 22627; add: 22645; add: 22681; add: 22694; add: 23138; add: 23844; add: 23862; add: 24128; add: 24412; add: 24421; add: 24744; add: 25287; add: 25389; add: 25496; add: 25548; add: 25565; add: 25633; add: 25642; add: 25656; add: 26033; add: 26090; add: 26133; add: 26228; add: 26231; add: 26730; add: 26788; add: 26813; add: 26818; add: 26821; add: 26829; add: 26830; add: 26833; add: 26836; add: 26903; add: 26952; add: 27017; add: 27034; add: 27039; add: 27042; add: 27046; add: 27124; add: 27127; add: 27146; add: 27192; add: 27205; add: 27222; add: 27311; add: 27349; add: 27370; add: 27394; add: 27452; add: 27467; add: 27499; add: 27671; add: 27683; add: 27720; add: 27755; add: 27779; add: 27783; add: 27784; add: 27785; add: 27786; add: 27787; add: 27828; add: 27833; add: 27850; add: 27851; add: 27855; add: 27859; add: 27890; add: 27965; add: 27989; add: 27994; add: 28001; add: 28003; add: 28009; add: 28065; add: 28187; add: 28216; add: 28270; add: 28279; add: 28283; add: 28289; add: 28297; add: 28315; add: 28318; add: 28353; add: 28357; add: 28358; add: 28359; add: 28360; add: 28369; add: 28370; add: 28374; add: 28379; add: 28381; add: 28383; add: 28384; add: 28385; add: 28386; add: 28387; add: 28390; add: 28396; add: 28416; add: 28418; add: 28419; add: 28420; add: 28421; add: 28422; add: 28423; add: 28424; add: 28428; add: 28429; add: 28430; add: 28432; add: 28433; add: 28434; add: 28435; add: 28436; add: 28439; add: 28441; add: 28442; add: 28443; add: 28444; add: 28451; add: 28452; add: 28453; add: 28454; add: 28455; add: 28458; add: 28459; add: 28460; add: 28461; add: 28462; add: 28463; add: 28468; add: 28469; add: 28471; add: 28477; add: 28486; add: 28487; add: 28488; add: 28489; add: 28560; add: 28598; add: 28766; add: 29001; add: 29122; add: 29136; add: 29138; add: 29972; add: 29976; add: 30065; add: 30076; add: 31107; add: 31127; add: 31995; add: 35135; add: 36824; add: 37815; add: 38147; add: 38472; add: 38504; add: 38505; add: 38506; add: 38603; add: 38639; add: 38685; add: 38687; add: 38806; add: 39872; add: 40488; add: 40537; add: 40587; add: 40636; add: 40694; add: 40747; add: 40812; add: 40816; add: 40822; add: 41317; add: 41352; add: 41360; add: 41388; add: 41463; add: 41469; add: 41523; add: 41542; add: 41571; add: 41576; add: 41577; add: 41793; add: 41799; add: 41843; add: 41903; add: 41972; add: 41976; add: 42008; add: 42022; add: 42055; add: 42360; add: 42370; add: 42732; add: 42741; add: 42837; add: 42996; add: 43006; add: 43059; add: 43091; add: 43195; add: 43266; add: 43296; add: 43298; add: 43356; add: 43393; add: 43436; add: 43441; add: 43470; add: 43504; add: 43530; add: 43541; add: 43978; add: 44299; add: 45103; add: 45315; add: 45317; add: 45405; add: 45698; add: 45755; add: 45765; add: 46086; add: 46146; add: 46191; add: 46215; add: 46223; add: 46256; add: 46268; add: 46273; add: 46274; add: 46318; add: 46327; add: 46329; add: 46332; add: 46340; add: 46356; add: 46367; add: 46395; add: 46398; add: 46433; add: 46449; add: 46456; add: 46457; add: 46460; add: 46463; add: 46465; add: 46466; add: 46500; add: 46501; add: 46502; yourself)"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-17T10:30:43.576403+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-17T10:30:58.394556+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "vaLt+giqDQCYCXpDA0zFLw=="
+				},
+				"code" : "history4:= (WEHistory fromRepoPath: '../fastai' forYML: 'docs.yml')"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-17T10:32:34.347029+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-17T10:32:45.284515+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NdyHAQmqDQCYC29VA0zFLw=="
+				},
+				"code" : "history4 storeString"
 			}
 		]
 	},
@@ -306,12 +374,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-11-14T15:30:01.805337+01:00"
+			"dateAndTimeString" : "2022-11-17T10:33:35.980795+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Sticky commits experiment"
+		"title" : "Sticky commits experiment (with time threshold)"
 	},
 	"uid" : {
 		"__type" : "uuid",

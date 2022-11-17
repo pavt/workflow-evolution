@@ -142,7 +142,8 @@ WEHistory >> initializeStickyCommits [
 			stickyCandidate add: element.
 			nextElement := commits at: index + 1.
 			(element author ~= nextElement author
-				or: [ element datetime - nextElement datetime > self maxStickyDuration ])
+			 "here we are not considering the time diff between 2 commits in the filtering process" 
+				"or: [ element datetime - nextElement datetime > self maxStickyDuration ]")
 				ifTrue: [ stickyCandidate := OrderedCollection new.
 					candidates add: stickyCandidate ] ].
 	stickyCandidate add: commits last.

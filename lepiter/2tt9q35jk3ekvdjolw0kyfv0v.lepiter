@@ -1,0 +1,178 @@
+{
+	"__schema" : "4.1",
+	"__type" : "page",
+	"children" : {
+		"__type" : "snippets",
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-17T10:35:26.431935+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-17T10:35:28.075856+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rAl1BwmqDQCYF/XNA0zFLw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-17T10:35:30.970167+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-17T10:35:53.896441+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "SuoODAmqDQCYHT2HA0zFLw=="
+				},
+				"code" : "history1:= (WEHistory fromRepoPath: '../fastai' forYML: 'docs.yml' ) commitIndices: ((OrderedCollection new) add: 31; add: 32; add: 38; add: 49; add: 134; add: 135; add: 136; add: 137; add: 138; add: 139; add: 140; add: 141; add: 142; add: 143; add: 148; add: 149; add: 152; add: 198; add: 208; add: 884; add: 1053; add: 1056; add: 1058; add: 1059; add: 1060; add: 1061; add: 1062; add: 1067; add: 1068; add: 1069; add: 1070; add: 1071; add: 1072; add: 1073; add: 1074; add: 1075; add: 1076; add: 1085; add: 1205; add: 1232; add: 1236; add: 1246; add: 1250; add: 1267; add: 1270; add: 1281; add: 1292; add: 1294; add: 1315; add: 1316; add: 1317; add: 1319; add: 1321; add: 1322; add: 1324; add: 1325; add: 1326; add: 1327; add: 1328; add: 1329; add: 1330; add: 1334; add: 1336; add: 1342; add: 1343; add: 1344; add: 1345; add: 1346; add: 1347; add: 1352; add: 1353; add: 1355; add: 1356; add: 1357; add: 1358; add: 1359; add: 1360; add: 1361; add: 1362; add: 1363; add: 1364; add: 1365; add: 1366; add: 1367; add: 1368; add: 1369; add: 1370; add: 1371; add: 1372; add: 1373; add: 1374; add: 1375; add: 1376; add: 1377; add: 1378; add: 1379; add: 1380; add: 1381; add: 1382; add: 1385; add: 1386; add: 1387; add: 1388; add: 1389; add: 1390; add: 1391; add: 1392; add: 1395; add: 1396; add: 1398; add: 1400; add: 1407; add: 1409; add: 1410; add: 1411; yourself)"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-17T10:36:37.731718+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-17T10:57:10.425292+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qJ0JEAmqDQCYH7J1A0zFLw=="
+				},
+				"code" : "history2:= (WEHistory fromRepoPath: '../vscode' forYML: 'monaco-editor.yml' ) commitIndices: ((OrderedCollection new) add: 162; add: 567; add: 571; add: 574; add: 576; add: 630; add: 650; add: 1562; add: 1620; add: 1686; add: 1689; add: 1725; add: 1726; add: 1756; add: 1783; add: 4146; add: 4299; add: 5071; add: 5229; add: 5374; add: 5488; add: 5529; add: 6332; add: 7336; add: 7433; add: 7467; add: 7586; add: 7635; add: 7793; add: 8013; add: 8175; add: 8205; add: 8361; add: 8379; add: 8393; yourself)"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-17T10:56:20.69294+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-17T11:05:20.89362+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "6yuMVgmqDQCYI/eTA0zFLw=="
+				},
+				"code" : ""
+			}
+		]
+	},
+	"createEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"createTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2022-11-17T10:34:13.740853+01:00"
+		}
+	},
+	"editEmail" : {
+		"__type" : "email",
+		"emailString" : "<unknown>"
+	},
+	"editTime" : {
+		"__type" : "time",
+		"time" : {
+			"__type" : "dateAndTime",
+			"dateAndTimeString" : "2022-11-17T10:34:13.740853+01:00"
+		}
+	},
+	"pageType" : {
+		"__type" : "namedPage",
+		"title" : "Sticky commits experiment (without time threshold)"
+	},
+	"uid" : {
+		"__type" : "uuid",
+		"uuid" : "cf7c7407-09aa-0d00-9816-a9e4034cc52f"
+	}
+}
