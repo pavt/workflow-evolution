@@ -42,6 +42,114 @@
 				"string" : ""
 			},
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-18T23:03:10.050232+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-18T23:03:10.050232+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "c4GrmyeqDQCt9TkeASg/5Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We found how to connect to the repo with Iceberg (thanks to Andrei):"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-18T22:31:26.065568+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-18T23:03:24.042456+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "0Qc5KieqDQCt83T7ASg/5Q=="
+				},
+				"code" : "repoDir := FileLocator imageDirectory parent / 'vscode'.\niceRepo := IceRepositoryCreator new\n\t\tlocation: repoDir;\n\t\tcreateRepository."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-18T23:04:13.346479+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-18T23:06:01.053225+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "r+CanieqDQCt979/ASg/5Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In order to find the commits to a particular file, we need the IceDiff difference between each commit and its parent, and then see if the file we are interested in is included in the list of files of that diff.  Now it takes 10 seconds (before 90 seconds)."
+			},
+			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -66,14 +174,190 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-18T22:18:11.99997+01:00"
+						"dateAndTimeString" : "2022-11-18T23:28:02.110662+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "gqCo7SaqDQCtYevEASg/5Q=="
 				},
-				"code" : "repoDir := FileLocator localDirectory/ 'iceberg' / 'vscode' .\nrepo := IceRepositoryCreator new\n        location: repoDir;\n        createRepository.\n        \nmaster := repo localBranches detect: [ :b | b name = 'main' ].\n\ndocPath := Path from: '.github/workflows/ci.yml'.\n\ncommits := OrderedCollection new.\n\ncommitWalk := master newCommitWalk.\ncommitWalk revwalk \n    select: [ :aLGitCommit | \n        aLGitCommit changesFileNamed: docPath fullName ]\n    thenDo: [ :aLGitCommit | \n        commits add: (commitWalk commitFrom: aLGitCommit) ].\n        \ncommits"
+				"code" : "repoDir := FileLocator imageDirectory parent / 'vscode'.\nrepo := IceRepositoryCreator new\n        location: repoDir;\n        createRepository.\r        \rymlFile:= 'ci.yml'.\r\rymlFilePath := Path from: '.github/workflows/', ymlFile. \n        \nbranch := repo localBranches detect: [ :b | b name = 'main' or: [b name = 'master']].\n\n\nallCommits := OrderedCollection new.\n\ncommitWalk := branch newCommitWalk.\ncommitWalk revwalk \n    select: [ :aLGitCommit | \n        aLGitCommit changesFileNamed: docPath fullName ]\n    thenDo: [ :aLGitCommit | \n        allCommits add: (commitWalk commitFrom: aLGitCommit) ].\n        \nallCommits"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-18T23:25:24.752209+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-19T00:52:20.288405+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "TgAz6yeqDQCuCDO/ASg/5Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Lets create a new class WEHistoryFast (similar to WEHistory)"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-19T00:11:01.942779+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-19T00:51:27.244426+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Ra5pjiiqDQCuFkm5ASg/5Q=="
+				},
+				"code" : "(WEHistoryFast fromRepoPath: '../vscode' forYML: 'ci.yml' ) allCommits"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-18T23:25:57.659274+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-19T00:10:40.834488+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "v5Y57SeqDQCuDLK1ASg/5Q=="
+				},
+				"code" : "previousAuthor := ''.\rcommitsByAuthor := OrderedCollection new.\rauthorCommits := OrderedCollection new.\rcommitsByAuthor add: authorCommits.\rcommits := allCommits.\rcommits allButLast\r\twithIndexDo: [ :element :index | \r\t\tauthorCommits add: element.\r\t\telement author = (commits at: index + 1) author\r\t\t\tifFalse: [ authorCommits := OrderedCollection new.\r\t\t\t\tcommitsByAuthor add: authorCommits ] ].\rauthorCommits add: commits last.\rcommitsByAuthor"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-19T00:10:23.080659+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-19T00:10:23.914295+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "D7EYjCiqDQCuFBmCASg/5Q=="
+				},
+				"code" : "previousAuthor := ''.\rcandidates := OrderedCollection new.\rstickyCandidate := OrderedCollection new.\rcandidates add: stickyCandidate.\rcommits := self.\rcommits allButLast\r\twithIndexDo: [ :element :index | \r\t\t| nextElement |\r\t\tstickyCandidate add: element.\r\t\tnextElement := commits at: index + 1.\r\t\telement author ~= nextElement author\r\t\t\tifTrue: [  \"here we are not considering the time diff between 2 commits in the filtering process\" \"or: [ element datetime - nextElement datetime > self maxStickyDuration ]\"stickyCandidate := OrderedCollection\r\t\t\t\t\t\tnew.\r\t\t\t\tcandidates add: stickyCandidate ] ].\rstickyCandidate add: commits last.\rstickyCommits := (candidates select: [ :each | each size > 1 ]).\rstickyCommits first"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-18T23:25:52.483779+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-18T23:25:52.483779+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "953q7CeqDQCuClChASg/5Q=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
 			}
 		]
 	},
