@@ -316,7 +316,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-19T02:51:04.129316+01:00"
+						"dateAndTimeString" : "2022-11-19T02:51:20.110649+01:00"
 					}
 				},
 				"uid" : {
@@ -326,7 +326,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then we create a new class called WEHistoryFast (similar to WEHistory) and we use it to "
+				"string" : "Then we create a new class called WEHistoryFast (similar to WEHistory) and we use it to drag all the sticky commits:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -353,14 +353,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-19T02:41:40.905447+01:00"
+						"dateAndTimeString" : "2022-11-19T22:45:35.917374+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Ra5pjiiqDQCuFkm5ASg/5Q=="
 				},
-				"code" : "(WEHistoryFast fromRepoPath: '../vscode' forYML: 'ci.yml' ) stickyCommits "
+				"code" : "(WEHistoryFast fromRepoPath: '../vscode' forYML: 'ci.yml' ) workflowCommits"
 			},
 			{
 				"__type" : "textSnippet",

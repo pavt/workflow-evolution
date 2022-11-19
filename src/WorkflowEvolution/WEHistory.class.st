@@ -104,7 +104,7 @@ WEHistory >> gtStickyCommitsFor: aView [
 	^ aView columnedList
 		title: 'Sticky Commits';
 		priority: 40;
-		items: [ self stickyCommits ];
+		items: [ self stickyGroups ];
 		column: 'Author' text: [ :each | each stickyGroup first commit author ];
 		column: 'Start' text: [ :each | each stickyGroup last commit datetime asString ];
 		column: 'End' text: [ :each | each stickyGroup first commit datetime asString ];
@@ -129,7 +129,7 @@ WEHistory >> initializeRepo [
 ]
 
 { #category : #accessing }
-WEHistory >> initializeStickyCommits [
+WEHistory >> initializeStickyGroups [
 	| stickyCandidate previousAuthor commits candidates |
 	previousAuthor := ''.
 	candidates := OrderedCollection new.
@@ -187,8 +187,8 @@ WEHistory >> repoPath: aPathString [
 ]
 
 { #category : #accessing }
-WEHistory >> stickyCommits [
-	stickyCommits ifNil: [self initializeStickyCommits].
+WEHistory >> stickyGroups [
+	stickyCommits ifNil: [self initializeStickyGroups].
 	^ stickyCommits
 ]
 

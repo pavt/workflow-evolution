@@ -48,16 +48,47 @@ WEHistoryFast >> commitsByAuthor [
 ]
 
 { #category : #accessing }
+WEHistoryFast >> gtCommitsFor: aView [
+	<gtView>
+	^ aView columnedList
+		title: 'Commits';
+		priority: 30;
+		items: [ self workflowCommits ];
+		column: 'Author' text: [ :commit | commit author ];
+		column: 'Timestamp' text: [ :commit | commit datetime asString ];
+		column: 'Delta'
+			text: [ :commit | (commit datetime - commit parent datetime) asString ]
+		"column: 'Sticky'
+			text: [ :commit | 
+				| delta |
+				delta := commit datetime - commit parent datetime.
+				(commit author = commit parent author
+					and: [ delta < self maxStickyDuration ])
+					ifTrue: [ 'yes' ]
+					ifFalse: [ '' ] ]"
+]
+
+{ #category : #accessing }
 WEHistoryFast >> gtStickyCommitsFor: aView [
 	<gtView>
 	^ aView columnedList
 		title: 'Sticky Commits';
 		priority: 40;
-		items: [ self stickyCommits ];
+		items: [ self stickyGroups ];
 		column: 'Author' text: [ :each | each stickyGroup first commit author ];
 		column: 'Start' text: [ :each | each stickyGroup last commit datetime asString ];
 		column: 'End' text: [ :each | each stickyGroup first commit datetime asString ];
 		column: 'Number of commits' text: [ :each | each stickyGroup size asString ]
+]
+
+{ #category : #accessing }
+WEHistoryFast >> gtWorkflowDirFor: aView [
+	<gtView>
+	^ aView forward
+		title: 'Workflows';
+		priority: 10;
+		object: [ self workflowDir ];
+		view: #gtItemsFor:
 ]
 
 { #category : #accessing }
@@ -68,7 +99,7 @@ WEHistoryFast >> initializeRepo [
 ]
 
 { #category : #accessing }
-WEHistoryFast >> initializeStickyCommits [
+WEHistoryFast >> initializeStickyGroups [
 	| stickyCandidate previousAuthor commits candidates |
 	
 	previousAuthor := ''.
@@ -108,8 +139,8 @@ WEHistoryFast >> repoPath: aPathString [
 ]
 
 { #category : #accessing }
-WEHistoryFast >> stickyCommits [
-	stickyCommits ifNil: [self initializeStickyCommits].
+WEHistoryFast >> stickyGroups [
+	stickyCommits ifNil: [self initializeStickyGroups].
 	^ stickyCommits
 ]
 
@@ -124,6 +155,11 @@ WEHistoryFast >> workflowCommits [
 		thenDo: [ :aLGitCommit | workflowCommits add: (commitWalk commitFrom: aLGitCommit) ].
 		
 	^ workflowCommits
+]
+
+{ #category : #accessing }
+WEHistoryFast >> workflowDir [
+	^ repo repositoryDirectory / '.github' / 'workflows'
 ]
 
 { #category : #accessing }
