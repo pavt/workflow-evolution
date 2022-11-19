@@ -293,7 +293,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-18T21:52:51.545906+01:00"
+									"dateAndTimeString" : "2022-11-20T00:23:35.02978+01:00"
 								}
 							},
 							"uid" : {
@@ -303,7 +303,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Experimenting with GitHub again]]  "
+							"string" : "[[Experimenting with GitHub (faster version)]]  "
 						}
 					]
 				},
