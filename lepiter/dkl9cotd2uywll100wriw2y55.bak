@@ -184,6 +184,74 @@
 				"code" : "repoDir := FileLocator imageDirectory parent / 'vscode'.\nrepo := IceRepositoryCreator new\n        location: repoDir;\n        createRepository.\r        \rymlFile:= 'ci.yml'.\r\rymlFilePath := Path from: '.github/workflows/', ymlFile. \n        \nbranch := repo localBranches detect: [ :b | b name = 'main' or: [b name = 'master']].\n\n\nallCommits := OrderedCollection new.\n\ncommitWalk := branch newCommitWalk.\ncommitWalk revwalk \n    select: [ :aLGitCommit | \n        aLGitCommit changesFileNamed: docPath fullName ]\n    thenDo: [ :aLGitCommit | \n        allCommits add: (commitWalk commitFrom: aLGitCommit) ].\n        \nallCommits"
 			},
 			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-19T02:13:13.875759+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-19T02:13:14.564893+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QRluQyqqDQCkjpzNCg1Ozg=="
+				},
+				"code" : "repoDir := FileLocator localDirectory/ 'iceberg' / 'fastai' / 'fastai'.\nrepo := IceRepositoryCreator new\n        location: repoDir;\n        createRepository.\n        \nmaster := repo localBranches detect: [ :b | b name = 'master' ].\n\ndocPath := Path from: '.github/workflows/docs.yml'.\n\ncommits := OrderedCollection new.\n\ncommitWalk := master newCommitWalk.\ncommitWalk revwalk \n    select: [ :aLGitCommit | \n        aLGitCommit changesFileNamed: docPath fullName ]\n    thenDo: [ :aLGitCommit | \n        commits add: (commitWalk commitFrom: aLGitCommit) ].\n        \ncommits"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-19T02:19:11.468468+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-19T02:19:12.280649+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9oe+WCqqDQCklWD+Cg1Ozg=="
+				},
+				"code" : "Path from: '.github/workflows/docs.yml'"
+			},
+			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -208,7 +276,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-19T00:52:18.876454+01:00"
+						"dateAndTimeString" : "2022-11-19T00:52:20.288405+01:00"
 					}
 				},
 				"uid" : {
@@ -218,7 +286,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Lets create a new class WEHistoryFast (similar to WEHistory)s"
+				"string" : "Lets create a new class WEHistoryFast (similar to WEHistory)"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -245,14 +313,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-19T00:51:27.244426+01:00"
+						"dateAndTimeString" : "2022-11-19T02:11:12.656464+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Ra5pjiiqDQCuFkm5ASg/5Q=="
 				},
-				"code" : "(WEHistoryFast fromRepoPath: '../vscode' forYML: 'ci.yml' ) allCommits"
+				"code" : "(WEHistoryFast fromRepoPath: '../vscode' forYML: 'ci.yml' ) workflowCommits"
 			},
 			{
 				"__type" : "pharoSnippet",

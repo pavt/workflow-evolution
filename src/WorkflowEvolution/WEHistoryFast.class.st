@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'ymlFile',
 		'repoPath',
-		'repo'
+		'repo',
+		'ymlFilePath'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
@@ -51,6 +52,19 @@ WEHistoryFast >> repoPath: aPathString [
 ]
 
 { #category : #accessing }
+WEHistoryFast >> workflowCommits [
+	| workflowCommits commitWalk |
+	workflowCommits := OrderedCollection new.
+
+	commitWalk := self branch newCommitWalk.
+	commitWalk revwalk
+		select: [ :aLGitCommit | aLGitCommit changesFileNamed: self ymlFilePath fullName ]
+		thenDo: [ :aLGitCommit | workflowCommits add: (commitWalk commitFrom: aLGitCommit) ].
+		
+	^ workflowCommits
+]
+
+{ #category : #accessing }
 WEHistoryFast >> ymlFile [
 	^ ymlFile
 ]
@@ -58,4 +72,17 @@ WEHistoryFast >> ymlFile [
 { #category : #accessing }
 WEHistoryFast >> ymlFile: aFilename [
 	ymlFile := aFilename
+]
+
+{ #category : #accessing }
+WEHistoryFast >> ymlFilePath [
+	"This is the path to the workflow file in any given repo with github actions"
+
+	^ Path from: '.github/workflows/', self ymlFile
+]
+
+{ #category : #accessing }
+WEHistoryFast >> ymlFilePath: anObject [
+
+	ymlFilePath := anObject
 ]
