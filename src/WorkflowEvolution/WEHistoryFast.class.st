@@ -5,7 +5,8 @@ Class {
 		'ymlFile',
 		'repoPath',
 		'repo',
-		'ymlFilePath'
+		'ymlFilePath',
+		'stickyCommits'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
@@ -29,10 +30,65 @@ WEHistoryFast >> branch [
 ]
 
 { #category : #accessing }
+WEHistoryFast >> commitsByAuthor [
+	| commitsByAuthor authorCommits previousAuthor commits |
+	previousAuthor := ''.
+	commitsByAuthor := OrderedCollection new.
+	authorCommits := OrderedCollection new.
+	commitsByAuthor add: authorCommits.
+	commits := self workflowCommits.
+	commits allButLast
+		withIndexDo: [ :element :index | 
+			authorCommits add: element.
+			element author = (commits at: index + 1) author
+				ifFalse: [ authorCommits := OrderedCollection new.
+					commitsByAuthor add: authorCommits ] ].
+	authorCommits add: commits last.
+	^ commitsByAuthor
+]
+
+{ #category : #accessing }
+WEHistoryFast >> gtStickyCommitsFor: aView [
+	<gtView>
+	^ aView columnedList
+		title: 'Sticky Commits';
+		priority: 40;
+		items: [ self stickyCommits ];
+		column: 'Author' text: [ :each | each stickyGroup first commit author ];
+		column: 'Start' text: [ :each | each stickyGroup last commit datetime asString ];
+		column: 'End' text: [ :each | each stickyGroup first commit datetime asString ];
+		column: 'Number of commits' text: [ :each | each stickyGroup size asString ]
+]
+
+{ #category : #accessing }
 WEHistoryFast >> initializeRepo [
 	repo := IceRepositoryCreator new
 			location: self location;
 			createRepository
+]
+
+{ #category : #accessing }
+WEHistoryFast >> initializeStickyCommits [
+	| stickyCandidate previousAuthor commits candidates |
+	
+	previousAuthor := ''.
+	candidates := OrderedCollection new.
+	stickyCandidate := OrderedCollection new.
+	candidates add: stickyCandidate.
+	commits := self workflowCommits.
+	commits allButLast
+		withIndexDo: [ :element :index | 
+			| nextElement |
+			stickyCandidate add: element.
+			nextElement := commits at: index + 1.
+			(element author ~= nextElement author
+			 "here we are not considering the time diff between 2 commits in the filtering process" 
+				"or: [ element datetime - nextElement datetime > self maxStickyDuration ]")
+				ifTrue: [ stickyCandidate := OrderedCollection new.
+					candidates add: stickyCandidate ] ].
+	stickyCandidate add: commits last.
+	stickyCommits := (candidates select: [ :each | each size > 1 ])
+			collect: [ :each | WEStickyGroup forCommit: each forYML: self ymlFile ]
 ]
 
 { #category : #accessing }
@@ -49,6 +105,12 @@ WEHistoryFast >> repoPath [
 WEHistoryFast >> repoPath: aPathString [
 	repoPath := aPathString.
 	self initializeRepo
+]
+
+{ #category : #accessing }
+WEHistoryFast >> stickyCommits [
+	stickyCommits ifNil: [self initializeStickyCommits].
+	^ stickyCommits
 ]
 
 { #category : #accessing }

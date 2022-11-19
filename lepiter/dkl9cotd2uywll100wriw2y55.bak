@@ -242,14 +242,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-19T02:19:12.280649+01:00"
+						"dateAndTimeString" : "2022-11-19T02:19:44.791936+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "9oe+WCqqDQCklWD+Cg1Ozg=="
 				},
-				"code" : "Path from: '.github/workflows/docs.yml'"
+				"code" : "(Path from: '.github/workflows/docs.yml' ) fullName"
 			},
 			{
 				"__type" : "textSnippet",
@@ -313,14 +313,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-19T02:11:12.656464+01:00"
+						"dateAndTimeString" : "2022-11-19T02:41:33.399202+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Ra5pjiiqDQCuFkm5ASg/5Q=="
 				},
-				"code" : "(WEHistoryFast fromRepoPath: '../vscode' forYML: 'ci.yml' ) workflowCommits"
+				"code" : "(WEHistoryFast fromRepoPath: '../vscode' forYML: 'ci.yml' ) initializeStickyCommits "
 			},
 			{
 				"__type" : "pharoSnippet",

@@ -313,14 +313,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-19T02:11:12.656464+01:00"
+						"dateAndTimeString" : "2022-11-19T02:41:40.905447+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Ra5pjiiqDQCuFkm5ASg/5Q=="
 				},
-				"code" : "(WEHistoryFast fromRepoPath: '../vscode' forYML: 'ci.yml' ) workflowCommits"
+				"code" : "(WEHistoryFast fromRepoPath: '../vscode' forYML: 'ci.yml' ) stickyCommits "
 			},
 			{
 				"__type" : "pharoSnippet",
