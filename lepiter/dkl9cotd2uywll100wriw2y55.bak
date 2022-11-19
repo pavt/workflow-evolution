@@ -353,14 +353,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-19T22:45:35.917374+01:00"
+						"dateAndTimeString" : "2022-11-20T00:12:24.460812+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Ra5pjiiqDQCuFkm5ASg/5Q=="
 				},
-				"code" : "(WEHistoryFast fromRepoPath: '../vscode' forYML: 'ci.yml' ) workflowCommits"
+				"code" : "(WEHistoryFast fromRepoPath: '../fastai' forYML: 'docs.yml' ) workflowCommits  "
 			},
 			{
 				"__type" : "textSnippet",

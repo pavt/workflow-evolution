@@ -5,8 +5,8 @@ Class {
 		'repo',
 		'commitIndices',
 		'repoPath',
-		'stickyCommits',
-		'ymlFile'
+		'ymlFile',
+		'stickyGroups'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
@@ -104,7 +104,7 @@ WEHistory >> gtStickyCommitsFor: aView [
 	^ aView columnedList
 		title: 'Sticky Commits';
 		priority: 40;
-		items: [ self stickyGroups ];
+		items: [ self stickyCommits ];
 		column: 'Author' text: [ :each | each stickyGroup first commit author ];
 		column: 'Start' text: [ :each | each stickyGroup last commit datetime asString ];
 		column: 'End' text: [ :each | each stickyGroup first commit datetime asString ];
@@ -147,7 +147,7 @@ WEHistory >> initializeStickyGroups [
 				ifTrue: [ stickyCandidate := OrderedCollection new.
 					candidates add: stickyCandidate ] ].
 	stickyCandidate add: commits last.
-	stickyCommits := (candidates select: [ :each | each size > 1 ])
+	stickyGroups := (candidates select: [ :each | each size > 1 ])
 			collect: [ :each | WEStickyGroup forCommit: each forYML: self ymlFile ]
 ]
 
@@ -187,9 +187,9 @@ WEHistory >> repoPath: aPathString [
 ]
 
 { #category : #accessing }
-WEHistory >> stickyGroups [
-	stickyCommits ifNil: [self initializeStickyGroups].
-	^ stickyCommits
+WEHistory >> stickyCommits [
+	stickyGroups ifNil: [self initializeStickyGroups].
+	^ stickyGroups
 ]
 
 { #category : #accessing }

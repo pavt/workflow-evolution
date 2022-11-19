@@ -6,7 +6,8 @@ Class {
 		'repoPath',
 		'repo',
 		'ymlFilePath',
-		'stickyCommits'
+		'stickyCommits',
+		'stickyGroups'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
@@ -72,9 +73,9 @@ WEHistoryFast >> gtCommitsFor: aView [
 WEHistoryFast >> gtStickyCommitsFor: aView [
 	<gtView>
 	^ aView columnedList
-		title: 'Sticky Commits';
+		title: 'Sticky Groups';
 		priority: 40;
-		items: [ self stickyGroups ];
+		items: [ self stickyCommits ];
 		column: 'Author' text: [ :each | each stickyGroup first commit author ];
 		column: 'Start' text: [ :each | each stickyGroup last commit datetime asString ];
 		column: 'End' text: [ :each | each stickyGroup first commit datetime asString ];
@@ -101,7 +102,6 @@ WEHistoryFast >> initializeRepo [
 { #category : #accessing }
 WEHistoryFast >> initializeStickyGroups [
 	| stickyCandidate previousAuthor commits candidates |
-	
 	previousAuthor := ''.
 	candidates := OrderedCollection new.
 	stickyCandidate := OrderedCollection new.
@@ -118,7 +118,7 @@ WEHistoryFast >> initializeStickyGroups [
 				ifTrue: [ stickyCandidate := OrderedCollection new.
 					candidates add: stickyCandidate ] ].
 	stickyCandidate add: commits last.
-	stickyCommits := (candidates select: [ :each | each size > 1 ])
+	stickyGroups := (candidates select: [ :each | each size > 1 ])
 			collect: [ :each | WEStickyGroup forCommit: each forYML: self ymlFile ]
 ]
 
@@ -139,9 +139,9 @@ WEHistoryFast >> repoPath: aPathString [
 ]
 
 { #category : #accessing }
-WEHistoryFast >> stickyGroups [
-	stickyCommits ifNil: [self initializeStickyGroups].
-	^ stickyCommits
+WEHistoryFast >> stickyCommits [
+	stickyGroups ifNil: [self initializeStickyGroups].
+	^ stickyGroups
 ]
 
 { #category : #accessing }
