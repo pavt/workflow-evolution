@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-20T01:41:33.543854+01:00"
+						"dateAndTimeString" : "2022-11-20T23:11:00.886694+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-20T01:41:33.543854+01:00"
+						"dateAndTimeString" : "2022-11-20T23:11:24.850059+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "We want to drag all the workflows files on each repo:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-20T23:11:36.061121+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-20T23:11:54.759294+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+7Z59U+qDQCFWjHzANMW/A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "First we try with all the workflows from one repo:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -76,6 +113,43 @@
 				"code" : "localPath:= (FileLocator imageDirectory parent / 'vscode' / '.github' / 'workflows').\rymlFiles:= (localPath asFileReference allChildrenMatching: '*.yml') asOrderedCollection."
 			},
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-20T23:12:05.227448+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-20T23:12:22.233031+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qwHw9k+qDQCFXGoFANMW/A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Then we get all the repos in one specific directory:"
+			},
+			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -110,6 +184,43 @@
 				"code" : "repositoriesFolder:= ((FileLocator imageDirectory parent / 'repositories')).\rrepositories:= (repositoriesFolder asFileReference children) asOrderedCollection.\rrepositories"
 			},
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-20T23:12:34.951405+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-20T23:13:23.098296+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mXm5+E+qDQCFXvVhANMW/A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "So, now we are to get all de workflows files from all repos:"
+			},
+			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -134,14 +245,85 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-20T22:56:56.50509+01:00"
+						"dateAndTimeString" : "2022-11-20T23:13:56.960872+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "qvziR0mqDQCEsQ/0ANMW/A=="
 				},
-				"code" : "com:= OrderedCollection new.\rrepositories do: [:each | com add: ] .\rcom "
+				"code" : "allFilesFromAllRepos:= OrderedCollection new.\rrepositories do: [:each | allFilesFromAllRepos add: (each  /'.github'/'workflows'  allChildrenMatching: '*.yml')] .\rallFilesFromAllRepos"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-20T23:16:12.928295+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-20T23:16:13.714432+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ksntBVCqDQCFYM2SANMW/A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Then, "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-20T23:01:22.215637+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-20T23:13:30.593581+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "69r20E+qDQCFV0RHANMW/A=="
+				},
+				"code" : ""
 			}
 		]
 	},
@@ -164,12 +346,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-11-20T01:41:33.478277+01:00"
+			"dateAndTimeString" : "2022-11-20T23:10:59.419353+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Reading multiples yml files from multiple repositories"
+		"title" : "Data generation"
 	},
 	"uid" : {
 		"__type" : "uuid",
