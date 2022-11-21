@@ -56,9 +56,9 @@ WEHistoryFast >> gtCommitsFor: aView [
 		priority: 30;
 		items: [ self workflowCommits ];
 		column: 'Author' text: [ :commit | commit author ];
-		column: 'Timestamp' text: [ :commit | commit datetime asString ];
-		column: 'Delta'
-			text: [ :commit | (commit datetime - commit parent datetime) asString ]
+		column: 'Timestamp' text: [ :commit | commit datetime asString ]
+		"column: 'Delta'
+			text: [ :commit | (commit datetime - commit parent datetime) asString ]"
 		"column: 'Sticky'
 			text: [ :commit | 
 				| delta |
