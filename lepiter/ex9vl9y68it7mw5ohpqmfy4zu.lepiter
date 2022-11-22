@@ -326,7 +326,7 @@
 				"code" : "repositoriesFolder:= ((FileLocator imageDirectory parent / 'repositories')).\rrepositories:= (repositoriesFolder asFileReference children) asOrderedCollection.\rallFilesFromAllRepos:= OrderedCollection new.\rrepositories do: [:each | allFilesFromAllRepos add: (each  /'.github'/'workflows'  allChildrenMatching: '*.yml')] .\rallFilesFromAllRepos"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -339,7 +339,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-21T15:35:14.577678+01:00"
+						"dateAndTimeString" : "2022-11-22T19:04:08.133123+01:00"
 					}
 				},
 				"editEmail" : {
@@ -350,17 +350,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-21T15:35:32.217875+01:00"
+						"dateAndTimeString" : "2022-11-22T23:45:31.883738+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "FhY/s12qDQCMHzEbCsSY6g=="
+					"uidString" : "Hb46vHSqDQCuPCNiD5GomA=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Experimenting to create multiple repos at once:"
+				"code" : "repositoriesFolder:= ((FileLocator imageDirectory parent / 'repositories')).\rrepositories:= (repositoriesFolder asFileReference children) asOrderedCollection.\rallFilesFromAllRepos:= OrderedCollection new.\rrepositories do: [:each | allFilesFromAllRepos add: (each  /'.github'/'workflows'  allChildrenMatching: '*.yml')] .\rallPathFromAllRepos := OrderedCollection new.\rallFilesFromAllRepos do: [ :each | allPathFromAllRepos add: (each collect: [ :e | e path ]) ].\r\r"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -376,7 +373,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-21T15:35:07.633579+01:00"
+						"dateAndTimeString" : "2022-11-22T23:45:35.023424+01:00"
 					}
 				},
 				"editEmail" : {
@@ -387,14 +384,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-21T15:35:42.126518+01:00"
+						"dateAndTimeString" : "2022-11-22T23:50:01.71363+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "5Yfqsl2qDQCMHRnRCsSY6g=="
+					"uidString" : "Uz3EqniqDQCuUuxtD5GomA=="
 				},
-				"code" : "repoDir := FileLocator imageDirectory parent / 'vscode'.\nrepo := IceRepositoryCreator new\n        location: repoDir;\n        createRepository"
+				"code" : "repositoriesFolder:= ((FileLocator imageDirectory parent / 'repositories')).\rrepositories:= (repositoriesFolder asFileReference children) asOrderedCollection.\rcollectionOfIceRepos := OrderedCollection new.\rrepositories\r\tdo: [ :each | \r\t\tcollectionOfIceRepos\r\t\t\tadd: (IceRepositoryCreator new\r\t\t\t\t\tlocation: each;\r\t\t\t\t\tcreateRepository) ]."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -410,7 +407,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-21T15:35:42.79017+01:00"
+						"dateAndTimeString" : "2022-11-22T18:27:05.16539+01:00"
 					}
 				},
 				"editEmail" : {
@@ -421,119 +418,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-21T15:48:56.464143+01:00"
+						"dateAndTimeString" : "2022-11-22T23:30:37.159252+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "N/oCtV2qDQCMIcX9CsSY6g=="
+					"uidString" : "vvK6N3SqDQCuKejMD5GomA=="
 				},
-				"code" : "repositoriesFolder := FileLocator imageDirectory parent / 'repositories'.\rrepositories := repositoriesFolder asFileReference children asOrderedCollection.\r\rreposDirs := OrderedCollection new.\rrepositories do: [ :each | reposDirs add: each asFileLocatorOrReference ].\rreposDirs"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-21T15:53:23.892714+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-21T16:25:27.172867+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "/x1C9F2qDQCMKaMmCsSY6g=="
-				},
-				"code" : "collectionOfIceRepos := OrderedCollection new.\r\rreposDirs\r\tdo: [ :each | \r\t\tcollectionOfIceRepos\r\t\t\tadd: (IceRepositoryCreator new\r\t\t\t\t\tlocation: each;\r\t\t\t\t\tcreateRepository) ].\rcollectionOfIceRepos"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-21T16:53:32.973932+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-21T16:54:04.334015+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "DqFIy16qDQCMOEbpCsSY6g=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Now, we can wrap this to creat Ice objects:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-21T16:38:25.622623+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-21T16:56:09.142056+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "cD5LlV6qDQCMM1C8CsSY6g=="
-				},
-				"code" : "repositories := (FileLocator imageDirectory parent / 'repositories') asFileReference children asOrderedCollection.\r\"repositories := repositoriesFolder asFileReference children asOrderedCollection.\"\rreposDirs := OrderedCollection new.\rrepositories do: [ :each | reposDirs add: each asFileLocatorOrReference ].\r\r\rcollectionOfIceRepos := OrderedCollection new.\rreposDirs\r\tdo: [ :each | \r\t\tcollectionOfIceRepos\r\t\t\tadd: (IceRepositoryCreator new\r\t\t\t\t\tlocation: each;\r\t\t\t\t\tcreateRepository) ].\rcollectionOfIceRepos"
+				"code" : "WEDataGeneration fromPathForAllRepos: allFilesFromAllRepos"
 			}
 		]
 	},
