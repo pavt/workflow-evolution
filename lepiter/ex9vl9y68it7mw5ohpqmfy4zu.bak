@@ -350,7 +350,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T23:45:31.883738+01:00"
+						"dateAndTimeString" : "2022-11-23T10:36:25.914949+01:00"
 					}
 				},
 				"uid" : {
@@ -384,14 +384,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T23:49:39.172863+01:00"
+						"dateAndTimeString" : "2022-11-23T10:36:25.919518+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Uz3EqniqDQCuUuxtD5GomA=="
 				},
-				"code" : "repositoriesFolder:= ((FileLocator imageDirectory parent / 'repositories')).\rrepositories:= (repositoriesFolder asFileReference children) asOrderedCollection.\rcollectionOfIceRepos := OrderedCollection new.\rrepositories\r\tdo: [ :each | \r\t\tcollectionOfIceRepos\r\t\t\tadd: (IceRepositoryCreator new\r\t\t\t\t\tlocation: each;\r\t\t\t\t\tcreateRepository) ].\rcollectionOfIceRepos"
+				"code" : "repositoriesFolder:= ((FileLocator imageDirectory parent / 'repositories')).\rrepositories:= (repositoriesFolder asFileReference children) asOrderedCollection.\rcollectionOfIceRepos := OrderedCollection new.\rrepositories\r\tdo: [ :each | \r\t\tcollectionOfIceRepos\r\t\t\tadd: (IceRepositoryCreator new\r\t\t\t\t\tlocation: each;\r\t\t\t\t\tcreateRepository) ]."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -418,14 +418,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T23:30:37.159252+01:00"
+						"dateAndTimeString" : "2022-11-23T10:57:26.324027+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "vvK6N3SqDQCuKejMD5GomA=="
 				},
-				"code" : "WEDataGeneration fromPathForAllRepos: allFilesFromAllRepos"
+				"code" : "repoPaths := ('../repositories' asFileReference children) collect: #gtDisplayString.\r(repoPaths first asFileReference / '.github' / 'workflows' allChildrenMatching: '*.yml') collect: #basename"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-23T10:57:40.254961+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-23T11:06:55.16518+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FnFWDoKqDQCn4IKJBbsfRA=="
+				},
+				"code" : "repoPaths := '../repositories' asFileReference children collect: #gtDisplayString.\rrepoPaths\r\tdo: [ :repoPath | \r\t\tfiles := (repoPath asFileReference / '.github' / 'workflows'\r\t\t\t\tallChildrenMatching: '*.yml') collect: #basename.\r\t\thistories\r\t\t\taddAll: (files collect: [ :file | WEHistoryFast fromRepoPath: repoPath forYML: file ]) ].\r\rhistories"
 			}
 		]
 	},

@@ -350,7 +350,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T23:45:31.883738+01:00"
+						"dateAndTimeString" : "2022-11-23T10:36:25.914949+01:00"
 					}
 				},
 				"uid" : {
@@ -384,7 +384,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T23:50:01.71363+01:00"
+						"dateAndTimeString" : "2022-11-23T10:36:25.919518+01:00"
 					}
 				},
 				"uid" : {
@@ -418,14 +418,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-22T23:30:37.159252+01:00"
+						"dateAndTimeString" : "2022-11-23T10:57:26.324027+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "vvK6N3SqDQCuKejMD5GomA=="
 				},
-				"code" : "WEDataGeneration fromPathForAllRepos: allFilesFromAllRepos"
+				"code" : "repoPaths := ('../repositories' asFileReference children) collect: #gtDisplayString.\r(repoPaths first asFileReference / '.github' / 'workflows' allChildrenMatching: '*.yml') collect: #basename"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-23T10:57:40.254961+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-23T11:07:24.400234+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FnFWDoKqDQCn4IKJBbsfRA=="
+				},
+				"code" : "repoPaths := '../repositories' asFileReference children collect: #gtDisplayString.\rhistories := OrderedCollection new.\rrepoPaths\r\tdo: [ :repoPath | \r\t\tfiles := (repoPath asFileReference / '.github' / 'workflows'\r\t\t\t\tallChildrenMatching: '*.yml') collect: #basename.\r\t\thistories\r\t\t\taddAll: (files collect: [ :file | WEHistoryFast fromRepoPath: repoPath forYML: file ]) ].\r\rhistories"
 			}
 		]
 	},
