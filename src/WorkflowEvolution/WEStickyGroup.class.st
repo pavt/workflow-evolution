@@ -38,7 +38,13 @@ WEStickyGroup >> gtWEStickyFor: aView [
 		title: 'Commits';
 		priority: 10;
 		items: [ self stickyGroup ];
+		
+		column: 'Index' 
+			text: [ :eachItem :eachIndex | 
+				eachIndex asRopedText foreground: Color gray ]
+			width: 45;
 		column: 'Author' text: [ :each | each commit author ];
+		
 		column: 'Date time' text: [ :each | each commit datetime asString ];
 		column: 'Duration'
 			text: [ :each | 

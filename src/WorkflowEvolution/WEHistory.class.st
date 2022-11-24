@@ -137,7 +137,7 @@ WEHistory >> printOn: aStream [
 	aStream
 		nextPutAll: self className;
 		nextPutAll: ' REPO: ';
-		nextPutAll: self repoPath ;
+		nextPutAll: self repoPath  ;
 		nextPutAll: ' YML: ';
 		nextPutAll: self ymlFile 
 		

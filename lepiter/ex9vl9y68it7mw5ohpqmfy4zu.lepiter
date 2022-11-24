@@ -418,14 +418,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-23T10:57:26.324027+01:00"
+						"dateAndTimeString" : "2022-11-24T15:10:33.971784+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "vvK6N3SqDQCuKejMD5GomA=="
 				},
-				"code" : "repoPaths := ('../repositories' asFileReference children) collect: #gtDisplayString.\r(repoPaths first asFileReference / '.github' / 'workflows' allChildrenMatching: '*.yml') collect: #basename"
+				"code" : "repoPaths := ('../repositories' asFileReference children) collect: #gtDisplayString.\r(repoPaths first asFileReference / '.github' / 'workflows' )  workingDirectory \"collect: #basename\""
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -452,14 +452,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-24T12:07:23.633709+01:00"
+						"dateAndTimeString" : "2022-11-24T15:02:51.725644+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "FnFWDoKqDQCn4IKJBbsfRA=="
 				},
-				"code" : "repoPaths := '../repositories' asFileReference children collect: #gtDisplayString.\rhistories := OrderedCollection new.\rrepoPaths\r\tdo: [ :repoPath | \r\t\tfiles := (repoPath asFileReference / '.github' / 'workflows'\r\t\t\t\tallChildrenMatching: '*.yml') collect: #basename.\r\t\thistories\r\t\t\taddAll: (files collect: [ :file | WEHistory fromRepoPath: repoPath forYML: file ]) ].\r\rhistories"
+				"code" : "repoPaths := '../repositories' asFileReference children collect: #gtDisplayString .\rhistories := OrderedCollection new.\rrepoPaths\r\tdo: [ :repoPath | \r\t\tfiles := (repoPath asFileReference / '.github' / 'workflows'\r\t\t\t\tallChildrenMatching: '*.yml') collect: #basename.\r\t\thistories\r\t\t\taddAll: (files collect: [ :file | WEHistory fromRepoPath: repoPath forYML: file ]) ].\r\rhistories"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-24T15:23:21.701123+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-24T15:25:18.138219+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FPtc4pmqDQCHOTNzBil1Ng=="
+				},
+				"code" : "histories writeStreamDo: [: stream | stream nextPutAll: stream]"
 			}
 		]
 	},
