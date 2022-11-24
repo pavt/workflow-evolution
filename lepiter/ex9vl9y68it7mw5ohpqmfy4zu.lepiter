@@ -452,14 +452,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-23T11:07:24.400234+01:00"
+						"dateAndTimeString" : "2022-11-24T12:07:23.633709+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "FnFWDoKqDQCn4IKJBbsfRA=="
 				},
-				"code" : "repoPaths := '../repositories' asFileReference children collect: #gtDisplayString.\rhistories := OrderedCollection new.\rrepoPaths\r\tdo: [ :repoPath | \r\t\tfiles := (repoPath asFileReference / '.github' / 'workflows'\r\t\t\t\tallChildrenMatching: '*.yml') collect: #basename.\r\t\thistories\r\t\t\taddAll: (files collect: [ :file | WEHistoryFast fromRepoPath: repoPath forYML: file ]) ].\r\rhistories"
+				"code" : "repoPaths := '../repositories' asFileReference children collect: #gtDisplayString.\rhistories := OrderedCollection new.\rrepoPaths\r\tdo: [ :repoPath | \r\t\tfiles := (repoPath asFileReference / '.github' / 'workflows'\r\t\t\t\tallChildrenMatching: '*.yml') collect: #basename.\r\t\thistories\r\t\t\taddAll: (files collect: [ :file | WEHistory fromRepoPath: repoPath forYML: file ]) ].\r\rhistories"
 			}
 		]
 	},

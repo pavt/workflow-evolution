@@ -55,6 +55,10 @@ WEHistory >> gtCommitsFor: aView [
 		title: 'Commits';
 		priority: 30;
 		items: [ self workflowCommits ];
+		column: 'Index' 
+			text: [ :eachItem :eachIndex | 
+				eachIndex asRopedText foreground: Color gray ]
+			width: 45;
 		column: 'Author' text: [ :commit | commit commit author ];
 		column: 'Timestamp' text: [ :commit | commit commit datetime asString ];
 		column: 'Delta'
@@ -69,8 +73,12 @@ WEHistory >> gtStickyCommitsFor: aView [
 	<gtView>
 	^ aView columnedList
 		title: 'Sticky Groups';
-		priority: 40;
+		priority: 70;
 		items: [ self stickyCommits ];
+		column: 'Index' 
+			text: [ :eachItem :eachIndex | 
+				eachIndex asRopedText foreground: Color gray ]
+			width: 45;
 		column: 'Author' text: [ :each | each stickyGroup first commit author ];
 		column: 'Start' text: [ :each | each stickyGroup last commit datetime asString ];
 		column: 'End' text: [ :each | each stickyGroup first commit datetime asString ];
