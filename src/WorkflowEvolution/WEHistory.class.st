@@ -55,19 +55,12 @@ WEHistory >> gtCommitsFor: aView [
 		title: 'Commits';
 		priority: 30;
 		items: [ self workflowCommits ];
-		column: 'Author' text: [ :commit | commit author ];
-		column: 'Timestamp' text: [ :commit | commit datetime asString ];
+		column: 'Author' text: [ :commit | commit commit author ];
+		column: 'Timestamp' text: [ :commit | commit commit datetime asString ];
 		column: 'Delta'
-			text: [  "column: 'Sticky'
 			text: [ :commit | 
-				| delta |
-				delta := commit datetime - commit parent datetime.
-				(commit author = commit parent author
-					and: [ delta < self maxStickyDuration ])
-					ifTrue: [ 'yes' ]
-					ifFalse: [ '' ] ]":commit | 
-				commit ancestors notEmpty
-					ifTrue: [ (commit datetime - commit parent datetime) asString ]
+				commit hasPreviousFileCommit
+					ifTrue: [ (commit commit datetime - commit previousFileCommit commit datetime) asString ]
 					ifFalse: [ 'na' ] ]
 ]
 
@@ -114,14 +107,14 @@ WEHistory >> initializeStickyGroups [
 			| nextElement |
 			stickyCandidate add: element.
 			nextElement := commits at: index + 1.
-			(element author ~= nextElement author
+			(element commit author ~= nextElement commit author
 			 "here we are not considering the time diff between 2 commits in the filtering process" 
 				"or: [ element datetime - nextElement datetime > self maxStickyDuration ]")
 				ifTrue: [ stickyCandidate := OrderedCollection new.
 					candidates add: stickyCandidate ] ].
 	stickyCandidate add: commits last.
 	stickyGroups := (candidates select: [ :each | each size > 1 ])
-			collect: [ :each | WEStickyGroup forCommit: each forYML: self ymlFile ]
+			collect: [ :each | WEStickyGroup forFileCommit: each ]
 ]
 
 { #category : #accessing }
@@ -131,7 +124,15 @@ WEHistory >> location [
 
 { #category : #accessing }
 WEHistory >> printOn: aStream [
-	self storeOn: aStream
+	 
+		
+	aStream
+		nextPutAll: self className;
+		nextPutAll: ' REPO: ';
+		nextPutAll: self repoPath ;
+		nextPutAll: ' YML: ';
+		nextPutAll: self ymlFile 
+		
 ]
 
 { #category : #accessing }
@@ -165,14 +166,20 @@ WEHistory >> storeOn: aStream [
 
 { #category : #accessing }
 WEHistory >> workflowCommits [
-	| workflowCommits commitWalk |
+	| workflowCommits commitWalk thisCommit lastCommit |
 	workflowCommits := OrderedCollection new.
 
 	commitWalk := self branch newCommitWalk.
 	commitWalk revwalk
 		select: [ :aLGitCommit | aLGitCommit changesFileNamed: self ymlFilePath fullName ]
-		thenDo: [ :aLGitCommit | workflowCommits add: (commitWalk commitFrom: aLGitCommit) ].
-		
+		thenDo: [ :aLGitCommit | 
+			thisCommit := WEFileCommit new
+					commit: (commitWalk commitFrom: aLGitCommit);
+					file: self ymlFile.
+			workflowCommits add: thisCommit.
+			lastCommit ifNotNil: [ lastCommit previousFileCommit: thisCommit ].
+			lastCommit := thisCommit ].
+
 	^ workflowCommits
 ]
 

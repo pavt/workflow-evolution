@@ -20,6 +20,13 @@ WEStickyGroup class >> forCommit: anIceCommitCollection forYML: aFilename [
 ]
 
 { #category : #accessing }
+WEStickyGroup class >> forFileCommit: aFileCommitCollection [
+	^ self new
+		stickyGroup: aFileCommitCollection;
+		ymlFile: aFileCommitCollection first file
+]
+
+{ #category : #accessing }
 WEStickyGroup >> author [
 	^ self stickyGroup first commit author
 ]
@@ -33,7 +40,11 @@ WEStickyGroup >> gtWEStickyFor: aView [
 		items: [ self stickyGroup ];
 		column: 'Author' text: [ :each | each commit author ];
 		column: 'Date time' text: [ :each | each commit datetime asString ];
-		column: 'Duration' text: [ :each | (each commit datetime - each commit parent datetime) asString ];
+		column: 'Duration'
+			text: [ :each | 
+				each hasPreviousFileCommit
+					ifTrue: [ (each commit datetime - each previousFileCommit commit datetime) asString ]
+					ifFalse: [ 'na' ] ];
 		column: 'Comment' text: [ :each | each commit comment ]
 ]
 

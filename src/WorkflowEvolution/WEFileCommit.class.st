@@ -88,6 +88,11 @@ WEFileCommit >> gtViewTwoPanesDiffFor: aView [
 ]
 
 { #category : #accessing }
+WEFileCommit >> hasPreviousFileCommit [
+	^ self previousFileCommit notNil
+]
+
+{ #category : #accessing }
 WEFileCommit >> previousFileCommit [
 
 	^ previousFileCommit
