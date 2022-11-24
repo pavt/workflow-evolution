@@ -2,26 +2,20 @@ Class {
 	#name : #WEHistory,
 	#superclass : #Object,
 	#instVars : [
-		'repo',
-		'commitIndices',
-		'repoPath',
 		'ymlFile',
+		'repoPath',
+		'repo',
+		'ymlFilePath',
+		'stickyCommits',
 		'stickyGroups'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
 
 { #category : #accessing }
-WEHistory class >> fromLocation: aFileReference [
-	^ self new location: aFileReference
-]
-
-{ #category : #accessing }
 WEHistory class >> fromRepoPath: aPathString forYML: aFilename [
 	^ self new repoPath: aPathString ; 
 		   ymlFile: aFilename
-	
-	
 ]
 
 { #category : #accessing }
@@ -33,30 +27,7 @@ WEHistory >> allCommits [
 
 { #category : #accessing }
 WEHistory >> branch [
-	"NB: this could be called eithe main or master -- fix this later tp search for one, then the other"
-
-	^ repo localBranches detect: [ :b | b name = 'main' or: [b name = 'master']]
-	
-
-]
-
-{ #category : #accessing }
-WEHistory >> commitIndices [
-	"Lazily compute indices of the commits we want if needed"
-	commitIndices
-		ifNil: [ commitIndices := OrderedCollection new.
-			self allCommits
-				withIndexDo: [ :commit :index | 
-					(commit ancestorIds notEmpty
-						and: [ ((commit changesFromCommit: commit parent) collect: [ :f | f path ])
-								includes: self ymlFilePath ]) ifTrue: [ commitIndices add: index ] ] ].
-	^ commitIndices
-]
-
-{ #category : #accessing }
-WEHistory >> commitIndices: anObject [
-
-	commitIndices := anObject
+	^ repo localBranches detect: [ :b | b name = 'main' or: [ b name = 'master' ] ]
 ]
 
 { #category : #accessing }
@@ -87,22 +58,24 @@ WEHistory >> gtCommitsFor: aView [
 		column: 'Author' text: [ :commit | commit author ];
 		column: 'Timestamp' text: [ :commit | commit datetime asString ];
 		column: 'Delta'
-			text: [ :commit | (commit datetime - commit parent datetime) asString ]
-		"column: 'Sticky'
+			text: [  "column: 'Sticky'
 			text: [ :commit | 
 				| delta |
 				delta := commit datetime - commit parent datetime.
 				(commit author = commit parent author
 					and: [ delta < self maxStickyDuration ])
 					ifTrue: [ 'yes' ]
-					ifFalse: [ '' ] ]"
+					ifFalse: [ '' ] ]":commit | 
+				commit ancestors notEmpty
+					ifTrue: [ (commit datetime - commit parent datetime) asString ]
+					ifFalse: [ 'na' ] ]
 ]
 
 { #category : #accessing }
 WEHistory >> gtStickyCommitsFor: aView [
 	<gtView>
 	^ aView columnedList
-		title: 'Sticky Commits';
+		title: 'Sticky Groups';
 		priority: 40;
 		items: [ self stickyCommits ];
 		column: 'Author' text: [ :each | each stickyGroup first commit author ];
@@ -121,7 +94,7 @@ WEHistory >> gtWorkflowDirFor: aView [
 		view: #gtItemsFor:
 ]
 
-{ #category : #initialization }
+{ #category : #accessing }
 WEHistory >> initializeRepo [
 	repo := IceRepositoryCreator new
 			location: self location;
@@ -153,30 +126,16 @@ WEHistory >> initializeStickyGroups [
 
 { #category : #accessing }
 WEHistory >> location [
-
 	^ self repoPath asFileReference
 ]
 
 { #category : #accessing }
-WEHistory >> maxStickyDuration [
-	^ Duration minutes: 30
-]
-
-{ #category : #accessing }
-WEHistory >> repo [
-
-	^ repo
-]
-
-{ #category : #accessing }
-WEHistory >> repo: anObject [
-
-	repo := anObject
+WEHistory >> printOn: aStream [
+	self storeOn: aStream
 ]
 
 { #category : #accessing }
 WEHistory >> repoPath [
-
 	^ repoPath
 ]
 
@@ -194,20 +153,27 @@ WEHistory >> stickyCommits [
 
 { #category : #accessing }
 WEHistory >> storeOn: aStream [
+	
 	aStream
-		nextPutAll: '(';
-		nextPutAll: self class name;
+		nextPutAll: self className;
 		nextPutAll: ' fromRepoPath: ';
 		nextPutAll: self repoPath storeString;
 		nextPutAll: ' forYML: ';
-		nextPutAll: self ymlFile storeString;
-		nextPutAll: ' ) commitIndices: ';
-		nextPutAll: self commitIndices storeString
+		nextPutAll: self ymlFile storeString
+		
 ]
 
 { #category : #accessing }
 WEHistory >> workflowCommits [
-	^ self allCommits atAll: self commitIndices
+	| workflowCommits commitWalk |
+	workflowCommits := OrderedCollection new.
+
+	commitWalk := self branch newCommitWalk.
+	commitWalk revwalk
+		select: [ :aLGitCommit | aLGitCommit changesFileNamed: self ymlFilePath fullName ]
+		thenDo: [ :aLGitCommit | workflowCommits add: (commitWalk commitFrom: aLGitCommit) ].
+		
+	^ workflowCommits
 ]
 
 { #category : #accessing }
@@ -217,7 +183,6 @@ WEHistory >> workflowDir [
 
 { #category : #accessing }
 WEHistory >> ymlFile [
-
 	^ ymlFile
 ]
 
@@ -231,4 +196,10 @@ WEHistory >> ymlFilePath [
 	"This is the path to the workflow file in any given repo with github actions"
 
 	^ Path from: '.github/workflows/', self ymlFile
+]
+
+{ #category : #accessing }
+WEHistory >> ymlFilePath: anObject [
+
+	ymlFilePath := anObject
 ]

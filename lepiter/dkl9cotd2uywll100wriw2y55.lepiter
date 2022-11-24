@@ -353,14 +353,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-20T00:35:53.39139+01:00"
+						"dateAndTimeString" : "2022-11-24T11:01:15.951141+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Ra5pjiiqDQCuFkm5ASg/5Q=="
 				},
-				"code" : " (WEHistoryFast fromRepoPath: '../fastai' forYML: 'docs.yml' )  "
+				"code" : " (WEHistory fromRepoPath: '../fastai' forYML: 'docs.yml' )  "
 			},
 			{
 				"__type" : "pharoSnippet",

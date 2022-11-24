@@ -3,7 +3,8 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'file',
-		'commit'
+		'commit',
+		'previousFileCommit'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
@@ -84,4 +85,16 @@ WEFileCommit >> gtViewTwoPanesDiffFor: aView [
 		priority: 40;
 		object: [ self diff ];
 		view: #gtViewTwoPanesDiffFor:
+]
+
+{ #category : #accessing }
+WEFileCommit >> previousFileCommit [
+
+	^ previousFileCommit
+]
+
+{ #category : #accessing }
+WEFileCommit >> previousFileCommit: anObject [
+
+	previousFileCommit := anObject
 ]
