@@ -19,6 +19,22 @@ WEHistory class >> fromRepoPath: aPathString forYML: aFilename [
 ]
 
 { #category : #accessing }
+WEHistory class >> fromReposPath: aPathString [ 
+
+| repoPaths histories files |
+	repoPaths := aPathString asFileReference children collect: #gtDisplayString .
+histories := OrderedCollection new.
+repoPaths
+	do: [ :repoPath | 
+		files := (repoPath asFileReference / '.github' / 'workflows'
+				allChildrenMatching: '*.yml') collect: #basename.
+		histories
+			addAll: (files collect: [ :file | WEHistory fromRepoPath: repoPath forYML: file ]) ].
+
+^histories
+]
+
+{ #category : #accessing }
 WEHistory >> allCommits [
 	"These are all commiyts, not just those to the workflow file"
 
