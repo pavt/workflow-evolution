@@ -251,14 +251,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-29T14:52:34.426995+01:00"
+						"dateAndTimeString" : "2022-11-29T15:14:45.282344+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "uo2c2P2qDQCamnxDCz8lJA=="
 				},
-				"code" : "histories := WEHistory fromReposPath: '../repositories'.\rhistories size .s"
+				"code" : "histories := WEHistory fromReposPath: '../repositories'.\rhistories size ."
+			},
+			{
+				"__type" : "exampleSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-29T15:22:46.635303+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-29T15:22:46.635303+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "qNd6df6qDQC1Q1UxAygIXg=="
+				},
+				"exampleSelector" : "historiesExample",
+				"previewHeight" : 500,
+				"previewShowSelector" : "gtViewsFor:",
+				"exampleBehaviorName" : "WEWorkflowExamples",
+				"codeExpanded" : true,
+				"previewExpanded" : true,
+				"noCode" : true
 			}
 		]
 	},
@@ -281,12 +321,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-11-29T14:00:20.248364+01:00"
+			"dateAndTimeString" : "2022-11-29T15:25:33.653132+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Creating new examples"
+		"title" : "Creating workflows histories examples"
 	},
 	"uid" : {
 		"__type" : "uuid",
