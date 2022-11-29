@@ -251,14 +251,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-29T14:40:33.531777+01:00"
+						"dateAndTimeString" : "2022-11-29T14:52:34.426995+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "uo2c2P2qDQCamnxDCz8lJA=="
 				},
-				"code" : "histories := WEHistory fromReposPath: '../repositories'.\rhistories size .\rhistory workflowCommits size."
+				"code" : "histories := WEHistory fromReposPath: '../repositories'.\rhistories size .s"
 			}
 		]
 	},

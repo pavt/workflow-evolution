@@ -30,6 +30,16 @@ WEWorkflowExamples >> docsYMLHistoryExample [
 ]
 
 { #category : #accessing }
+WEWorkflowExamples >> historiesExample [
+	<gtExample>
+	| histories |
+	histories := WEHistory fromReposPath: '../repositories'.
+	self assert: histories size equals: 105.
+	
+	^ histories
+]
+
+{ #category : #accessing }
 WEWorkflowExamples >> visualizeClassDiagramExample [
 	<gtExample>
 	| workflow |
