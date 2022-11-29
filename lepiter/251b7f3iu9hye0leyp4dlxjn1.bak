@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-28T10:04:05.565038+01:00"
+						"dateAndTimeString" : "2022-11-29T14:14:10.891101+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,51 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-28T10:04:05.565038+01:00"
+						"dateAndTimeString" : "2022-11-29T14:14:26.255015+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "mgrv4+WqDQCFcdjUCz8lJA=="
+					"uidString" : "Do6nTv2qDQCZyK44Cz8lJA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-28T10:04:13.130041+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-28T15:24:59.734747+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "SXli5OWqDQCFczTHCz8lJA=="
-				},
-				"code" : "histories := WEHistory fromReposPath: '../repositories'.\rtimeout := 2 seconds.\rresults := OrderedCollection new.\rhistories\r\tdo: [ :each | \r\t\t| commits time |\r\t\t[ time := [ commits := each workflowCommits ] timeToRun ]\r\t\t\tvalueWithin: timeout\r\t\t\tonTimeout: [ commits := OrderedCollection new.\r\t\t\t\ttime := timeout ].\r\r\t\tresults\r\t\t\tadd: {#history -> each.\r\t\t\t\t\t#time -> time.\r\t\t\t\t\t#commits -> commits} asDictionary ].\rresults"
+				"string" : "Let's create an example for WEHistory:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -89,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-28T10:51:27.254429+01:00"
+						"dateAndTimeString" : "2022-11-29T14:14:34.179827+01:00"
 					}
 				},
 				"editEmail" : {
@@ -100,17 +66,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-28T10:52:00.888519+01:00"
+						"dateAndTimeString" : "2022-11-29T14:14:55.676277+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Gd0njeaqDQCGzMdJCz8lJA=="
+					"uidString" : "eIl+gf2qDQCZ6sVcCz8lJA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Todo: create examples to present the data properly"
+				"string" : "Next is the history of the workflow file 'doc.yml':"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -126,7 +92,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-28T10:04:42.169843+01:00"
+						"dateAndTimeString" : "2022-11-29T14:00:27.564618+01:00"
 					}
 				},
 				"editEmail" : {
@@ -137,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-28T10:04:46.957664+01:00"
+						"dateAndTimeString" : "2022-11-29T14:16:48.336247+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "BZYd5uWqDQCFdmWVCz8lJA=="
+					"uidString" : "Zo4WT/2qDQCZyo9ICz8lJA=="
 				},
-				"code" : "histories:= (WEHistory fromReposPath: '../repositories') collect: [:each | each workflowCommits  ]"
+				"code" : "history := WEHistory fromRepoPath: '../fastai' forYML: 'docs.yml' .\rhistory workflowCommits size.\rhistory workflowCommits "
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -160,7 +126,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-28T10:26:46.83119+01:00"
+						"dateAndTimeString" : "2022-11-29T14:13:32.842232+01:00"
 					}
 				},
 				"editEmail" : {
@@ -171,23 +137,23 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-28T10:26:46.83119+01:00"
+						"dateAndTimeString" : "2022-11-29T14:13:32.842232+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "aVASNeaqDQCGwwnDCz8lJA=="
+					"uidString" : "DPHkff2qDQCZ6OwJCz8lJA=="
 				},
-				"exampleSelector" : "feenkcomOrganization",
+				"exampleSelector" : "historyExample",
 				"previewHeight" : 500,
 				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GhOrganizationExamples",
+				"exampleBehaviorName" : "WEWorkflowExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : true,
 				"noCode" : true
 			},
 			{
-				"__type" : "exampleSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -200,7 +166,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-28T10:28:49.165906+01:00"
+						"dateAndTimeString" : "2022-11-29T14:15:14.077848+01:00"
 					}
 				},
 				"editEmail" : {
@@ -211,20 +177,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-28T10:28:49.165906+01:00"
+						"dateAndTimeString" : "2022-11-29T14:15:40.227661+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "cf5cPOaqDQCGySGuCz8lJA=="
+					"uidString" : "/y3gg/2qDQCZ7AI5Cz8lJA=="
 				},
-				"exampleSelector" : "feenkcomOrganization",
-				"previewHeight" : 200,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "GhOrganizationExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : false,
-				"noCode" : false
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In this case, we can have access all the commits related withe this particular file."
 			}
 		]
 	},
@@ -236,7 +199,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-11-28T10:04:05.524545+01:00"
+			"dateAndTimeString" : "2022-11-29T14:00:20.248364+01:00"
 		}
 	},
 	"editEmail" : {
@@ -247,15 +210,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-11-28T10:04:05.524545+01:00"
+			"dateAndTimeString" : "2022-11-29T14:00:20.248364+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Data Filtering "
+		"title" : "Creating new examples"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "9f6beee3-e5aa-0d00-8570-ade60b3f2524"
+		"uuid" : "adeaa64e-fdaa-0d00-99c7-f44f0b3f2524"
 	}
 }

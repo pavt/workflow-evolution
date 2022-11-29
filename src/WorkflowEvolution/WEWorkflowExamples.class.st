@@ -5,6 +5,10 @@ Class {
 }
 
 { #category : #accessing }
+WEWorkflowExamples >> ahistoryExample [
+]
+
+{ #category : #accessing }
 WEWorkflowExamples >> ciExample [
 	<gtExample>
 	| workflow |
@@ -13,6 +17,16 @@ WEWorkflowExamples >> ciExample [
 	self assert: workflow events size equals: 1.
 	self assert: workflow jobs size equals: 4.
 	^ workflow
+]
+
+{ #category : #accessing }
+WEWorkflowExamples >> historyExample [
+	<gtExample>
+	| history |
+	history := WEHistory fromRepoPath: '../fastai' forYML: 'docs.yml' .
+	self assert: history workflowCommits size equals: 112.
+	self assert: history stickyCommits size equals: 12.
+	^ history
 ]
 
 { #category : #accessing }
