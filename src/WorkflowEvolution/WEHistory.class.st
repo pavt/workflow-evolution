@@ -132,7 +132,7 @@ WEHistory >> initializeStickyGroups [
 			stickyCandidate add: element.
 			nextElement := commits at: index + 1.
 			(element commit author ~= nextElement commit author
-			 "here we are not considering the time diff between 2 commits in the filtering process" 
+			 "here we are considering the time diff between 2 commits in the filtering process" 
 				"or: [ element datetime - nextElement datetime > self maxStickyDuration ]")
 				ifTrue: [ stickyCandidate := OrderedCollection new.
 					candidates add: stickyCandidate ] ].
@@ -144,6 +144,12 @@ WEHistory >> initializeStickyGroups [
 { #category : #accessing }
 WEHistory >> location [
 	^ self repoPath asFileReference
+]
+
+{ #category : #accessing }
+WEHistory >> maxStickyDuration [
+	"max duration is 20 minutes"
+	^ Duration minutes: 20
 ]
 
 { #category : #accessing }

@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-29T14:27:22.460947+01:00"
+						"dateAndTimeString" : "2022-11-29T14:33:06.524336+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Zo4WT/2qDQCZyo9ICz8lJA=="
 				},
-				"code" : "history := WEHistory fromRepoPath: '../fastai' forYML: 'docs.yml' .\rhistory workflowCommits size.\rhistory stickyCommits size."
+				"code" : "history := WEHistory fromRepoPath: '../fastai' forYML: 'docs.yml' .\rhistory workflowCommits size.\rhistory stickyCommits size"
 			},
 			{
 				"__type" : "exampleSnippet",
