@@ -113,6 +113,43 @@
 				"code" : "history := WEHistory fromRepoPath: '../fastai' forYML: 'docs.yml' .\rhistory workflowCommits size.\rhistory stickyCommits size"
 			},
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-29T14:38:20.82349+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-29T14:38:20.82349+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "vUiO1v2qDQCalqR0Cz8lJA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "In this case, we can have access all the commits related withe this particular file."
+			},
+			{
 				"__type" : "exampleSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -144,7 +181,7 @@
 					"__type" : "uid",
 					"uidString" : "DPHkff2qDQCZ6OwJCz8lJA=="
 				},
-				"exampleSelector" : "historyExample",
+				"exampleSelector" : "docsYMLHistoryExample",
 				"previewHeight" : 500,
 				"previewShowSelector" : "gtViewsFor:",
 				"exampleBehaviorName" : "WEWorkflowExamples",
@@ -166,7 +203,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-29T14:15:14.077848+01:00"
+						"dateAndTimeString" : "2022-11-29T14:38:26.336448+01:00"
 					}
 				},
 				"editEmail" : {
@@ -177,17 +214,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-29T14:15:40.227661+01:00"
+						"dateAndTimeString" : "2022-11-29T14:38:49.504808+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "/y3gg/2qDQCZ7AI5Cz8lJA=="
+					"uidString" : "XDDX1v2qDQCamEDeCz8lJA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "In this case, we can have access all the commits related withe this particular file."
+				"string" : "Another example considering all the workflows histories from 6 repositories:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-29T14:38:54.824865+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-29T14:40:33.531777+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "uo2c2P2qDQCamnxDCz8lJA=="
+				},
+				"code" : "histories := WEHistory fromReposPath: '../repositories'.\rhistories size .\rhistory workflowCommits size."
 			}
 		]
 	},

@@ -20,7 +20,7 @@ WEWorkflowExamples >> ciExample [
 ]
 
 { #category : #accessing }
-WEWorkflowExamples >> historyExample [
+WEWorkflowExamples >> docsYMLHistoryExample [
 	<gtExample>
 	| history |
 	history := WEHistory fromRepoPath: '../fastai' forYML: 'docs.yml' .
