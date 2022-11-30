@@ -20,19 +20,18 @@ WEHistory class >> fromRepoPath: aPathString forYML: aFilename [
 ]
 
 { #category : #accessing }
-WEHistory class >> fromReposPath: aPathString [ 
+WEHistory class >> fromReposPath: aPathString [
+	| repoPaths histories files |
+	repoPaths := aPathString asFileReference children collect: #gtDisplayString.
+	histories := OrderedCollection new.
+	repoPaths
+		do: [ :repoPath | 
+			files := (repoPath asFileReference / '.github' / 'workflows'
+					allChildrenMatching: '*.yml') collect: #basename.
+			histories
+				addAll: (files collect: [ :file | WEHistory fromRepoPath: repoPath forYML: file ]) ].
 
-| repoPaths histories files |
-	repoPaths := aPathString asFileReference children collect: #gtDisplayString .
-histories := OrderedCollection new.
-repoPaths
-	do: [ :repoPath | 
-		files := (repoPath asFileReference / '.github' / 'workflows'
-				allChildrenMatching: '*.yml') collect: #basename.
-		histories
-			addAll: (files collect: [ :file | WEHistory fromRepoPath: repoPath forYML: file ]) ].
-
-^histories
+	^ WEHistories from: histories
 ]
 
 { #category : #accessing }
@@ -159,6 +158,31 @@ WEHistory >> initializeWorkflowCommits [
 ]
 
 { #category : #accessing }
+WEHistory >> initializeWorkflowCommitsNicely [
+	"This version does a Processor yield after a certain delay"
+
+	| commitWalk thisCommit lastCommit lastTime delay thisTime |
+	lastTime := Time now asDuration.
+	delay := 100 milliseconds.
+
+	workflowCommits := OrderedCollection new.
+	commitWalk := self branch newCommitWalk.
+	commitWalk revwalk
+		select: [ :aLGitCommit | aLGitCommit changesFileNamed: self ymlFilePath fullName ]
+		thenDo: [ :aLGitCommit | 
+			thisTime := Time now asDuration.
+			thisTime - lastTime > delay
+				ifTrue: [ lastTime := thisTime.
+					Processor yield ].
+			thisCommit := WEFileCommit new
+					commit: (commitWalk commitFrom: aLGitCommit);
+					file: self ymlFile.
+			workflowCommits add: thisCommit.
+			lastCommit ifNotNil: [ lastCommit previousFileCommit: thisCommit ].
+			lastCommit := thisCommit ]
+]
+
+{ #category : #accessing }
 WEHistory >> location [
 	^ self repoPath asFileReference
 ]
@@ -213,7 +237,7 @@ WEHistory >> storeOn: aStream [
 
 { #category : #accessing }
 WEHistory >> workflowCommits [
-	workflowCommits ifNil: [ self initializeWorkflowCommits ].
+	workflowCommits ifNil: [ self initializeWorkflowCommitsNicely ].
 	^ workflowCommits
 ]
 

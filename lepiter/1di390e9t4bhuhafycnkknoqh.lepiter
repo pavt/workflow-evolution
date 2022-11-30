@@ -257,7 +257,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-28T13:55:32.001948+01:00"
+									"dateAndTimeString" : "2022-11-30T10:44:01.713788+01:00"
 								}
 							},
 							"uid" : {
@@ -724,48 +724,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-29T14:55:13.65867+01:00"
+									"dateAndTimeString" : "2022-11-30T10:43:35.185711+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "NoZRo/2qDQCnbALACUo2FA=="
 							},
-							"code" : "tasks\r\tfrom: 41\r\tto: 45\r\tdo: #fork"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-29T15:00:30.940783+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-29T15:00:35.994625+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "hrbdJf6qDQCmqy6pCtr6oQ=="
-							},
-							"code" : "Processor yield "
+							"code" : ""
 						},
 						{
 							"__type" : "textSnippet",
@@ -829,7 +795,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-30T10:23:54.130818+01:00"
+									"dateAndTimeString" : "2022-11-30T10:43:31.381984+01:00"
 								}
 							},
 							"uid" : {
@@ -839,7 +805,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "How to "
+							"string" : ""
 						},
 						{
 							"__type" : "textSnippet",
