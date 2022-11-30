@@ -2,7 +2,8 @@ Class {
 	#name : #WEHistories,
 	#superclass : #Object,
 	#instVars : [
-		'histories'
+		'histories',
+		'initializedHistories'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
@@ -26,6 +27,17 @@ WEHistories >> gtHistoriesFor: aView [
 ]
 
 { #category : #accessing }
+WEHistories >> gtInitializedHistoriesFor: aView [
+	<gtView>
+	^ aView columnedList
+		title: 'Workflow Histories';
+		priority: 20;
+		items: [ self histories ];
+		column: 'Repo' text: [ :each | each repoPath ];
+		column: 'YML file' text: [ :each | each ymlFile ]
+]
+
+{ #category : #accessing }
 WEHistories >> histories [
 	^ histories
 ]
@@ -33,4 +45,9 @@ WEHistories >> histories [
 { #category : #initialization }
 WEHistories >> histories: aHistoryCollection [
 	histories := aHistoryCollection
+]
+
+{ #category : #accessing }
+WEHistories >> initialize [
+	initializedHistories := OrderedCollection new asValueHolder
 ]

@@ -486,14 +486,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-11-25T14:16:56.081424+01:00"
+						"dateAndTimeString" : "2022-11-25T14:18:55.826083+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "dK/lh5qqDQCTUu6ADdJP5Q=="
 				},
-				"code" : "histories:= (WEHistory fromReposPath: '../repositories') collect: [:each | each workflowCommits size > 10]"
+				"code" : "histories:= (WEHistory fromReposPath: '../repositories') collect: [:each | each workflowCommits  ]"
 			},
 			{
 				"__type" : "pharoSnippet",

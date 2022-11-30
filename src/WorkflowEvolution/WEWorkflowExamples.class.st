@@ -34,7 +34,7 @@ WEWorkflowExamples >> historiesExample [
 	<gtExample>
 	| histories |
 	histories := WEHistory fromReposPath: '../repositories'.
-	self assert: histories size equals: 105.
+	self assert: histories histories size equals: 105.
 	
 	^ histories
 ]

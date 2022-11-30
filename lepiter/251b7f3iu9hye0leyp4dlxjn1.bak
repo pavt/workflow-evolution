@@ -321,12 +321,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-11-29T14:00:20.248364+01:00"
+			"dateAndTimeString" : "2022-11-29T15:25:33.653132+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Creating new examples"
+		"title" : "Creating workflows histories examples"
 	},
 	"uid" : {
 		"__type" : "uuid",

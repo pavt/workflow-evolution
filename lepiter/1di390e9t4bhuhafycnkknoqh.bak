@@ -257,14 +257,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-28T13:55:32.001948+01:00"
+									"dateAndTimeString" : "2022-11-30T11:03:07.819704+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "hQmaH+mqDQCksq76DQE6Fw=="
 							},
-							"code" : "histories:= (WEHistory fromReposPath: '../repositories')"
+							"code" : "histories := WEHistory fromReposPath: '../repositories'"
 						},
 						{
 							"__type" : "textSnippet",
@@ -328,14 +328,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-28T14:01:49.299732+01:00"
+									"dateAndTimeString" : "2022-11-30T11:03:24.785222+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "uXC+K+mqDQCktwKaDQE6Fw=="
 							},
-							"code" : "histories:= (WEHistory fromReposPath: '../repositories') collect: [:each | each workflowCommits  ]"
+							"code" : "histories := WEHistory fromReposPath: '../repositories'.\rhistories histories collect: [ :each | each workflowCommits ]"
 						}
 					]
 				},
@@ -582,14 +582,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-29T14:25:30.407402+01:00"
+									"dateAndTimeString" : "2022-11-30T11:03:53.328628+01:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "Xc+12+mqDQCl1XvcDQE6Fw=="
 							},
-							"code" : "histories := WEHistory fromReposPath: '../repositories'.\rtimeout := 2 seconds.\rresults := OrderedCollection new.\rhistories\r\tdo: [ :each | \r\t\t| commits time |\r\t\t[ time := [ commits := each workflowCommits ] timeToRun ]\r\t\t\tvalueWithin: timeout\r\t\t\tonTimeout: [ commits := OrderedCollection new.\r\t\t\t\ttime := timeout ].\r\r\t\tresults\r\t\t\tadd: {#history -> each.\r\t\t\t\t\t#time -> time.\r\t\t\t\t\t#commits -> commits} asDictionary ].\rresults"
+							"code" : "histories := WEHistory fromReposPath: '../repositories'.\rtimeout := 2 seconds.\rresults := OrderedCollection new.\rhistories histories\r\tdo: [ :each | \r\t\t| commits time |\r\t\t[ time := [ commits := each workflowCommits ] timeToRun ]\r\t\t\tvalueWithin: timeout\r\t\t\tonTimeout: [ commits := OrderedCollection new.\r\t\t\t\ttime := timeout ].\r\r\t\tresults\r\t\t\tadd: {#history -> each.\r\t\t\t\t\t#time -> time.\r\t\t\t\t\t#commits -> commits} asDictionary ].\rresults"
 						},
 						{
 							"__type" : "textSnippet",
@@ -690,7 +690,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-29T14:53:17.520345+01:00"
+									"dateAndTimeString" : "2022-11-30T11:03:42.380715+01:00"
 								}
 							},
 							"uid" : {
@@ -698,40 +698,6 @@
 								"uidString" : "YsKnBP6qDQC2mHqGAt9cMg=="
 							},
 							"code" : "histories := WEHistory fromReposPath: '../repositories'.\rtimeout := 100 seconds.\rresults := OrderedCollection new asValueHolder.\rmutex := Semaphore forMutualExclusion.\rtasks := histories\r\t\tcollect: [ :each | \r\t\t\t| commits time |\r\t\t\t[ [ time := [ commits := each workflowCommits ] timeToRun ]\r\t\t\t\tvalueWithin: timeout\r\t\t\t\tonTimeout: [ commits := nil.\r\t\t\t\t\ttime := timeout ].\r\t\t\tmutex\r\t\t\t\tcritical: [ results\r\t\t\t\t\t\taddLast: {#history -> each.\r\t\t\t\t\t\t\t\t#time -> time.\r\t\t\t\t\t\t\t\t#commits -> commits} asDictionary ] ] ].\rresults"
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-29T14:24:00.715289+01:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-11-30T10:43:35.185711+01:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "NoZRo/2qDQCnbALACUo2FA=="
-							},
-							"code" : ""
 						},
 						{
 							"__type" : "textSnippet",
