@@ -6,7 +6,7 @@ Class {
 		'eventsAST',
 		'jobsAST'
 	],
-	#category : #'WorkflowEvolution-Visitor'
+	#category : #'WorkflowEvolution-Obsolete'
 }
 
 { #category : #accessing }

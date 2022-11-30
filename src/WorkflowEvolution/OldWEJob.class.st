@@ -6,7 +6,7 @@ Class {
 		'runner',
 		'name'
 	],
-	#category : #'WorkflowEvolution-Model'
+	#category : #'WorkflowEvolution-Obsolete'
 }
 
 { #category : #accessing }

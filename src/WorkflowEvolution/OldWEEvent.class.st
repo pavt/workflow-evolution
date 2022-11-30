@@ -1,7 +1,7 @@
 Class {
 	#name : #OldWEEvent,
 	#superclass : #OldWEModelEntity,
-	#category : #'WorkflowEvolution-Model'
+	#category : #'WorkflowEvolution-Obsolete'
 }
 
 { #category : #accessing }

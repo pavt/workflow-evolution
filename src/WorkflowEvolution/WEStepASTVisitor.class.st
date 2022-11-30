@@ -5,7 +5,7 @@ Class {
 		'step',
 		'propertiesAST'
 	],
-	#category : #'WorkflowEvolution-Visitor'
+	#category : #'WorkflowEvolution-Obsolete'
 }
 
 { #category : #accessing }

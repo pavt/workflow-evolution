@@ -7,7 +7,8 @@ Class {
 		'repo',
 		'ymlFilePath',
 		'stickyCommits',
-		'stickyGroups'
+		'stickyGroups',
+		'workflowCommits'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
@@ -142,6 +143,22 @@ WEHistory >> initializeStickyGroups [
 ]
 
 { #category : #accessing }
+WEHistory >> initializeWorkflowCommits [
+	| commitWalk thisCommit lastCommit |
+	workflowCommits := OrderedCollection new.
+	commitWalk := self branch newCommitWalk.
+	commitWalk revwalk
+		select: [ :aLGitCommit | aLGitCommit changesFileNamed: self ymlFilePath fullName ]
+		thenDo: [ :aLGitCommit | 
+			thisCommit := WEFileCommit new
+					commit: (commitWalk commitFrom: aLGitCommit);
+					file: self ymlFile.
+			workflowCommits add: thisCommit.
+			lastCommit ifNotNil: [ lastCommit previousFileCommit: thisCommit ].
+			lastCommit := thisCommit ]
+]
+
+{ #category : #accessing }
 WEHistory >> location [
 	^ self repoPath asFileReference
 ]
@@ -196,20 +213,7 @@ WEHistory >> storeOn: aStream [
 
 { #category : #accessing }
 WEHistory >> workflowCommits [
-	| workflowCommits commitWalk thisCommit lastCommit |
-	workflowCommits := OrderedCollection new.
-
-	commitWalk := self branch newCommitWalk.
-	commitWalk revwalk
-		select: [ :aLGitCommit | aLGitCommit changesFileNamed: self ymlFilePath fullName ]
-		thenDo: [ :aLGitCommit | 
-			thisCommit := WEFileCommit new
-					commit: (commitWalk commitFrom: aLGitCommit);
-					file: self ymlFile.
-			workflowCommits add: thisCommit.
-			lastCommit ifNotNil: [ lastCommit previousFileCommit: thisCommit ].
-			lastCommit := thisCommit ].
-
+	workflowCommits ifNil: [ self initializeWorkflowCommits ].
 	^ workflowCommits
 ]
 

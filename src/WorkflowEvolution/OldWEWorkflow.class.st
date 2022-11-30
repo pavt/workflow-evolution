@@ -6,7 +6,7 @@ Class {
 		'events',
 		'steps'
 	],
-	#category : #'WorkflowEvolution-Model'
+	#category : #'WorkflowEvolution-Obsolete'
 }
 
 { #category : #accessing }

@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'properties'
 	],
-	#category : #'WorkflowEvolution-Model'
+	#category : #'WorkflowEvolution-Obsolete'
 }
 
 { #category : #accessing }

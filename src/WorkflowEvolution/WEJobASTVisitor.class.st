@@ -6,7 +6,7 @@ Class {
 		'stepsAST',
 		'runner'
 	],
-	#category : #'WorkflowEvolution-Visitor'
+	#category : #'WorkflowEvolution-Obsolete'
 }
 
 { #category : #accessing }

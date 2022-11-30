@@ -8,7 +8,7 @@ Class {
 		'ymlFile',
 		'stickyGroups'
 	],
-	#category : #'WorkflowEvolution-Model'
+	#category : #'WorkflowEvolution-Obsolete'
 }
 
 { #category : #accessing }

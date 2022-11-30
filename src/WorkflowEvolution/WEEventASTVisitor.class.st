@@ -5,7 +5,7 @@ Class {
 		'event',
 		'eventsAST'
 	],
-	#category : #'WorkflowEvolution-Visitor'
+	#category : #'WorkflowEvolution-Obsolete'
 }
 
 { #category : #accessing }
