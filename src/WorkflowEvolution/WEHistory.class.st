@@ -172,8 +172,8 @@ WEHistory >> initializeWorkflowCommitsNicely [
 		thenDo: [ :aLGitCommit | 
 			thisTime := Time now asDuration.
 			thisTime - lastTime > delay
-				ifTrue: [ lastTime := thisTime.
-					Processor yield ].
+				ifTrue: [ Processor yield.
+					lastTime := thisTime ].
 			thisCommit := WEFileCommit new
 					commit: (commitWalk commitFrom: aLGitCommit);
 					file: self ymlFile.
