@@ -25,7 +25,8 @@ WEHistories >> gtInitializedHistoriesFor: aView [
 		priority: 30;
 		items: [ self initializedHistories ];
 		column: 'Repo' text: [ :each | each repoPath ];
-		column: 'YML file' text: [ :each | each ymlFile ]
+		column: 'YML file' text: [ :each | each ymlFile ];
+		updateWhen: ValueChanged in: [ self initializedHistories announcer ]
 ]
 
 { #category : #accessing }
@@ -57,6 +58,7 @@ WEHistories >> historyTasks [
 { #category : #accessing }
 WEHistories >> initialize [
 	mutex := Semaphore forMutualExclusion.
+	self processes: OrderedCollection new.
 	self histories: OrderedCollection new.
 	self initializedHistories: OrderedCollection new asValueHolder
 ]
@@ -78,8 +80,22 @@ WEHistories >> killHistoryTasks [
 	processes do: #terminate
 ]
 
+{ #category : #accessing }
+WEHistories >> processes [
+
+	^ processes
+]
+
+{ #category : #accessing }
+WEHistories >> processes: anObject [
+
+	processes := anObject
+]
+
 { #category : #computation }
 WEHistories >> spawnHistoryTasks [
+	self killHistoryTasks.
+	self initializedHistories removeAll.
 	processes := OrderedCollection new.
 	self historyTasks
 		do: [ :task | 
