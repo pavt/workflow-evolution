@@ -8,7 +8,9 @@ Class {
 		'ymlFilePath',
 		'stickyCommits',
 		'stickyGroups',
-		'workflowCommits'
+		'workflowCommits',
+		'timeBudget',
+		'lastTime'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
@@ -39,6 +41,13 @@ WEHistory >> allCommits [
 	"These are all commiyts, not just those to the workflow file"
 
 	^ self branch commits
+]
+
+{ #category : #accessing }
+WEHistory >> beNice [
+	Time now asDuration - lastTime > self timeBudget
+		ifTrue: [ Processor yield.
+			self resetClock ]
 ]
 
 { #category : #accessing }
@@ -112,6 +121,11 @@ WEHistory >> gtWorkflowDirFor: aView [
 ]
 
 { #category : #accessing }
+WEHistory >> initialize [
+	self timeBudget: 100 milliseconds
+]
+
+{ #category : #accessing }
 WEHistory >> initializeRepo [
 	repo := IceRepositoryCreator new
 			location: self location;
@@ -161,19 +175,15 @@ WEHistory >> initializeWorkflowCommits [
 WEHistory >> initializeWorkflowCommitsNicely [
 	"This version does a Processor yield after a certain delay"
 
-	| commitWalk thisCommit lastCommit lastTime delay thisTime |
-	lastTime := Time now asDuration.
-	delay := 100 milliseconds.
+	| commitWalk thisCommit lastCommit |
+	self resetClock.
 
 	workflowCommits := OrderedCollection new.
 	commitWalk := self branch newCommitWalk.
 	commitWalk revwalk
 		select: [ :aLGitCommit | aLGitCommit changesFileNamed: self ymlFilePath fullName ]
 		thenDo: [ :aLGitCommit | 
-			thisTime := Time now asDuration.
-			thisTime - lastTime > delay
-				ifTrue: [ Processor yield.
-					lastTime := thisTime ].
+			self beNice.
 			thisCommit := WEFileCommit new
 					commit: (commitWalk commitFrom: aLGitCommit);
 					file: self ymlFile.
@@ -218,6 +228,11 @@ WEHistory >> repoPath: aPathString [
 ]
 
 { #category : #accessing }
+WEHistory >> resetClock [
+	lastTime := Time now asDuration
+]
+
+{ #category : #accessing }
 WEHistory >> stickyCommits [
 	stickyGroups ifNil: [self initializeStickyGroups].
 	^ stickyGroups
@@ -233,6 +248,17 @@ WEHistory >> storeOn: aStream [
 		nextPutAll: ' forYML: ';
 		nextPutAll: self ymlFile storeString
 		
+]
+
+{ #category : #accessing }
+WEHistory >> timeBudget [
+
+	^ timeBudget
+]
+
+{ #category : #accessing }
+WEHistory >> timeBudget: aDuration [
+	timeBudget := aDuration
 ]
 
 { #category : #accessing }
