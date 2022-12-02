@@ -177,14 +177,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T08:56:20.605148+01:00"
+						"dateAndTimeString" : "2022-12-02T09:56:22.411895+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "k10OXTWrDQCOs9ZQCR/tCQ=="
 				},
-				"code" : "tasks := (1 to: 20)\r\t\tcollect: [ :max | \r\t\t\t[ | total budget lastTime |\r\t\t\tbudget := 1 milliseconds.\r\t\t\tlastTime := Time now asDuration.\r\t\t\ttotal := 0.\r\t\t\t1\r\t\t\t\tto: max\r\t\t\t\tdo: [ :n | \r\t\t\t\t\t| delay |\r\t\t\t\t\t\"be nice within each iteration\"\r\t\t\t\t\tTime now asDuration - lastTime > budget\r\t\t\t\t\t\tifTrue: [ Processor yield.\r\t\t\t\t\t\t\tlastTime := Time now asDuration ].\t\r\t\t\t\t\t\"perform a potentially slow operation\"\r\t\t\t\t\tdelay := (5 * n) atRandom.\r\t\t\t\t\ttotal := total + delay.\r\t\t\t\t\t(Delay forMilliseconds: delay) wait ].\r\t\t\ttotal ] ].\rresult := OrderedCollection new asValueHolder.\rmutex := Semaphore forMutualExclusion.\rprocesses := OrderedCollection new.\rtasks\r\tdo: [ :task | processes add: [ mutex critical: [ result addLast: task value ] ] fork ].\rresult"
+				"code" : "tasks := (1 to: 20)\r\t\tcollect: [ :max | \r\t\t\t[ | total budget lastTime |\r\t\t\tbudget := 1 milliseconds.\r\t\t\tlastTime := Time now asDuration.\r\t\t\ttotal := 0.\r\t\t\t1\r\t\t\t\tto: max\r\t\t\t\tdo: [ :n | \r\t\t\t\t\t| delay |\r\t\t\t\t\t\"be nice within each iteration\"\r\t\t\t\t\tTime now asDuration - lastTime > budget\r\t\t\t\t\t\tifTrue: [ Processor yield.\r\t\t\t\t\t\t\tlastTime := Time now asDuration ].\t\"perform a potentially slow operation\"\r\t\t\t\t\tdelay := (100 * n) atRandom.\r\t\t\t\t\ttotal := total + delay.\r\t\t\t\t\t(Delay forMilliseconds: delay) wait ].\r\t\t\ttotal ] ].\rresult := OrderedCollection new asValueHolder.\rmutex := Semaphore forMutualExclusion.\rprocesses := OrderedCollection new.\rtasks\r\tdo: [ :task | \r\t\tprocesses\r\t\t\tadd: [ | value |\r\t\t\t\tvalue := task value.\r\t\t\t\tmutex critical: [ result addLast: value ] ] fork ].\rresult"
 			},
 			{
 				"__type" : "textSnippet",
