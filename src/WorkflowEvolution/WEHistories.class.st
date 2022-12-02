@@ -26,6 +26,7 @@ WEHistories >> gtInitializedHistoriesFor: aView [
 		items: [ self initializedHistories ];
 		column: 'Repo' text: [ :each | each repoPath ];
 		column: 'YML file' text: [ :each | each ymlFile ];
+		column: 'Commits size' text: [ :each | each workflowCommits size ];
 		updateWhen: ValueChanged in: [ self initializedHistories announcer ]
 ]
 
@@ -97,7 +98,7 @@ WEHistories >> spawnHistoryTasks [
 	self killHistoryTasks.
 	self initializedHistories removeAll.
 	processes := OrderedCollection new.
-	self historyTasks
+	(self historyTasks copyFrom: 1 to: 10)
 		do: [ :task | 
 			processes
 				add: [ mutex critical: [ self initializedHistories addLast: task value ] ] fork ]
