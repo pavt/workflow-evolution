@@ -98,8 +98,11 @@ WEHistories >> processes: anObject [
 WEHistories >> spawnHistoryTasks [
 	self killHistoryTasks.
 	self initializedHistories removeAll.
+	"to be sure that only one process at a time executes a section of code"
+	mutex := Semaphore forMutualExclusion.
 	processes := OrderedCollection new.
-	(self historyTasks copyFrom: 1 to: 20)
+	"be careful with the lenght"
+	(self historyTasks copyFrom: 1 to: 30)
 		do: [ :task | 
 			| value |
 			processes

@@ -175,7 +175,7 @@ WEHistory >> initializeWorkflowCommits [
 WEHistory >> initializeWorkflowCommitsNicely [
 	"This version does a Processor yield after a certain delay"
 
-	| commitWalk thisCommit lastCommit |
+	| commitWalk thisCommit lastCommit delay total |
 	self resetClock.
 
 	workflowCommits := OrderedCollection new.
@@ -184,6 +184,13 @@ WEHistory >> initializeWorkflowCommitsNicely [
 		select: [ :aLGitCommit | aLGitCommit changesFileNamed: self ymlFilePath fullName ]
 		thenDo: [ :aLGitCommit | 
 			self beNice.
+			"using 1 second to see if the process is working incrementally"
+			1 second asDelay wait
+			
+			"total:= 0.
+			delay := 100 atRandom.
+			total := total + delay.
+			(Delay forMilliseconds: delay) wait".
 			thisCommit := WEFileCommit new
 					commit: (commitWalk commitFrom: aLGitCommit);
 					file: self ymlFile.
