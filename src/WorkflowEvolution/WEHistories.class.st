@@ -18,6 +18,21 @@ WEHistories class >> from: aHistoryCollection [
 ]
 
 { #category : #accessing }
+WEHistories class >> fromReposPath: aPathString [
+	| repoPaths histories files |
+	repoPaths := aPathString asFileReference children collect: #gtDisplayString.
+	histories := OrderedCollection new.
+	repoPaths
+		do: [ :repoPath | 
+			files := (repoPath asFileReference / '.github' / 'workflows'
+					allChildrenMatching: '*.yml') collect: #basename.
+			histories
+				addAll: (files collect: [ :file | WEHistory fromRepoPath: repoPath forYML: file ]) ].
+
+	^ WEHistories from: histories
+]
+
+{ #category : #accessing }
 WEHistories >> gtInitializedHistoriesFor: aView [
 	<gtView>
 	^ aView columnedList
@@ -99,16 +114,14 @@ WEHistories >> spawnHistoryTasks [
 	| maxLength |
 	self killHistoryTasks.
 	self initializedHistories removeAll.
-	"to be sure that only one process at a time executes a section of code"
 	mutex := Semaphore forMutualExclusion.
 	processes := OrderedCollection new.
-	
-	"maxLength: length of the historyTasks"
-	maxLength:= self historyTasks size.
+	maxLength := self historyTasks size.
 	(self historyTasks copyFrom: 1 to: maxLength)
 		do: [ :task | 
 			| value |
 			processes
-				add: [ value := task value.
-					mutex critical: [ self initializedHistories addLast: value ] ] fork ]
+				add: ([ value := task value.
+					mutex critical: [ self initializedHistories addLast: value ] ]
+						forkAt: Processor userBackgroundPriority - 1) ]
 ]

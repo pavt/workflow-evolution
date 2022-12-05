@@ -23,17 +23,7 @@ WEHistory class >> fromRepoPath: aPathString forYML: aFilename [
 
 { #category : #accessing }
 WEHistory class >> fromReposPath: aPathString [
-	| repoPaths histories files |
-	repoPaths := aPathString asFileReference children collect: #gtDisplayString.
-	histories := OrderedCollection new.
-	repoPaths
-		do: [ :repoPath | 
-			files := (repoPath asFileReference / '.github' / 'workflows'
-					allChildrenMatching: '*.yml') collect: #basename.
-			histories
-				addAll: (files collect: [ :file | WEHistory fromRepoPath: repoPath forYML: file ]) ].
-
-	^ WEHistories from: histories
+	self error: 'Use WEHistories>>#fromReposPath: instead'
 ]
 
 { #category : #accessing }
@@ -175,7 +165,7 @@ WEHistory >> initializeWorkflowCommits [
 WEHistory >> initializeWorkflowCommitsNicely [
 	"This version does a Processor yield after a certain delay"
 
-	| commitWalk thisCommit lastCommit delay total |
+	| commitWalk thisCommit lastCommit |
 	self resetClock.
 
 	workflowCommits := OrderedCollection new.
@@ -184,13 +174,7 @@ WEHistory >> initializeWorkflowCommitsNicely [
 		select: [ :aLGitCommit | aLGitCommit changesFileNamed: self ymlFilePath fullName ]
 		thenDo: [ :aLGitCommit | 
 			self beNice.
-			"using 1 second to see if the process is working incrementally"
-			1 second asDelay wait
-			
-			"total:= 0.
-			delay := 100 atRandom.
-			total := total + delay.
-			(Delay forMilliseconds: delay) wait".
+			1 second asDelay wait.
 			thisCommit := WEFileCommit new
 					commit: (commitWalk commitFrom: aLGitCommit);
 					file: self ymlFile.

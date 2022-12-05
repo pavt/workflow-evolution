@@ -129,7 +129,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T08:57:49.849187+01:00"
+						"dateAndTimeString" : "2022-12-05T11:02:59.174591+01:00"
 					}
 				},
 				"editEmail" : {
@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T08:57:49.849187+01:00"
+						"dateAndTimeString" : "2022-12-05T11:03:04.32554+01:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "Demo with a slow random sort."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-05T11:03:04.875976+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-05T11:03:15.430178+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "fUzDh3OrDQC8nZ0LDdQIgA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Note that the"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -177,14 +214,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T09:56:03.467661+01:00"
+						"dateAndTimeString" : "2022-12-05T11:03:13.295027+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "k10OXTWrDQCOs9ZQCR/tCQ=="
 				},
-				"code" : "tasks := (1 to: 20)\r\t\tcollect: [ :max | \r\t\t\t[ | total budget lastTime |\r\t\t\tbudget := 1 milliseconds.\r\t\t\tlastTime := Time now asDuration.\r\t\t\ttotal := 0.\r\t\t\t1\r\t\t\t\tto: max\r\t\t\t\tdo: [ :n | \r\t\t\t\t\t| delay |\r\t\t\t\t\t\"be nice within each iteration\"\r\t\t\t\t\tTime now asDuration - lastTime > budget\r\t\t\t\t\t\tifTrue: [ Processor yield.\r\t\t\t\t\t\t\tlastTime := Time now asDuration ].\t\"perform a potentially slow operation\"\r\t\t\t\t\tdelay := (20 * n) atRandom.\r\t\t\t\t\ttotal := total + delay.\r\t\t\t\t\t(Delay forMilliseconds: delay) wait ].\r\t\t\ttotal ] ].\rresult := OrderedCollection new asValueHolder.\rmutex := Semaphore forMutualExclusion.\rprocesses := OrderedCollection new.\rtasks\r\tdo: [ :task | \r\t\tprocesses\r\t\t\tadd: [ | value |\r\t\t\t\tvalue := task value.\r\t\t\t\tmutex critical: [ result addLast: value ] ] fork ].\rresult"
+				"code" : "tasks := (1 to: 10)\r\t\tcollect: [ :max | \r\t\t\t[ | budget lastTime list iterations |\r\t\t\tbudget := 1 milliseconds.\r\t\t\tlastTime := Time now asDuration.\r\t\t\titerations := 0.\r\t\t\tlist := (1 to: 9) reversed.\r\t\t\t[ list isSorted ]\r\t\t\t\twhileFalse: [ list := list shuffled.\r\t\t\t\t\titerations := iterations + 1.\r\t\t\t\t\tTime now asDuration - lastTime > budget\r\t\t\t\t\t\tifTrue: [ Processor yield.\r\t\t\t\t\t\t\tlastTime := Time now asDuration ] ].\r\t\t\titerations ] ].\rresult := OrderedCollection new asValueHolder.\rmutex := Semaphore forMutualExclusion.\rprocesses := OrderedCollection new.\rtasks\r\tdo: [ :task | \r\t\tprocesses\r\t\t\tadd: ([ | value |\r\t\t\t\tvalue := task value.\r\t\t\t\tmutex critical: [ result addLast: value ] ]\r\t\t\t\t\tforkAt: Processor userBackgroundPriority - 1) ].\rresult"
 			},
 			{
 				"__type" : "textSnippet",
@@ -248,7 +285,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T08:58:13.088197+01:00"
+						"dateAndTimeString" : "2022-12-05T09:18:33.695428+01:00"
 					}
 				},
 				"uid" : {
@@ -256,6 +293,43 @@
 					"uidString" : "+xoabzWrDQCOvynuCR/tCQ=="
 				},
 				"code" : "processes do: #terminate "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-05T08:52:51.131512+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-05T08:52:51.131512+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "lPwLtnGrDQCzfZmUCxI0rQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
 			}
 		]
 	},
