@@ -174,7 +174,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T10:01:11.329633+01:00"
+						"dateAndTimeString" : "2022-12-05T11:13:21.857277+01:00"
 					}
 				},
 				"uid" : {
@@ -184,44 +184,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If we evaluate the following, it will slowly be populated. But something is wrong, as the results show all at once, instead of incrementally. Not sure what is wrong."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T10:01:18.968791+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T10:01:35.843523+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "5sZXUTarDQCf/Wd/Do5Hhw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "NB: only the first ten tasks are taken for now while debugging."
+				"string" : "If we evaluate the following, it will slowly be populated. (This works only if we fork the processes at a lower priority than user background processes.)"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -256,6 +219,40 @@
 					"uidString" : "VCztSjarDQCf+cKvDo5Hhw=="
 				},
 				"code" : "histories spawnHistoryTasks"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-05T11:06:57.865851+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-05T11:07:05.158116+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mGirlXOrDQCuNhT2DNZRvQ=="
+				},
+				"code" : "histories killHistoryTasks"
 			},
 			{
 				"__type" : "textSnippet",
@@ -535,7 +532,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-12-02T10:08:28.455435+01:00"
+									"dateAndTimeString" : "2022-12-05T11:08:52.160731+01:00"
 								}
 							},
 							"editEmail" : {
@@ -546,7 +543,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-12-02T10:08:40.350926+01:00"
+									"dateAndTimeString" : "2022-12-05T11:11:44.403507+01:00"
 								}
 							},
 							"uid" : {
@@ -556,7 +553,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "For some reason this is not working incrementally."
+							"string" : "This works only if we fork the processes at a lower priority than user background processes."
 						}
 					]
 				},

@@ -26,26 +26,26 @@ WEHistory class >> fromReposPath: aPathString [
 	self error: 'Use WEHistories>>#fromReposPath: instead'
 ]
 
-{ #category : #accessing }
+{ #category : #'git support' }
 WEHistory >> allCommits [
-	"These are all commiyts, not just those to the workflow file"
+	"These are all commits, not just those to the workflow file"
 
 	^ self branch commits
 ]
 
-{ #category : #accessing }
+{ #category : #scheduling }
 WEHistory >> beNice [
 	Time now asDuration - lastTime > self timeBudget
 		ifTrue: [ Processor yield.
 			self resetClock ]
 ]
 
-{ #category : #accessing }
+{ #category : #'git support' }
 WEHistory >> branch [
 	^ repo localBranches detect: [ :b | b name = 'main' or: [ b name = 'master' ] ]
 ]
 
-{ #category : #accessing }
+{ #category : #'git support' }
 WEHistory >> commitsByAuthor [
 	| commitsByAuthor authorCommits previousAuthor commits |
 	previousAuthor := ''.
@@ -63,7 +63,12 @@ WEHistory >> commitsByAuthor [
 	^ commitsByAuthor
 ]
 
-{ #category : #accessing }
+{ #category : #constants }
+WEHistory >> defaultTimeBudget [
+	^ 100 milliseconds
+]
+
+{ #category : #ui }
 WEHistory >> gtCommitsFor: aView [
 	<gtView>
 	^ aView columnedList
@@ -83,7 +88,7 @@ WEHistory >> gtCommitsFor: aView [
 					ifFalse: [ 'na' ] ]
 ]
 
-{ #category : #accessing }
+{ #category : #ui }
 WEHistory >> gtStickyCommitsFor: aView [
 	<gtView>
 	^ aView columnedList
@@ -100,7 +105,7 @@ WEHistory >> gtStickyCommitsFor: aView [
 		column: 'Number of commits' text: [ :each | each stickyGroup size asString ]
 ]
 
-{ #category : #accessing }
+{ #category : #ui }
 WEHistory >> gtWorkflowDirFor: aView [
 	<gtView>
 	^ aView forward
@@ -110,19 +115,19 @@ WEHistory >> gtWorkflowDirFor: aView [
 		view: #gtItemsFor:
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 WEHistory >> initialize [
-	self timeBudget: 100 milliseconds
+	self timeBudget: self defaultTimeBudget
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 WEHistory >> initializeRepo [
 	repo := IceRepositoryCreator new
 			location: self location;
 			createRepository
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 WEHistory >> initializeStickyGroups [
 	| stickyCandidate previousAuthor commits candidates |
 	previousAuthor := ''.
@@ -145,7 +150,7 @@ WEHistory >> initializeStickyGroups [
 			collect: [ :each | WEStickyGroup forFileCommit: each ]
 ]
 
-{ #category : #accessing }
+{ #category : #initialization }
 WEHistory >> initializeWorkflowCommits [
 	| commitWalk thisCommit lastCommit |
 	workflowCommits := OrderedCollection new.
