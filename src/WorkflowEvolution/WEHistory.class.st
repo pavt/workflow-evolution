@@ -122,9 +122,13 @@ WEHistory >> initialize [
 
 { #category : #initialization }
 WEHistory >> initializeRepo [
-	repo := IceRepositoryCreator new
-			location: self location;
-			createRepository
+	repo := IceRepository registry
+			detect: [ :repository | repository location = self location ]
+			ifNone: [ (IceRepositoryCreator new
+					location: self location;
+					createRepository)
+					name;
+					register ]
 ]
 
 { #category : #initialization }
@@ -179,7 +183,7 @@ WEHistory >> initializeWorkflowCommitsNicely [
 		select: [ :aLGitCommit | aLGitCommit changesFileNamed: self ymlFilePath fullName ]
 		thenDo: [ :aLGitCommit | 
 			self beNice.
-			1 second asDelay wait.
+			"1 second asDelay wait."
 			thisCommit := WEFileCommit new
 					commit: (commitWalk commitFrom: aLGitCommit);
 					file: self ymlFile.
