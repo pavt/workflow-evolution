@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-05T08:59:35.343592+01:00"
+						"dateAndTimeString" : "2022-12-08T16:06:45.535387+01:00"
 					}
 				},
 				"uid" : {
@@ -111,6 +111,77 @@
 					"uidString" : "LA9D8A6rDQCsVZhnDhtgnQ=="
 				},
 				"code" : "histories := WEHistories fromReposPath: '../repositories'"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-08T16:06:47.741471+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-08T16:07:06.316058+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gIUyH7SrDQCjR/xKAvyHzg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "This method initializes the histories without spawning processes."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-08T16:06:24.802567+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-08T16:06:32.625081+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QjsbHrSrDQCjRdnrAvyHzg=="
+				},
+				"code" : "histories initializeHistoryTasks"
 			},
 			{
 				"__type" : "textSnippet",

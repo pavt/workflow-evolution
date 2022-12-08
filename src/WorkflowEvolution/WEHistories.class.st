@@ -80,6 +80,12 @@ WEHistories >> initialize [
 	self initializedHistories: OrderedCollection new asValueHolder
 ]
 
+{ #category : #computation }
+WEHistories >> initializeHistoryTasks [
+	self histories do: [ :each | each initializeWorkflowCommits ].
+	self initializedHistories addAll: self histories asValueHolder
+]
+
 { #category : #accessing }
 WEHistories >> initializedHistories [
 

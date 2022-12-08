@@ -103,7 +103,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-05T08:59:35.343592+01:00"
+						"dateAndTimeString" : "2022-12-08T16:06:45.535387+01:00"
 					}
 				},
 				"uid" : {
@@ -111,6 +111,77 @@
 					"uidString" : "LA9D8A6rDQCsVZhnDhtgnQ=="
 				},
 				"code" : "histories := WEHistories fromReposPath: '../repositories'"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-08T16:06:43.106141+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-08T16:06:43.106141+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gIUyH7SrDQCjR/xKAvyHzg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-08T16:06:24.802567+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-08T16:06:32.625081+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "QjsbHrSrDQCjRdnrAvyHzg=="
+				},
+				"code" : "histories initializeHistoryTasks"
 			},
 			{
 				"__type" : "textSnippet",
@@ -174,7 +245,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-05T11:13:10.610991+01:00"
+						"dateAndTimeString" : "2022-12-05T11:13:21.857277+01:00"
 					}
 				},
 				"uid" : {
@@ -184,44 +255,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "If we evaluate the following, it will slowly be populated. "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T10:01:18.968791+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T10:01:35.843523+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "5sZXUTarDQCf/Wd/Do5Hhw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "NB: only the first ten tasks are taken for now while debugging."
+				"string" : "If we evaluate the following, it will slowly be populated. (This works only if we fork the processes at a lower priority than user background processes.)"
 			},
 			{
 				"__type" : "pharoSnippet",
