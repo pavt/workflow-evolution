@@ -83,7 +83,7 @@ WEHistories >> initialize [
 { #category : #computation }
 WEHistories >> initializeHistoryTasks [
 	self histories do: [ :each | each initializeWorkflowCommits ].
-	self initializedHistories addAll: self histories asValueHolder
+	self updateHistories
 ]
 
 { #category : #accessing }
@@ -134,5 +134,24 @@ WEHistories >> spawnHistoryTasks [
 
 { #category : #accessing }
 WEHistories >> storeOn: aStream [
-	"This is a new method"
+	aStream
+		nextPutAll: '(';
+		nextPutAll: self className;
+		nextPutAll: ' from: ((OrderedCollection new)';
+		nextPutAll: String cr.
+
+	self histories
+		do: [ :each | 
+			aStream nextPutAll: 'add: ('.
+			each storeOn: aStream.
+			aStream
+				nextPutAll: ');';
+				nextPutAll: String cr ].
+
+	aStream nextPutAll: 'yourself )) updateHistories'
+]
+
+{ #category : #computation }
+WEHistories >> updateHistories [
+	self initializedHistories addAll: self histories asValueHolder
 ]
