@@ -131,3 +131,8 @@ WEHistories >> spawnHistoryTasks [
 					mutex critical: [ self initializedHistories addLast: value ] ]
 						forkAt: Processor userBackgroundPriority - 1) ]
 ]
+
+{ #category : #accessing }
+WEHistories >> storeOn: aStream [
+	"This is a new method"
+]

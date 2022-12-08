@@ -115,6 +115,13 @@ WEHistory >> gtWorkflowDirFor: aView [
 		view: #gtItemsFor:
 ]
 
+{ #category : #accessing }
+WEHistory >> historyIds [
+	"We use these in the storeOn: method to recreate the workflowcommits from the ids."
+
+	^ self workflowCommits collect: [ :each | each commit id ]
+]
+
 { #category : #initialization }
 WEHistory >> initialize [
 	self timeBudget: self defaultTimeBudget
@@ -168,6 +175,20 @@ WEHistory >> initializeWorkflowCommits [
 			workflowCommits add: thisCommit.
 			lastCommit ifNotNil: [ lastCommit previousFileCommit: thisCommit ].
 			lastCommit := thisCommit ]
+]
+
+{ #category : #initialization }
+WEHistory >> initializeWorkflowCommitsFromIds: anIdCollection [
+	workflowCommits := anIdCollection
+			collect: [ :id | 
+				| iceCommit weCommit |
+				iceCommit := self repository
+						commitFromGitCommit: (LGitCommit
+								of: self repository repositoryHandle
+								fromId: (LGitId fromHexString: id)).
+				weCommit := WEFileCommit new
+						commit: iceCommit;
+						file: self ymlFile ]
 ]
 
 { #category : #accessing }
@@ -227,6 +248,12 @@ WEHistory >> repoPath: aPathString [
 	self initializeRepo
 ]
 
+{ #category : #initialization }
+WEHistory >> repository [
+	repo ifNil: [ self initializeRepo ].
+	^ repo
+]
+
 { #category : #accessing }
 WEHistory >> resetClock [
 	lastTime := Time now asDuration
@@ -240,14 +267,15 @@ WEHistory >> stickyCommits [
 
 { #category : #accessing }
 WEHistory >> storeOn: aStream [
-	
 	aStream
+		nextPutAll: '(';
 		nextPutAll: self className;
 		nextPutAll: ' fromRepoPath: ';
 		nextPutAll: self repoPath storeString;
 		nextPutAll: ' forYML: ';
-		nextPutAll: self ymlFile storeString
-		
+		nextPutAll: self ymlFile storeString;
+		nextPutAll: ') initializeWorkflowCommitsFromIds: ';
+		nextPutAll: self historyIds storeString
 ]
 
 { #category : #accessing }
