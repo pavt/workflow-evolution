@@ -179,6 +179,7 @@ WEHistory >> initializeWorkflowCommits [
 
 { #category : #initialization }
 WEHistory >> initializeWorkflowCommitsFromIds: anIdCollection [
+	| lastCommit |
 	workflowCommits := anIdCollection
 			collect: [ :id | 
 				| iceCommit weCommit |
@@ -188,7 +189,9 @@ WEHistory >> initializeWorkflowCommitsFromIds: anIdCollection [
 								fromId: (LGitId fromHexString: id)).
 				weCommit := WEFileCommit new
 						commit: iceCommit;
-						file: self ymlFile ]
+						file: self ymlFile.
+				lastCommit ifNotNil: [ lastCommit previousFileCommit: weCommit ].
+				lastCommit := weCommit ]
 ]
 
 { #category : #accessing }
