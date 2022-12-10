@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-09T17:28:57.37819-03:00"
+						"dateAndTimeString" : "2022-12-09T22:38:54.577266-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "T/hatbarDQCf8ZSgCtLrtA=="
 				},
-				"code" : "histories:= ('datafile.txt' asFileReference \n    readStreamDo: [ :stream | stream contents ] ).\rhistories  "
+				"code" : "histories:= ('datafile.txt' asFileReference \n    readStreamDo: [ :stream | stream contents ] ).\rhistories."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -134,14 +134,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-09T17:28:29.734878-03:00"
+						"dateAndTimeString" : "2022-12-09T22:46:44.839328-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "IcHj/barDQCf90lMCtLrtA=="
 				},
-				"code" : ""
+				"code" : "WEHistories exampleIni"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-09T22:48:13.952609-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-09T22:48:34.451579-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+OkdM9GrDQCR+r+vCLqB5w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Next time try to generate the example using the data string froma a File"
 			}
 		]
 	},
