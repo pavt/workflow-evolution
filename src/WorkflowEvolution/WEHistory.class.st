@@ -94,18 +94,21 @@ WEHistory >> gtCommitsFor: aView [
 	^ aView columnedList
 		title: 'Commits';
 		priority: 30;
-		items: [ self workflowCommits ];
+		"we display the commits in descending order"
+		items: [ self workflowCommits sort: [ :a :b | a commit datetime <= b commit datetime ] ];
 		column: 'Index' 
 			text: [ :eachItem :eachIndex | 
-				eachIndex asRopedText foreground: Color gray ]
-			width: 45;
-		column: 'Author' text: [ :commit | commit commit author ];
-		column: 'Timestamp' text: [ :commit | commit commit datetime asString ];
+				 eachIndex asRopedText  foreground: Color gray ]
+			width: 45 ;
+		column: 'Author' text: [ :commit | commit commit author ] width: 130;
+		column: 'Timestamp' text: [ :commit | commit commit datetime year  ] width: 70;
 		column: 'Delta'
 			text: [ :commit | 
 				commit hasPreviousFileCommit
 					ifTrue: [ (commit commit datetime - commit previousFileCommit commit datetime) asString ]
-					ifFalse: [ 'na' ] ];
+					ifFalse: [ 'na' ] ] width: 100;
+		
+		column: 'Comment' text: [ :commit | commit commit comment ] width: 400;
 		column: 'Category'
 			do: [ :column | 
 			column
@@ -114,6 +117,7 @@ WEHistory >> gtCommitsFor: aView [
 						editableLabelFor: commit category 
 						withSetter: [ :newCategoryName | commit category: newCategoryName ] ];
 				weight: 1 ]
+	
 		"column: ' '
 			do: [ :column | 
 			
