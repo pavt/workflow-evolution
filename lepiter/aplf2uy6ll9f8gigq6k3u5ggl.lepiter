@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-08T15:11:52.27398-03:00"
+						"dateAndTimeString" : "2022-12-12T10:17:05.201264-03:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +66,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-09T22:38:54.577266-03:00"
+						"dateAndTimeString" : "2022-12-12T10:17:08.881152-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "T/hatbarDQCf8ZSgCtLrtA=="
+					"uidString" : "iCh9DgOsDQC10DK4AyIzwQ=="
 				},
-				"code" : "histories:= ('datafile.txt' asFileReference \n    readStreamDo: [ :stream | stream contents ] ).\rhistories."
+				"code" : "'testfile.txt' asFileReference \n    readStreamDo: [ :stream | stream contents  ]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T10:17:55.90655-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T10:44:24.257866-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "B9yCEQOsDQC10dVGAyIzwQ=="
+				},
+				"code" : ""
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -134,14 +168,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-09T22:46:44.839328-03:00"
+						"dateAndTimeString" : "2022-12-12T10:15:51.541585-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "IcHj/barDQCf90lMCtLrtA=="
 				},
-				"code" : "WEHistories exampleIni"
+				"code" : "WEHistories exampleLazyInitialization"
 			},
 			{
 				"__type" : "textSnippet",
