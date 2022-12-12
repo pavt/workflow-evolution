@@ -4,10 +4,23 @@ Class {
 	#instVars : [
 		'file',
 		'commit',
-		'previousFileCommit'
+		'previousFileCommit',
+		'category'
 	],
 	#category : #'WorkflowEvolution-Model'
 }
+
+{ #category : #accessing }
+WEFileCommit >> category [
+
+	^ category
+]
+
+{ #category : #accessing }
+WEFileCommit >> category: anObject [
+
+	category := anObject
+]
 
 { #category : #accessing }
 WEFileCommit >> commit [

@@ -68,6 +68,26 @@ WEHistory >> defaultTimeBudget [
 	^ 100 milliseconds
 ]
 
+{ #category : #accessing }
+WEHistory >> editableLabelFor: aString withSetter: aOneArgumentBlock [
+	"NB: stateless utility method"
+
+	| label |
+	label := BrEditableLabel new
+		aptitude: (BrGlamorousEditableLabelAptitude new defaultBackground: Color white);
+		text: aString.
+	label
+		when: BrEditorAcceptWish
+		do: [ :aWish | 
+			aString ~= aWish text asString
+				ifTrue: [ [ aOneArgumentBlock value: aWish text asString ]
+						on: AssertionFailure
+						do: [ :e | 
+							label text: aString.
+							self inform: e printString ] ] ].
+	^ label
+]
+
 { #category : #ui }
 WEHistory >> gtCommitsFor: aView [
 	<gtView>
@@ -85,7 +105,21 @@ WEHistory >> gtCommitsFor: aView [
 			text: [ :commit | 
 				commit hasPreviousFileCommit
 					ifTrue: [ (commit commit datetime - commit previousFileCommit commit datetime) asString ]
-					ifFalse: [ 'na' ] ]
+					ifFalse: [ 'na' ] ];
+		column: 'Category'
+			do: [ :column | 
+			column
+				stencil: [ :commit | 
+					self
+						editableLabelFor: commit category 
+						withSetter: [ :newCategoryName | commit category: newCategoryName ] ];
+				weight: 1 ]
+		"column: ' '
+			do: [ :column | 
+			
+			column
+				stencil: [ BlTextElement new text: '' asRopedText ];
+				weight: 1 ]"
 ]
 
 { #category : #ui }

@@ -66,14 +66,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-12T10:17:08.881152-03:00"
+						"dateAndTimeString" : "2022-12-12T10:50:27.543919-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "iCh9DgOsDQC10DK4AyIzwQ=="
 				},
-				"code" : "'testfile.txt' asFileReference \n    readStreamDo: [ :stream | stream contents  ]"
+				"code" : "histories:= 'testfile.txt' asFileReference \n    readStreamDo: [ :stream | stream contents  ]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T10:50:55.740603-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T10:51:00.499292-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "6rqEhwOsDQC17WVLAyIzwQ=="
+				},
+				"code" : "histories:= 'testfile.txt' asFileReference contents"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -100,14 +134,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-12T10:17:55.90655-03:00"
+						"dateAndTimeString" : "2022-12-12T10:50:21.023243-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "B9yCEQOsDQC10dVGAyIzwQ=="
 				},
-				"code" : ""
+				"code" : "Smalltalk compiler evaluate: "
 			},
 			{
 				"__type" : "pharoSnippet",
