@@ -494,6 +494,11 @@ WEHistories class >> fromReposPath: aPathString [
 ]
 
 { #category : #accessing }
+WEHistories >> addHistories: aHistory [
+	self histories add: aHistory
+]
+
+{ #category : #accessing }
 WEHistories >> gtInitializedHistoriesFor: aView [
 	<gtView>
 	^ aView columnedList

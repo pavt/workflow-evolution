@@ -86,8 +86,10 @@ WEFileCommit >> gtDiffFor: aView [
 	^ aView forward
 		title: 'Diff';
 		priority: 30;
-		object: [ self diff ];
+		object: self diff; 
 		view: #gtViewDiffFor:
+		
+		
 ]
 
 { #category : #accessing }

@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-08T15:11:39.617281-03:00"
+						"dateAndTimeString" : "2022-12-12T21:03:14.938984-03:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,115 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-08T15:11:41.619917-03:00"
+						"dateAndTimeString" : "2022-12-12T21:03:26.483891-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "RGUCFQysDQCX/CXwDQMdFA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We are able to get the data using storeString:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T21:03:33.77433-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T21:03:34.249332-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "DtB3FgysDQCX/cV9DQMdFA=="
+				},
+				"code" : "WEHistories exampleLazyInitialization"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T21:04:08.592913-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T21:04:08.592913-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "nAiLGAysDQCX/qidDQMdFA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Then we can get the same, but using a File."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T16:44:24.112718-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T21:04:08.595214-03:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +147,112 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "First, we save the data into a file:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T16:44:36.842596-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-13T07:49:26.828248-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dgxleAisDQCXrPRNDQMdFA=="
+				},
+				"code" : "'testfile.txt' asFileReference \n    writeStreamDo: [ :stream | stream << self  storeString ]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-13T07:49:30.330898-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-13T07:57:33.789673-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "TO+JHBWsDQCYJKG/DQMdFA=="
+				},
+				"code" : "histories:='testfile.txt' asFileReference \n    readStreamDo: [ :stream | stream contents  ]"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T16:44:51.400099-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T16:46:14.512147-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "jEI2eQisDQCXrfv5DQMdFA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Then, we read the file and execute the content to get the workflows histories "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -66,14 +279,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-12T10:50:27.543919-03:00"
+						"dateAndTimeString" : "2022-12-13T08:39:33.617554-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "iCh9DgOsDQC10DK4AyIzwQ=="
 				},
-				"code" : "histories:= 'testfile.txt' asFileReference \n    readStreamDo: [ :stream | stream contents  ]"
+				"code" : "histories:= 'testfile.txt' asFileReference contents.\rresult:= Smalltalk compiler evaluate: histories"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -89,7 +302,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-12T10:50:55.740603-03:00"
+						"dateAndTimeString" : "2022-12-13T08:44:09.093418-03:00"
 					}
 				},
 				"editEmail" : {
@@ -100,17 +313,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-12T10:51:00.499292-03:00"
+						"dateAndTimeString" : "2022-12-13T09:48:52.682201-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "6rqEhwOsDQC17WVLAyIzwQ=="
+					"uidString" : "oOH33xWsDQCYSiHkDQMdFA=="
 				},
-				"code" : "histories:= 'testfile.txt' asFileReference contents"
+				"code" : "dataset:= result histories select:[:each | each workflowCommits size > 40]."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -123,7 +336,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-12T10:17:55.90655-03:00"
+						"dateAndTimeString" : "2022-12-12T21:03:01.869131-03:00"
 					}
 				},
 				"editEmail" : {
@@ -134,17 +347,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-12T10:50:21.023243-03:00"
+						"dateAndTimeString" : "2022-12-13T07:32:30.842063-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "B9yCEQOsDQC10dVGAyIzwQ=="
+					"uidString" : "A6CEEwysDQCX+3EJDQMdFA=="
 				},
-				"code" : "Smalltalk compiler evaluate: "
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -157,7 +373,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-08T15:12:40.630149-03:00"
+						"dateAndTimeString" : "2022-12-12T20:40:38.571476-03:00"
 					}
 				},
 				"editEmail" : {
@@ -168,14 +384,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-09T16:15:24.757461-03:00"
+						"dateAndTimeString" : "2022-12-12T20:40:59.208793-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ttM8uLarDQCf8rDzCtLrtA=="
+					"uidString" : "sV4/xAusDQCX+YtFDQMdFA=="
 				},
-				"code" : "candidates := OrderedCollection new.\rcom:= OrderedCollection new.\rhistories \r\tdo: [ :each | each workflowCommits size <= 5 ifTrue: [ candidates add: each workflowCommits ] ].\rcandidates."
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Then, we select commit using the next criteria:"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T16:46:32.001432-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T16:46:35.405418-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/c0GfwisDQCXrq/XDQMdFA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### old stuff"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -212,7 +468,7 @@
 				"code" : "WEHistories exampleLazyInitialization"
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -225,7 +481,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-09T22:48:13.952609-03:00"
+						"dateAndTimeString" : "2022-12-08T15:12:40.630149-03:00"
 					}
 				},
 				"editEmail" : {
@@ -236,17 +492,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-09T22:48:34.451579-03:00"
+						"dateAndTimeString" : "2022-12-12T20:48:43.261498-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "+OkdM9GrDQCR+r+vCLqB5w=="
+					"uidString" : "ttM8uLarDQCf8rDzCtLrtA=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
+				"code" : "WEHistories exampleLazyInitialization \r\tdo: [ :each | each  ]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
 				},
-				"string" : "Next time try to generate the example using the data string froma a File"
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-12T20:44:28.65625-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-13T08:28:46.631629-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "srI20gusDQCX+mB4DQMdFA=="
+				},
+				"code" : "candidates := OrderedCollection new.\rresult initializedHistories\r\tdo: [ :each | each workflowCommits size <= 10 ifTrue: [ result histories size <= 3 ] ]."
 			}
 		]
 	},
