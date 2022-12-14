@@ -10,8 +10,30 @@ Class {
 	#category : #'WorkflowEvolution-Model'
 }
 
+{ #category : #'instance creation' }
+WEHistories class >> from: aHistoryCollection [
+	^ self new
+		histories: aHistoryCollection;
+		yourself
+]
+
 { #category : #accessing }
-WEHistories class >> exampleLazyInitialization [
+WEHistories class >> fromReposPath: aPathString [
+	| repoPaths histories files |
+	repoPaths := aPathString asFileReference children collect: #gtDisplayString.
+	histories := OrderedCollection new.
+	repoPaths
+		do: [ :repoPath | 
+			files := (repoPath asFileReference / '.github' / 'workflows'
+					allChildrenMatching: '*.yml') collect: #basename.
+			histories
+				addAll: (files collect: [ :file | WEHistory fromRepoPath: repoPath forYML: file ]) ].
+
+	^ WEHistories from: histories
+]
+
+{ #category : #accessing }
+WEHistories class >> initialDataset [
 	^ (self
 		from: (OrderedCollection new
 				add: ((WEHistory fromRepoPath: '../repositories/numpy' forYML: 'cygwin.yml')
@@ -469,28 +491,6 @@ WEHistories class >> exampleLazyInitialization [
 								add: 'ff0dff1eda65a35e447849540b7b83ee365e2109';
 								yourself));
 				yourself)) updateHistories
-]
-
-{ #category : #'instance creation' }
-WEHistories class >> from: aHistoryCollection [
-	^ self new
-		histories: aHistoryCollection;
-		yourself
-]
-
-{ #category : #accessing }
-WEHistories class >> fromReposPath: aPathString [
-	| repoPaths histories files |
-	repoPaths := aPathString asFileReference children collect: #gtDisplayString.
-	histories := OrderedCollection new.
-	repoPaths
-		do: [ :repoPath | 
-			files := (repoPath asFileReference / '.github' / 'workflows'
-					allChildrenMatching: '*.yml') collect: #basename.
-			histories
-				addAll: (files collect: [ :file | WEHistory fromRepoPath: repoPath forYML: file ]) ].
-
-	^ WEHistories from: histories
 ]
 
 { #category : #accessing }

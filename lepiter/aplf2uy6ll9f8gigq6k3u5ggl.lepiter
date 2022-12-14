@@ -18,6 +18,228 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-14T09:24:33.817132-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-14T11:21:06.107347-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "JwmMjSqsDQCYJhH/CPByOQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### 1 - list of GitHub repositories definition"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-14T10:49:27.255153-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-14T11:17:00.426509-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ZVOVgCusDQCYKi0kCPByOQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The list of GitHub repositories: [google spreadsheet](https://docs.google.com/spreadsheets/d/1rMyxw7JCZsJuo2aFNbnjZZnZJ4ybfnFU8vzxGoE9pgw/edit#gid=740634947) "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-14T11:19:29.87202-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-14T11:19:29.87202-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "bwRfKSysDQCYSDyLCPByOQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The list of GitHub repositories is obtained using [seart research team tool](https://seart-ghs.si.usi.ch/) "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-14T11:19:15.505356-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-14T11:20:22.973829-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ws2DKCysDQCYR281CPByOQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The following filters were applied: \n - Created at: before 2022-12-14\n - Last commit at: after 2019-01-11 (GA official release date)\n - Number of commits: min 500\n - Number of stars: min 10\n - Exclude forks: true"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-14T09:24:44.270555-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-14T09:24:44.270555-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "ERz1jiqsDQCYJ5CQCPByOQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-14T09:24:10.295026-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-14T09:24:14.663092-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "wDJRjCqsDQCYJVHPCPByOQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "###Old stuff"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2022-12-12T21:03:14.938984-03:00"
 					}
 				},
@@ -66,14 +288,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-12T21:03:34.249332-03:00"
+						"dateAndTimeString" : "2022-12-14T09:26:35.521898-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "DtB3FgysDQCX/cV9DQMdFA=="
 				},
-				"code" : "WEHistories exampleLazyInitialization"
+				"code" : "WEHistories initialDataset"
 			},
 			{
 				"__type" : "textSnippet",
@@ -350,14 +572,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-13T18:14:23.724982-03:00"
+						"dateAndTimeString" : "2022-12-14T08:40:34.657245-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "oOH33xWsDQCYSiHkDQMdFA=="
 				},
-				"code" : "(dataset:= result histories select:[:each | each workflowCommits size > 40]) "
+				"code" : "(dataset:=  result histories select:[:each | each workflowCommits size > 40]) "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -384,14 +606,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-13T19:09:39.242784-03:00"
+						"dateAndTimeString" : "2022-12-14T08:40:49.506381-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "eSWR1x2sDQCZiH4gDQMdFA=="
 				},
-				"code" : "(dataset first workflowCommits first commit comment) asString "
+				"code" : "stringText:= (dataset first workflowCommits first commit comment) asString "
 			},
 			{
 				"__type" : "textSnippet",
@@ -455,14 +677,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-13T19:09:27.006207-03:00"
+						"dateAndTimeString" : "2022-12-14T08:40:59.564313-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Esw1nB6sDQCZqiiwDQMdFA=="
 				},
-				"code" : ""
+				"code" : "stringText allRegexMatches: '\\w+'"
 			},
 			{
 				"__type" : "textSnippet",
