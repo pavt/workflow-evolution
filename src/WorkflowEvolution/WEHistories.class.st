@@ -520,7 +520,8 @@ WEHistories >> gtWorkflowHistoriesFor: aView [
 		priority: 20;
 		items: [ self histories ];
 		column: 'Repo' text: [ :each | each repoPath ];
-		column: 'YML file' text: [ :each | each ymlFile ]
+		column: 'YML file' text: [ :each | each ymlFile ];
+		column: 'Size' text: [ :each | each workflowCommits size ]
 ]
 
 { #category : #accessing }
