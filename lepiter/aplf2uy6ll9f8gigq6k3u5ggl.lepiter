@@ -751,7 +751,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T12:39:25.170601-03:00"
+						"dateAndTimeString" : "2022-12-15T18:12:40.029244-03:00"
 					}
 				},
 				"uid" : {
@@ -761,7 +761,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then, as first approach, we filter online histories having more than 50 commits"
+				"string" : "Then, as first approach, we filter online histories having more than 100 commits"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -890,7 +890,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T17:12:08.712111-03:00"
+						"dateAndTimeString" : "2022-12-15T17:49:56.162836-03:00"
 					}
 				},
 				"uid" : {
@@ -924,14 +924,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T17:05:55.490037-03:00"
+						"dateAndTimeString" : "2022-12-15T17:25:35.987666-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "UJ8WAy2sDQCWpcawBCnhLg=="
 				},
-				"code" : "'100-repositories.txt' asFileReference \n    writeStreamDo: [ :stream | stream << ab ]"
+				"code" : "'10000-repositories.txt' asFileReference \n    writeStreamDo: [ :stream | stream << ab ]"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -958,14 +958,85 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T17:03:27.462673-03:00"
+						"dateAndTimeString" : "2022-12-15T17:25:46.476423-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "NWwvKEOsDQCd5ReVC3pw9A=="
 				},
-				"code" : "dd:= '100-repositories.txt' asFileReference contents. \rdadad:= Smalltalk compiler evaluate: dd"
+				"code" : "dd:= '10000-repositories.txt' asFileReference contents. \rdadad:= Smalltalk compiler evaluate: dd"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T18:16:04.35839-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T18:16:38.56648-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "JzHxGEasDQCjdYN1DsifHg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "**IMPORTANT: How to store the edited state of a object???** "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T18:15:56.913026-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T18:15:56.913026-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "vmmOGEasDQCjdIPKDsifHg=="
+				},
+				"code" : ""
 			},
 			{
 				"__type" : "textSnippet",
