@@ -433,14 +433,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T12:02:39.204683-03:00"
+						"dateAndTimeString" : "2022-12-15T14:35:17.86991-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "pqoohSysDQCV1yPoBCnhLg=="
 				},
-				"code" : "histories := WEHistories fromReposPath: '../repositories'"
+				"code" : "\"(histories := WEHistories fromReposPath: '../repositories') \""
 			},
 			{
 				"__type" : "textSnippet",
@@ -467,7 +467,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-14T11:49:28.769151-03:00"
+						"dateAndTimeString" : "2022-12-15T14:55:13.368928-03:00"
 					}
 				},
 				"uid" : {
@@ -477,7 +477,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "So, we have 10 repositories containing  the history of 68 workflows"
+				"string" : "So, we have **52 repositories** containing  the history of **307 workflows** "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -504,14 +504,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T12:03:00.229214-03:00"
+						"dateAndTimeString" : "2022-12-15T14:35:15.44458-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "S14XhyysDQCV2G7bBCnhLg=="
 				},
-				"code" : "numberOfHistories:= histories histories size"
+				"code" : "\"numberOfHistories:= histories histories size\""
 			},
 			{
 				"__type" : "textSnippet",
@@ -538,7 +538,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T10:00:02.236843-03:00"
+						"dateAndTimeString" : "2022-12-15T14:34:37.579356-03:00"
 					}
 				},
 				"uid" : {
@@ -548,7 +548,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The, we create a File to save the histories"
+				"string" : "The, we create a File to save the histories (20 min)"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -575,14 +575,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T12:03:17.90832-03:00"
+						"dateAndTimeString" : "2022-12-15T14:34:32.122779-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "7B3azSysDQCV4Dc4BCnhLg=="
 				},
-				"code" : "['10-repositories.txt' asFileReference \n    writeStreamDo: [ :stream | stream << histories storeString ]] timeToRun"
+				"code" : "\"['52-repositories.txt' asFileReference \n    writeStreamDo: [ :stream | stream << histories storeString ]] timeToRun\""
 			},
 			{
 				"__type" : "textSnippet",
@@ -646,14 +646,85 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T09:58:50.279039-03:00"
+						"dateAndTimeString" : "2022-12-15T14:38:05.258867-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "hPNj1CysDQCV4gGQBCnhLg=="
 				},
-				"code" : "historiesFromFile:= '10-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
+				"code" : "historiesFromFile:= '52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T14:39:05.521471-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T14:39:16.255281-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rZXxEEOsDQCd4ZSvC3pw9A=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Avegare size of the histories"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T14:38:05.979792-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T14:38:29.847319-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "v8x3DUOsDQCd4LsCC3pw9A=="
+				},
+				"code" : "sizeOfHistories := OrderedCollection new.\rallHistories histories do: [:each | sizeOfHistories add: each workflowCommits size].\rsizeOfHistories average"
 			},
 			{
 				"__type" : "textSnippet",
@@ -706,7 +777,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-14T12:10:55.385327-03:00"
+						"dateAndTimeString" : "2022-12-15T15:05:55.687072-03:00"
 					}
 				},
 				"editEmail" : {
@@ -717,14 +788,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T14:16:08.178635-03:00"
+						"dateAndTimeString" : "2022-12-15T15:59:59.011716-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "/z5I4SysDQCWpPNuBCnhLg=="
+					"uidString" : "soL9cEOsDQCd5jc8C3pw9A=="
 				},
-				"code" : "allHistoriesOver50:=allHistories histories select: [:history | history workflowCommits size > 50]"
+				"code" : "allHistories initializedHistories  "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -740,7 +811,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T14:16:10.59293-03:00"
+						"dateAndTimeString" : "2022-12-14T12:10:55.385327-03:00"
 					}
 				},
 				"editEmail" : {
@@ -751,14 +822,82 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T14:19:23.905431-03:00"
+						"dateAndTimeString" : "2022-12-15T17:02:48.47059-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2JYQv0KsDQCX+KIZBCnhLg=="
+					"uidString" : "/z5I4SysDQCWpPNuBCnhLg=="
 				},
-				"code" : "allHistories"
+				"code" : "allHistoriesOver100 := allHistories initializedHistories\r\t\tselect: [ :each | each workflowCommits size > 100 ]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T16:52:55.72198-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T16:54:34.50259-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Dnin70SsDQCd63yWC3pw9A=="
+				},
+				"code" : "test:= (WEHistories from: allHistoriesOver100)"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T16:54:37.935642-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T17:12:08.712111-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "UCC/9USsDQCd7HGnC3pw9A=="
+				},
+				"code" : "ab:= test storeString"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -785,14 +924,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-14T12:24:32.453012-03:00"
+						"dateAndTimeString" : "2022-12-15T17:05:55.490037-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "UJ8WAy2sDQCWpcawBCnhLg=="
 				},
-				"code" : ""
+				"code" : "'100-repositories.txt' asFileReference \n    writeStreamDo: [ :stream | stream << ab ]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T14:45:34.221301-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T17:03:27.462673-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NWwvKEOsDQCd5ReVC3pw9A=="
+				},
+				"code" : "dd:= '100-repositories.txt' asFileReference contents. \rdadad:= Smalltalk compiler evaluate: dd"
 			},
 			{
 				"__type" : "textSnippet",
