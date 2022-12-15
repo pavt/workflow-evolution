@@ -680,7 +680,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T12:39:03.828373-03:00"
+						"dateAndTimeString" : "2022-12-15T12:39:25.170601-03:00"
 					}
 				},
 				"uid" : {
@@ -690,7 +690,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then, as first approach"
+				"string" : "Then, as first approach, we filter online histories having more than 50 commits"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -717,14 +717,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T12:36:48.950216-03:00"
+						"dateAndTimeString" : "2022-12-15T14:16:08.178635-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "/z5I4SysDQCWpPNuBCnhLg=="
 				},
-				"code" : "allHistories histories select: [:history | history workflowCommits size > 50]"
+				"code" : "allHistoriesOver50:=allHistories histories select: [:history | history workflowCommits size > 50]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T14:16:10.59293-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-15T14:16:44.496859-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "2JYQv0KsDQCX+KIZBCnhLg=="
+				},
+				"code" : ""
 			},
 			{
 				"__type" : "pharoSnippet",
