@@ -42,7 +42,11 @@ WEHistory >> beNice [
 
 { #category : #'git support' }
 WEHistory >> branch [
-	^ repo localBranches detect: [ :b | b name = 'main' or: [ b name = 'master' ] ]
+	^ repo localBranches
+		detect: [ :b | 
+			b name = 'main'
+				or: [ b name = 'master'
+						or: [ b name = 'development' or: [ b name = 'develop' or: [ b name = 'canary' ] ] ] ] ]
 ]
 
 { #category : #'git support' }
