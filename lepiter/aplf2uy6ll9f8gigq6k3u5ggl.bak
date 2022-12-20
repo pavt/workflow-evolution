@@ -433,14 +433,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T14:35:17.86991-03:00"
+						"dateAndTimeString" : "2022-12-20T13:31:22.266072+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "pqoohSysDQCV1yPoBCnhLg=="
 				},
-				"code" : "\"(histories := WEHistories fromReposPath: '../repositories') \""
+				"code" : "\"(histories := WEHistories fromReposPath: '../repositories')\""
 			},
 			{
 				"__type" : "textSnippet",
@@ -992,7 +992,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T18:16:21.009159-03:00"
+						"dateAndTimeString" : "2022-12-15T18:16:38.56648-03:00"
 					}
 				},
 				"uid" : {
@@ -1002,7 +1002,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "IHow to store the edited state of a object???"
+				"string" : "**IMPORTANT: How to store the edited state of a object???** "
 			},
 			{
 				"__type" : "pharoSnippet",

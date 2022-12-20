@@ -118,3 +118,9 @@ WEFileCommit >> previousFileCommit: anObject [
 
 	previousFileCommit := anObject
 ]
+
+{ #category : #serialization }
+WEFileCommit >> storeOn: aStream [
+	"Not used for now."
+	self notYetImplemented
+]

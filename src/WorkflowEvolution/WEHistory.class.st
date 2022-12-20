@@ -158,10 +158,10 @@ WEHistory >> gtWorkflowDirFor: aView [
 ]
 
 { #category : #accessing }
-WEHistory >> historyIds [
-	"We use these in the storeOn: method to recreate the workflowcommits from the ids."
+WEHistory >> historyIdsAndCategories [
+	"We use these in the storeOn: method to recreate the workflowcommits from the ids and the categories."
 
-	^ self workflowCommits collect: [ :each | each commit id ]
+	^ self workflowCommits collect: [ :each | each commit id -> each category ]
 ]
 
 { #category : #initialization }
@@ -223,15 +223,16 @@ WEHistory >> initializeWorkflowCommits [
 WEHistory >> initializeWorkflowCommitsFromIds: anIdCollection [
 	| lastCommit |
 	workflowCommits := anIdCollection
-			collect: [ :id | 
+			collect: [ :assoc | 
 				| iceCommit weCommit |
 				iceCommit := self repository
 						commitFromGitCommit: (LGitCommit
 								of: self repository repositoryHandle
-								fromId: (LGitId fromHexString: id)).
+								fromId: (LGitId fromHexString: assoc key)).
 				weCommit := WEFileCommit new
 						commit: iceCommit;
 						file: self ymlFile.
+				weCommit category: assoc value.
 				lastCommit ifNotNil: [ lastCommit previousFileCommit: weCommit ].
 				lastCommit := weCommit ]
 ]
@@ -320,7 +321,7 @@ WEHistory >> storeOn: aStream [
 		nextPutAll: ' forYML: ';
 		nextPutAll: self ymlFile storeString;
 		nextPutAll: ') initializeWorkflowCommitsFromIds: ';
-		nextPutAll: self historyIds storeString
+		nextPutAll: self historyIdsAndCategories storeString
 ]
 
 { #category : #accessing }
