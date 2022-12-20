@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T08:10:54.686529-03:00"
+						"dateAndTimeString" : "2022-12-20T16:47:31.608724-03:00"
 					}
 				},
 				"uid" : {
@@ -150,7 +150,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The following filters were applied:    \n- Created at: before 2022-12-14\n- Last commit at: after 2019-01-11 (GA official release date)\n- Number of commits: min 500\n- Number of stars: min 10\n- Exclude forks: true   \n- Retrieval date: 2022-12-14"
+				"string" : "**The following filters were applied:**     \n- Created at: before 2022-12-14\n- Last commit at: after 2019-01-11 (GA official release date)\n- Number of commits: min 500\n- Number of stars: min 10\n- Exclude forks: true   \n- Retrieval date: 2022-12-14"
 			},
 			{
 				"__type" : "textSnippet",
@@ -788,14 +788,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T16:03:37.884771-03:00"
+						"dateAndTimeString" : "2022-12-20T18:21:11.499324-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "/z5I4SysDQCWpPNuBCnhLg=="
 				},
-				"code" : "allHistoriesOver100 := allHistories initializedHistories\r\t\tselect: [ :each | each workflowCommits size > 100 ].\rdataset:= WEHistories from: allHistoriesOver100"
+				"code" : "allHistoriesOver100 := allHistories initializedHistories\r\t\tselect: [ :each | each workflowCommits size > 50 and: [each workflowCommits size < 60] ].\rdataset:= WEHistories from: allHistoriesOver100"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -886,12 +886,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-12-08T15:11:37.582768-03:00"
+			"dateAndTimeString" : "2022-12-20T16:06:44.146643-03:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Data Analysis"
+		"title" : "Data Analysis - Part 1"
 	},
 	"uid" : {
 		"__type" : "uuid",
