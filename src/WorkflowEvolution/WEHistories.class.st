@@ -500,8 +500,8 @@ WEHistories >> addHistories: aHistory [
 
 { #category : #accessing }
 WEHistories >> gtInitializedHistoriesFor: aView [
-	<gtView>
-	^ aView columnedList
+	"<gtView>"
+	"^ aView columnedList
 		title: 'Initialized Histories';
 		priority: 30;
 		items: [ self initializedHistories ];
@@ -509,7 +509,7 @@ WEHistories >> gtInitializedHistoriesFor: aView [
 		column: 'YML file' text: [ :each | each ymlFile ];
 		column: 'Commits size' text: [ :each | each workflowCommits size ];
 		updateWhen: ValueChanged in: [ self initializedHistories announcer ];
-		updateWhen: ValueRemoved in: [ self initializedHistories announcer ]
+		updateWhen: ValueRemoved in: [ self initializedHistories announcer ]"
 ]
 
 { #category : #accessing }

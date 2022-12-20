@@ -751,7 +751,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T18:12:40.029244-03:00"
+						"dateAndTimeString" : "2022-12-20T14:51:36.5686-03:00"
 					}
 				},
 				"uid" : {
@@ -761,7 +761,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then, as first approach, we filter online histories having more than 100 commits"
+				"string" : "Then, as first approach, we filter online histories having more than 100 commits (6 repositories)"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -788,14 +788,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T17:02:48.47059-03:00"
+						"dateAndTimeString" : "2022-12-20T16:03:37.884771-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "/z5I4SysDQCWpPNuBCnhLg=="
 				},
-				"code" : "allHistoriesOver100 := allHistories initializedHistories\r\t\tselect: [ :each | each workflowCommits size > 100 ]"
+				"code" : "allHistoriesOver100 := allHistories initializedHistories\r\t\tselect: [ :each | each workflowCommits size > 100 ].\rdataset:= WEHistories from: allHistoriesOver100"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -822,14 +822,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T14:21:44.551996-03:00"
+						"dateAndTimeString" : "2022-12-20T16:05:09.129948-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Dnin70SsDQCd63yWC3pw9A=="
 				},
-				"code" : "WEHistories from: allHistoriesOver100"
+				"code" : "['up-100-52-repositories.txt' asFileReference \n    writeStreamDo: [ :stream | stream << dataset storeString ]] timeToRun"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-20T16:06:03.024118-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-20T16:06:13.354465-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "G/s13aisDQC116UfADL3ww=="
+				},
+				"code" : "historiesFromFile:= 'up-100-52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
 			}
 		]
 	},
@@ -852,12 +886,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-12-08T15:11:37.582768-03:00"
+			"dateAndTimeString" : "2022-12-20T16:06:44.146643-03:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Data Analysis"
+		"title" : "Data Analysis - Part 1"
 	},
 	"uid" : {
 		"__type" : "uuid",

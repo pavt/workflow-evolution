@@ -441,7 +441,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-12-16T18:07:32.234843-03:00"
+									"dateAndTimeString" : "2022-12-20T16:06:44.152952-03:00"
 								}
 							},
 							"uid" : {
@@ -451,7 +451,44 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Data Analysis]] "
+							"string" : "[[Data Analysis - Part 1]] "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-12-20T16:07:11.915768-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2022-12-20T16:07:18.227646-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "lsXe4KisDQC122icADL3ww=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[Data Analysis - Part 2 ]] "
 						},
 						{
 							"__type" : "textSnippet",
