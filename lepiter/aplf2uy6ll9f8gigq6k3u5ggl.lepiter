@@ -788,14 +788,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T09:36:49.034349-03:00"
+						"dateAndTimeString" : "2022-12-21T10:06:14.398673-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "/z5I4SysDQCWpPNuBCnhLg=="
 				},
-				"code" : "allHistoriesOver100 := allHistories initializedHistories\r\t\tselect: [ :each | each workflowCommits size =15 ].\rdataset:= WEHistories from: allHistoriesOver100"
+				"code" : "allHistoriesOver100 := allHistories initializedHistories\r\t\tselect: [ :each | each workflowCommits size >= 14 and: [each workflowCommits size <= 16] ].\rdataset:= WEHistories from: allHistoriesOver100"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -822,14 +822,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T09:37:08.248511-03:00"
+						"dateAndTimeString" : "2022-12-21T10:08:36.012575-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Dnin70SsDQCd63yWC3pw9A=="
 				},
-				"code" : "['(15)-52-repositories.txt' asFileReference \n    writeStreamDo: [ :stream | stream << dataset storeString ]] timeToRun"
+				"code" : "['[14-16]-52-repositories.txt' asFileReference \n    writeStreamDo: [ :stream | stream << dataset storeString ]] timeToRun"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -856,14 +856,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T09:37:16.750046-03:00"
+						"dateAndTimeString" : "2022-12-21T10:08:47.590256-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "G/s13aisDQC116UfADL3ww=="
 				},
-				"code" : "historiesFromFile:= '(15)-52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
+				"code" : "historiesFromFile:= '[14-16]-52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
 			}
 		]
 	},

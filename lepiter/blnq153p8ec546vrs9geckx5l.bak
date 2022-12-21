@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T16:08:52.251435-03:00"
+						"dateAndTimeString" : "2022-12-21T10:02:01.426585-03:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +29,267 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T09:37:55.713783-03:00"
+						"dateAndTimeString" : "2022-12-21T10:04:51.437993-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "ZC7R4aisDQC143zeADL3ww=="
+					"uidString" : "eHrq5LesDQC5OqKtBkg/kA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We use stories with 15 histories (10 repositories):"
+				"string" : "## Dataset from 52 repositories"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:02:08.828744-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:02:58.631675-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "XPmh5besDQC5PIJCBkg/kA=="
+				},
+				"code" : "historiesFromFile:= '52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:03:19.452336-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:45:02.764953-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "98016besDQC5Qxd1Bkg/kA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The total number of workflows histories: 307"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:02:27.555371-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:14:00.781549-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "T7i/5resDQC5PhsGBkg/kA=="
+				},
+				"code" : "(allHistories histories collect: [:each | each  workflowCommits repo]) sum"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:04:03.698532-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:04:08.810986-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "vLvU67esDQC5R432Bkg/kA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The total number of commits: 4911"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:03:41.277842-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:03:45.737076-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "7KIk67esDQC5RTH5Bkg/kA=="
+				},
+				"code" : "(allHistories histories collect: [:each | each  workflowCommits size]) sum"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:07:30.211557-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:08:01.961026-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cwWJ+LesDQC5SVNrBkg/kA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "## First experiment"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:08:04.524444-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:08:09.775283-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "H5qj+besDQC5S0DZBkg/kA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "### Dataset"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -66,14 +316,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T09:37:24.046945-03:00"
+						"dateAndTimeString" : "2022-12-21T10:09:00.146231-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "+na84qisDQC15zFVADL3ww=="
 				},
-				"code" : "historiesFromFile:= '(15)-52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
+				"code" : "historiesFromFile:= '[14-16]-52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
 			},
 			{
 				"__type" : "textSnippet",
@@ -100,7 +350,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T16:18:01.368104-03:00"
+						"dateAndTimeString" : "2022-12-21T10:09:29.766738-03:00"
 					}
 				},
 				"uid" : {
@@ -110,7 +360,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "#### Exploratory data analysis"
+				"string" : "####Number of repositories, histories and commits"
 			},
 			{
 				"__type" : "textSnippet",
@@ -137,7 +387,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T09:37:40.370674-03:00"
+						"dateAndTimeString" : "2022-12-21T11:29:52.481672-03:00"
 					}
 				},
 				"uid" : {
@@ -147,7 +397,78 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The total number of repositories: 10"
+				"string" : "The total number of unique respositories: 15 "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:09:44.056541-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T11:28:34.089794-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8DLEALisDQC5T5EwBkg/kA=="
+				},
+				"code" : "allRepos:= allHistories histories collect: [ :each | each repoPath ].\rallRepos asSet size"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T10:09:36.045769-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T11:30:27.424808-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "LuscALisDQC5TfE2Bkg/kA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The total number of histories: 24"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -208,7 +529,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T17:17:37.359847-03:00"
+						"dateAndTimeString" : "2022-12-21T11:33:08.570449-03:00"
 					}
 				},
 				"uid" : {
@@ -218,7 +539,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The total number of commits: 943"
+				"string" : "The total number of commits: 352 (7% of )"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -245,14 +566,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T17:03:19.958336-03:00"
+						"dateAndTimeString" : "2022-12-21T11:32:37.982466-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "RwammKmsDQCG9c+8AAILgg=="
 				},
-				"code" : "(allHistories histories collect: [:each | each  workflowCommits size]) sum"
+				"code" : "(allHistories histories collect: [:each | each workflowCommits size ]) sum "
 			},
 			{
 				"__type" : "textSnippet",
