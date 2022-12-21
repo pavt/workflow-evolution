@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T16:09:02.955823-03:00"
+						"dateAndTimeString" : "2022-12-21T09:37:55.713783-03:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We use stories with at least 100 commits (6 repositories):"
+				"string" : "We use stories with 15 histories (10 repositories):"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T16:07:37.152676-03:00"
+						"dateAndTimeString" : "2022-12-21T09:37:24.046945-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "+na84qisDQC15zFVADL3ww=="
 				},
-				"code" : "historiesFromFile:= 'up-100-52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
+				"code" : "historiesFromFile:= '(15)-52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
 			},
 			{
 				"__type" : "textSnippet",
@@ -137,7 +137,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T17:17:30.795949-03:00"
+						"dateAndTimeString" : "2022-12-21T09:37:40.370674-03:00"
 					}
 				},
 				"uid" : {
@@ -147,7 +147,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The total number of repositories: 6"
+				"string" : "The total number of repositories: 10"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -316,7 +316,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T18:39:45.837908-03:00"
+						"dateAndTimeString" : "2022-12-20T18:40:13.481981-03:00"
 					}
 				},
 				"uid" : {
@@ -326,7 +326,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We need to follow open coding methodology: 1) describing each modification, 2) categor"
+				"string" : "We need to follow open coding methodology: 1) describing shortly each commit, 2) categorizing each commit"
 			},
 			{
 				"__type" : "textSnippet",

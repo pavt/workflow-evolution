@@ -788,14 +788,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T18:21:11.499324-03:00"
+						"dateAndTimeString" : "2022-12-21T09:36:49.034349-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "/z5I4SysDQCWpPNuBCnhLg=="
 				},
-				"code" : "allHistoriesOver100 := allHistories initializedHistories\r\t\tselect: [ :each | each workflowCommits size > 50 and: [each workflowCommits size < 60] ].\rdataset:= WEHistories from: allHistoriesOver100"
+				"code" : "allHistoriesOver100 := allHistories initializedHistories\r\t\tselect: [ :each | each workflowCommits size =15 ].\rdataset:= WEHistories from: allHistoriesOver100"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -822,14 +822,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T16:05:09.129948-03:00"
+						"dateAndTimeString" : "2022-12-21T09:35:34.83595-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Dnin70SsDQCd63yWC3pw9A=="
 				},
-				"code" : "['up-100-52-repositories.txt' asFileReference \n    writeStreamDo: [ :stream | stream << dataset storeString ]] timeToRun"
+				"code" : "['(10-20)-52-repositories.txt' asFileReference \n    writeStreamDo: [ :stream | stream << dataset storeString ]] timeToRun"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -856,14 +856,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T16:06:13.354465-03:00"
+						"dateAndTimeString" : "2022-12-21T09:35:57.302625-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "G/s13aisDQC116UfADL3ww=="
 				},
-				"code" : "historiesFromFile:= 'up-100-52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
+				"code" : "historiesFromFile:= '(10-20)-52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
 			}
 		]
 	},
