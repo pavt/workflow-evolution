@@ -532,14 +532,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T18:00:13.471755-03:00"
+						"dateAndTimeString" : "2022-12-21T18:38:49.220635-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "SdmHG76sDQCPkh/SDr8tyw=="
 				},
-				"code" : ""
+				"code" : "commentingCode := OrderedCollection new.\rallHistories histories\r\tcollect: [ :each | \r\t\teach workflowCommits\r\t\t\tdo: [ :c | c category = 'commenting code' ifTrue: [ commentingCode add: c ] ] ]."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T18:38:06.861571-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-21T18:38:40.190442-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "MhHgGr+sDQCQpmRODr8tyw=="
+				},
+				"code" : "commentingCode first"
 			},
 			{
 				"__type" : "textSnippet",
