@@ -242,7 +242,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T10:08:01.961026-03:00"
+						"dateAndTimeString" : "2022-12-21T11:36:55.80658-03:00"
 					}
 				},
 				"uid" : {
@@ -252,7 +252,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "## First experiment"
+				"string" : "## Dataset definition "
 			},
 			{
 				"__type" : "textSnippet",
@@ -387,7 +387,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T11:29:52.481672-03:00"
+						"dateAndTimeString" : "2022-12-21T11:38:46.812988-03:00"
 					}
 				},
 				"uid" : {
@@ -397,7 +397,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The total number of unique respositories: 15 "
+				"string" : "The total number of unique respositories: 15 (28% of 52 repositories)"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -458,7 +458,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T11:30:27.424808-03:00"
+						"dateAndTimeString" : "2022-12-21T11:38:54.485789-03:00"
 					}
 				},
 				"uid" : {
@@ -468,7 +468,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The total number of histories: 24"
+				"string" : "The total number of histories: 24 (7.8% of 307 histories)"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -529,7 +529,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T11:33:12.261059-03:00"
+						"dateAndTimeString" : "2022-12-21T11:38:58.206551-03:00"
 					}
 				},
 				"uid" : {
@@ -539,7 +539,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The total number of commits: 352 (7% of 4911)"
+				"string" : "The total number of commits: 352 (7% of 4911 commits)"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -574,188 +574,6 @@
 					"uidString" : "RwammKmsDQCG9c+8AAILgg=="
 				},
 				"code" : "(allHistories histories collect: [:each | each workflowCommits size ]) sum "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T17:24:00.925463-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T17:35:20.214081-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "g8823qmsDQCG+pjWAAILgg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "### Categories "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T18:39:15.023381-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T18:40:13.481981-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "+WlL96msDQCG/n++AAILgg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "We need to follow open coding methodology: 1) describing shortly each commit, 2) categorizing each commit"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T17:26:01.184442-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T17:36:49.448606-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "qoHm+qmsDQCHAB9qAAILgg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "**Corrective**:  commits aimed to correct issues introduced as the result of code changes omitted in the previous commit"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T17:36:57.197939-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T17:37:13.346444-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "02UCIqqsDQCHAmySAAILgg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "**Other**:  the rest of commits"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T17:24:11.79681-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-20T17:24:11.79681-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Xvmu9KmsDQCG/P9/AAILgg=="
-				},
-				"code" : ""
 			}
 		]
 	},
