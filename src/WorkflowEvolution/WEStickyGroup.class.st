@@ -45,11 +45,11 @@ WEStickyGroup >> gtWEStickyFor: aView [
 			width: 45;
 		column: 'Author' text: [ :each | each commit author ] width: 100;
 		
-		"column: 'Date time' text: [ :each | each commit datetime asString ];"
+		column: 'Date time' text: [ :each | each commit datetime asString ];
 		column: 'Duration'
 			text: [ :each | 
 				each hasPreviousFileCommit
-					ifTrue: [ (each previousFileCommit commit datetime - each commit datetime ) asString ]
+					ifTrue: [ ( each commit datetime - each previousFileCommit commit datetime ) asString ]
 					ifFalse: [ 'na' ] ] width: 90;
 		column: 'Comment' text: [ :each | each commit comment ];
 		column: 'Category' text: [:each | each category ] width: 300

@@ -109,7 +109,7 @@ WEHistory >> gtCommitsFor: aView [
 		column: 'Delta'
 			text: [ :commit | 
 				commit hasPreviousFileCommit
-					ifTrue: [ (commit previousFileCommit commit datetime - commit commit datetime ) asString ]
+					ifTrue: [ (commit commit datetime - commit previousFileCommit commit datetime ) asString ]
 					ifFalse: [ 'na' ] ] width: 100;
 		
 		column: 'Comment' text: [ :commit | commit commit comment ] width: 400;
