@@ -142,8 +142,8 @@ WEHistory >> gtStickyCommitsFor: aView [
 				eachIndex asRopedText foreground: Color gray ]
 			width: 45;
 		column: 'Author' text: [ :each | each stickyGroup first commit author ];
-		column: 'Start' text: [ :each | each stickyGroup last commit datetime asString ];
-		column: 'End' text: [ :each | each stickyGroup first commit datetime asString ];
+		column: 'Start' text: [ :each | each stickyGroup first commit datetime asString ];
+		column: 'End' text: [ :each | each stickyGroup last commit datetime asString ];
 		column: 'Number of commits' text: [ :each | each stickyGroup size asString ]
 ]
 
