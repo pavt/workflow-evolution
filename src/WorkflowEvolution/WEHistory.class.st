@@ -110,7 +110,7 @@ WEHistory >> gtCommitsFor: aView [
 			text: [ :commit | 
 				commit hasPreviousFileCommit
 					ifTrue: [ (commit previousFileCommit commit datetime - commit commit datetime ) abs asString ]
-					ifFalse: [ 'na' ] ] width: 100;
+					ifFalse: [ 'na' ]  ] width: 100;
 		
 		column: 'Comment' text: [ :commit | commit commit comment ] width: 400;
 		column: 'Category'
