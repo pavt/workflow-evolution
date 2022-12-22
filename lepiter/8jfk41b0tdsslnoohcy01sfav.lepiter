@@ -424,7 +424,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-22T11:15:54.694514-03:00"
+						"dateAndTimeString" : "2022-12-22T14:19:47.650078-03:00"
 					}
 				},
 				"uid" : {
@@ -434,7 +434,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##### C2-1: indentation"
+				"string" : "##### C2-1: indentatio"
 			},
 			{
 				"__type" : "textSnippet",
@@ -450,7 +450,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T15:01:13.611372-03:00"
+						"dateAndTimeString" : "2022-12-22T14:19:49.537758-03:00"
 					}
 				},
 				"editEmail" : {
@@ -461,17 +461,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T15:01:15.489305-03:00"
+						"dateAndTimeString" : "2022-12-22T14:52:46.139339-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "QvSuErysDQCPjCd6Dr8tyw=="
+					"uidString" : "j13tnM+sDQCRp7rkBYSz5A=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "**Obs:** "
+				"string" : "fix, fix-type-check, fix-path-definition, code-refactoring, bug-fix, debugging, fix-job, fix-workflow"
 			},
 			{
 				"__type" : "pharoSnippet",
