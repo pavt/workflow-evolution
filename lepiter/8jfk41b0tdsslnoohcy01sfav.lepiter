@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-22T11:08:36.72322-03:00"
+						"dateAndTimeString" : "2022-12-23T09:55:27.010828-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "LYhWTLmsDQCsDoopADZMWw=="
 				},
-				"code" : "historiesFromFile:= 'categories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
+				"code" : "historiesFromFile:= '[14-16]-52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
 			},
 			{
 				"__type" : "textSnippet",

@@ -103,14 +103,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-22T11:08:36.72322-03:00"
+						"dateAndTimeString" : "2022-12-23T09:06:03.210549-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "LYhWTLmsDQCsDoopADZMWw=="
 				},
-				"code" : "historiesFromFile:= 'categories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
+				"code" : "historiesFromFile:= '52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
 			},
 			{
 				"__type" : "textSnippet",
@@ -461,7 +461,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-22T14:49:55.05403-03:00"
+						"dateAndTimeString" : "2022-12-22T14:52:46.139339-03:00"
 					}
 				},
 				"uid" : {
@@ -471,7 +471,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "fix, fix-type-check, fix-path-definition, code-refactoring, bug-fix, debugging, fix-job, "
+				"string" : "fix, fix-type-check, fix-path-definition, code-refactoring, bug-fix, debugging, fix-job, fix-workflow"
 			},
 			{
 				"__type" : "pharoSnippet",

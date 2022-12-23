@@ -88,6 +88,8 @@ WEFileCommit >> gtDiffFor: aView [
 		priority: 30;
 		object: self diff; 
 		view: #gtViewDiffFor:
+	
+		
 		
 		
 ]
@@ -98,7 +100,7 @@ WEFileCommit >> gtViewTwoPanesDiffFor: aView [
 	^ aView forward
 		title: 'Diff (two panes)';
 		priority: 40;
-		object: [ self diff ];
+		object: [ self diff];
 		view: #gtViewTwoPanesDiffFor:
 ]
 
