@@ -75,6 +75,11 @@ WEHistory >> defaultTimeBudget [
 	^ 100 milliseconds
 ]
 
+{ #category : #ui }
+WEHistory >> delta: commit [
+	^ commit commit datetime - commit previousFileCommit commit datetime
+]
+
 { #category : #accessing }
 WEHistory >> editableLabelFor: aString withSetter: aOneArgumentBlock [
 	"NB: stateless utility method"
@@ -101,36 +106,38 @@ WEHistory >> gtCommitsFor: aView [
 	^ aView columnedList
 		title: 'Commits';
 		priority: 30;
-		"we display the commits in descending order"
 		items: [ self workflowCommits sort: [ :a :b | a commit datetime < b commit datetime ] ];
-		column: 'Index' 
-			text: [ :eachItem :eachIndex | 
-				 eachIndex asRopedText  foreground: Color gray ]
-			width: 45 ;
-		column: 'Author' text: [ :commit | commit commit author ] width: 130;
-		column: 'Timestamp' text: [ :commit | commit commit datetime year  ] width: 70;
+		column: 'Index'
+			text: [ :eachItem :eachIndex | eachIndex asRopedText foreground: Color gray ]
+			width: 45;
+		column: 'Author'
+			text: [ :commit | commit commit author ]
+			width: 130;
+		column: 'Timestamp'
+			text: [ :commit | commit commit datetime year ]
+			width: 70;
 		column: 'Delta'
 			text: [ :commit | 
 				commit hasPreviousFileCommit
-					ifTrue: [ (commit commit datetime - commit previousFileCommit commit datetime  ) asString ]
-					ifFalse: [ 'na' ]  ] width: 100;
-		
-		column: 'Comment' text: [ :commit | commit commit comment ] width: 400;
+					ifTrue: [ (self delta: commit) asString ]
+					ifFalse: [ 'na' ] ]
+			width: 100;
+		column: 'Comment'
+			text: [ :commit | commit commit comment ]
+			width: 400;
 		column: 'Category'
-			do: [ :column | 
-			column
-				stencil: [ :commit | 
-					self
-						editableLabelFor: commit category 
-						withSetter: [ :newCategoryName | commit category: newCategoryName ] ];
-				weight: 1 ]
-	
-		"column: ' '
+			do: [  "column: ' '
 			do: [ :column | 
 			
 			column
 				stencil: [ BlTextElement new text: '' asRopedText ];
-				weight: 1 ]"
+				weight: 1 ]":column | 
+				column
+					stencil: [ :commit | 
+						self
+							editableLabelFor: commit category
+							withSetter: [ :newCategoryName | commit category: newCategoryName ] ];
+					weight: 1 ]	"we display the commits in descending order"
 ]
 
 { #category : #ui }
