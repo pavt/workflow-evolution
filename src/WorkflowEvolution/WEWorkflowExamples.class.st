@@ -33,8 +33,9 @@ WEWorkflowExamples >> docsYMLHistoryExample [
 WEWorkflowExamples >> historiesExample [
 	<gtExample>
 	| histories |
-	histories := WEHistory fromReposPath: '../repositories'.
-	self assert: histories histories size equals: 105.
+	
+	histories := WEHistories fromReposPath: '../repositories'.
+	self assert: (histories histories size) equals: 307.
 	
 	^ histories
 ]
