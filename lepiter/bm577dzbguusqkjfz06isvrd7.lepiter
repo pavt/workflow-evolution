@@ -552,7 +552,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2022-12-16T18:07:55.216451-03:00"
+									"dateAndTimeString" : "2022-12-26T15:34:57.739597-03:00"
 								}
 							},
 							"uid" : {
@@ -562,7 +562,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Refactoring WEFileCommit]] "
+							"string" : "[[Software documentation]] "
 						}
 					]
 				},

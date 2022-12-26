@@ -1,3 +1,6 @@
+"
+I am a class that represents the history of GitHub Actions workflows
+"
 Class {
 	#name : #WEHistory,
 	#superclass : #Object,
@@ -99,7 +102,7 @@ WEHistory >> gtCommitsFor: aView [
 		title: 'Commits';
 		priority: 30;
 		"we display the commits in descending order"
-		items: [ self workflowCommits sort: [ :a :b | a commit datetime <= b commit datetime ] ];
+		items: [ self workflowCommits sort: [ :a :b | a commit datetime < b commit datetime ] ];
 		column: 'Index' 
 			text: [ :eachItem :eachIndex | 
 				 eachIndex asRopedText  foreground: Color gray ]
@@ -109,7 +112,7 @@ WEHistory >> gtCommitsFor: aView [
 		column: 'Delta'
 			text: [ :commit | 
 				commit hasPreviousFileCommit
-					ifTrue: [ (commit previousFileCommit commit datetime - commit commit datetime ) abs asString ]
+					ifTrue: [ (commit commit datetime - commit previousFileCommit commit datetime  ) asString ]
 					ifFalse: [ 'na' ]  ] width: 100;
 		
 		column: 'Comment' text: [ :commit | commit commit comment ] width: 400;
