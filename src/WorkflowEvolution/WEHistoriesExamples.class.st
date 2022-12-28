@@ -61,6 +61,19 @@ WEHistoriesExamples >> modelClassExplicitLabeledReferences [
 ]
 
 { #category : #accessing }
+WEHistoriesExamples >> modelClassHierarchy [
+	<gtExample>
+	
+	| mondrian |
+	mondrian := GtMondrian new.
+	self
+		paintClassHierarchyWith: mondrian
+		forClasses: self modelClasses
+		andRoots: {}.
+	^ mondrian
+]
+
+{ #category : #accessing }
 WEHistoriesExamples >> modelClassPositions [
 	"Recorded positions from a handtweaked graph:
 	(mondrian root children collect: #position) storeString
