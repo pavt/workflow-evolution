@@ -1,11 +1,11 @@
 Class {
-	#name : #WEHistoriesExamples,
+	#name : #WEClassesExamples,
 	#superclass : #Object,
 	#category : #'WorkflowEvolution-Examples'
 }
 
 { #category : #accessing }
-WEHistoriesExamples >> classHierarchy [
+WEClassesExamples >> classHierarchy [
 	<gtExample>
 	
 	| mondrian |
@@ -20,7 +20,7 @@ WEHistoriesExamples >> classHierarchy [
 ]
 
 { #category : #accessing }
-WEHistoriesExamples >> classReferences [
+WEClassesExamples >> classReferences [
 	<gtExample>
 	| mondrian |
 	mondrian := GtMondrian new.
@@ -29,7 +29,7 @@ WEHistoriesExamples >> classReferences [
 ]
 
 { #category : #accessing }
-WEHistoriesExamples >> historiesExample [
+WEClassesExamples >> historiesExample [
 	<gtExample>
 	| histories |
 	
@@ -40,7 +40,7 @@ WEHistoriesExamples >> historiesExample [
 ]
 
 { #category : #accessing }
-WEHistoriesExamples >> modelClassExplicitLabeledReferences [
+WEClassesExamples >> modelClassExplicitLabeledReferences [
 	"Use hand-tweaked positions."
 
 	<gtExample>
@@ -61,7 +61,7 @@ WEHistoriesExamples >> modelClassExplicitLabeledReferences [
 ]
 
 { #category : #accessing }
-WEHistoriesExamples >> modelClassHierarchy [
+WEClassesExamples >> modelClassHierarchy [
 	<gtExample>
 	
 	| mondrian |
@@ -74,7 +74,7 @@ WEHistoriesExamples >> modelClassHierarchy [
 ]
 
 { #category : #accessing }
-WEHistoriesExamples >> modelClassPositions [
+WEClassesExamples >> modelClassPositions [
 	"Recorded positions from a handtweaked graph:
 	(mondrian root children collect: #position) storeString
 	"
@@ -107,13 +107,13 @@ WEHistoriesExamples >> modelClassPositions [
 ]
 
 { #category : #accessing }
-WEHistoriesExamples >> modelClasses [
+WEClassesExamples >> modelClasses [
 	^ (WEModelEntity package classes select: [ :c | c category endsWith: 'Model' ]) asOrderedCollection
 	sort: [ :a :b | a name <= b name ]
 ]
 
 { #category : #accessing }
-WEHistoriesExamples >> paintClassDependenciesWith: m [
+WEClassesExamples >> paintClassDependenciesWith: m [
 
 	m nodes
 		stencil: [ :c | 
@@ -164,7 +164,7 @@ WEHistoriesExamples >> paintClassDependenciesWith: m [
 ]
 
 { #category : #accessing }
-WEHistoriesExamples >> paintClassHierarchyWith: mondrian forClasses: classes andRoots: roots [
+WEClassesExamples >> paintClassHierarchyWith: mondrian forClasses: classes andRoots: roots [
 
 	mondrian nodes
 		stencil: [ :class | 
@@ -219,7 +219,7 @@ WEHistoriesExamples >> paintClassHierarchyWith: mondrian forClasses: classes and
 ]
 
 { #category : #accessing }
-WEHistoriesExamples >> paintClassLabeledDependenciesWith: m forClasses: classes andRoots: roots [
+WEClassesExamples >> paintClassLabeledDependenciesWith: m forClasses: classes andRoots: roots [
 	"
 	Eg classes = GtLudoRecordingGame package classes
 	roots = {BlElement. Announcement}
