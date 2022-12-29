@@ -103,14 +103,85 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-23T09:55:27.010828-03:00"
+						"dateAndTimeString" : "2022-12-29T18:28:57.174666-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "LYhWTLmsDQCsDoopADZMWw=="
 				},
-				"code" : "historiesFromFile:= '[14-16]-52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
+				"code" : "historiesFromFile:= '[12]-52-repositories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-29T19:27:14.416478-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-29T19:27:30.747137-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "VjwvuWCtDQCakpPfAMievw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Size of the dataset: 72"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-29T19:27:18.55507-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-29T19:27:24.037594-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "0VWKuWCtDQCalGllAMievw=="
+				},
+				"code" : "(allHistories histories collect: [:each | each workflowCommits size ]) sum "
 			},
 			{
 				"__type" : "textSnippet",
@@ -163,43 +234,6 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-23T17:55:54.627253-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-23T17:56:21.714223-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "Pft5v+asDQC5VgwaB6Rq5Q=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "**There is a bug when save the categories in the order of commits** "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2022-12-21T11:56:58.580688-03:00"
 					}
 				},
@@ -211,7 +245,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-22T11:09:33.226105-03:00"
+						"dateAndTimeString" : "2022-12-29T19:25:39.489094-03:00"
 					}
 				},
 				"uid" : {
@@ -221,7 +255,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "##### C1: workflow-definition"
+				"string" : "##### 2 categories: "
 			},
 			{
 				"__type" : "textSnippet",
@@ -237,7 +271,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T11:53:44.289222-03:00"
+						"dateAndTimeString" : "2022-12-29T19:25:40.951738-03:00"
 					}
 				},
 				"editEmail" : {
@@ -248,20 +282,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-22T11:10:18.746584-03:00"
+						"dateAndTimeString" : "2022-12-29T19:25:50.859838-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "14ONdLmsDQCsIu2gADZMWw=="
+					"uidString" : "G5Kps2CtDQCaiaGGAMievw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "**Obs**: Difficult to capture automatically because modifications can appear anywhere in the code; the commit note does not always reflect the change in detail."
+				"string" : "yes: corrective modification?"
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -274,7 +308,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T11:46:51.614295-03:00"
+						"dateAndTimeString" : "2022-12-29T19:25:52.399932-03:00"
 					}
 				},
 				"editEmail" : {
@@ -285,14 +319,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-22T11:09:42.339551-03:00"
+						"dateAndTimeString" : "2022-12-29T19:25:58.594508-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "aqwdXLmsDQCsINUpADZMWw=="
+					"uidString" : "KqtatGCtDQCainIaAMievw=="
 				},
-				"code" : "allHistories histories first workflowCommits fourth category"
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "no: no corrective mofication:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -330,40 +367,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "**Obs:**  "
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T18:55:43.554533-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-22T11:14:32.516918-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "BezbWb+sDQCYsu9yC/645Q=="
-				},
-				"code" : "commentingCode := OrderedCollection new.\rallHistories histories\r\tcollect: [ :each | \r\t\teach workflowCommits\r\t\t\tdo: [ :c | c category = 'workflow-definition' ifTrue: [ commentingCode add: c ] ] ]."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -498,14 +501,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-26T15:02:28.863501-03:00"
+						"dateAndTimeString" : "2022-12-29T18:29:34.444981-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "llldT7usDQCPebZsDr8tyw=="
 				},
-				"code" : "'categories2.txt' asFileReference \n    writeStreamDo: [ :stream | stream << allHistories storeString ]"
+				"code" : "'categories.txt' asFileReference \n    writeStreamDo: [ :stream | stream << allHistories storeString ]"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -532,14 +535,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-26T15:01:56.444564-03:00"
+						"dateAndTimeString" : "2022-12-29T18:29:36.332297-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "AGVuV7usDQCPfRVLDr8tyw=="
 				},
-				"code" : "historiesFromFile:= 'categories2.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
+				"code" : "historiesFromFile:= 'categories.txt' asFileReference contents.\rallHistories:= Smalltalk compiler evaluate: historiesFromFile"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-29T19:23:16.296712-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-29T19:23:16.899967-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "LMQZq2CtDQCahyYVAMievw=="
+				},
+				"code" : "(allHistories histories collect: [:each | each workflowCommits size ]) sum "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -566,14 +603,122 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-22T10:00:02.272564-03:00"
+						"dateAndTimeString" : "2022-12-29T19:19:45.733125-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "FbYq+8usDQCYucqTC/645Q=="
 				},
-				"code" : ""
+				"code" : "yesCategory := OrderedCollection new.\rallHistories histories\r\tcollect: [ :each | \r\t\teach workflowCommits\r\t\t\tdo: [ :c | c category = 'yes' ifTrue: [ yesCategory add: c ] ] ]."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-29T19:26:31.135681-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-29T19:26:39.720637-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "EAxWtmCtDQCajRwQAMievw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Size of yesCategory: 17"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-29T19:21:05.827412-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-29T19:22:12.943239-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "aPZSo2CtDQCagRSgAMievw=="
+				},
+				"code" : "yesCategory size"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-29T19:27:53.035373-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-29T19:28:41.30402-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FoSBu2CtDQCal2lgAMievw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "=> 17/72 ~ 23.6% are corrective modifications"
 			}
 		]
 	},

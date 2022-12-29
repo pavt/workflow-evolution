@@ -646,7 +646,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-15T14:38:05.258867-03:00"
+						"dateAndTimeString" : "2022-12-29T18:24:51.440582-03:00"
 					}
 				},
 				"uid" : {
@@ -788,14 +788,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-21T10:06:14.398673-03:00"
+						"dateAndTimeString" : "2022-12-29T18:27:51.094707-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "/z5I4SysDQCWpPNuBCnhLg=="
 				},
-				"code" : "allHistoriesOver100 := allHistories initializedHistories\r\t\tselect: [ :each | each workflowCommits size >= 14 and: [each workflowCommits size <= 16] ].\rdataset:= WEHistories from: allHistoriesOver100"
+				"code" : "allHistoriesOver100 := allHistories initializedHistories\r\t\tselect: [ :each | each workflowCommits size = 12 ].\rdataset:= WEHistories from: allHistoriesOver100"
 			},
 			{
 				"__type" : "pharoSnippet",
