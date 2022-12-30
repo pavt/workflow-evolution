@@ -37,7 +37,7 @@ WEStickyGroup >> gtWEStickyFor: aView [
 	^ aView columnedList
 		title: 'Commits';
 		priority: 10;
-		items: [ self stickyGroup ];
+		items: [ self stickyGroup reversed ];
 		
 		column: 'Index' 
 			text: [ :eachItem :eachIndex | 

@@ -141,7 +141,7 @@ WEHistory >> gtStickyCommitsFor: aView [
 	^ aView columnedList
 		title: 'Sticky Groups';
 		priority: 70;
-		items: [ self stickyCommits ];
+		items: [ self stickyCommits reversed];
 		column: 'Index' 
 			text: [ :eachItem :eachIndex | 
 				eachIndex asRopedText foreground: Color gray ]
