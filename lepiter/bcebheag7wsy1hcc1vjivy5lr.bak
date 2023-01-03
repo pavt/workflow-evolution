@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-02T12:53:25.567929-03:00"
+						"dateAndTimeString" : "2023-01-03T08:39:01.425547-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "7GQ9sKutDQChJBhlAoouEg=="
 				},
-				"code" : "\"githubAccessKeyFile := FileLocator home / '.secrets' / 'home-github.txt'.\"\rgithubAccessKeyFile := FileLocator home / '.ssh' / 'graph.pub'.\rgithubAccessKey := githubAccessKeyFile contents trimBoth"
+				"code" : "githubAccessKeyFile := FileLocator home / '.ssh' / 'graph.pub'.\rgithubAccessKey := githubAccessKeyFile contents trimBoth"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -141,8 +141,8 @@
 					"__type" : "uid",
 					"uidString" : "dhFuGGCtDQCacCvlAMievw=="
 				},
-				"operation" : "{\n  repository(owner: \"fastai\", name: \"fastai\") {\n    pullRequest(number: $NUMBER) {\n      commits(first: 5) {\n        edges {\n          node {\n            commit {\n              checkSuites(first: 5) {\n                nodes {\n                  workflowRun {\n                    url\n                    workflow {\n                      name\n                    }\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}",
-				"input" : "{\n\t\"ownername\": \"feenkcom\",\n\t\"reponame\": \"gtoolkit\"\n}",
+				"operation" : "query GetRepository {\n  repository(owner: \"fastai\", name: \"fastai\"){\n    id\n    nameWithOwner\n    description\n    url\n   \n  \n  }\n}",
+				"input" : "",
 				"context" : "aContext",
 				"resultVariableName" : ""
 			},
@@ -178,9 +178,45 @@
 					"__type" : "uid",
 					"uidString" : "gDLEu6utDQChKpwRAoouEg=="
 				},
-				"operation" : "",
+				"operation" : "\n  query {\n  repository(owner:\"octocat\", name:\"Hello-World\") {\n    issues(last:20, states:CLOSED) {\n      edges {\n        node {\n          title\n          url\n          labels(first:5) {\n            edges {\n              node {\n                name\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n\n}",
 				"input" : "",
 				"context" : "aContext",
+				"resultVariableName" : ""
+			},
+			{
+				"__type" : "GraphQL",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-03T08:55:52.614939-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-03T08:55:52.614939-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "K6SRfLytDQChUftIAoouEg=="
+				},
+				"operation" : "query {\n  repository(owner: \"fastai\", name: \"fastai\") {\n  \tworkflow (first: 3) {\n  \t\tname\n  \t}  \n  }\n}",
+				"input" : "",
 				"resultVariableName" : ""
 			}
 		]
