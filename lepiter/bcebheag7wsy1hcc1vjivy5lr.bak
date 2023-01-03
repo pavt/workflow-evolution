@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-29T18:41:59.546532-03:00"
+						"dateAndTimeString" : "2023-01-02T12:53:25.064881-03:00"
 					}
 				},
 				"editEmail" : {
@@ -66,14 +66,122 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-29T18:41:59.546532-03:00"
+						"dateAndTimeString" : "2023-01-02T12:53:25.567929-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "uY55F2CtDQCabtmaAMievw=="
+					"uidString" : "7GQ9sKutDQChJBhlAoouEg=="
 				},
-				"code" : ""
+				"code" : "\"githubAccessKeyFile := FileLocator home / '.secrets' / 'home-github.txt'.\"\rgithubAccessKeyFile := FileLocator home / '.ssh' / 'graph.pub'.\rgithubAccessKey := githubAccessKeyFile contents trimBoth"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-02T12:53:33.296818-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-02T12:53:40.283111-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "xQC7sKutDQChJkt1AoouEg=="
+				},
+				"code" : "aContext := GtGQLContext new\r\t\turl: 'https://api.github.com/graphql';\r\t\tbearerToken: githubAccessKey;\r\t\tbuildSchema"
+			},
+			{
+				"__type" : "GraphQL",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-29T18:42:15.570789-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-29T18:42:15.570789-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dhFuGGCtDQCacCvlAMievw=="
+				},
+				"operation" : "{\n  repository(owner: \"fastai\", name: \"fastai\") {\n    pullRequest(number: $NUMBER) {\n      commits(first: 5) {\n        edges {\n          node {\n            commit {\n              checkSuites(first: 5) {\n                nodes {\n                  workflowRun {\n                    url\n                    workflow {\n                      name\n                    }\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}",
+				"input" : "{\n\t\"ownername\": \"feenkcom\",\n\t\"reponame\": \"gtoolkit\"\n}",
+				"context" : "aContext",
+				"resultVariableName" : ""
+			},
+			{
+				"__type" : "GraphQL",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-02T12:56:38.44875-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-02T12:56:38.44875-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gDLEu6utDQChKpwRAoouEg=="
+				},
+				"operation" : "",
+				"input" : "",
+				"context" : "aContext",
+				"resultVariableName" : ""
 			}
 		]
 	},
