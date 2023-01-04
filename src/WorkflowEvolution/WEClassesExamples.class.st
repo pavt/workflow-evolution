@@ -29,17 +29,6 @@ WEClassesExamples >> classReferences [
 ]
 
 { #category : #accessing }
-WEClassesExamples >> historiesExample [
-	<gtExample>
-	| histories |
-	
-	histories := WEHistories fromReposPath: '../repositories'.
-	self assert: (histories histories size) equals: 307.
-	
-	^ histories
-]
-
-{ #category : #accessing }
 WEClassesExamples >> modelClassExplicitLabeledReferences [
 	"Use hand-tweaked positions."
 
