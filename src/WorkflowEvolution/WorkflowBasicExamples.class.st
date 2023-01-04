@@ -19,27 +19,10 @@ WorkflowBasicExamples >> basicExample [
 WorkflowBasicExamples >> nameExample [
 	<gtExample>
 	| workflow |
-	workflow := self visualizeClassDiagramExample.
+	workflow := self visualizeWEWorkflowDiagramExample.
 
 	self assert: workflow name equals: 'UML Class diagram'.
 	^ workflow
-]
-
-{ #category : #accessing }
-WorkflowBasicExamples >> visualizeClassDiagramExample [
-
-	<gtExample>
-	| workflow directory filename |
-	workflow := self basicExample.
-	directory:= FileLocator imageDirectory/ 'pharo-local' / 'iceberg' / 'pavt'/ 'workflow-evolution' / 'yml-json-examples'.
-	filename:= 'visualizeClassDiagram'.
-	workflow filename: filename.
-	workflow directory: directory.
-	self assert: workflow directory equals: directory.
-	self assert: workflow filename equals: filename.
-	self assert: workflow ast isNotNil.
-	^ workflow
-	
 ]
 
 { #category : #accessing }
@@ -56,4 +39,21 @@ WorkflowBasicExamples >> visualizeExampleJSON [
 	self assert: workflow filename equals: filename.
 	self assert: workflow ast isNotNil.
 	^ workflow
+]
+
+{ #category : #accessing }
+WorkflowBasicExamples >> visualizeWEWorkflowDiagramExample [
+
+	<gtExample>
+	| workflow directory filename |
+	workflow := self basicExample.
+	directory:= FileLocator imageDirectory/ 'pharo-local' / 'iceberg' / 'pavt'/ 'workflow-evolution' / 'yml-json-examples'.
+	filename:= 'visualizeClassDiagram'.
+	workflow filename: filename.
+	workflow directory: directory.
+	self assert: workflow directory equals: directory.
+	self assert: workflow filename equals: filename.
+	self assert: workflow ast isNotNil.
+	^ workflow
+	
 ]

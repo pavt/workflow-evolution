@@ -5,10 +5,6 @@ Class {
 }
 
 { #category : #accessing }
-WEWorkflowExamples >> ahistoryExample [
-]
-
-{ #category : #accessing }
 WEWorkflowExamples >> ciExample [
 	<gtExample>
 	| workflow |
@@ -20,17 +16,7 @@ WEWorkflowExamples >> ciExample [
 ]
 
 { #category : #accessing }
-WEWorkflowExamples >> docsYMLHistoryExample [
-	<gtExample>
-	| history |
-	history := WEHistory fromRepoPath: '../fastai' forYML: 'docs.yml' .
-	self assert: history workflowCommits size equals: 112.
-	self assert: history stickyCommits size equals: 12.
-	^ history
-]
-
-{ #category : #accessing }
-WEWorkflowExamples >> visualizeClassDiagramExample [
+WEWorkflowExamples >> visualizeWEWorkflowDiagramExample [
 	<gtExample>
 	| workflow |
 	workflow := OldWEWorkflow forExample: 'visualizeClassDiagram'.
