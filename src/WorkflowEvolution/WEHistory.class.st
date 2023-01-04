@@ -1,5 +1,12 @@
 "
-I am a class that represents the history of GitHub Actions workflows
+Workflow Evolution the evolution of a workflow file into a history. The class  `WEHistory` implement the history of a workflow.
+
+*Responsibility*: (i) keep a collection of all the version of a workflow file; (ii) initialize the history of a workflow.
+
+An example of a WEHistory is:  <docsYMLHistoryExample> 
+
+
+
 "
 Class {
 	#name : #WEHistory,
