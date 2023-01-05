@@ -25,3 +25,20 @@ WEWorkflowExamples >> visualizeWEWorkflowDiagramExample [
 	self assert: workflow jobs size equals: 1.
 	^ workflow
 ]
+
+{ #category : #accessing }
+WEWorkflowExamples >> weWorkflowExample [
+	<gtExample>
+	"In this example we build a WEWorkflow considering workflows files in JSON format"
+	| examples jsonFiles collectionOfJsonFiles weWorkflow |
+	"All the files are in the next path"
+	examples := FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'
+			/ 'workflow-evolution' / 'workflow_examples'.
+	jsonFiles := examples asFileReference allChildrenMatching: '*.json'.
+	collectionOfJsonFiles:= jsonFiles collect: [ :file | WEWorkflow new data: (STON fromString: file contents) ].
+	"Here we consider the first file, but you can try the second, the third, and so on."
+	weWorkflow:= WEWorkflow fromFile: jsonFiles second.
+	
+	^ weWorkflow
+	
+]
