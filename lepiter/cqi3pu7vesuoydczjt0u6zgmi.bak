@@ -55,74 +55,6 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-16T18:08:04.685479-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-19T21:29:31.740461-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "vSpAGlqsDQC+vWGKCysh1w=="
-				},
-				"code" : "WEFileCommit"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-19T21:29:32.609429-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-19T21:29:36.911871-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "yV9FRJmsDQC08b2dBOa4sQ=="
-				},
-				"code" : "WEHistories"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2022-12-19T21:29:41.266754-03:00"
 					}
 				},
@@ -164,12 +96,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-12-26T15:34:57.7365-03:00"
+			"dateAndTimeString" : "2022-12-26T15:38:34.078643-03:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Software documentation"
+		"title" : "Documenting the  GitHub Actions Workflows Domain:"
 	},
 	"uid" : {
 		"__type" : "uuid",
