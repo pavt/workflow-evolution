@@ -712,6 +712,43 @@
 								"__type" : "textStyle"
 							},
 							"string" : "[[Narrative 1:   The Anatomy of GitHub Actions workflows]] "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-10T22:05:24.089714-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-10T22:05:44.44558-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "uCSyVFSuDQCa8OV5BxX9uQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "[[Narrative 2:   The History of GA workflows]] "
 						}
 					]
 				},
