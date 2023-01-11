@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:05:46.176371-03:00"
+						"dateAndTimeString" : "2023-01-10T22:49:15.907957-03:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,78 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:05:46.176371-03:00"
+						"dateAndTimeString" : "2023-01-10T22:49:18.104907-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "33B76VSuDQCcZltpBxX9uQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The histor"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-10T22:47:07.592574-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-10T22:47:10.409428-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "iQc96lSuDQCccMhqBxX9uQ=="
+				},
+				"code" : "history := WEHistory fromRepoPath: '../fastai' forYML: 'docs.yml' ."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-10T22:40:06.677357-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-10T22:41:45.695258-03:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +110,112 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "A collection of Repositories:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-10T22:41:10.129919-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-10T22:41:11.041974-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "C5Xu1FSuDQCcRqyYBxX9uQ=="
+				},
+				"code" : "FileLocator imageDirectory parent / 'repositories'"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-10T22:41:23.048867-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-10T22:42:02.259164-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "weii1VSuDQCcTFX6BxX9uQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "A collection of Workflow histories:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-10T22:39:02.204792-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-10T22:39:50.81226-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "f5lOzVSuDQCcNUvjBxX9uQ=="
+				},
+				"code" : "histories := WEHistories fromReposPath: '../repositories'."
 			},
 			{
 				"__type" : "exampleSnippet",
@@ -73,10 +249,10 @@
 					"__type" : "uid",
 					"uidString" : "pr9BV1SuDQCbAQoZBxX9uQ=="
 				},
-				"exampleSelector" : "workflowExample",
+				"exampleSelector" : "historiesExample",
 				"previewHeight" : 500,
 				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "WEHistoriesxamples",
+				"exampleBehaviorName" : "WEHistoriesExamples",
 				"codeExpanded" : true,
 				"previewExpanded" : true,
 				"noCode" : true
