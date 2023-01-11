@@ -24,7 +24,7 @@ WEModelEntity >> gtJSONFor: aView [
 	<gtView>
 	^ aView forward
 		title: 'JSON data';
-		priority: 10;
+		priority: 20;
 		object: [ data ];
 		view: #gtItemsFor:
 ]

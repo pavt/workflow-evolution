@@ -39,7 +39,7 @@ WEWorkflow >> gtEventsFor: aView [
 	<gtView>
 	^ aView columnedList
 		title: 'Events';
-		priority: 20;
+		priority: 30;
 		items: [ self events ];
 		column: 'Event' text: [ :event | event name ]
 ]
@@ -49,7 +49,7 @@ WEWorkflow >> gtJSONSourceFor: aView [
 	<gtView>
 	^ aView forward
 		title: 'JSON source';
-		priority: 20;
+		priority: 10;
 		object: [ file ];
 		view: #gtJsonFor:
 ]
@@ -62,6 +62,15 @@ WEWorkflow >> gtJobsFor: aView [
 		priority: 30;
 		items: [ self jobs ];
 		column: 'Job' text: [ :job | job name ]
+]
+
+{ #category : #accessing }
+WEWorkflow >> gtWorkflowNameFor: aView [
+	<gtView>
+	^ aView forward
+		title: 'Name';
+		priority: 20;
+		object: [ self name asString ]
 ]
 
 { #category : #initialization }
