@@ -66,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-13T14:35:21.920147-03:00"
+						"dateAndTimeString" : "2023-01-13T16:43:53.860919-03:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Our goal is to know the specific implementation of the Jobs within GA workflows."
+				"string" : "Our goal is to know the components  of a Workflow."
 			},
 			{
 				"__type" : "textSnippet",
@@ -287,7 +287,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-13T14:49:00.17772-03:00"
+									"dateAndTimeString" : "2023-01-13T16:40:27.123075-03:00"
 								}
 							},
 							"uid" : {
@@ -297,7 +297,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now, we can consider the GA workflow domain model.  Thus, we wrap the workflow file using the class {{gtClass:name=WEWorkflow}} "
+							"string" : "Now, we can use the GA workflow domain model.  Thus, we wrap the workflow file using the class {{gtClass:name=WEWorkflow}} "
 						},
 						{
 							"__type" : "textSnippet",
@@ -324,7 +324,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-13T14:49:49.761586-03:00"
+									"dateAndTimeString" : "2023-01-13T14:58:10.237931-03:00"
 								}
 							},
 							"uid" : {
@@ -334,7 +334,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "In particular, we get a collection of all the workflows within all the repositories:"
+							"string" : "In particular, we get a collection of all the workflows objects within all the repositories:"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -395,7 +395,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-13T14:51:18.47514-03:00"
+									"dateAndTimeString" : "2023-01-13T15:21:31.546047-03:00"
 								}
 							},
 							"uid" : {
@@ -405,41 +405,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Inspecting the collection we can an array of 151 items. Each item is a GA workflow."
-						},
-						{
-							"__type" : "pharoSnippet",
-							"children" : {
-								"__type" : "snippets",
-								"items" : [ ]
-							},
-							"createEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"createTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-13T14:50:18.187235-03:00"
-								}
-							},
-							"editEmail" : {
-								"__type" : "email",
-								"emailString" : "<unknown>"
-							},
-							"editTime" : {
-								"__type" : "time",
-								"time" : {
-									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-13T14:53:43.436796-03:00"
-								}
-							},
-							"uid" : {
-								"__type" : "uid",
-								"uidString" : "m0GCmoquDQCyocxzDG9feA=="
-							},
-							"code" : "collectionOfWorkflows"
+							"string" : "Inspecting this collection we can see an array of 151 items. Each item is a GA workflow object. We show this collection as an object example {{gtMethod:name=WEWorkflowExamples >>collectionOfWorkflowsExample|expanded}}so we can reuse it"
 						},
 						{
 							"__type" : "textSnippet",
@@ -455,7 +421,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-13T14:50:07.858259-03:00"
+									"dateAndTimeString" : "2023-01-13T15:21:48.225074-03:00"
 								}
 							},
 							"editEmail" : {
@@ -466,7 +432,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-13T14:50:10.751652-03:00"
+									"dateAndTimeString" : "2023-01-13T15:25:28.651812-03:00"
 								}
 							},
 							"uid" : {
@@ -476,7 +442,118 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : ""
+							"string" : "Since our goal is to know the specific implementation of the Jobs within GA workflows, we can inspect one of the workflow of the collection. We choose the fifth:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T15:23:00.673257-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T15:24:15.178364-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "8G57D4uuDQCpqQjuBNGNKg=="
+							},
+							"code" : "collectionOfWorkflows fifth"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T16:27:53.072976-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T16:45:03.948841-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mRba9ouuDQCp8buHBNGNKg=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "We wrap this specific workflow in an object example. With the example we have acces to all the key components of the workflow (e.g., Name, Events, Jobs and Steps). Thus we have acces to the components of the workflow and we can navigate to get detailed information through a custom views"
+						},
+						{
+							"__type" : "exampleSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-10T19:40:22.848724-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-10T19:40:22.848724-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "6TRiTlKuDQCaNzJmBxX9uQ=="
+							},
+							"exampleSelector" : "workflowExample",
+							"previewHeight" : 500,
+							"previewShowSelector" : "gtViewsFor:",
+							"exampleBehaviorName" : "WEWorkflowExamples",
+							"codeExpanded" : true,
+							"previewExpanded" : true,
+							"noCode" : true
 						}
 					]
 				},
@@ -510,188 +587,6 @@
 					"__type" : "textStyle"
 				},
 				"string" : "We have added a {{gtClass:name=WEHistories}} class to wrap the histories and manage the computation of the workflow commits."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:17:09.716443-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:17:40.394157-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "3woDf1SuDQCbbiQHBxX9uQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Collection of workflows objects:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:16:12.314152-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:16:15.153704-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "C7One1SuDQCbZSXrBxX9uQ=="
-				},
-				"code" : "collectionOfJsonFiles := jsonFiles\r\t\tcollect: [ :file | WEWorkflow new data: (STON fromString: file contents) ]."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:17:53.69072-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:18:03.677226-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "UhGfgVSuDQCbdCpfBxX9uQ=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "We select the second workflow"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:13:29.93622-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:33:43.498127-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "dwn6cVSuDQCbOmWEBxX9uQ=="
-				},
-				"code" : "weWorkflow := WEWorkflow fromFile: jsonFiles second"
-			},
-			{
-				"__type" : "exampleSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T19:40:22.848724-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T19:40:22.848724-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "6TRiTlKuDQCaNzJmBxX9uQ=="
-				},
-				"exampleSelector" : "workflowExample",
-				"previewHeight" : 500,
-				"previewShowSelector" : "gtViewsFor:",
-				"exampleBehaviorName" : "WEWorkflowExamples",
-				"codeExpanded" : true,
-				"previewExpanded" : true,
-				"noCode" : true
 			}
 		]
 	},

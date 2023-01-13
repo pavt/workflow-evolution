@@ -30,8 +30,13 @@ WEWorkflow >> events [
 ]
 
 { #category : #accessing }
+WEWorkflow >> file [
+	^ file
+]
+
+{ #category : #accessing }
 WEWorkflow >> file: aFileReference [
-	file := aFileReference
+	file := aFileReference 
 ]
 
 { #category : #accessing }
@@ -51,7 +56,7 @@ WEWorkflow >> gtJSONSourceFor: aView [
 		title: 'JSON source';
 		priority: 10;
 		object: [ file ];
-		view: #gtJsonFor:
+		gtViewsFor: #gtJsonFor
 ]
 
 { #category : #accessing }

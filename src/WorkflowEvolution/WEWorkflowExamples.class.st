@@ -16,6 +16,18 @@ WEWorkflowExamples >> ciExample [
 ]
 
 { #category : #accessing }
+WEWorkflowExamples >> collectionOfWorkflowsExample [
+	<gtExample>
+	| examples jsonFiles collectionOfWorkflows |
+	examples := FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'
+			/ 'workflow-evolution' / 'workflow_examples'.
+	jsonFiles := examples asFileReference allChildrenMatching: '*.json'.
+	collectionOfWorkflows := jsonFiles
+			collect: [ :file | WEWorkflow new data: (STON fromString: file contents) ].
+	^ collectionOfWorkflows
+]
+
+{ #category : #accessing }
 WEWorkflowExamples >> visualizeWEWorkflowDiagramExample [
 	<gtExample>
 	| workflow |
@@ -40,8 +52,8 @@ WEWorkflowExamples >> workflowExample [
 	jsonFiles := examples asFileReference allChildrenMatching: '*.json'.
 	collectionOfJsonFiles:= jsonFiles collect: [ :file | WEWorkflow new data: (STON fromString: file contents) ].
 	
-	"Here we consider the first file, but you can try the second, the third, and so on."
-	weWorkflow:= WEWorkflow fromFile: jsonFiles second.
+	"Here we consider the first file, but you can try the second, the fifth, and so on."
+	weWorkflow:= WEWorkflow fromFile: jsonFiles fifth.
 	
 	^ weWorkflow
 	
