@@ -708,7 +708,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-29T19:28:17.725676-03:00"
+						"dateAndTimeString" : "2022-12-29T19:28:41.30402-03:00"
 					}
 				},
 				"uid" : {
@@ -718,7 +718,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Thus, 17/72 is ~ 23.6% o"
+				"string" : "=> 17/72 ~ 23.6% are corrective modifications"
 			}
 		]
 	},

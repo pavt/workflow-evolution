@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:14:02.340592-03:00"
+						"dateAndTimeString" : "2023-01-13T14:25:57.133025-03:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:15:36.762017-03:00"
+						"dateAndTimeString" : "2023-01-13T14:27:19.892327-03:00"
 					}
 				},
 				"uid" : {
@@ -39,41 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Respositories:"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:14:21.244998-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:14:39.589185-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "mucIdVSuDQCbQAxsBxX9uQ=="
-				},
-				"code" : "examples := FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\r\t\t/ 'workflow-evolution' / 'workflow_examples'."
+				"string" : "We explore GA workflow through MWE"
 			},
 			{
 				"__type" : "textSnippet",
@@ -89,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:15:43.017326-03:00"
+						"dateAndTimeString" : "2023-01-13T14:33:05.332947-03:00"
 					}
 				},
 				"editEmail" : {
@@ -100,23 +66,419 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:17:42.600625-03:00"
+						"dateAndTimeString" : "2023-01-13T14:35:21.920147-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "B8JfdVSuDQCbSRECBxX9uQ=="
+					"uidString" : "5h5pSIquDQCyXyqZDG9feA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Workflows in JSON format:"
+				"string" : "Our goal is to know the specific implementation of the Jobs within GA workflows."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:34:21.578109-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:36:18.025661-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "wA2OQ4quDQCyU56pDG9feA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "First, we define the repositories of our interest:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-10T22:14:21.244998-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:36:59.441865-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mucIdVSuDQCbQAxsBxX9uQ=="
+							},
+							"code" : "repositories := FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\r\t\t/ 'workflow-evolution' / 'workflow_examples'."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:34:50.740959-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:36:38.651387-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "Op4uY4quDQCyaIjwDG9feA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Second, we get the all workflow files within the repositories:"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:38:39.908492-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:38:39.908492-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "yWLccIquDQCykr4lDG9feA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Note: For the purpose of this example, workflows were parsed to JSON fomar usin a external tool."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:35:59.503446-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:37:03.855245-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "XcxTZ4quDQCydvhRDG9feA=="
+							},
+							"code" : "jsonFiles := repositories asFileReference allChildrenMatching: '*.json'."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:38:47.844239-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:49:00.17772-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "m2KsbYquDQCye4V1DG9feA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Now, we can consider the GA workflow domain model.  Thus, we wrap the workflow file using the class {{gtClass:name=WEWorkflow}} "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:49:49.761586-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:49:49.761586-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "/qSch4quDQCynBDCDG9feA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "In particular, we get a collection of all the workflows within all the repositories:"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-10T22:15:02.713483-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:50:17.48024-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "lrSBd1SuDQCbTxylBxX9uQ=="
+							},
+							"code" : "collectionOfWorkflows := jsonFiles\r\t\tcollect: [ :file | WEWorkflow new data: (STON fromString: file contents) ]."
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:50:34.806688-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:51:18.47514-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "+g1Sm4quDQCypk6HDG9feA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Inspecting the collection we can an array of 151 items. Each item is a GA workflow."
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:50:18.187235-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:53:19.430122-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "m0GCmoquDQCyocxzDG9feA=="
+							},
+							"code" : ""
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:50:07.858259-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-13T14:50:10.751652-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "iAKHeYquDQCyl+kYDG9feA=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : ""
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -126,7 +488,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:15:02.713483-03:00"
+						"dateAndTimeString" : "2023-01-13T14:28:03.014351-03:00"
 					}
 				},
 				"editEmail" : {
@@ -137,14 +499,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:15:03.758413-03:00"
+						"dateAndTimeString" : "2023-01-13T14:28:03.014351-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "lrSBd1SuDQCbTxylBxX9uQ=="
+					"uidString" : "/oDjSoquDQCyY9abDG9feA=="
 				},
-				"code" : "jsonFiles := examples asFileReference allChildrenMatching: '*.json'."
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We have added a {{gtClass:name=WEHistories}} class to wrap the histories and manage the computation of the workflow commits."
 			},
 			{
 				"__type" : "textSnippet",
@@ -279,14 +644,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:19:21.019662-03:00"
+						"dateAndTimeString" : "2023-01-10T22:33:43.498127-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "dwn6cVSuDQCbOmWEBxX9uQ=="
 				},
-				"code" : "weWorkflow := WEWorkflow fromFile: jsonFiles third"
+				"code" : "weWorkflow := WEWorkflow fromFile: jsonFiles second"
 			},
 			{
 				"__type" : "exampleSnippet",
