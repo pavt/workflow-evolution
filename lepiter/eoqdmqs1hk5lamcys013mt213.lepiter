@@ -45,43 +45,6 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-13T14:33:05.332947-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-13T16:43:53.860919-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "5h5pSIquDQCyXyqZDG9feA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Our goal is to know the components  of a Workflow."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
 					"items" : [
 						{
 							"__type" : "textSnippet",
@@ -503,7 +466,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-13T16:45:03.948841-03:00"
+									"dateAndTimeString" : "2023-01-13T17:42:32.664765-03:00"
 								}
 							},
 							"uid" : {
@@ -513,7 +476,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We wrap this specific workflow in an object example. With the example we have acces to all the key components of the workflow (e.g., Name, Events, Jobs and Steps). Thus we have acces to the components of the workflow and we can navigate to get detailed information through a custom views"
+							"string" : "We wrap this specific workflow in an object example. With the example we have acces to all the key components of the workflow (e.g., Name, Events, Jobs and Steps). Thus, we have acces to the components of the workflow and we can navigate to get detailed information through a custom views"
 						},
 						{
 							"__type" : "exampleSnippet",
@@ -565,7 +528,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-13T14:28:03.014351-03:00"
+						"dateAndTimeString" : "2023-01-13T14:33:05.332947-03:00"
 					}
 				},
 				"editEmail" : {
@@ -576,17 +539,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-13T14:28:03.014351-03:00"
+						"dateAndTimeString" : "2023-01-13T16:57:06.921178-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "/oDjSoquDQCyY9abDG9feA=="
+					"uidString" : "5h5pSIquDQCyXyqZDG9feA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We have added a {{gtClass:name=WEHistories}} class to wrap the histories and manage the computation of the workflow commits."
+				"string" : "Our goal is to know the key components  of a Workflow."
 			}
 		]
 	},
