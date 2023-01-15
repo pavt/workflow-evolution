@@ -324,14 +324,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-14T23:36:15.224467-03:00"
+									"dateAndTimeString" : "2023-01-14T23:36:28.906394-03:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "lrSBd1SuDQCbTxylBxX9uQ=="
 							},
-							"code" : "collectionOfWorkflows := jsonFiles\r\t\tcollect: [ :file | WEWorkflow fromFile: (STON fromString: file contents) ]."
+							"code" : "collectionOfWorkflows := jsonFiles\r\t\tcollect: [ :file | WEWorkflow new data: (STON fromString: file contents) ]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -466,7 +466,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-13T17:42:32.664765-03:00"
+									"dateAndTimeString" : "2023-01-15T17:08:01.943336-03:00"
 								}
 							},
 							"uid" : {
@@ -476,7 +476,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We wrap this specific workflow in an object example. With the example we have acces to all the key components of the workflow (e.g., Name, Events, Jobs and Steps). Thus, we have acces to the components of the workflow and we can navigate to get detailed information through a custom views"
+							"string" : "We wrap this specific workflow in an object example {{gtMethod:name=WEWorkflowExamples >>workflowExample|expanded}}. With the example we have acces to all the key components of the workflow (e.g., Name, Events, Jobs and Steps). Thus, we have acces to the components of the workflow and we can navigate to get detailed information through a custom views"
 						},
 						{
 							"__type" : "exampleSnippet",

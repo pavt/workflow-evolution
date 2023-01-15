@@ -52,7 +52,7 @@ WEWorkflowExamples >> workflowExample [
 	jsonFiles := examples asFileReference allChildrenMatching: '*.json'.
 	collectionOfJsonFiles:= jsonFiles collect: [ :file | WEWorkflow new data: (STON fromString: file contents) ].
 	
-	"Here we consider the first file, but you can try the second, the fifth, and so on."
+	"Here we consider the fifth file, but you can try others."
 	weWorkflow:= WEWorkflow fromFile: jsonFiles fifth.
 	
 	^ weWorkflow
