@@ -324,14 +324,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-13T14:50:17.48024-03:00"
+									"dateAndTimeString" : "2023-01-14T23:36:15.224467-03:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "lrSBd1SuDQCbTxylBxX9uQ=="
 							},
-							"code" : "collectionOfWorkflows := jsonFiles\r\t\tcollect: [ :file | WEWorkflow new data: (STON fromString: file contents) ]."
+							"code" : "collectionOfWorkflows := jsonFiles\r\t\tcollect: [ :file | WEWorkflow fromFile: (STON fromString: file contents) ]."
 						},
 						{
 							"__type" : "textSnippet",
@@ -432,14 +432,14 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-13T15:24:15.178364-03:00"
+									"dateAndTimeString" : "2023-01-14T22:51:08.339654-03:00"
 								}
 							},
 							"uid" : {
 								"__type" : "uid",
 								"uidString" : "8G57D4uuDQCpqQjuBNGNKg=="
 							},
-							"code" : "collectionOfWorkflows fifth"
+							"code" : "weWorkflow:= WEWorkflow fromFile: jsonFiles fifth."
 						},
 						{
 							"__type" : "textSnippet",
@@ -543,7 +543,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-14T22:01:44.610531-03:00"
+									"dateAndTimeString" : "2023-01-14T22:08:19.362037-03:00"
 								}
 							},
 							"uid" : {
@@ -553,7 +553,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now, we can try a specific query. Lets get the jobs with more than 3 steps"
+							"string" : "Now, we can try a specific query. Lets get the jobs with more than 5 steps"
 						},
 						{
 							"__type" : "pharoSnippet",

@@ -53,10 +53,11 @@ WEWorkflow >> gtEventsFor: aView [
 WEWorkflow >> gtJSONSourceFor: aView [
 	<gtView>
 	^ aView forward
-		title: 'JSON source';
+		title: 'JSON Source';
 		priority: 10;
 		object: [ file ];
-		gtViewsFor: #gtJsonFor
+		"gtViewsFor: #gtJsonFor"
+		view: #gtJsonFor:
 ]
 
 { #category : #accessing }
