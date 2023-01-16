@@ -150,7 +150,7 @@
 				"code" : "history := WEHistory fromRepoPath: '../rich' forYML: 'pythonpackage.yml' ."
 			},
 			{
-				"__type" : "pharoSnippet",
+				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -163,7 +163,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-15T23:36:21.931304-03:00"
+						"dateAndTimeString" : "2023-01-16T00:33:30.635245-03:00"
 					}
 				},
 				"editEmail" : {
@@ -174,14 +174,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-15T23:36:52.03196-03:00"
+						"dateAndTimeString" : "2023-01-16T00:33:30.635245-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "TIWJL7quDQC280TcCpWAeQ=="
+					"uidString" : "nZ9VVlSuDQCa++axBxX9uQ=="
 				},
-				"code" : "history stickyCommits first "
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Similarly, we can replicate the  Sticky Commits candidates analysis considering all the GA workflows in a set of repositories."
 			},
 			{
 				"__type" : "textSnippet",
@@ -197,7 +200,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:40:06.677357-03:00"
+						"dateAndTimeString" : "2023-01-16T00:33:32.931498-03:00"
 					}
 				},
 				"editEmail" : {
@@ -208,17 +211,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:41:45.695258-03:00"
+						"dateAndTimeString" : "2023-01-16T00:33:52.298295-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "nZ9VVlSuDQCa++axBxX9uQ=="
+					"uidString" : "fXH4+7quDQC3Wv2BCpWAeQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A collection of Repositories:"
+				"string" : "First, we get all the repositories:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -279,7 +282,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-15T22:42:39.961597-03:00"
+						"dateAndTimeString" : "2023-01-16T00:34:15.775768-03:00"
 					}
 				},
 				"uid" : {
@@ -289,7 +292,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A collection of Workflow histories (it's take ~10 seconds to get the result):"
+				"string" : "Then, we crete a collection of Workflow histories (it's take ~10 seconds to get the result):"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -324,6 +327,43 @@
 					"uidString" : "f5lOzVSuDQCcNUvjBxX9uQ=="
 				},
 				"code" : "histories := WEHistories fromReposPath: '../repositories'."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-16T00:34:26.558326-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-16T00:34:32.016999-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "WJQo/7quDQC4oFEeCpWAeQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We wrap this "
 			},
 			{
 				"__type" : "exampleSnippet",
