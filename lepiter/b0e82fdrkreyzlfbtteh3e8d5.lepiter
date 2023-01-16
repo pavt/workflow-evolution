@@ -140,7 +140,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-15T22:49:13.940378-03:00"
+						"dateAndTimeString" : "2023-01-15T23:36:20.996516-03:00"
 					}
 				},
 				"uid" : {
@@ -148,6 +148,40 @@
 					"uidString" : "iQc96lSuDQCccMhqBxX9uQ=="
 				},
 				"code" : "history := WEHistory fromRepoPath: '../rich' forYML: 'pythonpackage.yml' ."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-15T23:36:21.931304-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-15T23:37:31.199557-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "TIWJL7quDQC280TcCpWAeQ=="
+				},
+				"code" : "history stickyCommits  "
 			},
 			{
 				"__type" : "textSnippet",

@@ -32,6 +32,26 @@ WEStickyGroup >> author [
 ]
 
 { #category : #accessing }
+WEStickyGroup >> editableLabelFor: aString withSetter: aOneArgumentBlock [
+	"NB: stateless utility method"
+
+	| label |
+	label := BrEditableLabel new
+		aptitude: (BrGlamorousEditableLabelAptitude new defaultBackground: Color white);
+		text: aString.
+	label
+		when: BrEditorAcceptWish
+		do: [ :aWish | 
+			aString ~= aWish text asString
+				ifTrue: [ [ aOneArgumentBlock value: aWish text asString ]
+						on: AssertionFailure
+						do: [ :e | 
+							label text: aString.
+							self inform: e printString ] ] ].
+	^ label
+]
+
+{ #category : #accessing }
 WEStickyGroup >> gtWEStickyFor: aView [
 	<gtView>
 	^ aView columnedList
@@ -52,7 +72,18 @@ WEStickyGroup >> gtWEStickyFor: aView [
 					ifTrue: [ ( each commit datetime - each previousFileCommit commit datetime ) abs asString ]
 					ifFalse: [ 'na' ] ] width: 90;
 		column: 'Comment' text: [ :each | each commit comment ];
-		column: 'Category' text: [:each | each category ] width: 300
+		
+		column: 'Category'
+			do: [ :column | 
+				column
+					stencil: [ :commit | 
+						self
+							editableLabelFor: commit category
+							withSetter: [ :newCategoryName | commit category: newCategoryName ] ];
+					weight: 1 ]
+		
+		"column: 'Category' text: [:each | each category ] width: 300"
+		
 		
 		
 ]
