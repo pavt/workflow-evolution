@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-13T14:25:44.450558-03:00"
+						"dateAndTimeString" : "2023-01-15T21:30:58.204984-03:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Exploring GA workflow through MWE "
+				"string" : "Exploring GA workflow through MWE:"
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:49:15.907957-03:00"
+						"dateAndTimeString" : "2023-01-15T21:31:09.54242-03:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +66,54 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:49:31.096974-03:00"
+						"dateAndTimeString" : "2023-01-15T21:31:41.944461-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "33B76VSuDQCcZltpBxX9uQ=="
+					"uidString" : "2DB0b7iuDQCzjvFJCpWAeQ=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The history of a workflow:"
+				"string" : "**Goal**: inspect the existence of “quick remedy commits” in the GA workflow evolution"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-15T21:25:22.509697-03:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-01-15T21:25:52.898234-03:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "pEhBWriuDQCx6M0BCpWAeQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We wrap the history of a worflow in the {{gtClass:name=WEHistory}} class"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -103,14 +140,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:47:10.409428-03:00"
+						"dateAndTimeString" : "2023-01-15T22:49:13.940378-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "iQc96lSuDQCccMhqBxX9uQ=="
 				},
-				"code" : "history := WEHistory fromRepoPath: '../fastai' forYML: 'docs.yml' ."
+				"code" : "history := WEHistory fromRepoPath: '../rich' forYML: 'pythonpackage.yml' ."
 			},
 			{
 				"__type" : "textSnippet",
@@ -208,7 +245,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:42:02.259164-03:00"
+						"dateAndTimeString" : "2023-01-15T22:42:39.961597-03:00"
 					}
 				},
 				"uid" : {
@@ -218,7 +255,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A collection of Workflow histories:"
+				"string" : "A collection of Workflow histories (it's take ~10 seconds to get the result):"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -315,12 +352,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-01-10T22:05:46.137921-03:00"
+			"dateAndTimeString" : "2023-01-15T22:31:27.983484-03:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Narrative 2:   The History of GA workflows"
+		"title" : "Narrative 2:   Sticky Commits in the GA workflow Evolution"
 	},
 	"uid" : {
 		"__type" : "uuid",

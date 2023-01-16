@@ -569,6 +569,43 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-15T21:03:27.912218-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-15T21:03:51.732467-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "mBW5DLiuDQCwIk9lCpWAeQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "Now, we can try specifics queries. "
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
 									"dateAndTimeString" : "2023-01-14T21:58:35.27579-03:00"
 								}
 							},
@@ -580,7 +617,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-14T22:08:19.362037-03:00"
+									"dateAndTimeString" : "2023-01-15T21:03:44.257008-03:00"
 								}
 							},
 							"uid" : {
@@ -590,7 +627,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "Now, we can try a specific query. Lets get the jobs with more than 5 steps"
+							"string" : "query: jobs with more than 5 steps"
 						},
 						{
 							"__type" : "pharoSnippet",
@@ -617,7 +654,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-14T22:08:09.008091-03:00"
+									"dateAndTimeString" : "2023-01-15T21:01:37.083123-03:00"
 								}
 							},
 							"uid" : {
@@ -625,6 +662,77 @@
 								"uidString" : "iHeKs6SuDQCt3+kiDTSULw=="
 							},
 							"code" : "collectionOfWorkflows fifth jobs select: [ :each | each steps size > 5]"
+						},
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-15T21:03:17.452758-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-15T21:04:23.986794-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "rPUODLiuDQCwGlVLCpWAeQ=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "query: workflows with more than 20 jobs"
+						},
+						{
+							"__type" : "pharoSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-15T21:01:37.720769-03:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-01-15T21:04:26.79535-03:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "xbYnBriuDQCwFMedCpWAeQ=="
+							},
+							"code" : "collectionOfWorkflows select: [ :each | each jobs size > 20]"
 						}
 					]
 				},
@@ -647,7 +755,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-13T16:57:06.921178-03:00"
+						"dateAndTimeString" : "2023-01-15T21:06:47.488086-03:00"
 					}
 				},
 				"uid" : {
@@ -657,7 +765,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Our goal is to know the key components  of a Workflow."
+				"string" : "Our **goal** is to  formulate specific queries about the components of a set of GA workflows"
 			}
 		]
 	},

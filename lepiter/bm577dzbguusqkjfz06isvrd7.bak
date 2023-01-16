@@ -738,7 +738,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-10T22:05:26.073937-03:00"
+									"dateAndTimeString" : "2023-01-15T21:31:55.556113-03:00"
 								}
 							},
 							"uid" : {
@@ -748,7 +748,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Narrative 2:   The Anatomy of GitHub Actions workflows]]"
+							"string" : "[[Narrative 2:   Quick Remedy Commits in the GA workflow Evolution]] "
 						}
 					]
 				},

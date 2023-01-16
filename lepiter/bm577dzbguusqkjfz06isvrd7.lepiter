@@ -738,7 +738,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-10T22:05:44.44558-03:00"
+									"dateAndTimeString" : "2023-01-15T22:31:27.989121-03:00"
 								}
 							},
 							"uid" : {
@@ -748,7 +748,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Narrative 2:   The History of GA workflows]] "
+							"string" : "[[Narrative 2:   Sticky Commits in the GA workflow Evolution]] "
 						}
 					]
 				},
