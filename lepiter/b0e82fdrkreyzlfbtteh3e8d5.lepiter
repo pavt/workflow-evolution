@@ -18,43 +18,6 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-13T14:25:26.749968-03:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-15T21:30:58.204984-03:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "fYVlQYquDQCyShA/DG9feA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Exploring GA workflow through MWE:"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2023-01-15T21:31:09.54242-03:00"
 					}
 				},
@@ -66,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-16T23:42:21.957048-03:00"
+						"dateAndTimeString" : "2023-01-18T23:35:29.387561-03:00"
 					}
 				},
 				"uid" : {
@@ -76,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "**Goal**: inspect the existence of “Sticky Commits” in the GA workflow History"
+				"string" : "Our goal is *to detect one or more sequences of commits (the sticky ones) through the exploration of the history of the pythonpackage.yml file*."
 			},
 			{
 				"__type" : "textSnippet",
@@ -103,7 +66,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-15T21:25:52.898234-03:00"
+						"dateAndTimeString" : "2023-01-18T13:46:31.573312-03:00"
 					}
 				},
 				"uid" : {
@@ -113,7 +76,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We wrap the history of a worflow in the {{gtClass:name=WEHistory}} class"
+				"string" : "We wrap the history of a workflow in a {{gtClass:name=WEHistory}} object"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -319,14 +282,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-10T22:39:50.81226-03:00"
+						"dateAndTimeString" : "2023-01-18T23:07:56.513481-03:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "f5lOzVSuDQCcNUvjBxX9uQ=="
 				},
-				"code" : "histories := WEHistories fromReposPath: '../repositories'."
+				"code" : "histories := WEHistories fromReposPath: '../repositories'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -426,12 +389,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-01-16T23:01:05.653702-03:00"
+			"dateAndTimeString" : "2023-01-18T21:41:57.623749-03:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Sticky Commits in the GA workflow Evolution"
+		"title" : "Sticky Commits narrative"
 	},
 	"uid" : {
 		"__type" : "uuid",

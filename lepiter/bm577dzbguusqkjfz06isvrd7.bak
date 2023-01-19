@@ -701,7 +701,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-10T19:24:23.481195-03:00"
+									"dateAndTimeString" : "2023-01-18T20:48:54.356992-03:00"
 								}
 							},
 							"uid" : {
@@ -711,7 +711,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Narrative 1:   The Anatomy of GitHub Actions workflows]] "
+							"string" : "[[The Anatomy of GitHub Actions workflows]] "
 						},
 						{
 							"__type" : "textSnippet",
@@ -738,7 +738,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-01-15T21:31:55.556113-03:00"
+									"dateAndTimeString" : "2023-01-18T20:48:10.722494-03:00"
 								}
 							},
 							"uid" : {
@@ -748,7 +748,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "[[Narrative 2:   Quick Remedy Commits in the GA workflow Evolution]] "
+							"string" : "[[Sticky Commits]]]"
 						}
 					]
 				},

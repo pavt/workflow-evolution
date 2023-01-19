@@ -755,7 +755,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-01-15T21:05:33.432952-03:00"
+						"dateAndTimeString" : "2023-01-15T21:06:47.488086-03:00"
 					}
 				},
 				"uid" : {
@@ -765,7 +765,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Our **goal** is to know the key components  of a Workflow."
+				"string" : "Our **goal** is to  formulate specific queries about the components of a set of GA workflows"
 			}
 		]
 	},
