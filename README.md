@@ -3,12 +3,12 @@
 Load the project into GT:
 ```
 Metacello new
-	baseline: 'GtStuff';
-	repository: 'github://pavt/gt-stuff:main/src';
+	baseline: 'WorkflowEvolution';
+	repository: 'github://pavt/workflow-evolution:main/src';
 	load
 ```
 
 Load the Lepiter database:
 ```
-BaselineOfGtStuff loadLepiter
+BaselineOfWorkflowEvolution loadLepiter
 ```
