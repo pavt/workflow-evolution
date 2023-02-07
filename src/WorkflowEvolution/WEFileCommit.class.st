@@ -63,6 +63,8 @@ WEFileCommit >> file: aFilename [
 { #category : #accessing }
 WEFileCommit >> gtChangesFor: aView [
 	<gtView>
+	(self hasPreviousFileCommit and: [ self commit ancestors isNotEmpty ])
+		ifFalse: [ ^ aView empty ].
 	^ aView forward
 		title: 'Changes';
 		priority: 20;
@@ -83,15 +85,13 @@ WEFileCommit >> gtDetailsFor: aView [
 { #category : #accessing }
 WEFileCommit >> gtDiffFor: aView [
 	<gtView>
+	(self hasPreviousFileCommit and: [ self commit ancestors isNotEmpty ])
+		ifFalse: [ ^ aView empty ].
 	^ aView forward
 		title: 'Diff';
 		priority: 30;
-		object: self diff; 
+		object: self diff;
 		view: #gtViewDiffFor:
-	
-		
-		
-		
 ]
 
 { #category : #accessing }
