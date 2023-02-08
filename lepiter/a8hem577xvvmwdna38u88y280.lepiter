@@ -280,14 +280,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T17:09:50.385031+01:00"
+						"dateAndTimeString" : "2023-02-08T08:50:02.58176+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "rkU6HYCwDQCp7HszBXnkrA=="
 				},
-				"code" : "historiesPlusTen"
+				"code" : "historiesPlusTen "
 			},
 			{
 				"__type" : "textSnippet",
@@ -351,14 +351,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T15:48:04.108966+01:00"
+						"dateAndTimeString" : "2023-02-08T09:28:33.012249+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Vwqt9n6wDQCpcvI/BXnkrA=="
 				},
-				"code" : "words := historiesPlusTen histories\r\t\tcollect: [ :each | \r\t\t\teach workflowCommits\r\t\t\t\tcollect: [ :each2 | each2 commit comment allRegexMatches: '\\w+' ] ]"
+				"code" : "words := historiesPlusTen histories\r\t\tcollect: [ :each | \r\t\t\teach workflowCommits\r\t\t\t\tcollect: [ :each2 | each2 commit comment \"allRegexMatches: '\\w+'\" ] ]"
 			},
 			{
 				"__type" : "pharoSnippet",

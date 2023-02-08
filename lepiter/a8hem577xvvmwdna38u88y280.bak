@@ -280,14 +280,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T17:09:50.385031+01:00"
+						"dateAndTimeString" : "2023-02-08T08:50:02.58176+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "rkU6HYCwDQCp7HszBXnkrA=="
 				},
-				"code" : "historiesPlusTen"
+				"code" : "historiesPlusTen "
 			},
 			{
 				"__type" : "textSnippet",
@@ -619,12 +619,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-07T10:17:51.884617+01:00"
+			"dateAndTimeString" : "2023-02-07T17:39:14.605865+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Part 1 "
+		"title" : "Study setup "
 	},
 	"uid" : {
 		"__type" : "uuid",

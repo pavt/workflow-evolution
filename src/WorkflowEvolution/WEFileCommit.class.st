@@ -97,6 +97,10 @@ WEFileCommit >> gtDiffFor: aView [
 { #category : #accessing }
 WEFileCommit >> gtViewTwoPanesDiffFor: aView [
 	<gtView>
+	
+	(self hasPreviousFileCommit and: [ self commit ancestors isNotEmpty ])
+		ifFalse: [ ^ aView empty ].
+	
 	^ aView forward
 		title: 'Diff (two panes)';
 		priority: 40;
