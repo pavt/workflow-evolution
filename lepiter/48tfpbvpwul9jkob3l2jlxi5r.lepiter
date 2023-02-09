@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-09T15:37:21.627209+01:00"
+						"dateAndTimeString" : "2023-02-09T22:47:23.573489+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-09T15:37:21.627209+01:00"
+						"dateAndTimeString" : "2023-02-09T22:48:19.514855+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,44 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "We want a lexical pattern similar to : *(former or last or prev or previous) and commit* "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-09T22:48:22.688257+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-09T22:49:17.348604+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "3WaHE62wDQCnAF0rDLqzRw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Ref: [quick remedy commits](https://link.springer.com/article/10.1007/s10664-021-10051-z#Sec2)"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -215,6 +252,43 @@
 				"code" : "nlp := WENLP new."
 			},
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-09T22:51:54.97298+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-09T22:52:13.676669+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "WQwKIK2wDQCnV1VnDLqzRw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Example: the next is the commit message"
+			},
+			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -239,14 +313,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-09T22:38:23.772078+01:00"
+						"dateAndTimeString" : "2023-02-09T22:52:21.970912+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "tyPywaywDQChiJVHDLqzRw=="
 				},
-				"code" : "text := #('Fixes a bug introduced in previous commit')."
+				"code" : "commitMessage := #('Fixes a bug introduced in previous commit')."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -273,14 +347,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-09T22:40:27.41392+01:00"
+						"dateAndTimeString" : "2023-02-09T22:52:30.738447+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "H6+0wqywDQChsTUrDLqzRw=="
 				},
-				"code" : "gram := nlp nGramFor: text nSize: 2.\n"
+				"code" : "gram := nlp nGramFor: commitMessage nSize: 2.\n"
 			}
 		]
 	},
