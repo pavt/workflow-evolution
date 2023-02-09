@@ -246,7 +246,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T15:46:41.654248+01:00"
+						"dateAndTimeString" : "2023-02-08T16:27:07.57744+01:00"
 					}
 				},
 				"uid" : {
@@ -351,14 +351,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T15:48:04.108966+01:00"
+						"dateAndTimeString" : "2023-02-09T15:34:02.082777+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Vwqt9n6wDQCpcvI/BXnkrA=="
 				},
-				"code" : "words := historiesPlusTen histories\r\t\tcollect: [ :each | \r\t\t\teach workflowCommits\r\t\t\t\tcollect: [ :each2 | each2 commit comment allRegexMatches: '\\w+' ] ]"
+				"code" : "words := historiesPlusTen histories\r\t\tcollect: [ :each | \r\t\t\teach workflowCommits\r\t\t\t\tcollect: [ :each2 | each2 commit comment matchesRegex: 'fix+g' ] ]"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -385,218 +385,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T16:22:38.321248+01:00"
+						"dateAndTimeString" : "2023-02-09T15:29:32.908308+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "2Ctje3ywDQCau6ppBXnkrA=="
 				},
-				"code" : "words := historiesPlusTen histories\r\t\tcollect: [ :each | \r\t\t\teach workflowCommits\r\t\t\t\tcollect: [ :each2 | \r\t\t\t\t\t((each2 commit comment allRegexMatches: '\\w+')\r\t\t\t\t\t\tselect: [ :each3 | (each3 = 'cleanup')  ]) ] ]"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T12:43:33.341805+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T15:14:40.959271+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "5FbzZHywDQCZcG19BXnkrA=="
-				},
-				"code" : "words "
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T11:02:37.536811+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T11:05:59.416933+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "PhX/+3qwDQCwYLTTBXnkrA=="
-				},
-				"code" : "aCommitComment := changeHistories first workflowCommits first commit comment"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T11:06:04.374072+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T11:13:58.509053+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "bStTCHuwDQCxVF/xBXnkrA=="
-				},
-				"code" : "aCommitComment asString allRegexMatches: '\\w+'"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T11:14:30.207483+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T11:23:10.350738+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "A5R5JnuwDQCxy9BjBXnkrA=="
-				},
-				"code" : "aCollectionOfCommits := OrderedCollection new.\rchangeHistories do: [ :each | \r\taCollectionOfCommits add: each  \r ]"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T11:19:55.224722+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T11:19:55.917155+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "SPPYOXuwDQCzn2C7BXnkrA=="
-				},
-				"code" : "allHistories histories do: [:each | sizeOfHistories add: each workflowCommits size]."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T15:10:58.860475+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T15:12:23.7946+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "NT4vdH6wDQCiJzpOBXnkrA=="
-				},
-				"code" : "ordCol := OrderedCollection new.\nordCol add: 'Seaside'; add: 'SqueakSource'; add: 'Monticello'.\rordCol count: [:each | each isString]"
+				"code" : "words := historiesPlusTen histories\r\t\tcollect: [ :each | \r\t\t\teach workflowCommits\r\t\t\t\tcollect: [ :each2 | \r\t\t\t\t\t((each2 commit comment allRegexMatches: '\\w+')\r\t\t\t\t\t\tselect: [ :each3 | (each3 = 'fix*g')  ]) ] ]"
 			}
 		]
 	},
