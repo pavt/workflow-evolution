@@ -256,6 +256,43 @@
 				"code" : "changeHistories := histories histories select: [ :each | each workflowCommits size > 10].\rhistoriesPlusTen:= WEHistories from: changeHistories"
 			},
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T10:44:27.263663+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T10:44:45.200616+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "88RRFLewDQCBv3w/D8OYzA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Then, we get the comments of each commit on each history"
+			},
+			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -280,14 +317,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-08T08:50:02.58176+01:00"
+						"dateAndTimeString" : "2023-02-10T10:41:44.9695+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "rkU6HYCwDQCp7HszBXnkrA=="
 				},
-				"code" : "historiesPlusTen "
+				"code" : "commentsOfHistories := historiesPlusTen histories collect: [ :each | each workflowCommits collect: [ :each2 | each2 commit comment ] ]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -303,7 +340,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T15:46:12.372695+01:00"
+						"dateAndTimeString" : "2023-02-11T22:35:24.943439+01:00"
 					}
 				},
 				"editEmail" : {
@@ -314,17 +351,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T15:47:14.659254+01:00"
+						"dateAndTimeString" : "2023-02-11T22:35:37.202615+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "NBkO8n6wDQCn5ZtWBXnkrA=="
+					"uidString" : "h9XwINWwDQCy+/toD8OYzA=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then, we get all the tokens of each commit comment, per history"
+				"string" : "Then, we get the 2-grams of the comments mesages  of each commit on each history"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -340,7 +377,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T15:47:28.142857+01:00"
+						"dateAndTimeString" : "2023-02-10T10:41:31.984676+01:00"
 					}
 				},
 				"editEmail" : {
@@ -351,14 +388,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-09T15:34:02.082777+01:00"
+						"dateAndTimeString" : "2023-02-11T12:03:40.088443+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Vwqt9n6wDQCpcvI/BXnkrA=="
+					"uidString" : "qWsWCrewDQCAsH3ND8OYzA=="
 				},
-				"code" : "words := historiesPlusTen histories\r\t\tcollect: [ :each | \r\t\t\teach workflowCommits\r\t\t\t\tcollect: [ :each2 | each2 commit comment matchesRegex: 'fix+g' ] ]"
+				"code" : "twoGrams := commentsOfHistories collect: [ :each | \r\t\t\tnlp := WENLP new.\r\t\t\tcommitMessage := each asArray.\r\t\t\tngram := nlp nGramFor: commitMessage nSize: 2.\r ] "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-11T22:35:53.096618+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-11T22:36:27.827458+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "cfqZItWwDQCzUJrkD8OYzA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Then, we get a collection of flat 2-grams"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -374,7 +448,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T12:49:49.770433+01:00"
+						"dateAndTimeString" : "2023-02-10T10:53:11.284081+01:00"
 					}
 				},
 				"editEmail" : {
@@ -385,14 +459,357 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-09T15:29:32.908308+01:00"
+						"dateAndTimeString" : "2023-02-10T23:38:37.1431+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "2Ctje3ywDQCau6ppBXnkrA=="
+					"uidString" : "u+HEM7ewDQCDfUL+D8OYzA=="
 				},
-				"code" : "words := historiesPlusTen histories\r\t\tcollect: [ :each | \r\t\t\teach workflowCommits\r\t\t\t\tcollect: [ :each2 | \r\t\t\t\t\t((each2 commit comment allRegexMatches: '\\w+')\r\t\t\t\t\t\tselect: [ :each3 | (each3 = 'fix*g')  ]) ] ]"
+				"code" : "twoGramsNotRepeated:= (twoGrams flatten flatten ) asOrderedCollection"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-11T22:36:35.979675+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-11T22:36:54.884087+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "1nonJdWwDQC0LGHTD8OYzA=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Next: we need to filter all the pairs containing not useful words"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T11:21:31.402809+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T23:37:49.394884+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "daIambewDQCI2VwtD8OYzA=="
+				},
+				"code" : "toReview:= OrderedCollection new."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T11:10:47.075495+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T16:36:52.012399+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "C/uycrewDQCFRVV6D8OYzA=="
+				},
+				"code" : "values := twoGramsNotRepeated\r\t\tcollect: [ :each | \r\t\t\t(each first isEmpty\r\t\t\t\tor: [ each first = '*'\r\t\t\t\t\t\tor: [ each first isEmpty or: [ each first = '*' ] ] ])\r\t\t\t\tifFalse: [ toReview add: each ] ]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T14:21:50.195674+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T17:08:22.725455+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "B1H0HbqwDQCRwJMdD8OYzA=="
+				},
+				"code" : "repeated := (selected:= (values select: [:each | each notNil]))"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T14:42:00.669344+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T22:14:29.690785+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "v6waZrqwDQCUKhopD8OYzA=="
+				},
+				"code" : "repeated count: [:each | 'fix' match: each first  ]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T22:09:50.520801+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T23:30:43.941833+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gBKsp8CwDQCmSK4YD8OYzA=="
+				},
+				"code" : "(repeated collect: [: each | each first ]) asOrderedCollection"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T23:36:33.750546+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T23:43:06.382098+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8gfP3cGwDQCpyPu5D8OYzA=="
+				},
+				"code" : "sorted := repeated sorted:  [:a :b | b first > a first ]."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T23:23:55.028592+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-11T12:30:29.427555+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "W+CVsMGwDQCoIf73D8OYzA=="
+				},
+				"code" : "bagOfPairs := Bag new.\nrepeated do: [ :each | \n    each allPairsDo: [:first :second |\n    (first = second) ifFalse: [bagOfPairs add: {first . second}]\n    ].\n]."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-10T23:43:11.344966+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-11T12:41:07.880801+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "gdyB9cGwDQCqZHoQD8OYzA=="
+				},
+				"code" : "(bagOfPairs  asDictionary contents) sorted: [ :a :b | a > b ]."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-11T12:29:52.790867+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-11T12:32:50.903109+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "4zhoq8ywDQCwuSVlD8OYzA=="
+				},
+				"code" : "((bagOfPairs  asDictionary) associations detectMax: #value) key\n"
 			}
 		]
 	},
