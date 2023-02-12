@@ -256,6 +256,40 @@
 				"code" : "changeHistories := histories histories select: [ :each | each workflowCommits size > 10].\rhistoriesPlusTen:= WEHistories from: changeHistories"
 			},
 			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-12T16:45:05.977647+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-12T16:45:06.682299+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/kb8WeSwDQCs15vrCHquWw=="
+				},
+				"code" : "historiesPlusTen"
+			},
+			{
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -351,7 +385,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-11T22:35:37.202615+01:00"
+						"dateAndTimeString" : "2023-02-12T16:44:54.690699+01:00"
 					}
 				},
 				"uid" : {
@@ -361,7 +395,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then, we get the 2-grams of the comments mesages  of each commit on each history"
+				"string" : "Then, we get the 2-grams of the mesages  of each commit on each history"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -388,7 +422,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-11T12:03:40.088443+01:00"
+						"dateAndTimeString" : "2023-02-12T16:45:52.766106+01:00"
 					}
 				},
 				"uid" : {
@@ -422,7 +456,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-11T22:36:27.827458+01:00"
+						"dateAndTimeString" : "2023-02-12T16:46:13.123239+01:00"
 					}
 				},
 				"uid" : {
@@ -432,7 +466,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then, we get a collection of flat 2-grams"
+				"string" : "Then, we get a flat the collection 2-grams"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -459,14 +493,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-10T23:38:37.1431+01:00"
+						"dateAndTimeString" : "2023-02-12T16:50:00.580648+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "u+HEM7ewDQCDfUL+D8OYzA=="
 				},
-				"code" : "twoGramsNotRepeated:= (twoGrams flatten flatten ) asOrderedCollection"
+				"code" : "twoGramsCollection:= (twoGrams flatten flatten ) asOrderedCollection"
 			},
 			{
 				"__type" : "textSnippet",
@@ -493,7 +527,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-11T22:36:54.884087+01:00"
+						"dateAndTimeString" : "2023-02-12T16:50:21.896974+01:00"
 					}
 				},
 				"uid" : {
@@ -530,14 +564,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-10T23:37:49.394884+01:00"
+						"dateAndTimeString" : "2023-02-12T16:51:08.774307+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "daIambewDQCI2VwtD8OYzA=="
 				},
-				"code" : "toReview:= OrderedCollection new."
+				"code" : "pairToReview:= OrderedCollection new."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -564,14 +598,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-10T16:36:52.012399+01:00"
+						"dateAndTimeString" : "2023-02-12T18:36:35.834468+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "C/uycrewDQCFRVV6D8OYzA=="
 				},
-				"code" : "values := twoGramsNotRepeated\r\t\tcollect: [ :each | \r\t\t\t(each first isEmpty\r\t\t\t\tor: [ each first = '*'\r\t\t\t\t\t\tor: [ each first isEmpty or: [ each first = '*' ] ] ])\r\t\t\t\tifFalse: [ toReview add: each ] ]"
+				"code" : "values := twoGramsCollection\r\t\tcollect: [ :each | \r\t\t\t(each first isEmpty\r\t\t\t\tor: [ each first = '*'\r\t\t\t\t\t\tor: [ each first isEmpty\r\t\t\t\t\t\t\t\tor: [ each first isNil\r\t\t\t\t\t\t\t\t\t\tor: [ each first = Character null\r\t\t\t\t\t\t\t\t\t\t\t\tor: [ each second = '*'\r\t\t\t\t\t\t\t\t\t\t\t\t\t\tor: [ each second isEmpty\r\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tor: [ each second isNil or: [ each second = Character null ] ] ] ] ] ] ] ])\r\t\t\t\tifFalse: [ pairToReview add: each ] ]"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-12T16:51:55.650706+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-12T17:39:35.66532+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8KxocOSwDQCvUTjMCHquWw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Values still contain Nil elements, so we filter it"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -598,14 +669,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-10T17:08:22.725455+01:00"
+						"dateAndTimeString" : "2023-02-12T19:18:45.342639+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "B1H0HbqwDQCRwJMdD8OYzA=="
 				},
-				"code" : "repeated := (selected:= (values select: [:each | each notNil]))"
+				"code" : "valuesNotNil := (selected:= (values select: [:each | each notNil])) asBag"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-12T19:27:41.026087+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-12T19:27:59.626571+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "NdyInuawDQC9R06fCHquWw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We still have Character null values, so we reject all of them:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -621,7 +729,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-10T14:42:00.669344+01:00"
+						"dateAndTimeString" : "2023-02-12T17:39:44.581376+01:00"
 					}
 				},
 				"editEmail" : {
@@ -632,14 +740,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-10T22:14:29.690785+01:00"
+						"dateAndTimeString" : "2023-02-12T19:28:07.165202+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "v6waZrqwDQCUKhopD8OYzA=="
+					"uidString" : "48lnHeWwDQCyOMlqCHquWw=="
 				},
-				"code" : "repeated count: [:each | 'fix' match: each first  ]"
+				"code" : "ngrams:= valuesNotNil reject: [:each | each first first = Character null or: [each second = Character null]]"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-12T20:16:24.658727+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-12T20:16:45.079787+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "X0ifTeewDQCBohRiCHquWw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Now, we need to sort the pairs the 2-grams: ()"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -655,7 +800,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-10T22:09:50.520801+01:00"
+						"dateAndTimeString" : "2023-02-12T19:51:19.399369+01:00"
 					}
 				},
 				"editEmail" : {
@@ -666,150 +811,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-10T23:30:43.941833+01:00"
+						"dateAndTimeString" : "2023-02-12T20:16:16.598339+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "gBKsp8CwDQCmSK4YD8OYzA=="
+					"uidString" : "GSb58+awDQC/ROg2CHquWw=="
 				},
-				"code" : "(repeated collect: [: each | each first ]) asOrderedCollection"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-10T23:36:33.750546+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-10T23:43:06.382098+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "8gfP3cGwDQCpyPu5D8OYzA=="
-				},
-				"code" : "sorted := repeated sorted:  [:a :b | b first > a first ]."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-10T23:23:55.028592+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-11T12:30:29.427555+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "W+CVsMGwDQCoIf73D8OYzA=="
-				},
-				"code" : "bagOfPairs := Bag new.\nrepeated do: [ :each | \n    each allPairsDo: [:first :second |\n    (first = second) ifFalse: [bagOfPairs add: {first . second}]\n    ].\n]."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-10T23:43:11.344966+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-11T12:41:07.880801+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "gdyB9cGwDQCqZHoQD8OYzA=="
-				},
-				"code" : "(bagOfPairs  asDictionary contents) sorted: [ :a :b | a > b ]."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-11T12:29:52.790867+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-11T12:32:50.903109+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "4zhoq8ywDQCwuSVlD8OYzA=="
-				},
-				"code" : "((bagOfPairs  asDictionary) associations detectMax: #value) key\n"
+				"code" : "(ngrams groupedBy: [:each | each ]) \r"
 			}
 		]
 	},
