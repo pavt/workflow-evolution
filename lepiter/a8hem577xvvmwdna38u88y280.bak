@@ -198,6 +198,77 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-13T09:49:13.013022+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-13T09:49:23.119829+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9GdjqPKwDQCloMZLCT1v1g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We obtain 307 histories"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-13T09:45:32.638357+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-13T09:45:45.169643+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "vPdgm/KwDQClRvdhCT1v1g=="
+				},
+				"code" : "histories histories size  "
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2023-02-07T15:32:36.749486+01:00"
 					}
 				},
@@ -256,6 +327,43 @@
 				"code" : "changeHistories := histories histories select: [ :each | each workflowCommits size > 10].\rhistoriesPlusTen:= WEHistories from: changeHistories"
 			},
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-13T09:49:43.317986+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-02-13T09:49:48.381673+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "mgVIqvKwDQCl9UysCT1v1g=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "We obtain 123 histories"
+			},
+			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -280,14 +388,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-12T16:45:06.682299+01:00"
+						"dateAndTimeString" : "2023-02-13T09:45:56.628259+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "/kb8WeSwDQCs15vrCHquWw=="
 				},
-				"code" : "historiesPlusTen"
+				"code" : "historiesPlusTen histories size"
 			},
 			{
 				"__type" : "textSnippet",
@@ -385,7 +493,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-12T16:44:54.690699+01:00"
+						"dateAndTimeString" : "2023-02-13T10:00:55.614917+01:00"
 					}
 				},
 				"uid" : {
@@ -395,7 +503,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then, we get the 2-grams of the mesages  of each commit on each history"
+				"string" : "Then, we get a collections of 2-grams of the comments  of each commit on each history"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -493,14 +601,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-12T16:50:00.580648+01:00"
+						"dateAndTimeString" : "2023-02-13T10:01:51.17953+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "u+HEM7ewDQCDfUL+D8OYzA=="
 				},
-				"code" : "twoGramsCollection:= (twoGrams flatten flatten ) asOrderedCollection"
+				"code" : "twoGramsCollection:= (twoGrams flatten flatten) asOrderedCollection"
 			},
 			{
 				"__type" : "textSnippet",
@@ -553,40 +661,6 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-10T11:21:31.402809+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-12T16:51:08.774307+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "daIambewDQCI2VwtD8OYzA=="
-				},
-				"code" : "pairToReview:= OrderedCollection new."
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2023-02-10T11:10:47.075495+01:00"
 					}
 				},
@@ -598,14 +672,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-12T18:36:35.834468+01:00"
+						"dateAndTimeString" : "2023-02-13T10:02:39.825938+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "C/uycrewDQCFRVV6D8OYzA=="
 				},
-				"code" : "values := twoGramsCollection\r\t\tcollect: [ :each | \r\t\t\t(each first isEmpty\r\t\t\t\tor: [ each first = '*'\r\t\t\t\t\t\tor: [ each first isEmpty\r\t\t\t\t\t\t\t\tor: [ each first isNil\r\t\t\t\t\t\t\t\t\t\tor: [ each first = Character null\r\t\t\t\t\t\t\t\t\t\t\t\tor: [ each second = '*'\r\t\t\t\t\t\t\t\t\t\t\t\t\t\tor: [ each second isEmpty\r\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tor: [ each second isNil or: [ each second = Character null ] ] ] ] ] ] ] ])\r\t\t\t\tifFalse: [ pairToReview add: each ] ]"
+				"code" : "pairToReview := OrderedCollection new.\rvalues := twoGramsCollection\r\t\tcollect: [ :each | \r\t\t\t(each first isEmpty\r\t\t\t\tor: [ each first = '*'\r\t\t\t\t\t\tor: [ each first isEmpty\r\t\t\t\t\t\t\t\tor: [ each first isNil\r\t\t\t\t\t\t\t\t\t\tor: [ each first = Character null\r\t\t\t\t\t\t\t\t\t\t\t\tor: [ each second = '*'\r\t\t\t\t\t\t\t\t\t\t\t\t\t\tor: [ each second isEmpty\r\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tor: [ each second isNil or: [ each second = Character null ] ] ] ] ] ] ] ])\r\t\t\t\tifFalse: [ pairToReview add: each ] ]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -703,7 +777,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-12T19:27:59.626571+01:00"
+						"dateAndTimeString" : "2023-02-13T10:03:13.435892+01:00"
 					}
 				},
 				"uid" : {
@@ -713,7 +787,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We still have Character null values, so we reject all of them:"
+				"string" : "We still have Character null values, so we reject them all:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -740,14 +814,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-12T19:28:07.165202+01:00"
+						"dateAndTimeString" : "2023-02-13T10:27:08.435591+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "48lnHeWwDQCyOMlqCHquWw=="
 				},
-				"code" : "ngrams:= valuesNotNil reject: [:each | each first first = Character null or: [each second = Character null]]"
+				"code" : "ngrams:= valuesNotNil reject: [:each | each first first = Character null or: [each second  = Character null]]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -774,7 +848,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-12T20:16:45.079787+01:00"
+						"dateAndTimeString" : "2023-02-13T11:29:56.589731+01:00"
 					}
 				},
 				"uid" : {
@@ -784,7 +858,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Now, we need to sort the pairs the 2-grams: ()"
+				"string" : "Now, we get the 2-grams in order of occurrences:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -800,7 +874,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-12T19:51:19.399369+01:00"
+						"dateAndTimeString" : "2023-02-13T11:11:57.418293+01:00"
 					}
 				},
 				"editEmail" : {
@@ -811,14 +885,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-12T20:16:16.598339+01:00"
+						"dateAndTimeString" : "2023-02-13T11:13:38.046798+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "GSb58+awDQC/ROg2CHquWw=="
+					"uidString" : "nW1q0POwDQCopKoeCT1v1g=="
 				},
-				"code" : "(ngrams groupedBy: [:each | each ]) \r"
+				"code" : "ngrams sortedCounts"
 			}
 		]
 	},

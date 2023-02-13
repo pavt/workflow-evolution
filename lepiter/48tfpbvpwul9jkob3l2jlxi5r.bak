@@ -316,14 +316,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-09T22:52:21.970912+01:00"
+						"dateAndTimeString" : "2023-02-10T10:46:52.077511+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "tyPywaywDQChiJVHDLqzRw=="
 				},
-				"code" : "commitMessage := #('Fixes a bug introduced in previous commit')."
+				"code" : "commitMessage := 'Fixes a bug introduced in previous commit'"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -380,12 +380,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-02-09T15:37:21.594511+01:00"
+			"dateAndTimeString" : "2023-02-13T11:34:15.635797+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Lexical pattern "
+		"title" : "A model to generate n-grams"
 	},
 	"uid" : {
 		"__type" : "uuid",
