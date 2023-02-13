@@ -530,14 +530,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-12T16:45:52.766106+01:00"
+						"dateAndTimeString" : "2023-02-13T17:04:31.116319+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "qWsWCrewDQCAsH3ND8OYzA=="
 				},
-				"code" : "twoGrams := commentsOfHistories collect: [ :each | \r\t\t\tnlp := WENLP new.\r\t\t\tcommitMessage := each asArray.\r\t\t\tngram := nlp nGramFor: commitMessage nSize: 2.\r ] "
+				"code" : "twoGrams := commentsOfHistories collect: [ :each | \r\t\t\tnlp := WENLP new.\r\t\t\tcommitMessage := each asArray.\r\t\t\t\"words:= nlp stopWords: commitMessage.\"\r\t\t\tngram := nlp nGramFor: commitMessage nSize: 2.\r ] "
 			},
 			{
 				"__type" : "textSnippet",

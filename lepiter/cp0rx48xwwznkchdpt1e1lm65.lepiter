@@ -455,7 +455,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:29:44.948737+01:00"
+						"dateAndTimeString" : "2023-02-13T18:01:58.466411+01:00"
 					}
 				},
 				"uid" : {
@@ -465,7 +465,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then, we get a collections of comments"
+				"string" : "Then, we clean all the Stop Words from each collection"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -481,7 +481,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:27:52.84348+01:00"
+						"dateAndTimeString" : "2023-02-13T16:32:55.510625+01:00"
 					}
 				},
 				"editEmail" : {
@@ -492,14 +492,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:30:37.064109+01:00"
+						"dateAndTimeString" : "2023-02-13T18:06:14.115712+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "F6WrY/ewDQCxXEr7CT1v1g=="
+					"uidString" : "x55JTPiwDQCTkRyUBa73Rg=="
 				},
-				"code" : "commentsMessages := commentsOfHistories flattened"
+				"code" : "commentsClean := commentsOfHistories collect: [:each | \r\tnlp:= WENLP new.\r\ttext:= each asArray.\r\twords:= nlp stopWords: text.\r\t]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -515,7 +515,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:32:29.51888+01:00"
+						"dateAndTimeString" : "2023-02-13T18:06:23.942516+01:00"
 					}
 				},
 				"editEmail" : {
@@ -526,17 +526,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:32:47.704132+01:00"
+						"dateAndTimeString" : "2023-02-13T18:06:40.306817+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "1e8HdPewDQCzB2+8CT1v1g=="
+					"uidString" : "IHF/mvmwDQCZtVIWBa73Rg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "From the comments, we get all the individual words"
+				"string" : "The, we collect each word of a comment:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -552,7 +552,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:30:13.907335+01:00"
+						"dateAndTimeString" : "2023-02-13T15:33:51.874654+01:00"
 					}
 				},
 				"editEmail" : {
@@ -563,14 +563,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:33:44.489161+01:00"
+						"dateAndTimeString" : "2023-02-13T18:04:18.13826+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "AhwUbPewDQCx3NQ/CT1v1g=="
+					"uidString" : "/gYSefewDQCzztZlCT1v1g=="
 				},
-				"code" : "words := (commentsMessages flatCollect: [:each | each allRegexMatches: '\\w+'])"
+				"code" : "wordsCollection := commentsClean flattened collect: [:each | each allRegexMatches: '\\w+' ]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -586,7 +586,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:37:12.974337+01:00"
+						"dateAndTimeString" : "2023-02-13T18:07:21.168973+01:00"
 					}
 				},
 				"editEmail" : {
@@ -597,17 +597,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:59:01.843592+01:00"
+						"dateAndTimeString" : "2023-02-13T18:07:21.168973+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "JcXhhPewDQC1EOvHCT1v1g=="
+					"uidString" : "TsPTm/mwDQCaZdYMBa73Rg=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Since there are many stopwords we reject them all (not yet implemented)"
+				"string" : "We filtered each word with less than 3 letters"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -623,7 +623,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:39:23.15037+01:00"
+						"dateAndTimeString" : "2023-02-13T18:04:24.358482+01:00"
 					}
 				},
 				"editEmail" : {
@@ -634,48 +634,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:56:38.512583+01:00"
+						"dateAndTimeString" : "2023-02-13T18:05:52.461448+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "HuLQjPewDQC1h0kYCT1v1g=="
+					"uidString" : "I8tyk/mwDQCYbSlqBa73Rg=="
 				},
-				"code" : "wordModel := WENLP new.\rtext:= 'hi this is a Try of Words Stops' asString asArray.\rwordModel nGramFor: text nSize: 2\r"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:40:14.771789+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:52:19.829858+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "ppTkj/ewDQC14C4QCT1v1g=="
-				},
-				"code" : "wordModel nGramFor: text nSize: 2"
+				"code" : "words := wordsCollection flattened reject: [:each | each size < 3]"
 			},
 			{
 				"__type" : "textSnippet",
@@ -728,7 +694,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:33:51.874654+01:00"
+						"dateAndTimeString" : "2023-02-13T17:59:10.142051+01:00"
 					}
 				},
 				"editEmail" : {
@@ -739,14 +705,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:34:45.556955+01:00"
+						"dateAndTimeString" : "2023-02-13T18:05:43.795813+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "/gYSefewDQCzztZlCT1v1g=="
+					"uidString" : "sTu4gPmwDQCWwztbBa73Rg=="
 				},
-				"code" : "words asBag "
+				"code" : "words flattened asBag"
 			},
 			{
 				"__type" : "textSnippet",
