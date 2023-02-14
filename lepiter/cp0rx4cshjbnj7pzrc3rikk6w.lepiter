@@ -71,7 +71,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-14T11:20:09.613891+01:00"
+									"dateAndTimeString" : "2023-02-14T23:34:50.715943+01:00"
 								}
 							},
 							"uid" : {
@@ -81,7 +81,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We generate a set of single words:[[Generating set of single words from commit notes ]]"
+							"string" : "Set of single words:[[Generating set of single words from commit notes ]]"
 						},
 						{
 							"__type" : "textSnippet",
@@ -108,7 +108,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-14T11:21:03.04821+01:00"
+									"dateAndTimeString" : "2023-02-14T23:11:03.688894+01:00"
 								}
 							},
 							"uid" : {
@@ -118,7 +118,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "We generate a set of 2-grams:[[Generating 2-grams from commits notes]]"
+							"string" : "Set of 2-grams:[[Generating 2-grams from commits notes]]"
 						}
 					]
 				},
@@ -183,7 +183,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-14T11:21:38.452729+01:00"
+									"dateAndTimeString" : "2023-02-14T23:11:15.039305+01:00"
 								}
 							},
 							"uid" : {
@@ -193,7 +193,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : " fixes, a, bug, etc. as the single words, "
+							"string" : " Fixes, a, bug, etc. as the single words, "
 						},
 						{
 							"__type" : "textSnippet",
@@ -220,7 +220,7 @@
 								"__type" : "time",
 								"time" : {
 									"__type" : "dateAndTime",
-									"dateAndTimeString" : "2023-02-14T11:21:52.917395+01:00"
+									"dateAndTimeString" : "2023-02-14T23:11:20.250569+01:00"
 								}
 							},
 							"uid" : {
@@ -230,7 +230,7 @@
 							"paragraphStyle" : {
 								"__type" : "textStyle"
 							},
-							"string" : "and fixes a, a bug, bug introduced, etc. as 2-grams."
+							"string" : "and Fixes a, a bug, bug introduced, etc. as 2-grams."
 						},
 						{
 							"__type" : "textSnippet",
