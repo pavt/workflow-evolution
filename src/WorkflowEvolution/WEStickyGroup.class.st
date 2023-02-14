@@ -58,36 +58,30 @@ WEStickyGroup >> gtWEStickyFor: aView [
 		title: 'Commits';
 		priority: 10;
 		items: [ self stickyGroup reversed ];
-		
-		column: 'Index' 
-			text: [ :eachItem :eachIndex | 
-				eachIndex asRopedText foreground: Color gray ]
+		column: 'Index'
+			text: [ :eachItem :eachIndex | eachIndex asRopedText foreground: Color gray ]
 			width: 45;
-		
-		column: 'Author' text: [ :each | each commit author ] width: 120;
-		
-		column: 'Date time' text: [ :each | each commit datetime year asString ] width: 60;
-		
+		column: 'Author'
+			text: [ :each | each commit author ]
+			width: 120;
+		column: 'Date time'
+			text: [ :each | each commit datetime year asString ]
+			width: 60;
 		column: 'Duration'
 			text: [ :each | 
 				each hasPreviousFileCommit
-					ifTrue: [ ( each commit datetime - each previousFileCommit commit datetime ) abs asString ]
-					ifFalse: [ 'na' ] ] width: 90;
+					ifTrue: [ self timeDiffOfStickyCommits: each ]
+					ifFalse: [ 'na' ] ]
+			width: 90;
 		column: 'Comment' text: [ :each | each commit comment ];
-		
 		column: 'Category'
-			do: [ :column | 
+			do: [  "column: 'Category' text: [:each | each category ] width: 300":column | 
 				column
 					stencil: [ :commit | 
 						self
 							editableLabelFor: commit category
 							withSetter: [ :newCategoryName | commit category: newCategoryName ] ];
 					weight: 1 ]
-		
-		"column: 'Category' text: [:each | each category ] width: 300"
-		
-		
-		
 ]
 
 { #category : #accessing }
@@ -104,6 +98,11 @@ WEStickyGroup >> stickyGroup [
 { #category : #accessing }
 WEStickyGroup >> stickyGroup: each [
 	stickyGroup := each
+]
+
+{ #category : #accessing }
+WEStickyGroup >> timeDiffOfStickyCommits: each [
+	^ (each commit datetime - each previousFileCommit commit datetime) abs asString
 ]
 
 { #category : #accessing }
