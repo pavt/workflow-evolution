@@ -66,13 +66,13 @@ WEStickyGroup >> gtWEStickyFor: aView [
 		
 		column: 'Author' text: [ :each | each commit author ] width: 120;
 		
-		column: 'Date time' text: [ :each | each commit datetime year asString ] width: 140;
+		column: 'Date time' text: [ :each | each commit datetime year asString ] width: 60;
 		
 		column: 'Duration'
 			text: [ :each | 
 				each hasPreviousFileCommit
 					ifTrue: [ ( each commit datetime - each previousFileCommit commit datetime ) abs asString ]
-					ifFalse: [ 'na' ] ] width: 150;
+					ifFalse: [ 'na' ] ] width: 90;
 		column: 'Comment' text: [ :each | each commit comment ];
 		
 		column: 'Category'
