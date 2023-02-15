@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-09T22:48:19.514855+01:00"
+						"dateAndTimeString" : "2023-02-13T11:34:29.793738+01:00"
 					}
 				},
 				"uid" : {
@@ -39,44 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We want a lexical pattern similar to : *(former or last or prev or previous) and commit* "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-09T22:48:22.688257+01:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-09T22:49:17.348604+01:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "3WaHE62wDQCnAF0rDLqzRw=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Ref: [quick remedy commits](https://link.springer.com/article/10.1007/s10664-021-10051-z#Sec2)"
+				"string" : "We want create a lexical pattern similar to : *(former or last or prev or previous) and commit* "
 			},
 			{
 				"__type" : "textSnippet",
@@ -208,7 +171,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-09T23:38:24.4724+01:00"
+						"dateAndTimeString" : "2023-02-15T01:23:26.350641+01:00"
 					}
 				},
 				"uid" : {
@@ -218,7 +181,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "So, we adapt an NLP class (no Metachello available) with n-gram detection features from: [reference](https://github.com/Ugesh-S/Pharo-NLP)"
+				"string" : "So, we adapt an NLP class (not completely implemented) with n-gram detection features from: [reference](https://github.com/Ugesh-S/Pharo-NLP)"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -316,14 +279,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-10T10:46:52.077511+01:00"
+						"dateAndTimeString" : "2023-02-15T01:24:28.870714+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "tyPywaywDQChiJVHDLqzRw=="
 				},
-				"code" : "commitMessage := 'Fixes a bug introduced in previous commit'"
+				"code" : "commitMessage := 'Fixes a bug introduced in previous commit' asOrderedCollection"
 			},
 			{
 				"__type" : "pharoSnippet",
