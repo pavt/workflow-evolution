@@ -21,6 +21,11 @@ WEHistories class >> from: aHistoryCollection [
 WEHistories class >> fromReposPath: aPathString [
 	| repoPaths histories files |
 	repoPaths := aPathString asFileReference children collect: #gtDisplayString.
+	repoPaths := (aPathString asFileReference children
+			select: [ :each | 
+				each isDirectory
+					and: [ (each / '.git') exists and: [ (each / '.git') isDirectory ] ] ])
+			collect: #gtDisplayString.
 	histories := OrderedCollection new.
 	repoPaths
 		do: [ :repoPath | 
@@ -28,7 +33,6 @@ WEHistories class >> fromReposPath: aPathString [
 					allChildrenMatching: '*.yml') collect: #basename.
 			histories
 				addAll: (files collect: [ :file | WEHistory fromRepoPath: repoPath forYML: file ]) ].
-
 	^ WEHistories from: histories
 ]
 
