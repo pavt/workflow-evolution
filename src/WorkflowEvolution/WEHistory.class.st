@@ -56,7 +56,10 @@ WEHistory >> branch [
 		detect: [ :b | 
 			b name = 'main'
 				or: [ b name = 'master'
-						or: [ b name = 'development' or: [ b name = 'develop' or: [ b name = 'canary' ] ] ] ] ]
+						or: [ b name = 'development'
+								or: [ b name = 'develop'
+										or: [ b name = 'canary'
+												or: [ b name = 'original' or: [ b name = 'drag-race' or: [ b name = 'dev' ] ] ] ] ] ] ] ]
 ]
 
 { #category : #'git support' }
