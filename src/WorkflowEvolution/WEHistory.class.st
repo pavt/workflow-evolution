@@ -64,7 +64,12 @@ WEHistory >> branch [
 																or: [ b name = 'dev'
 																		or: [ b name = '1.19.x/dev'
 																				or: [ b name = '1.19.3'
-																						or: [ b name = 'cinder/3.10' or: [ b name = 'staging' or: [ b name = 'next' or: [b name = 'dev-ose'] ] ] ] ] ] ] ] ] ] ] ]] ]
+																						or: [ b name = 'cinder/3.10'
+																								or: [ b name = 'staging'
+																										or: [ b name = 'next'
+																												or: [ b name = 'dev-ose'
+																														or: [ b name = 'devel'
+																																or: [ b name = 'Multi' or: [ b name = 'xysubfilter_libass' ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ]
 ]
 
 { #category : #'git support' }
