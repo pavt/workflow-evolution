@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T14:20:34.233431+01:00"
+						"dateAndTimeString" : "2023-03-08T09:36:42.261084+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "WwhpcvawDQCv+oE4CT1v1g=="
 				},
-				"code" : "repositories := FileLocator imageDirectory parent / 'repositories'"
+				"code" : "repositories := FileLocator imageDirectory parent / 'repo2'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -279,14 +279,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T14:26:03.656395+01:00"
+						"dateAndTimeString" : "2023-03-08T09:36:55.743069+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "O0aJhvawDQCw6aVqCT1v1g=="
 				},
-				"code" : "changeHistories := histories histories select: [ :each | each workflowCommits size > 10].\rhistoriesPlusTen:= WEHistories from: changeHistories"
+				"code" : "changeHistories := histories histories select: [ :each | each workflowCommits size > 1].\rhistoriesPlusTen:= WEHistories from: changeHistories"
 			},
 			{
 				"__type" : "textSnippet",
@@ -350,14 +350,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T14:27:03.025955+01:00"
+						"dateAndTimeString" : "2023-03-08T09:41:42.445882+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "iXqaifawDQCxAKW0CT1v1g=="
 				},
-				"code" : "historiesPlusTen histories size"
+				"code" : "historiesPlusTen histories size flatCollect: _"
 			},
 			{
 				"__type" : "textSnippet",
@@ -421,14 +421,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T15:29:34.346993+01:00"
+						"dateAndTimeString" : "2023-03-08T09:40:53.450336+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "7CzIfPawDQCwO+fBCT1v1g=="
 				},
-				"code" : "commentsOfHistories := historiesPlusTen histories collect: [ :each | each workflowCommits collect: [ :each2 | each2 commit comment ] ]"
+				"code" : "commentsOfHistories := (historiesPlusTen histories collect: [ :each | each workflowCommits collect: [ :each2 | each2 commit comment ] ]) flattened"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-08T09:41:15.210778+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-08T09:41:50.310317+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "+JNiOsGyDQCvZA1ZCK0erg=="
+				},
+				"code" : "commentsOfHistories := (historiesPlusTen histories flatCollect:: [ :each | each workflowCommits collect: [ :each2 | each2 commit comment ] ]) flattened"
 			},
 			{
 				"__type" : "textSnippet",
@@ -586,7 +620,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T18:06:46.798278+01:00"
+						"dateAndTimeString" : "2023-02-13T18:07:21.168973+01:00"
 					}
 				},
 				"editEmail" : {
@@ -597,7 +631,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-13T18:07:05.393194+01:00"
+						"dateAndTimeString" : "2023-02-13T18:07:21.168973+01:00"
 					}
 				},
 				"uid" : {
@@ -607,7 +641,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "We filtered each word with less of 3 letters"
+				"string" : "We filtered each word with less than 3 letters"
 			},
 			{
 				"__type" : "pharoSnippet",
