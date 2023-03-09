@@ -54,7 +54,8 @@ WEHistory >> beNice [
 WEHistory >> branch [
 
 	"this must change"
-	^ repo localBranches
+	^ repo branch
+	"^ repo localBranches
 		detect: [ :b | 
 			b name = 'main'
 				or: [ b name = 'master'
@@ -71,7 +72,7 @@ WEHistory >> branch [
 																										or: [ b name = 'next'
 																												or: [ b name = 'dev-ose'
 																														or: [ b name = 'devel'
-																																or: [ b name = 'Multi' or: [ b name = 'xysubfilter_libass' or: [ b name = '1.x' or: [b name = 'v6'] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ]]
+																																or: [ b name = 'Multi' or: [ b name = 'xysubfilter_libass' or: [ b name = '1.x' or: [b name = 'v6'] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ] ]]"
 ]
 
 { #category : #'git support' }
