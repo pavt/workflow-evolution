@@ -53,8 +53,9 @@ WEHistory >> beNice [
 { #category : #'git support' }
 WEHistory >> branch [
 
-	"this must change"
+	"now we are taking the default branch from the repo"
 	^ repo branch
+	
 	"^ repo localBranches
 		detect: [ :b | 
 			b name = 'main'
