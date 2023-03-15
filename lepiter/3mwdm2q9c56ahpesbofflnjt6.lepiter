@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-14T10:17:25.462547+01:00"
+						"dateAndTimeString" : "2023-03-15T09:00:22.449861+01:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Data"
+				"string" : "Data source "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -74,6 +74,43 @@
 					"uidString" : "y6NcOzqzDQCHsVYODAJrPQ=="
 				},
 				"code" : "repositories := FileLocator imageDirectory parent / 'repo2'"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-15T09:00:29.310443+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-15T09:00:32.39446+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9LZ8eU2zDQCNmM7rDAJrPQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Histories"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -144,6 +181,43 @@
 				"code" : "histories"
 			},
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-15T09:00:58.809963+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-15T09:02:27.079905+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "YTP6eU2zDQCNysn3DAJrPQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "data is the object to keep: i) commit path, ii) commit id, and commit comment"
+			},
+			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
@@ -210,6 +284,43 @@
 					"uidString" : "e9ev2DqzDQCITHgIDAJrPQ=="
 				},
 				"code" : "data"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-15T09:01:55.732012+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-15T09:01:55.732012+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "A2mjfk2zDQCQGE5nDAJrPQ=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : ""
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -304,14 +415,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-14T14:47:05.1236+01:00"
+						"dateAndTimeString" : "2023-03-15T09:25:40.83071+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "p0Jf3TqzDQCIptqPDAJrPQ=="
 				},
-				"code" : "neoCSVWriter := NeoCSVWriter on: stream.\rneoCSVWriter\n    separator: $;;\n    fieldWriter: #raw."
+				"code" : "neoCSVWriter := NeoCSVWriter on: stream.\rneoCSVWriter\n    separator: Character tab;\n    fieldWriter: #raw."
 			},
 			{
 				"__type" : "pharoSnippet",
