@@ -134,14 +134,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-15T14:59:38.843448+01:00"
+						"dateAndTimeString" : "2023-03-15T20:30:03.809521+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "CuuXSE+zDQCURPdZDAJrPQ=="
 				},
-				"code" : "dataset := WEDataset from: histories "
+				"code" : "dataset := WEDataset fromHistories: histories"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-15T20:21:56.551203+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-15T20:52:57.876096+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "k4KO/lazDQCEPqTEA88dIA=="
+				},
+				"code" : "dataset"
 			}
 		]
 	},
