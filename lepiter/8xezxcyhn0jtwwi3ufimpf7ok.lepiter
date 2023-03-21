@@ -473,14 +473,16 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-25T20:52:22.704068+02:00"
+						"dateAndTimeString" : "2023-03-21T13:35:42.479202+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "uM4KBEKoDQC1xfH8AORzSg=="
 				},
-				"url" : "attachments/4eohdn6g4lhnqsokwauhe81jv/workflow-ilustration.png"
+				"url" : "attachments/4eohdn6g4lhnqsokwauhe81jv/workflow-ilustration.png",
+				"caption" : "",
+				"previewHeight" : 300
 			}
 		]
 	},

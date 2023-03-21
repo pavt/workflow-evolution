@@ -718,6 +718,43 @@
 				"code" : "step:= (WEWorkflow forExample: 'visualizeClassDiagram' ) jobs first steps first.\rproperties1:= step ast members first .\rdic:= Dictionary new.\rstep ast members do: [\r\t:propAST | \r\tdic at: propAST name value withoutQuoting put: propAST value value value.\r].\rdic "
 			},
 			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-04T23:51:13.535478+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-11-04T23:51:30.860416+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "yqCspQ6pDQCZWUOUCII/Ag=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "A WEWorkflow example named 'ci'"
+			},
+			{
 				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",

@@ -8,7 +8,45 @@
 				"__type" : "textSnippet",
 				"children" : {
 					"__type" : "snippets",
-					"items" : [ ]
+					"items" : [
+						{
+							"__type" : "textSnippet",
+							"children" : {
+								"__type" : "snippets",
+								"items" : [ ]
+							},
+							"createEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"createTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-21T14:06:08.094663+01:00"
+								}
+							},
+							"editEmail" : {
+								"__type" : "email",
+								"emailString" : "<unknown>"
+							},
+							"editTime" : {
+								"__type" : "time",
+								"time" : {
+									"__type" : "dateAndTime",
+									"dateAndTimeString" : "2023-03-21T14:06:16.770737+01:00"
+								}
+							},
+							"uid" : {
+								"__type" : "uid",
+								"uidString" : "gp+cccqzDQCzTWLWCiY5Hw=="
+							},
+							"paragraphStyle" : {
+								"__type" : "textStyle"
+							},
+							"string" : "On a mac, just run `brew install yq@3`."
+						}
+					]
 				},
 				"createEmail" : {
 					"__type" : "email",
@@ -18,7 +56,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T09:43:04.59801+02:00"
+						"dateAndTimeString" : "2023-03-21T14:01:21.749675+01:00"
 					}
 				},
 				"editEmail" : {
@@ -29,17 +67,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T09:43:38.422598+02:00"
+						"dateAndTimeString" : "2023-03-21T14:02:50.393231+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "SBYxFcCnDQCxM1NqD4IxxA=="
+					"uidString" : "w1qLYMqzDQCugdgzCiY5Hw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "This is the PhD project of [[Pablo Valenzuela]] ."
+				"string" : "Writing a native YAML parser turns outto be very hard. Instead we will try to leverage an existing tool called [yq](https://mikefarah.gitbook.io/yq/). It needs to be installed locally so it can be called from GT."
 			},
 			{
 				"__type" : "textSnippet",
@@ -55,7 +93,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-21T14:03:07.469254+01:00"
+						"dateAndTimeString" : "2023-03-21T14:06:17.196582+01:00"
 					}
 				},
 				"editEmail" : {
@@ -66,17 +104,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-21T14:03:08.518001+01:00"
+						"dateAndTimeString" : "2023-03-21T14:07:53.894317+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "8n7YZsqzDQCyPYoMCiY5Hw=="
+					"uidString" : "pIIncsqzDQCzyYrrCiY5Hw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "The "
+				"string" : "To convert a YAML file to JSON, you can simply use {{gtMethod:name=WorkflowBuilder class>>#jsonFor:}}. "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-21T14:06:52.330056+01:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-03-21T14:07:17.600291+01:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "/pg/dMqzDQC0zLPuCiY5Hw=="
+				},
+				"code" : "WorkflowBuilder jsonFor: 'foo'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -92,7 +164,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T09:48:17.661747+02:00"
+						"dateAndTimeString" : "2023-03-21T14:02:51.303177+01:00"
 					}
 				},
 				"editEmail" : {
@@ -103,17 +175,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T09:48:36.195071+02:00"
+						"dateAndTimeString" : "2023-03-21T14:08:24.646588+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "mVyVHsCnDQCxQ+KJD4IxxA=="
+					"uidString" : "vNPhZcqzDQCyNeC4CiY5Hw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Here is the [[Workflow TOC]]. "
+				"string" : "The next step is to walk the resulting JSON to build the model entities."
 			},
 			{
 				"__type" : "textSnippet",
@@ -129,7 +201,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T14:25:28.696785+02:00"
+						"dateAndTimeString" : "2023-03-21T14:08:30.88974+01:00"
 					}
 				},
 				"editEmail" : {
@@ -140,20 +212,20 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T14:32:46.091652+02:00"
+						"dateAndTimeString" : "2023-03-21T14:08:36.525498+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "tI2KH8CnDQCxSDuDD4IxxA=="
+					"uidString" : "8YAfesqzDQC2/DEuCiY5Hw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Automating repetitive tasks of a software development process is nowadays frequently supported by Social Code Platforms, such as GitHub. GitHub Actions (GA) are a service offered by GitHub to automate all software workflow, including building, testing, and deploying directly from GitHub. GA is relatively new since a beta release of GA was available in November 2019. Since then, GA has become a central service for practitioners and cloud adoption. "
+				"string" : "We have lots of examples."
 			},
 			{
-				"__type" : "textSnippet",
+				"__type" : "pharoSnippet",
 				"children" : {
 					"__type" : "snippets",
 					"items" : [ ]
@@ -166,7 +238,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T14:26:18.533033+02:00"
+						"dateAndTimeString" : "2023-03-21T14:08:38.279821+01:00"
 					}
 				},
 				"editEmail" : {
@@ -177,91 +249,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T14:39:46.33436+02:00"
+						"dateAndTimeString" : "2023-03-21T14:10:03.398095+01:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "YmZP+cOnDQC0Zld/AgbPlg=="
+					"uidString" : "ekOQesqzDQC3ftb0CiY5Hw=="
 				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "Despite the relevance of GA in state-of-the-art software development practices, little is known about how practitioners build and maintain GitHub Actions workflows. For example, it is not clear how practitioners cope with the particularities of developing GA workflows (e.g., workflow are executed only by pushing a change in the repository, debugging a GA workflow is carried out by inspecting logs, workflows are typically edited through a generic text editor or the GitHub interface). "
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T16:35:39.543791+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T16:35:50.207921+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "hwcO3MWnDQC13csDAgbPlg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "This research project aims to automatically disclose information from GA workflows to aid, for example, in program comprehension and maintenance tasks.  The long-term vision is to provide a domain model of the workflow evolution to build, visualize, and explore its instances for real software systems and evaluate the proposed approach's usefulness."
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T09:45:49.237312+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-10-19T09:45:49.237312+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "XMRbIsCnDQCxW1z/D4IxxA=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : ""
+				"code" : "(FileLocator imageDirectory parent / 'yamlFiles' childrenMatching: '*.y*ml')\r\tcollect: [ :each | WorkflowBuilder jsonFor: each contents ]."
 			}
 		]
 	},
@@ -273,7 +268,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-10-19T09:42:08.299691+02:00"
+			"dateAndTimeString" : "2023-03-21T14:01:21.718391+01:00"
 		}
 	},
 	"editEmail" : {
@@ -284,15 +279,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-10-19T09:42:51.907127+02:00"
+			"dateAndTimeString" : "2023-03-21T14:01:21.718391+01:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Overview of the Workflow Evolution Project"
+		"title" : "Building workflow models with yq"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "60863015-c0a7-0d00-b132-c5f10f8231c4"
+		"uuid" : "07e08a60-cab3-0d00-ae80-1cc50a26391f"
 	}
 }
