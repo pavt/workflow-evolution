@@ -104,14 +104,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T10:42:47.639298+01:00"
+						"dateAndTimeString" : "2023-03-30T16:50:56.689364+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "rh+RsHqwDQCuNnobBXnkrA=="
 				},
-				"code" : "repositories := FileLocator imageDirectory parent / 'repositories'"
+				"code" : "repositories := FileLocator imageDirectory parent / 'repo2'"
 			},
 			{
 				"__type" : "textSnippet",
@@ -175,7 +175,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-02-07T10:43:21.793371+01:00"
+						"dateAndTimeString" : "2023-03-30T16:51:36.340488+02:00"
 					}
 				},
 				"uid" : {
