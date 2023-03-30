@@ -1041,7 +1041,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-21T13:24:01.053776+01:00"
+												"dateAndTimeString" : "2023-03-30T10:49:01.722804+02:00"
 											}
 										},
 										"uid" : {
@@ -1051,7 +1051,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "[[Seven step process]]"
+										"string" : "[[Commit comment generation]]]"
 									}
 								]
 							},
