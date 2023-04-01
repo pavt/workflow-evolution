@@ -134,14 +134,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-01T20:44:35.896249+02:00"
+						"dateAndTimeString" : "2023-04-01T21:47:06.583149+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "vupL+IC0DQCMJaJ/Bs2kCQ=="
 				},
-				"code" : "commits  := histories histories collect: [ :each | (each workflowCommits first )].\rcomments := commits collect: [ :each | each commit comment ].\rcomments select: [:each | each  matches: 'fix']"
+				"code" : "commits  := histories histories collect: [ :each | (each workflowCommits first )].\rcomments := commits collect: [ :each | each commit comment ].\r(comments select: [:each | each  matches: 'fix']) \r"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -157,7 +157,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-30T17:11:33.538743+02:00"
+						"dateAndTimeString" : "2023-04-01T21:47:15.14388+02:00"
 					}
 				},
 				"editEmail" : {
@@ -168,14 +168,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-03-30T17:12:06.213784+02:00"
+						"dateAndTimeString" : "2023-04-01T22:06:15.345743+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "lSi8PoG0DQCUgiKKBs2kCQ=="
+					"uidString" : "8cRfVK20DQCOB1jbBz+7Pw=="
 				},
-				"code" : ""
+				"code" : "data := OrderedCollection new.\nhistories histories\n\tdo: [ :each | \n\t\teach workflowCommits\n\t\t\tdo: [ :each2 | \n\t\t\t\tdata\n\t\t\t\t\tadd: {repoPath.\n\t\t\t\t\t\t\teach2 commit id} ] ].\ndata"
 			}
 		]
 	},
@@ -198,12 +198,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-03-30T13:53:37.654339+02:00"
+			"dateAndTimeString" : "2023-04-01T20:45:02.823392+02:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Filtering commit"
+		"title" : "Filtering commits using keywords"
 	},
 	"uid" : {
 		"__type" : "uuid",

@@ -37,6 +37,28 @@ WEHistories class >> fromReposPath: aPathString [
 ]
 
 { #category : #accessing }
+WEHistories class >> fromReposPathFiltered: aPathString [
+	| repoPaths histories files collectionOfHistories |
+	repoPaths := aPathString asFileReference children collect: #gtDisplayString.
+	repoPaths := (aPathString asFileReference children
+			select: [ :each | 
+				each isDirectory
+					and: [ (each / '.git') exists and: [ (each / '.git') isDirectory ] ] ])
+			collect: #gtDisplayString.
+	histories := OrderedCollection new.
+	repoPaths
+		do: [ :repoPath | 
+			files := (repoPath asFileReference / '.github' / 'workflows'
+					allChildrenMatching: '*.yml') collect: #basename.
+			collectionOfHistories:= (files collect: [ :file | WEHistory fromRepoPath: repoPath forYML: file ]).
+			"Filter here"
+			histories
+				addAll: collectionOfHistories ].
+	^ WEHistories from: histories
+
+]
+
+{ #category : #accessing }
 WEHistories class >> initialDataset [
 	^ (self
 		from: (OrderedCollection new
