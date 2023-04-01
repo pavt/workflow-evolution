@@ -1041,7 +1041,7 @@
 											"__type" : "time",
 											"time" : {
 												"__type" : "dateAndTime",
-												"dateAndTimeString" : "2023-03-30T13:53:14.024727+02:00"
+												"dateAndTimeString" : "2023-03-30T13:53:33.984204+02:00"
 											}
 										},
 										"uid" : {
@@ -1051,7 +1051,7 @@
 										"paragraphStyle" : {
 											"__type" : "textStyle"
 										},
-										"string" : "[[Fig"
+										"string" : "[[Filtering commit]]"
 									}
 								]
 							},
