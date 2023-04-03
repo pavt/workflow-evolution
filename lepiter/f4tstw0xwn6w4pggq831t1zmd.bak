@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-03T12:46:40.511685+02:00"
+						"dateAndTimeString" : "2023-04-03T21:41:26.494004+02:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : ""
+				"string" : "First, the example from the repo:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -100,14 +100,85 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-03T13:35:02.830069+02:00"
+						"dateAndTimeString" : "2023-04-03T21:41:32.831238+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "hH0pGc60DQC6OpSGAhui/w=="
 				},
-				"code" : "(YAMLParser parse: yaml ) object at: #on"
+				"code" : "(YAMLParser parse: yaml )  object at: #on"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-04-03T21:41:42.119167+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-04-03T21:42:08.579652+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "HPc0fNW0DQCh+9vjDoeRVg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Then, we wrap the yaml file "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-04-03T19:21:11.078882+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-04-03T21:34:00.146304+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "v3+thdO0DQCQZkkIDoeRVg=="
+				},
+				"code" : "\rWEWorkflow2 fromFile: yaml"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -134,14 +205,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-03T18:22:46.273582+02:00"
+						"dateAndTimeString" : "2023-04-03T21:42:42.219517+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "E3OxQdG0DQC+CPGWAhui/w=="
 				},
-				"code" : "WEWorkflow2 fr"
+				"code" : "file:= ((FileLocator imageDirectory parent / 'repo2'/'alpine'/'.github'/'workflows' ) allChildrenMatching: '*.yml' ) contents"
 			}
 		]
 	},
