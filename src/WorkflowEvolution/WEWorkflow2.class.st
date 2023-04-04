@@ -12,7 +12,7 @@ Class {
 { #category : #accessing }
 WEWorkflow2 class >> astFor: aLocalPath [
 	| ast yamlFile |
-	yamlFile := self exampleFolder / (aLocalPath , '.json').
+	yamlFile := self exampleFolder / (aLocalPath , '.yml').
 	ast := YAMLParser parse: yamlFile contents.
 	^ ast
 ]

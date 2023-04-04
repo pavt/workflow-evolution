@@ -37,7 +37,7 @@ WEWorkflowASTVisitor2 >> jobsAST: anObject [
 { #category : #accessing }
 WEWorkflowASTVisitor2 >> visitObject: anASTObjectNode [
 	| members |
-	members := anASTObjectNode members.	 
+	members := anASTObjectNode .	 
 	self assert: members size equals: 3.
 
 	self workflow ast: anASTObjectNode.
