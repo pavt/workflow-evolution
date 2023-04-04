@@ -100,14 +100,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-03T21:41:32.831238+02:00"
+						"dateAndTimeString" : "2023-04-04T15:53:45.4348+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "hH0pGc60DQC6OpSGAhui/w=="
 				},
-				"code" : "(YAMLParser parse: yaml )  object at: #on"
+				"code" : "(YAMLParser parse: yaml ) "
 			},
 			{
 				"__type" : "textSnippet",
@@ -134,7 +134,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-03T21:42:08.579652+02:00"
+						"dateAndTimeString" : "2023-04-03T21:43:04.239136+02:00"
 					}
 				},
 				"uid" : {
@@ -144,7 +144,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Then, we wrap the yaml file "
+				"string" : "Then, we wrap the yaml file using the WEWorkflow2 class:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -171,48 +171,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-03T21:34:00.146304+02:00"
+						"dateAndTimeString" : "2023-04-04T15:54:17.118378+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "v3+thdO0DQCQZkkIDoeRVg=="
 				},
-				"code" : "\rWEWorkflow2 fromFile: yaml"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-03T16:39:00.552501+02:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-03T21:42:42.219517+02:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "E3OxQdG0DQC+CPGWAhui/w=="
-				},
-				"code" : "file:= ((FileLocator imageDirectory parent / 'repo2'/'alpine'/'.github'/'workflows' ) allChildrenMatching: '*.yml' ) contents"
+				"code" : "\rWEWorkflow2 forExample: ''"
 			}
 		]
 	},
