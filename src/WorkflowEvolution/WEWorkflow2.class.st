@@ -47,7 +47,7 @@ WEWorkflow2 class >> fromFilePath: aYamlFilePath [
 
 { #category : #accessing }
 WEWorkflow2 class >> fromString: aString [
-	^ (YAMLParser parse: aString) acceptVisitor: YAML2JSONVisitor new
+	^ (YAMLParser parse: aString) acceptVisitor: WEWorkflowASTVisitor2 new
 ]
 
 { #category : #accessing }
