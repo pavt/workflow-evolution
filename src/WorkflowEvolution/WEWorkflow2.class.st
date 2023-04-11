@@ -4,16 +4,16 @@ Class {
 	#instVars : [
 		'jobs',
 		'events',
-		'steps'
+		'steps',
+		'file'
 	],
 	#category : #'WorkflowEvolution-Model2'
 }
 
 { #category : #accessing }
-WEWorkflow2 class >> astFor: aLocalPath [
-	| ast yamlFile |
-	yamlFile := self exampleFolder / (aLocalPath , '.yml').
-	ast := YAMLParser parse: yamlFile contents.
+WEWorkflow2 class >> astFor: ymlFile [
+	| ast |
+	ast := YAMLParser parse: ymlFile contents.
 	^ ast
 ]
 
@@ -24,12 +24,35 @@ WEWorkflow2 class >> exampleFolder [
 ]
 
 { #category : #accessing }
-WEWorkflow2 class >> forExample: aLocalPath [
-	| ast visitor |
-	ast := self astFor: aLocalPath.
+WEWorkflow2 class >> forExample: anAST [
+	| visitor |
 	visitor := WEWorkflowASTVisitor2 new.
-	ast acceptVisitor: visitor.
-	^ visitor workflow
+	anAST acceptVisitor: visitor.
+	^ visitor 
+]
+
+{ #category : #accessing }
+WEWorkflow2 class >> fromFile: aYamlFileReference [
+	| dataIn |
+	dataIn:= self fromString: (aYamlFileReference contents).
+	^ self new
+		file: aYamlFileReference;
+		data: dataIn
+]
+
+{ #category : #accessing }
+WEWorkflow2 class >> fromFilePath: aYamlFilePath [
+	^ self fromFile: aYamlFilePath asFileReference
+]
+
+{ #category : #accessing }
+WEWorkflow2 class >> fromString: aString [
+	^ (YAMLParser parse: aString) acceptVisitor: YAML2JSONVisitor new
+]
+
+{ #category : #accessing }
+WEWorkflow2 >> data: aDictionary [
+	super data: aDictionary.
 ]
 
 { #category : #accessing }
@@ -43,6 +66,22 @@ WEWorkflow2 >> events: anObject [
 ]
 
 { #category : #accessing }
+WEWorkflow2 >> file [
+	^ file
+]
+
+{ #category : #accessing }
+WEWorkflow2 >> file: anObject [
+	file := anObject
+]
+
+{ #category : #accessing }
+WEWorkflow2 >> initialize [
+	events:= OrderedCollection new.
+	jobs:= OrderedCollection new.
+]
+
+{ #category : #accessing }
 WEWorkflow2 >> jobs [
 	^ jobs
 ]
@@ -50,6 +89,11 @@ WEWorkflow2 >> jobs [
 { #category : #accessing }
 WEWorkflow2 >> jobs: anObject [
 	jobs := anObject
+]
+
+{ #category : #accessing }
+WEWorkflow2 >> name [ 
+	 ^ self data at: 'name'
 ]
 
 { #category : #accessing }

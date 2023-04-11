@@ -2,17 +2,18 @@ Class {
 	#name : #WEModelEntity2,
 	#superclass : #Object,
 	#instVars : [
-		'ast'
+		'data'
 	],
 	#category : #'WorkflowEvolution-Model2'
 }
 
 { #category : #accessing }
-WEModelEntity2 >> ast [
-	^ ast
+WEModelEntity2 >> data [
+	^ data
 ]
 
 { #category : #accessing }
-WEModelEntity2 >> ast: anObject [
-	ast := anObject
+WEModelEntity2 >> data: dictionary [ 
+
+	data:= dictionary ifNil: [Dictionary new]
 ]
