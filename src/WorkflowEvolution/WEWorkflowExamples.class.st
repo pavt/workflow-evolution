@@ -5,13 +5,30 @@ Class {
 }
 
 { #category : #accessing }
+WEWorkflowExamples >> aWEWorkflowExample [
+	<gtExample>
+	| workflow aLocalPath ymlFile |
+	aLocalPath := (FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'
+		/ 'workflow-evolution' / 'yml-json-examples' ) allChildrenMatching: '*.yml'.
+	ymlFile:= (aLocalPath first).
+	workflow := WEWorkflow2 fromFilePath: ymlFile.
+	self assert: workflow events size equals: 3.
+	self assert: workflow name equals: 'UML Class diagram'.
+	self assert: workflow jobs size equals: 1.
+	^ workflow
+]
+
+{ #category : #accessing }
 WEWorkflowExamples >> ciExample [
 	<gtExample>
-	| workflow |
-	workflow := OldWEWorkflow forExample: 'ci'.
-	self assert: workflow name equals: 'CI'.
-	self assert: workflow events size equals: 1.
-	self assert: workflow jobs size equals: 4.
+	| workflow aLocalPath ymlFile |
+	aLocalPath := (FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'
+		/ 'workflow-evolution' / 'yml-json-examples' ) allChildrenMatching: '*.yml'.
+	ymlFile:= (aLocalPath first).
+	workflow := WEWorkflow2 fromFilePath: ymlFile.
+	self assert: workflow events size equals: 3.
+	self assert: workflow name equals: 'UML Class diagram'.
+	self assert: workflow jobs size equals: 1.
 	^ workflow
 ]
 
