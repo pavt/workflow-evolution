@@ -1,6 +1,6 @@
 Class {
 	#name : #WEWorkflow2,
-	#superclass : #WEModelEntity2,
+	#superclass : #WENamedEntity2,
 	#instVars : [
 		'jobs',
 		'events',
@@ -53,6 +53,7 @@ WEWorkflow2 class >> fromString: aString [
 { #category : #accessing }
 WEWorkflow2 >> data: aDictionary [
 	super data: aDictionary.
+	self name: (data at: 'name' ifAbsent: ['(missing name)'])
 ]
 
 { #category : #accessing }
@@ -89,11 +90,6 @@ WEWorkflow2 >> jobs [
 { #category : #accessing }
 WEWorkflow2 >> jobs: anObject [
 	jobs := anObject
-]
-
-{ #category : #accessing }
-WEWorkflow2 >> name [ 
-	 ^ self data at: 'name'
 ]
 
 { #category : #accessing }
