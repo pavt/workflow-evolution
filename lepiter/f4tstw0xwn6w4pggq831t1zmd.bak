@@ -313,14 +313,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-11T10:22:31.600444+02:00"
+						"dateAndTimeString" : "2023-04-11T10:51:53.054259+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "4QwlkWy1DQCQD25RDGksEQ=="
 				},
-				"code" : "workflow := WEWorkflow2 fromFilePath: ymlFile.\r "
+				"code" : "workflow := WEWorkflow2 fromFilePath: ymlFile."
 			},
 			{
 				"__type" : "pharoSnippet",
