@@ -54,7 +54,8 @@ WEWorkflow2 class >> fromString: aString [
 WEWorkflow2 >> data: aDictionary [
 	super data: aDictionary.
 	self initializeEvents.
-	self name: (data at: 'name' ifAbsent: ['(missing name)'])
+	self initializeJobs.
+	self name: (data at: 'name' ifAbsent: [ '(missing name)' ])
 ]
 
 { #category : #accessing }
@@ -88,6 +89,16 @@ WEWorkflow2 >> gtEventsFor: aView [
 ]
 
 { #category : #accessing }
+WEWorkflow2 >> gtJobsFor: aView [
+	<gtView>
+	^ aView columnedList
+		title: 'Jobs';
+		priority: 30;
+		items: [ self jobs ];
+		column: 'Job' text: [ :job | job name ]
+]
+
+{ #category : #accessing }
 WEWorkflow2 >> gtWorkflowNameFor: aView [
 	<gtView>
 	^ aView forward
@@ -111,6 +122,19 @@ WEWorkflow2 >> initializeEvents [
 		ifFalse: [ events := (data at: 'on' ) associations
 					collect: [ :asoc | 
 						WEEvent new
+							name: asoc key;
+							data: asoc value ] ]
+]
+
+{ #category : #accessing }
+WEWorkflow2 >> initializeJobs [
+	| jobDictionary |
+	jobDictionary := data at: 'jobs' ifAbsent: [''].
+	(jobDictionary isKindOf: String)
+		ifTrue: [ jobs := OrderedCollection new ]
+		ifFalse: [ jobs := (data at: 'jobs') associations
+					collect: [ :asoc | 
+						WEJob new
 							name: asoc key;
 							data: asoc value ] ]
 ]
