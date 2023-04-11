@@ -171,14 +171,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-11T09:54:33.422804+02:00"
+						"dateAndTimeString" : "2023-04-11T13:05:35.064399+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "gKFJfVy1DQCIHDtsDGksEQ=="
 				},
-				"code" : "aLocalPath := (FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\r\t\t/ 'workflow-evolution' / 'yml-json-examples' ) allChildrenMatching: '*.yml'.\rymlFile:= (aLocalPath first)."
+				"code" : "aLocalPath := (FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\r\t\t/ 'workflow-evolution' / 'yml-json-examples' ) allChildrenMatching: '*.yml'.\rymlFile:= (aLocalPath third)."
 			},
 			{
 				"__type" : "textSnippet",
@@ -313,14 +313,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-11T10:51:53.054259+02:00"
+						"dateAndTimeString" : "2023-04-11T13:12:28.155696+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "4QwlkWy1DQCQD25RDGksEQ=="
 				},
-				"code" : "workflow := WEWorkflow2 fromFilePath: ymlFile."
+				"code" : "workflow := WEWorkflow2 fromFilePath: ymlFile.\rworkflow  name"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -347,14 +347,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-11T13:00:11.788208+02:00"
+						"dateAndTimeString" : "2023-04-11T13:12:33.777424+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Qi10q2y1DQCSliD5DGksEQ=="
 				},
-				"code" : "workflow jobs "
+				"code" : ""
 			}
 		]
 	},

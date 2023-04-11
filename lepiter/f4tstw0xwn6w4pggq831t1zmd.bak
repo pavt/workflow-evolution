@@ -171,14 +171,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-11T09:54:33.422804+02:00"
+						"dateAndTimeString" : "2023-04-11T13:05:35.064399+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "gKFJfVy1DQCIHDtsDGksEQ=="
 				},
-				"code" : "aLocalPath := (FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\r\t\t/ 'workflow-evolution' / 'yml-json-examples' ) allChildrenMatching: '*.yml'.\rymlFile:= (aLocalPath first)."
+				"code" : "aLocalPath := (FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\r\t\t/ 'workflow-evolution' / 'yml-json-examples' ) allChildrenMatching: '*.yml'.\rymlFile:= (aLocalPath third)."
 			},
 			{
 				"__type" : "textSnippet",
@@ -347,14 +347,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-11T13:00:01.6707+02:00"
+						"dateAndTimeString" : "2023-04-11T13:00:11.788208+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Qi10q2y1DQCSliD5DGksEQ=="
 				},
-				"code" : "workflow jobs steps"
+				"code" : "workflow jobs "
 			}
 		]
 	},
