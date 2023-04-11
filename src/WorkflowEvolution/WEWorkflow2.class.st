@@ -77,6 +77,15 @@ WEWorkflow2 >> file: anObject [
 ]
 
 { #category : #accessing }
+WEWorkflow2 >> gtWorkflowNameFor: aView [
+	<gtView>
+	^ aView forward
+		title: 'Name';
+		priority: 20;
+		object: [ self name asString ]
+]
+
+{ #category : #accessing }
 WEWorkflow2 >> initialize [
 	events:= OrderedCollection new.
 	jobs:= OrderedCollection new.
