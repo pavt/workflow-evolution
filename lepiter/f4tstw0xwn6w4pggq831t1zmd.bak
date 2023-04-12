@@ -171,14 +171,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-11T13:05:35.064399+02:00"
+						"dateAndTimeString" : "2023-04-11T13:32:28.845431+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "gKFJfVy1DQCIHDtsDGksEQ=="
 				},
-				"code" : "aLocalPath := (FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\r\t\t/ 'workflow-evolution' / 'yml-json-examples' ) allChildrenMatching: '*.yml'.\rymlFile:= (aLocalPath third)."
+				"code" : "aLocalPath := (FileLocator imageDirectory / 'pharo-local' / 'iceberg' / 'pavt'\r\t\t/ 'workflow-evolution' / 'yml-json-examples' ) allChildrenMatching: '*.yml'.\rymlFile:= (aLocalPath first)."
 			},
 			{
 				"__type" : "textSnippet",
@@ -205,7 +205,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-11T09:55:13.584303+02:00"
+						"dateAndTimeString" : "2023-04-12T14:10:12.75764+02:00"
 					}
 				},
 				"uid" : {
@@ -215,7 +215,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "A WEWorkflow2 object from the yml file:"
+				"string" : "A WEWorkflow2 object   the yml file:"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -313,14 +313,51 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-11T10:51:53.054259+02:00"
+						"dateAndTimeString" : "2023-04-11T13:33:00.750328+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "4QwlkWy1DQCQD25RDGksEQ=="
 				},
-				"code" : "workflow := WEWorkflow2 fromFilePath: ymlFile."
+				"code" : "workflow := WEWorkflow2 fromFilePath: ymlFile.\rworkflow  name"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-04-11T13:33:06.967079+02:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-04-11T13:36:58.022285+02:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "4Tyel2+1DQCfJVqzA6U0xg=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "The events of the workflow"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -347,14 +384,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-04-11T13:00:11.788208+02:00"
+						"dateAndTimeString" : "2023-04-11T13:40:55.433283+02:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Qi10q2y1DQCSliD5DGksEQ=="
 				},
-				"code" : "workflow jobs "
+				"code" : "workflow  events first  data at: 'branches'"
 			}
 		]
 	},
